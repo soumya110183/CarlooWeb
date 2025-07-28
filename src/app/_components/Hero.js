@@ -5,9 +5,9 @@ import { useState } from "react";
 function Hero() {
   const [activeSlide, setActiveSlide] = useState("First Slide");
   return (
-    <div>
-      <div className="flex items-center gap-2 mt-35 text-white  ">
-        <div className="w-full max-w-[1280px] mx-auto  items-center flex justify-between text-white">
+    <section>
+      <div className="flex items-center gap-2 mt-18 text-white  ">
+        <div className="w-full max-w-[1180px] mx-auto  items-center flex justify-between text-white">
           <div>
             <h1 className="text-[48px] font-bold ">
               Transforming Compliance <br /> Building Trust <br />
@@ -28,12 +28,10 @@ function Hero() {
             </div>
           </div>
           <div>
-            <img src="/robot.png" className="w-[500px]" alt="" />
+            <img src="/robot.png" className="w-[400px]" alt="" />
           </div>
         </div>
-        {/* <div className="w-4 h-4 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-
-        <div className="w-24 h-4 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div> */}
+        
       </div>
       <div className="flex items-center mx-auto justify-between mt-7.5 w-full max-w-[800px]">
         {["First Slide", "Second Slide", "Third Slide"].map((slide) => (
@@ -58,7 +56,7 @@ function Hero() {
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -21,7 +21,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #180d49;
     --foreground: #ededed;
   }
 }
@@ -30,4 +30,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "montserrat", sans-serif;
+}
+.hide-scrollbar {
+  scrollbar-width: none;      
+  -ms-overflow-style: none; 
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;              
 }

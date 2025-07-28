@@ -1,11 +1,11 @@
 function Navigation() {
   return (
-    <div className="fixed top-0 left-0 right-0 w-full bg-transparent h-[86px]">
+    <div className="fixed top-0 left-0 right-0 w-full bg-transparent h-[86px] z-50">
       <nav className="h-full w-full max-w-[1280px] flex  items-center justify-between mx-auto  text-white font-mont">
         <div className="flex items-center gap-10">
           <div className="flex items-center gap-1">
             <img
-              src="/logo-verselion.png"
+              src="/Carlo-PEaas 1.png"
               alt=""
               className="w-[54px] h-[54px]"
             />
