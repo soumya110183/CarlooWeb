@@ -1,6 +1,27 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 function Navigation() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="fixed top-0 left-0 right-0 w-full bg-transparent h-[86px] z-50">
+    <div
+      className={`fixed top-0 left-0 right-0 w-full transition-all duration-300 z-50 ${
+        scrolled
+          ? "bg-[#080223]/70 backdrop-blur-xl h-[56px]"
+          : "bg-transparent h-[86px] "
+      }  `}
+    >
       <nav className="h-full w-full max-w-[1280px] flex  items-center justify-between mx-auto  text-white font-mont">
         <div className="flex items-center gap-10">
           <div className="flex items-center gap-1">

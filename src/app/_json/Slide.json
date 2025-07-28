@@ -1,0 +1,42 @@
+[
+  {
+    "character": "First Slide",
+    "heading": "Transforming Compliance",
+    "paragraph": "Scan your AI streams for real-time violations and ensure ethical alignment.",
+    "visual": "The Validator robot waves and scans floating code snippets. A halo lights up when a compliant section is detected.",
+    "cta": {
+      "text": "👉 Explore Policy Monitoring",
+      "scrollTo": "Policy Enforcement"
+    }
+  },
+  {
+    "character": "Second Slide",
+    "heading": "Building Trust",
+    "paragraph": "Round-the-clock AI oversight. Spot drift, bias, or risk before it impacts.",
+    "visual": "The Watcher robot monitors a floating tablet. Graphs blink and update live.",
+    "cta": {
+      "text": "🔍 View Real-Time Dashboard",
+      "scrollTo": "Monitoring Dashboard"
+    }
+  },
+  {
+    "character": "Third Slide",
+    "heading": "Defending Your AI",
+    "paragraph": "Enforce your policies. Block bias and protect your users.",
+    "visual": "The Guardian raises a glowing shield and deflects a red alert icon labeled “Violation”.",
+    "cta": {
+      "text": "🛡 See How Carlo Blocks Bias",
+      "scrollTo": "Why Carlo / Certification"
+    }
+  },
+  {
+    "character": "Fourth Slide",
+    "heading": "Empowering AI",
+    "paragraph": "Get actionable feedback to continuously improve your models.",
+    "visual": "The Messenger holds a JSON tablet and sends glowing code snippets toward a floating laptop interface.",
+    "cta": {
+      "text": "💡 Get Developer Insights",
+      "scrollTo": "Developer Tools / Feedback Loops"
+    }
+  }
+]

@@ -32,10 +32,18 @@ body {
   font-family: "montserrat", sans-serif;
 }
 .hide-scrollbar {
-  scrollbar-width: none;      
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;              
+  display: none;
+}
+/* Add this to globals.css if using Tailwind */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
