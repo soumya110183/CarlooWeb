@@ -19,7 +19,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative w-full mt-35">
+    <div className="relative w-full mt-25">
       <div
         ref={scrollRef}
         className="flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth  no-scrollbar"
@@ -29,7 +29,7 @@ function Hero() {
             const slide = Slide.find((s) => s.character === label);
             return (
               <div key={label} className="w-full flex-shrink-0 snap-start ">
-                <HeaderSlider filteredSlide={slide} />
+                <HeaderSlider filteredSlide={slide} label={label} />
               </div>
             );
           }
@@ -37,7 +37,7 @@ function Hero() {
       </div>
 
       <div className="flex gap-5 mx-auto justify-center">
-        {["First Slide", "Second Slide", "Third Slide", "Fourth Slide"].map(
+        {["The Validator", "The Watcher", "The Guardian", "The Messenger"].map(
           (label, index) => (
             <button
               key={label}

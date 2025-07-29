@@ -6,7 +6,7 @@ export default function ScrollHeading({heading,paragraph}){
 >
          {heading}
         </h2> 
-        <p className="font-medium text-[18px]  max-w-[1219px] text-center mx-auto">{paragraph}</p>
+        <p className="font-medium text-[20px]  max-w-[1219px] text-center mx-auto">{paragraph}</p>
                     </div>
     )
 }
