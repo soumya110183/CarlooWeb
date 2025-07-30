@@ -1,6 +1,6 @@
 import Card from "../_subcomponents/Card";
 
-export default function SixthSection() {
+export default function Research() {
   return (
     <section>
       <div className="mt-[124px] w-full max-w-[1200px] mx-auto flex items-center justify-between text-white">

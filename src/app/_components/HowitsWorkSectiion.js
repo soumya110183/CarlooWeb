@@ -1,7 +1,7 @@
 import HowitsWork from "../_subcomponents/HowitsWork";
 import ScrollHeading from "../_subcomponents/ScrollHeading";
 
-export default function FourthSection() {
+export default function HowitsWorkSection() {
   return (
     <section>
       <ScrollHeading

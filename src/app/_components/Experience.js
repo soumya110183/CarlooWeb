@@ -1,4 +1,4 @@
-export default function SeventhFunction() {
+export default function Experience() {
   return (
     <section>
       <div
