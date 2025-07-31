@@ -4,8 +4,8 @@ export default function WhyCarlo(params) {
   return (
     <section className="relative">
       <Image
-      width={1500}
-      height={700}
+        width={1500}
+        height={700}
         src="/parallax_zqaizh (1) 1.png"
         alt="background-image"
         className="absolute inset-0 w-full h-full left-[-700px]  -z-10"
@@ -23,7 +23,9 @@ export default function WhyCarlo(params) {
               />
               <div className="pt-25 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
-                <p className="font-semibold text-[15px]">Virtual Machine</p>
+                <p className="font-semibold text-[15px]">
+                  Compliance Frameworks
+                </p>
               </div>
             </div>
           </div>
@@ -39,7 +41,9 @@ export default function WhyCarlo(params) {
               />
               <div className="pt-25 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
-                <p className="font-semibold text-[15px]">Virtual Machine</p>
+                <p className="font-semibold text-[15px]">
+                  Real-Time Enforcement
+                </p>
               </div>
             </div>
           </div>
@@ -55,7 +59,7 @@ export default function WhyCarlo(params) {
               />
               <div className="pt-25 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
-                <p className="font-semibold text-[15px]">Virtual Machine</p>
+                <p className="font-semibold text-[15px]">Enterprise Scale</p>
               </div>
             </div>
           </div>
@@ -91,6 +95,7 @@ export default function WhyCarlo(params) {
               "Real-time compliance monitoring",
               "Automated policy enforcement",
               "Scalable for multi-project and enterprise use",
+              "Audit-ready reporting and certification",
             ].map((text) => (
               <div key={text} className="flex items-center gap-2">
                 <div

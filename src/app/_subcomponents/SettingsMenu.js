@@ -1,9 +1,11 @@
+import { forwardRef } from "react";
 import ThemeToggle from "./ThemeToggle";
 
-function SettingsMenu({ dropdownOpen }) {
+const SettingsMenu = forwardRef(({ dropdownOpen }, ref) => {
   return (
     <div
-      className={`w-full max-w-[211px] h-[388px] bg-[#282828] rounded-[11px] absolute right-0 top-20  transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
+      ref={ref}
+      className={`w-full max-w-[211px] h-[388px] bg-[#282828] rounded-[11px] absolute right-0 top-20 transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
       ${
         dropdownOpen
           ? "opacity-100 translate-y-0 scale-100"
@@ -22,6 +24,7 @@ function SettingsMenu({ dropdownOpen }) {
       </div>
     </div>
   );
-}
+});
 
+SettingsMenu.displayName = "SettingsMenu";
 export default SettingsMenu;

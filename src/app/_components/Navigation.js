@@ -12,7 +12,11 @@ function Navigation() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+
+  const navRef = useRef(null);
+  const dropdownMenuRef = useRef(null);
+  const resourcesMenuRef = useRef(null);
+  const settingsMenuRef = useRef(null);
 
   const navItems = [
     { name: "Why Carlo", href: "/Why-carlo" },
@@ -33,11 +37,29 @@ function Navigation() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      const clickedInsideNav = navRef.current?.contains(event.target);
+      const clickedInsideDropdown = dropdownMenuRef.current?.contains(
+        event.target
+      );
+      const clickedInsideResources = resourcesMenuRef.current?.contains(
+        event.target
+      );
+      const clickedInsideSettings = settingsMenuRef.current?.contains(
+        event.target
+      ); // ✅ New
+
+      if (
+        !clickedInsideNav &&
+        !clickedInsideDropdown &&
+        !clickedInsideResources &&
+        !clickedInsideSettings
+      ) {
         setDropdownOpen(false);
         setResourcesOpen(false);
+        setSettingsOpen(false); // ✅ Close settings too
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
@@ -54,17 +76,22 @@ function Navigation() {
     >
       <nav
         className="h-full w-full max-w-[1280px] flex items-center justify-between mx-auto text-white font-mont relative"
-        ref={dropdownRef}
+        ref={navRef}
       >
         <div className="flex items-center gap-10">
-          <Link href={"/"}>
-          <div className="flex items-center gap-1">
-            <Image src="/logo.png" alt="logo" className="w-[80px] h-[80px]" width={80} height={80}/>
-            <span className="font-montserrat text-[18px] font-bold">
-              Carlo peass
-            </span>
-            
-          </div>
+          <Link href="/">
+            <div className="flex items-center gap-1">
+              <Image
+                src="/logo.png"
+                alt="logo"
+                className="w-[80px] h-[80px]"
+                width={80}
+                height={80}
+              />
+              <span className="font-montserrat text-[18px] font-bold">
+                Carlo peass
+              </span>
+            </div>
           </Link>
 
           <ul className="flex items-center gap-[20px] text-[16px] font-semibold">
@@ -85,7 +112,14 @@ function Navigation() {
                   }
                 }}
               >
-                <Link href={item.href}>
+                <Link
+                  href={`${
+                    item.name === "Compliance Frameworks" ||
+                    item.name === "Resources"
+                      ? "#"
+                      : item.href
+                  }`}
+                >
                   <span className="hover:text-[#C7BFE9] transition-all duration-300 flex items-center gap-2">
                     {item.name}
                     {(item.name === "Compliance Frameworks" ||
@@ -104,11 +138,14 @@ function Navigation() {
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
                     <div className="w-10 h-2 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
                   </div>
-
-                  {resourcesOpen && item.name === "Resources" && (
-                    <DropDownMenuResources dropdownOpen={resourcesOpen} />
-                  )}
                 </Link>
+
+                {resourcesOpen && item.name === "Resources" && (
+                  <DropDownMenuResources
+                    dropdownOpen={resourcesOpen}
+                    ref={resourcesMenuRef}
+                  />
+                )}
               </li>
             ))}
           </ul>
@@ -126,10 +163,14 @@ function Navigation() {
             height={29}
           />
         </button>
-        {settingsOpen && <SettingsMenu dropdownOpen={settingsOpen} />}
+        {settingsOpen && (
+          <SettingsMenu dropdownOpen={settingsOpen} ref={settingsMenuRef} />
+        )}
       </nav>
 
-      {dropdownOpen && <DropDownMenu dropdownOpen={dropdownOpen} />}
+      {dropdownOpen && (
+        <DropDownMenu dropdownOpen={dropdownOpen} ref={dropdownMenuRef} />
+      )}
     </div>
   );
 }

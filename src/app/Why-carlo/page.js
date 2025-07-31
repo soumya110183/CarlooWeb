@@ -4,12 +4,14 @@ import TrustandTransparency from "./_whyCarloComp/Interactive explainer";
 import Trust from "./_whyCarloComp/Trust";
 
 function page() {
-  return <div className="mt-25">
-    <Introduction />
-   
-    <TrustandTransparency />
-    <Trust />
-  </div>;
+  return (
+    <div className="mt-25">
+      <Introduction />
+      <GlobalReach />
+      <TrustandTransparency />
+      <Trust />
+    </div>
+  );
 }
 
 export default page;
