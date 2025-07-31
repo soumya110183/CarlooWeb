@@ -10,7 +10,8 @@ function HeaderSlider({ filteredSlide }) {
       exit={{ x: "-100vw", opacity: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
       className={`w-full mx-auto items-center flex ${
-        filteredSlide.character === "Second Slide" || filteredSlide.character === "Fourth Slide"
+        filteredSlide.character === "Second Slide" ||
+        filteredSlide.character === "Fourth Slide"
           ? "flex-row-reverse"
           : ""
       } justify-between text-white`}
@@ -25,10 +26,15 @@ function HeaderSlider({ filteredSlide }) {
         <div className="flex items-center gap-5 mt-10">
           <ButtonPimary buttonText={"GET STARTED"} />
           <button className="text-white border-none p-0 m-0 outline-none bg-[#651FFF] w-[49px] h-[49px] text-[18px] rounded-full nav-text flex items-center justify-center">
-            <Image src="/play-512.png" width={25} height={25} alt="play button" />
+            <Image
+              src="/play-512.png"
+              width={25}
+              height={25}
+              alt="play button"
+            />
           </button>
           <button className="text-[#00E5FF] bg-transparent p-0 m-0 outline-none border border-[#00E5FF] px-5 py-5 text-[18px] rounded-[36px] nav-text flex items-center justify-center">
-            WATCH INTRO VIDEO
+            <a href="https://www.youtube.com/@Algorethics">WATCH INTRO VIDEO</a>
           </button>
         </div>
       </div>

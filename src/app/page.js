@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Hero from "./_components/Hero";
 
-
 import Regulation from "./_components/Regulations";
 import WhyCarlo from "./_components/WhyCarlo";
 
@@ -21,11 +20,10 @@ export default function Home() {
         <WhyCarlo />
         <KeyFeaturesSection />
         <HowitsWorkSection />
+        <Robot />
         <Services />
         <Research />
-        <Robot />
         <Experience />
-        
       </main>
     </div>
   );
