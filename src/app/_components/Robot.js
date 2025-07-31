@@ -5,8 +5,8 @@ function Robot() {
   return (
     <section>
       <ScrollHeading
-        heading={"CHARACTERSTICS"}
-        paragraph={"Each One Symbolizing a Function Of Carlo"}
+        heading={"ETHICAL GUARDIANS"}
+        paragraph={"Carlo Protecting AI Integrity and Compliance in Real Time"}
       />
       <div className="py-10 flex flex-col gap-16">
         <RobootCharacterstics
