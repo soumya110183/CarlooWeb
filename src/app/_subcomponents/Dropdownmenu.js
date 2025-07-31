@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DropDownMenu({ dropdownOpen }) {
   const dropdownItems = [
     "Global Policy Frameworks: Navigating International AI Standards",
@@ -16,7 +18,7 @@ export default function DropDownMenu({ dropdownOpen }) {
       <div className="w-full flex justify-center items-center flex-wrap gap-3">
         {dropdownItems.map((text, index) => (
           <div key={index} className="flex flex-col items-center gap-1 max-w-[204px]">
-            <img src="/l60_arrczr 1.png" alt="image" className="w-[114px]" />
+            <Image src="/l60_arrczr 1.png" alt="image" className="w-[114px]" width={114} height={114} />
             <p className="font-medium text-[12px] text-center leading-tight">{text}</p>
           </div>
         ))}

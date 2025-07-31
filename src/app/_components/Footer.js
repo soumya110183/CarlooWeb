@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FaTwitter,
   FaFacebookF,
@@ -14,7 +15,7 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto flex flex-wrap justify-between ">
         <div className="max-w-[300px] space-y-4 font-medium">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="Awrora" className="w-[40px]" />
+            <Image src="/logo.png" alt="Awrora" className="w-[40px]" width={40} height={40} />
             <h2 className="text-xl font-bold">Carlo PEaas</h2>
           </div>
           <p className="text-gray-300">
@@ -125,7 +126,7 @@ export default function Footer() {
               className="bg-black text-white text-sm px-4 py-3 outline-none w-full placeholder:font-medium placeholder:text-white"
             />
 
-            <img src="material-symbols_send.svg" alt="sendbutton"></img>
+            <Image src="material-symbols_send.svg" alt="sendbutton" width={24} height={24} />
           </div>
         </div>
       </div>

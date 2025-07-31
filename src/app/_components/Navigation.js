@@ -5,6 +5,7 @@ import DropDownMenu from "../_subcomponents/Dropdownmenu";
 import DropDownMenuResources from "../_subcomponents/DropDownResources";
 import SettingsMenu from "../_subcomponents/SettingsMenu";
 import Link from "next/link";
+import Image from "next/image";
 
 function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -58,7 +59,7 @@ function Navigation() {
         <div className="flex items-center gap-10">
           <Link href={"/"}>
           <div className="flex items-center gap-1">
-            <img src="/logo.png" alt="logo" className="w-[80px] h-[80px]" />
+            <Image src="/logo.png" alt="logo" className="w-[80px] h-[80px]" width={80} height={80}/>
             <span className="font-montserrat text-[18px] font-bold">
               Carlo peass
             </span>
@@ -89,10 +90,12 @@ function Navigation() {
                     {item.name}
                     {(item.name === "Compliance Frameworks" ||
                       item.name === "Resources") && (
-                      <img
+                      <Image
                         src="/Vector.png"
                         alt="dropdown icon"
                         className="w-[15px] transition-transform duration-300"
+                        width={9}
+                        height={16}
                       />
                     )}
                   </span>
@@ -115,10 +118,12 @@ function Navigation() {
           <a href="https://app.policyenforcement.com/login">SIGN IN</a>
         </button>
         <button onClick={() => setSettingsOpen(!settingsOpen)}>
-          <img
+          <Image
             src="/material-symbols_settings.svg"
             alt="settings"
             className="w-[29px]"
+            width={29}
+            height={29}
           />
         </button>
         {settingsOpen && <SettingsMenu dropdownOpen={settingsOpen} />}

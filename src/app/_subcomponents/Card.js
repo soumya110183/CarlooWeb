@@ -45,16 +45,16 @@ export default function Card() {
       
         <div  className="flex-shrink-0">
           <CardComp heading="How Bias Creeps into AI Models - And How Carlo Stops It" paragraph="  Artificial intelligence has the power to transform decision-making
-      across industries, from loan approvals to job candidate screening," img="unsplash_FYOwBvRb2Mk.png" />
+      across industries, from loan approvals to job candidate screening," img="/unsplash_FYOwBvRb2Mk.png" />
         </div>
         <div  className="flex-shrink-0">
-          <CardComp heading="Top 7 Misconceptions About Ethical AI and Compliance" paragraph="  As artificial intelligence (AI) becomes an integral part of industries from healthcare to finance, conversations around," img="unsplash_bV_P23FXxhI.png" />
+          <CardComp heading="Top 7 Misconceptions About Ethical AI and Compliance" paragraph="  As artificial intelligence (AI) becomes an integral part of industries from healthcare to finance, conversations around," img="/unsplash_bV_P23FXxhI.png" />
         </div>
         <div  className="flex-shrink-0">
-          <CardComp heading="How Bias Creeps into AI Models - And How Carlo Stops It" paragraph="Artificial intelligence has the power to transform decision-making across industries. From loan approvals to job candidate screening," img="unsplash_agUC-v_D1iI.png" />
+          <CardComp heading="How Bias Creeps into AI Models - And How Carlo Stops It" paragraph="Artificial intelligence has the power to transform decision-making across industries. From loan approvals to job candidate screening," img="/unsplash_agUC-v_D1iI.png" />
         </div>
         <div  className="flex-shrink-0">
-          <CardComp heading="Why Every AI System Needs a Human-in-the-Loop for Ethical Safety " paragraph="As artificial intelligence becomes increasingly integrated into business operations," img="unsplash_FHgWFzDDAOs.png" />
+          <CardComp heading="Why Every AI System Needs a Human-in-the-Loop for Ethical Safety " paragraph="As artificial intelligence becomes increasingly integrated into business operations," img="/unsplash_FHgWFzDDAOs.png" />
         </div>
      
     </div>

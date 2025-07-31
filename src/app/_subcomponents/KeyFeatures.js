@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function KeyFeatures({ features }) {
   console.log(features.heading);
   return (
@@ -7,17 +9,23 @@ export default function KeyFeatures({ features }) {
       } items-center mx-auto justify-between gap-4`}
     >
       <div className="mt-5">
-        <img src={features.img} className="w-[400px] rounded-2xl mt-5" alt="" />
+        <Image
+          src={features.img}
+          alt={features.heading || "feature image"}
+          width={400}
+          height={300}
+          className="w-[400px] rounded-2xl mt-5 object-cover"
+        />
       </div>
       <div>
-        <div className="flex  gap-2 items-start  ">
+        <div className="flex gap-2 items-start">
           <div
             className="rounded-full mt-4"
             style={{
               width: "18px",
               height: "18px",
               background:
-                "linear-gradient(183deg, rgba(182, 154, 239, 1) 0%, rgba(133, 81, 248, 1) 100%) ",
+                "linear-gradient(183deg, rgba(182, 154, 239, 1) 0%, rgba(133, 81, 248, 1) 100%)",
             }}
           ></div>
           <h3

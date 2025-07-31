@@ -1,8 +1,12 @@
+import Image from "next/image";
+
 export default function CardComp({heading,paragraph,img}){
     return(
         <div className="relative w-[320px] h-[400px] rounded-[20px] overflow-hidden shadow-lg">
   
-  <img
+  <Image
+  width={800}
+  height={1200}
     src={img}
     alt="AI Robot"
     className="w-full h-full object-cover"

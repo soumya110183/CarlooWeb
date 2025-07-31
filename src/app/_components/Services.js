@@ -28,7 +28,7 @@ export default function Services() {
                 Have any question about us?
               </h3>
               <p className="text-[16px] font-medium">
-                Don't hesitate to contact us. Contact Us
+                Don&apos;t hesitate to contact us. Contact Us
               </p>
             </div>
 

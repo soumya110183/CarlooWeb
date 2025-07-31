@@ -26,7 +26,7 @@ export default function Experience() {
               START FREE TRIAL
             </button>
             <button className="p-2.5 bg-transparent border-2 borderblack text-black rounded-[37px]">
-              TALK TO A COMPLIANCE SUPPORT{" "}
+              TALK TO A COMPLIANCE SUPPORT
             </button>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import TrustSteps from "@/app/Why-carlo/_subcomp/TrustSteps";
+import Image from "next/image";
 
 export default function GlobalPolicy(){
     return(
@@ -18,11 +19,13 @@ export default function GlobalPolicy(){
       </div>
         </div>
         <div>
-        <img
+        <Image
           src="/machine-ai 1.png"
           alt="robot-validator"
           className="w-[500px]"
-        ></img>
+          width={500}
+          height={500}
+        />
       </div>
         </section>
     )

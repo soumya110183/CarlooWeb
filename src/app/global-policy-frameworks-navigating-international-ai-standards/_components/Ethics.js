@@ -1,13 +1,17 @@
+import Image from "next/image";
+
 export default function Ethics(){
  return(
     <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
-      <div>
-        <img
-          src="/machine-ai 1.png"
-          alt="robot-validator"
-          className="w-[500px]"
-        ></img>
-      </div>
+       <div>
+              <Image
+                src="/machine-ai 1.png"
+                alt="robot-validator"
+                className="w-[500px]"
+                width={500}
+                height={500}
+              />
+            </div>
       <div className="w-full max-w-[570px]">
         <h2 className="text-[40px] font-bold">2. Interactive Explainer</h2>
         <div className="flex gap-2">
