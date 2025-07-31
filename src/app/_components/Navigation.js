@@ -56,12 +56,15 @@ function Navigation() {
         ref={dropdownRef}
       >
         <div className="flex items-center gap-10">
+          <Link href={"/"}>
           <div className="flex items-center gap-1">
             <img src="/logo.png" alt="logo" className="w-[80px] h-[80px]" />
             <span className="font-montserrat text-[18px] font-bold">
               Carlo peass
             </span>
+            
           </div>
+          </Link>
 
           <ul className="flex items-center gap-[20px] text-[16px] font-semibold">
             {navItems.map((item, i) => (

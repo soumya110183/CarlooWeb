@@ -3,7 +3,7 @@ import ScrollHeading from "../_subcomponents/ScrollHeading";
 
 function Robot() {
   return (
-    <secton>
+    <section>
       <ScrollHeading
         heading={"CHARACTERSTICS"}
         paragraph={"Each One Symbolizing a Function Of Carlo"}
@@ -47,7 +47,7 @@ function Robot() {
           flex={true}
         />
       </div>
-    </secton>
+    </section>
   );
 }
 

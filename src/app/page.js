@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Hero from "./_components/Hero";
 
-import Footer from "./_components/Footer";
+
 import Regulation from "./_components/Regulations";
 import WhyCarlo from "./_components/WhyCarlo";
 
@@ -25,7 +25,7 @@ export default function Home() {
         <Research />
         <Robot />
         <Experience />
-        <Footer />
+        
       </main>
     </div>
   );

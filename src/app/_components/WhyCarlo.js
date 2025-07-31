@@ -96,11 +96,11 @@ export default function WhyCarlo(params) {
               </div>
             ))}
           </div>
-          <img
+          {/* <img
             src="/image 9.png"
             className="w-[500px] rounded-2xl mt-5"
             alt=""
-          />
+          /> */}
         </div>
       </div>
     </section>
