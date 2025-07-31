@@ -6,7 +6,7 @@ import Trust from "./_whyCarloComp/Trust";
 function page() {
   return <div className="mt-25">
     <Introduction />
-    <GlobalReach />
+   
     <TrustandTransparency />
     <Trust />
   </div>;
