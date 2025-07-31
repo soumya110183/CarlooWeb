@@ -4,7 +4,7 @@ export default function CardTrust(){
             <img src="/gdpr.png" alt="" className="mx-auto"></img>
             <h2 className="font-bold text-[16px]">Aligned with GDPR, CCPA, and Global Standards:</h2>
             <p className="font-medium text-[13px] mt-3">Ensures your AI applications comply with major regulatory frameworks.</p>
-            <p className="font-medium text-[13px] mt-3">Carlo's proactive risk management minimizes fines, protects data privacy, and fosters user trust.</p>
+            <p className="font-medium text-[13px] mt-3">Carlo&apos; proactive risk management minimizes fines, protects data privacy, and fosters user trust.</p>
 
             
         </div>

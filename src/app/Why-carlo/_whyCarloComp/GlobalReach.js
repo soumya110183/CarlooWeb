@@ -50,7 +50,7 @@ export default function GlobalReach() {
           Key Feature
         </h3>
         <p className="font-medium text-[22px] mt-2">
-          Users can zoom into regions or countries to explore Carlo's compliance solutions tailored to local laws.
+          Users can zoom into regions or countries to explore Carlo&apos; compliance solutions tailored to local laws.
         </p>
       </div>
 

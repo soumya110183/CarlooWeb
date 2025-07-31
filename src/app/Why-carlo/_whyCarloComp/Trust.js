@@ -11,7 +11,7 @@ export default function Trust() {
           <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
         </div>
         <p className="font-medium text-[22px] mt-6">
-          Carlo's commitment to trust is demonstrated through certifications and
+          Carlo&apos;s commitment to trust is demonstrated through certifications and
           alignment with global standards:
         </p>
         <div className="w-full max-w-[400px] mt-5">

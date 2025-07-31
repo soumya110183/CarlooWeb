@@ -21,7 +21,7 @@ export default function Introduction() {
         <p className="font-medium text-[22px] mt-6">
           Carlo PEaaS is more than a compliance platform—it's your partner in
           building trust, mitigating risks, and ensuring that every algorithm
-          aligns with global ethical and legal standards. Whether you’re
+          aligns with global ethical and legal standards. Whether you&apos;re
           developing AI for healthcare, finance, retail, or IoT, Carlo adapts to
           your needs and ensures your projects are always compliant and
           transparent.
