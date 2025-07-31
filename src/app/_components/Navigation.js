@@ -15,7 +15,7 @@ function Navigation() {
 
   const navItems = [
     { name: "Why Carlo", href: "/Why-carlo" },
-    { name: "Compliance Frameworks", href: "/Compliance Frameworks" },
+    { name: "Compliance Frameworks", href: "/Compliance-Frameworks" },
     { name: "Key Features", href: "/Key Features" },
     { name: "Resources", href: "/Resources" },
     { name: "Contact", href: "/Contact" },

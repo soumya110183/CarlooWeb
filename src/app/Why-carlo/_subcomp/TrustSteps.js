@@ -18,7 +18,7 @@ export default function TrustSteps({title,steps}){
         <div className="flex gap-2">
     
           <div
-            className="rounded-full mt-4"
+            className="rounded-full mt-4 "
             style={{
               width: "18px",
               height: "18px",
