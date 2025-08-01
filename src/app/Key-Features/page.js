@@ -1,14 +1,28 @@
 import AllInOne from "./_Components-keyFeature/1AllinOne";
-import Feedback from "./_Components-keyFeature/Feedback-loops";
+import Featureskey from "./_Components-keyFeature/FeedbackLoops";
+import { featuresData } from "../_data/data";
+import ProjectCount from "./_Components-keyFeature/ProjectCount";
+import SubScribeSection from "./_Components-keyFeature/SubsScribeSection";
 
-import PolicyMonitor from "./_Components-keyFeature/PolicyMonitor";
+
+
+
+
 
 export default function page(){
     return(
         <div className="mt-40">
             <AllInOne />
-            <PolicyMonitor />
-            <Feedback />
+            {featuresData.map((feature, index) => (
+        <Featureskey
+          key={index}
+          flex={feature.flex}
+          heading={feature.heading}
+          paragraph={feature.paragraph}
+        />
+      ))}
+      <ProjectCount />
+      <SubScribeSection />
         </div>
     )
 }
