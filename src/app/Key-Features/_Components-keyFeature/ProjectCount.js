@@ -25,9 +25,9 @@ export default function ProjectCount(){
                             className="absolute top-[-60px] right-0"
                           />
                           <div className="pt-25 pl-4">
-                            <h4 className="font-bold text-3xl">+200</h4>
+                            <h4 className="font-bold text-3xl">23K</h4>
                             <p className="font-semibold text-[15px]">
-                              Compliance Frameworks
+                              Completed Projects
                             </p>
                           </div>
                         </div>
@@ -43,9 +43,9 @@ export default function ProjectCount(){
                             className="absolute top-[-60px] right-0"
                           />
                           <div className="pt-25 pl-4">
-                            <h4 className="font-bold text-3xl">+200</h4>
+                            <h4 className="font-bold text-3xl">67</h4>
                             <p className="font-semibold text-[15px]">
-                              Real-Time Enforcement
+                              Completed Projects
                             </p>
                           </div>
                         </div>
@@ -61,8 +61,8 @@ export default function ProjectCount(){
                             className="absolute top-[-60px] right-0"
                           />
                           <div className="pt-25 pl-4">
-                            <h4 className="font-bold text-3xl">+200</h4>
-                            <p className="font-semibold text-[15px]">Enterprise Scale</p>
+                            <h4 className="font-bold text-3xl">450</h4>
+                            <p className="font-semibold text-[15px]">Completed Projects</p>
                           </div>
                         </div>
                       </div>
@@ -77,8 +77,8 @@ export default function ProjectCount(){
                             className="absolute top-[-60px] right-0"
                             />
                           <div className="pt-25 pl-4">
-                            <h4 className="font-bold text-3xl">+200</h4>
-                            <p className="font-semibold text-[15px]">Virtual Machine</p>
+                            <h4 className="font-bold text-3xl">19 K+</h4>
+                            <p className="font-semibold text-[15px]">Completed Projects</p>
                           </div>
                         </div>
                       </div>
