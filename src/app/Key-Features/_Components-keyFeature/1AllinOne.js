@@ -12,9 +12,9 @@ export default function AllInOne() {
             Carlo PEaaS is more than a compliance platform—it&apos;s your
             partner in building trust, mitigating risks, and ensuring that every
             algorithm aligns with global ethical and legal standards. Whether
-            you're developing AI for healthcare, finance, retail, or IoT, Carlo
-            adapts to your needs and ensures your projects are always compliant
-            and transparent.
+            you&apos;re developing AI for healthcare, finance, retail, or IoT,
+            Carlo adapts to your needs and ensures your projects are always
+            compliant and transparent.
           </p>
         </div>
         <div className="mt-12">

@@ -3,7 +3,7 @@ import ContactForm from "./Contactcomp/ContactForm";
 export default function page() {
   return (
     <div>
-      <section className="w-full mx-auto mt-35">
+      <section className="w-full mx-auto mt-35 text-white">
         <h2 className="text-[48px] font-bold text-center">
           Get in touch with us
         </h2>
@@ -11,7 +11,7 @@ export default function page() {
           Complete the form, and our team will reach out within 24 hours.
         </p>
         <ContactForm />
-         <h2 className="text-[48px] font-bold text-center mt-32">
+        <h2 className="text-[48px] font-bold text-center mt-32">
           Need more help
         </h2>
         <p className="text-[22px] text-center">

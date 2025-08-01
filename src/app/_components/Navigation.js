@@ -46,7 +46,7 @@ function Navigation() {
       );
       const clickedInsideSettings = settingsMenuRef.current?.contains(
         event.target
-      ); // ✅ New
+      );
 
       if (
         !clickedInsideNav &&
