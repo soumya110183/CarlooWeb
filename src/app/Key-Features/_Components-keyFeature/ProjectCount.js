@@ -77,8 +77,8 @@ export default function ProjectCount(){
                             className="absolute top-[-60px] right-0"
                             />
                           <div className="pt-25 pl-4">
-                            <h4 className="font-bold text-3xl">19 K+</h4>
-                            <p className="font-semibold text-[15px]">Completed Projects</p>
+                            <h4 className="font-bold text-3xl">19K+</h4>
+                            <p className="font-semibold text-[15px] text-center">Completed Projects</p>
                           </div>
                         </div>
                       </div>

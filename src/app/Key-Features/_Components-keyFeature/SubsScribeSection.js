@@ -29,7 +29,7 @@ export default function SubScribeSection() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="px-4 py-2 w-full sm:w-2/3 rounded-full text-white border-none outline-none  placeholder:text-gray-500 focus:outline-none focus:ring-0"
+            className="px-4 py-2 w-full sm:w-2/3  text-white border-none outline-none  placeholder:text-gray-500 focus:outline-none focus:ring-0"
             required
           />
           <button
