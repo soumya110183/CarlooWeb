@@ -8,7 +8,7 @@ export default function TrustandTransparency() {
         <Image
           width={700}
           height={700}
-          src="/InterActiveRobot.png"
+          src="/InterActive.png"
           alt="robot-validator"
         />
       </div>

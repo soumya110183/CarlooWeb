@@ -19,8 +19,8 @@ export default function Home() {
         <Hero />
         <WhyCarlo />
         <KeyFeaturesSection />
-        <HowitsWorkSection />
         <Robot />
+        <HowitsWorkSection />
         <Services />
         <Research />
         <Experience />
