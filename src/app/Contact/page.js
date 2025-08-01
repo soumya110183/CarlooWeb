@@ -1,3 +1,5 @@
+import Experience from "../_components/Experience";
+import ContactDetails from "./Contactcomp/ContactDetails";
 import ContactForm from "./Contactcomp/ContactForm";
 
 export default function page() {
@@ -17,6 +19,8 @@ export default function page() {
         <p className="text-[22px] text-center">
           Queries, complaints and feedback. We will be happy to serve you
         </p>
+        <ContactDetails />
+        <Experience />
       </section>
     </div>
   );

@@ -3,14 +3,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
-
-
 import "swiper/css";
 import "swiper/css/navigation";
 import MyCard from "./Mycard";
 import CardTrust from "./CardTrust";
 
-export default function CardSlider({trust}) {
+export default function CardSlider({ trust }) {
   const data = [
     {
       title: "Card One",
@@ -45,7 +43,6 @@ export default function CardSlider({trust}) {
     >
       {data.map((card, index) => (
         <SwiperSlide key={index}>
-         
           {trust ? <CardTrust /> : <MyCard {...card} />}
         </SwiperSlide>
       ))}

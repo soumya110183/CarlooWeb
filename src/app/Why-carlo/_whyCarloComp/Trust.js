@@ -14,9 +14,9 @@ export default function Trust() {
           Carlo&apos;s commitment to trust is demonstrated through
           certifications and alignment with global standards:
         </p>
-        {/* <div className="w-full max-w-[400px] mt-5">
+        <div className="w-full max-w-[400px] mt-5">
           <CardSlider trust={true} />
-        </div> */}
+        </div>
       </div>
 
       <div>

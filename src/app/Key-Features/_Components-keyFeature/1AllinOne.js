@@ -23,7 +23,7 @@ export default function AllInOne() {
       </div>
       <div>
         <Image
-          src="/machine-ai 1.png"
+          src="/Key Feature -robot1.png"
           alt="robot-validator"
           className="w-[500px]"
           width={500}
