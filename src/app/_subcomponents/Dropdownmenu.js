@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { forwardRef } from "react";
 
-const DropDownMenu = forwardRef(({ dropdownOpen }, ref) => {
+const DropDownMenu = forwardRef(({ dropdownOpen,closeDropdown }, ref) => {
   const dropdownItems = [
     {
       title: "Global Policy Frameworks: Navigating International AI Standards",
@@ -48,6 +48,7 @@ const DropDownMenu = forwardRef(({ dropdownOpen }, ref) => {
             href={item.href}
             key={index}
             className="flex flex-col items-center gap-1 max-w-[204px] hover:opacity-90 transition"
+            onClick={closeDropdown}
           >
             <Image
               src="/l60_arrczr 1.png"

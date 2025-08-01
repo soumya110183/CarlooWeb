@@ -21,7 +21,7 @@ function Navigation() {
   const navItems = [
     { name: "Why Carlo", href: "/Why-carlo" },
     { name: "Compliance Frameworks", href: "/Compliance-Frameworks" },
-    { name: "Key Features", href: "/Key Features" },
+    { name: "Key Features", href: "/Key-Features" },
     { name: "Resources", href: "/Resources" },
     { name: "Contact", href: "/Contact" },
     { name: "About Us", href: "/About Us" },
@@ -56,7 +56,7 @@ function Navigation() {
       ) {
         setDropdownOpen(false);
         setResourcesOpen(false);
-        setSettingsOpen(false); // ✅ Close settings too
+        setSettingsOpen(false); 
       }
     };
 
@@ -169,7 +169,7 @@ function Navigation() {
       </nav>
 
       {dropdownOpen && (
-        <DropDownMenu dropdownOpen={dropdownOpen} ref={dropdownMenuRef} />
+        <DropDownMenu dropdownOpen={dropdownOpen} ref={dropdownMenuRef} closeDropdown={() => setDropdownOpen(false)} />
       )}
     </div>
   );

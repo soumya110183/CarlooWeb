@@ -1,7 +1,9 @@
 import Image from "next/image";
 import TrustSteps from "../Why-carlo/_subcomp/TrustSteps";
 import HeadingReuse from "../_subcomponents/HeadingReuse";
-import { trustStepsData } from "../_data/data";
+import {dataProtectionLawsData} from "../_data/data"
+
+
 
 
 
@@ -10,9 +12,16 @@ export default function page() {
     <div className="mt-50">
       <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
         <div className="w-full max-w-[570px]">
-          <HeadingReuse heading={"Ethical AI Guidelines: Building Responsible AI Systems"} />
+          <HeadingReuse
+            heading={"Data Protection Laws: Ensuring Data Privacy Across Borders"}
+          />
+          <p className="font-medium text-[22px] mt-6">
+            Carlo PEaaS ensures compliance with the most stringent global data
+            protection regulations. Each compliance is represented with a
+            Unicode icon for better visualization and organization.
+          </p>
           <div className="mt-7">
-            {trustStepsData.map((item, index) => (
+            {dataProtectionLawsData.map((item, index) => (
               <TrustSteps key={index} title={item.title} steps={item.steps} />
             ))}
           </div>
