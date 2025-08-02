@@ -5,29 +5,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { forwardRef } from "react";
 
-const DropDownMenu = forwardRef(({ dropdownOpen,closeDropdown }, ref) => {
+const DropDownMenu = forwardRef(({ dropdownOpen, closeDropdown }, ref) => {
   const dropdownItems = [
     {
       title: "Global Policy Frameworks: Navigating International AI Standards",
       href: "/global-policy-frameworks",
+      img: "/euaiac.png",
     },
     {
       title: "Ethical AI Guidelines: Building Responsible AI Systems",
       href: "/ethical-ai-guidelines",
+      img: "/california.png",
     },
     {
       title: "Data Protection Laws: Ensuring Data Privacy Across Borders",
       href: "/data-protection-laws",
+      img: "/gdpr.jpg",
     },
     {
       title:
         "Carlo PEaaS: Enforcing Rome Call for AI Ethics in Every AI Project",
       href: "/rome-call-ai-ethics",
+      img: "/romecallfor aiethics.png",
     },
     {
       title:
         "Carlo PEaaS: Enforcing Sharia-Compliant AI Ethics in the Modern World",
       href: "/sharia-compliant-ai-ethics",
+      img: "/sharia.png",
     },
   ];
 
@@ -50,13 +55,15 @@ const DropDownMenu = forwardRef(({ dropdownOpen,closeDropdown }, ref) => {
             className="flex flex-col items-center gap-1 max-w-[204px] hover:opacity-90 transition"
             onClick={closeDropdown}
           >
-            <Image
-              src="/l60_arrczr 1.png"
-              alt="icon"
-              className="w-[114px]"
-              width={114}
-              height={114}
-            />
+            <div className="w-[90px] h-[90px] rounded-full  p-1 flex items-center justify-center shrink-0">
+              <Image
+                src={item.img}
+                alt="icon"
+                className="object-cover rounded-full"
+                width={90}
+                height={90}
+              />
+            </div>
             <p className="font-medium text-[12px] text-center leading-tight">
               {item.title}
             </p>

@@ -56,7 +56,7 @@ function Navigation() {
       ) {
         setDropdownOpen(false);
         setResourcesOpen(false);
-        setSettingsOpen(false); 
+        setSettingsOpen(false);
       }
     };
 
@@ -80,13 +80,14 @@ function Navigation() {
       >
         <div className="flex items-center gap-10">
           <Link href="/">
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/carlo-logo.png"
                 alt="logo"
-                className="w-[80px] h-[80px]"
-                width={80}
-                height={80}
+                width={100}
+                height={100}
+                className="w-auto h-auto"
+                priority
               />
               <span className="font-montserrat text-[18px] font-bold">
                 Carlo peass
@@ -169,7 +170,11 @@ function Navigation() {
       </nav>
 
       {dropdownOpen && (
-        <DropDownMenu dropdownOpen={dropdownOpen} ref={dropdownMenuRef} closeDropdown={() => setDropdownOpen(false)} />
+        <DropDownMenu
+          dropdownOpen={dropdownOpen}
+          ref={dropdownMenuRef}
+          closeDropdown={() => setDropdownOpen(false)}
+        />
       )}
     </div>
   );
