@@ -1,4 +1,5 @@
 import Experience from "../_components/Experience";
+import SubScribe from "../About-us/_components/SubScribe";
 import ContactDetails from "./Contactcomp/ContactDetails";
 import ContactForm from "./Contactcomp/ContactForm";
 
@@ -21,6 +22,10 @@ export default function page() {
         </p>
         <ContactDetails />
         <Experience />
+        <div className="pt-32">
+          <SubScribe />
+        </div>
+        
       </section>
     </div>
   );
