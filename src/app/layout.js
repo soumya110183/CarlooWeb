@@ -16,7 +16,7 @@ export const metadata = {
   title: "Carlo peass | Ethical and Data Science",
   description: "Ethical and Data Science",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo-carlo.png",
   },
 };
 

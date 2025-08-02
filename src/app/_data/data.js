@@ -221,17 +221,20 @@ export const featuresData = [
   },
   {
     heading: "Multi-Project Scalability",
+    img: "multi-project scalablity.png",
     paragraph:
       "This feature is crucial for large enterprises with various teams and diverse projects. Carlo makes it easy to maintain consistent compliance across the board, regardless of project complexity or geographical location.",
   },
   {
     flex: true,
     heading: "Compliance Dashboard",
+    img: "compliance.png",
     paragraph:
       "The dashboard is an essential tool for executives and compliance officers to track real-time compliance, mitigate risks, and make informed decisions based on up-to-date data.",
   },
   {
     heading: "Cross-Platform Integration",
+    img: "cross-platform.png",
     paragraph:
       "This feature ensures that Carlo can be easily incorporated into existing workflows and infrastructure, enabling developers and organizations to implement compliance without disrupting their current systems.",
   },
