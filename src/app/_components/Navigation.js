@@ -24,7 +24,7 @@ function Navigation() {
     { name: "Key Features", href: "/Key-Features" },
     { name: "Resources", href: "/Resources" },
     { name: "Contact", href: "/Contact" },
-    { name: "About Us", href: "/About Us" },
+    { name: "About Us", href: "/About-us" },
   ];
 
   useEffect(() => {
