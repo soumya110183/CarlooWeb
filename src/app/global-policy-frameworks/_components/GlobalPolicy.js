@@ -21,7 +21,7 @@ export default function GlobalPolicy() {
       </div>
       <div>
         <Image
-          src="/machine-ai 1.png"
+          src="/feature3_2x_idh2mq.png"
           alt="robot-validator"
           className="w-[500px]"
           width={500}
