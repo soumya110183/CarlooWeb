@@ -21,22 +21,22 @@ export default function SubScribeSection() {
           heading={"Subscribe to the newsletter and receive notifications."}
         />
         <div className="flex gap-2 items-start">
-          <p className="font-medium text-[22px] mt-6">
+          <p className="font-normal text-[22px] mt-6">
             Sign up for updates and stay informed about the latest developments
             and be a part of our community and get the latest news and insights
           </p>
         </div>
-       <SubScriptionForm />
+        <SubScriptionForm />
         <div className="flex gap-4 mt-4">
-            {[FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn].map(
-              (Icon, idx) => (
-                <Icon
-                  key={idx}
-                  className="text-white bg-black rounded-full p-2 w-8 h-8 cursor-pointer hover:scale-105 transition"
-                />
-              )
-            )}
-          </div>
+          {[FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn].map(
+            (Icon, idx) => (
+              <Icon
+                key={idx}
+                className="text-white bg-black rounded-full p-2 w-8 h-8 cursor-pointer hover:scale-105 transition"
+              />
+            )
+          )}
+        </div>
       </div>
       <div>
         <Image

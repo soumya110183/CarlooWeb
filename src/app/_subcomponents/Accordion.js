@@ -28,7 +28,7 @@ export default function FeatureAccordions({ features }) {
           <Accordion.Content className="mt-2 text-secondary">
             <ul className="list-disc list-inside space-y-2 pt-3">
               {feature.featureDetails.map((detail, i) => (
-                <li key={i} className="font-medium text-[17px] leading-relaxed">
+                <li key={i} className="font-normal text-[17px] leading-relaxed">
                   {detail}
                 </li>
               ))}

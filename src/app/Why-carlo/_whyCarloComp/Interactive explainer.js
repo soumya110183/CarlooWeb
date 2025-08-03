@@ -21,7 +21,7 @@ export default function TrustandTransparency() {
 
           <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
         </div>
-        <p className="font-medium text-[22px] mt-6">
+        <p className="font-normal text-[22px] mt-6">
           An interactive workflow diagram explains how Carlo integrates
           seamlessly into your AI projects. Each step includes a clickable icon
           that reveals detailed functionality:

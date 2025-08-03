@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function TeamContainer({img,name,role,details}) {
+export default function TeamContainer({ img, name, role, details }) {
   return (
     <div className="bg-[#0F092A] px-10 items-center  justify-items-center rounded-3xl py-10 ">
       <div>
@@ -13,14 +13,13 @@ export default function TeamContainer({img,name,role,details}) {
             className="object-cover w-full h-full"
           />
         </div>
-        <h3 className="font-bold text-center text-[24px] mt-3">
-          {name}
-        </h3>
+        <h3 className="font-bold text-center text-[24px] mt-3">{name}</h3>
 
-        <p className="font-semibold text-[18px] text-center">
-         {role}
-        </p>
-        <p className="font-medium text-[16px] mt-2.5 text-center ">
+        <p className="font-semibold text-[18px] text-center">{role}</p>
+        <p
+          className="font-normal  text-[16px] mt-2.5  "
+          style={{ whiteSpace: "pre-line" }}
+        >
           {details}
         </p>
       </div>

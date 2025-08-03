@@ -35,7 +35,7 @@ export default function GlobalReach() {
           <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
           <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
         </div>
-        <p className="font-medium text-[22px] mt-6">
+        <p className="font-normal text-[22px] mt-6">
           A visually engaging interactive world map highlights the regions where
           Carlo supports compliance. Each region is clickable, displaying the
           specific laws and frameworks Carlo adheres to.
@@ -51,7 +51,7 @@ export default function GlobalReach() {
         >
           Key Feature
         </h3>
-        <p className="font-medium text-[22px] mt-2">
+        <p className="font-normal text-[22px] mt-2">
           Users can zoom into regions or countries to explore Carlo&apos;
           compliance solutions tailored to local laws.
         </p>

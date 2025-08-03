@@ -1,5 +1,3 @@
-
-
 import HeadingReuse from "../../_subcomponents/HeadingReuse";
 import Image from "next/image";
 
@@ -18,11 +16,12 @@ export default function PolicyMonitor() {
       <div className="w-full max-w-[570px]">
         <HeadingReuse heading={"Policy Monitoring & Enforcement"} />
         <div className="flex gap-2 items-start">
-          <p className="font-medium text-[22px] mt-6">
-           By continuously monitoring data flows and AI outputs, Carlo ensures that every step of the AI lifecycle is compliant, reducing the risk of data breaches, fines, and non-compliance.
+          <p className="font-normal text-[22px] mt-6">
+            By continuously monitoring data flows and AI outputs, Carlo ensures
+            that every step of the AI lifecycle is compliant, reducing the risk
+            of data breaches, fines, and non-compliance.
           </p>
         </div>
-       
       </div>
     </section>
   );

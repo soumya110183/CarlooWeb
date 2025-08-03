@@ -15,7 +15,7 @@ export default function GlobalPolicy() {
 
           <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
         </div>
-        <div className="mt-9">
+        <div className="mt-9 h-[600px]">
           <FeatureAccordions features={featuresInternational} />
         </div>
       </div>
