@@ -1,5 +1,7 @@
 import Image from "next/image";
-import TrustSteps from "../_subcomp/TrustSteps";
+import { featuresInterActive } from "@/app/_data/data";
+
+import FeatureAccordions from "@/app/_subcomponents/Accordion";
 
 export default function TrustandTransparency() {
   return (
@@ -25,32 +27,7 @@ export default function TrustandTransparency() {
           that reveals detailed functionality:
         </p>
         <div className="mt-4">
-          <TrustSteps
-            title={"Step 1 : Data Monitoring"}
-            steps={[
-              "Real-time tracking of data flow through AI models and applications.",
-              "Ensures no personally identifiable information (PII) or sensitive data is mishandled",
-            ]}
-          />
-          <TrustSteps
-            title={"Step 2: Policy Enforcement"}
-            steps={[
-              "Detects policy violations and takes automated actions like blocking or alerting.",
-              "Example: Prevents models from using biased datasets or unauthorized data access.",
-            ]}
-          />
-          <TrustSteps
-            title={"Step 3: Feedback & Corrections"}
-            steps={[
-              "Sends detailed reports and JSON-based feedback for developers to retrain models or correct workflows.",
-            ]}
-          />
-          <TrustSteps
-            title={"Step 4: Compliance Assurance"}
-            steps={[
-              "Generates audit-ready logs and reports for stakeholders, showcasing adherence to global laws and ethical AI principles.",
-            ]}
-          />
+          <FeatureAccordions features={featuresInterActive} />
         </div>
       </div>
     </div>

@@ -7,10 +7,20 @@ module.exports = {
   darkMode: "class", // <-- enables dark mode via class (controlled by toggle)
   theme: {
     extend: {
-      // Optional: Add your custom colors or font here if needed
-      // colors: {
-      //   brand: "#6366f1"
-      // }
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 300ms ease-out",
+        "accordion-up": "accordion-up 300ms ease-out",
+      },
     },
   },
   plugins: [],

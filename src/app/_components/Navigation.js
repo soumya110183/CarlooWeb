@@ -6,12 +6,15 @@ import DropDownMenuResources from "../_subcomponents/DropDownResources";
 import SettingsMenu from "../_subcomponents/SettingsMenu";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navRef = useRef(null);
   const dropdownMenuRef = useRef(null);
@@ -89,66 +92,67 @@ function Navigation() {
                 className="w-auto h-auto"
                 priority
               />
-              <span className="font-montserrat text-[18px] font-bold">
+              {/* <span className="font-montserrat text-[18px] font-bold">
                 Carlo peass
-              </span>
+              </span> */}
             </div>
           </Link>
 
           <ul className="flex items-center gap-[20px] text-[16px] font-semibold">
-            {navItems.map((item, i) => (
-              <li
-                key={i}
-                className="relative group cursor-pointer"
-                onClick={() => {
-                  if (item.name === "Compliance Frameworks") {
-                    setDropdownOpen(!dropdownOpen);
-                    setResourcesOpen(false);
-                  } else if (item.name === "Resources") {
-                    setResourcesOpen(!resourcesOpen);
-                    setDropdownOpen(false);
-                  } else {
-                    setDropdownOpen(false);
-                    setResourcesOpen(false);
-                  }
-                }}
-              >
-                <Link
-                  href={`${
-                    item.name === "Compliance Frameworks" ||
-                    item.name === "Resources"
-                      ? "#"
-                      : item.href
-                  }`}
+            {navItems.map((item, i) => {
+              const isActive = item.href === pathname;
+              return (
+                <li
+                  key={i}
+                  className="relative group cursor-pointer"
+                  onClick={() => {
+                    if (item.name === "Compliance Frameworks") {
+                      setDropdownOpen(!dropdownOpen);
+                      setResourcesOpen(false);
+                    } else if (item.name === "Resources") {
+                      setResourcesOpen(!resourcesOpen);
+                      setDropdownOpen(false);
+                    } else {
+                      setDropdownOpen(false);
+                      setResourcesOpen(false);
+                    }
+                  }}
                 >
-                  <span className="hover:text-[#C7BFE9] transition-all duration-300 flex items-center gap-2">
-                    {item.name}
-                    {(item.name === "Compliance Frameworks" ||
-                      item.name === "Resources") && (
-                      <Image
-                        src="/Vector.png"
-                        alt="dropdown icon"
-                        className="w-[15px] transition-transform duration-300"
-                        width={9}
-                        height={16}
-                      />
-                    )}
-                  </span>
+                  <Link
+                    href={`${
+                      item.name === "Compliance Frameworks" ||
+                      item.name === "Resources"
+                        ? "#"
+                        : item.href
+                    }`}
+                  >
+                    <span
+                      className={`hover:text-[#C7BFE9] ${
+                        isActive && "text-[#7A5BFF]"
+                      } transition-all duration-300 flex items-center gap-2`}
+                    >
+                      {item.name}
+                      {(item.name === "Compliance Frameworks" ||
+                        item.name === "Resources") && (
+                        <IoIosArrowDown size={25} />
+                      )}
+                    </span>
 
-                  <div className="absolute left-1/2 -bottom-[15px] flex items-center gap-1 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-400">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-                    <div className="w-10 h-2 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-                  </div>
-                </Link>
+                    <div className="absolute left-1/2 -bottom-[15px] flex items-center gap-1 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-400">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
+                      <div className="w-10 h-2 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
+                    </div>
+                  </Link>
 
-                {resourcesOpen && item.name === "Resources" && (
-                  <DropDownMenuResources
-                    dropdownOpen={resourcesOpen}
-                    ref={resourcesMenuRef}
-                  />
-                )}
-              </li>
-            ))}
+                  {resourcesOpen && item.name === "Resources" && (
+                    <DropDownMenuResources
+                      dropdownOpen={resourcesOpen}
+                      ref={resourcesMenuRef}
+                    />
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
 

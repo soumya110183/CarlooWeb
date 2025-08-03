@@ -3,9 +3,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { forwardRef } from "react";
 
 const DropDownMenu = forwardRef(({ dropdownOpen, closeDropdown }, ref) => {
+  const pathName = usePathname();
+
   const dropdownItems = [
     {
       title: "Global Policy Frameworks: Navigating International AI Standards",
@@ -48,27 +51,34 @@ const DropDownMenu = forwardRef(({ dropdownOpen, closeDropdown }, ref) => {
       }`}
     >
       <div className="w-full flex justify-center items-center flex-wrap gap-3">
-        {dropdownItems.map((item, index) => (
-          <Link
-            href={item.href}
-            key={index}
-            className="flex flex-col items-center gap-1 max-w-[204px] hover:opacity-90 transition"
-            onClick={closeDropdown}
-          >
-            <div className="w-[90px] h-[90px] rounded-full  p-1 flex items-center justify-center shrink-0">
-              <Image
-                src={item.img}
-                alt="icon"
-                className="object-cover rounded-full"
-                width={90}
-                height={90}
-              />
-            </div>
-            <p className="font-medium text-[12px] text-center leading-tight">
-              {item.title}
-            </p>
-          </Link>
-        ))}
+        {dropdownItems.map((item, index) => {
+          const isActive = item.href === pathName;
+          return (
+            <Link
+              href={item.href}
+              key={index}
+              className="flex flex-col items-center gap-1 max-w-[204px] hover:opacity-90 transition"
+              onClick={closeDropdown}
+            >
+              <div className="w-[90px] h-[90px] rounded-full  p-1 flex items-center justify-center shrink-0">
+                <Image
+                  src={item.img}
+                  alt="icon"
+                  className="object-cover rounded-full"
+                  width={90}
+                  height={90}
+                />
+              </div>
+              <p
+                className={`font-medium text-[12px] ${
+                  isActive && "text-[#7A5BFF]"
+                } text-center leading-tight`}
+              >
+                {item.title}
+              </p>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
