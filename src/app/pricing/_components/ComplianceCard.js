@@ -1,0 +1,34 @@
+import { FaCheck } from 'react-icons/fa';
+
+
+export default function ComplianceCard({plan}) {
+
+
+  return (
+    <div className="flex justify-center p-4 font-sans">
+      <div
+        className="text-white p-8 rounded-xl shadow-2xl max-w-sm flex flex-col justify-between"
+        style={{ backgroundColor: "#5d3fd3 "}}
+      >
+        <div>
+          <div className="text-3xl font-bold mb-2">{plan.price}</div>
+          <div className="text-xl font-semibold mb-4">{plan.title}</div>
+          <p className="text-gray-200 mb-6 text-sm leading-relaxed">
+            {plan.description}
+          </p>
+          <ul className="space-y-3 mb-8">
+            {plan.features.map((feature, index) => (
+              <li key={index} className="flex items-center text-sm">
+                <FaCheck className="text-white mr-3 flex-shrink-0" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <button className="w-full bg-white text-[#5d3fd3] font-bold py-3 px-6 rounded-lg text-center transition-transform transform hover:scale-105">
+          Choose Plan
+        </button>
+      </div>
+    </div>
+  );
+}

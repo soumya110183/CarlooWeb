@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import MyCard from "./Mycard";
 import CardTrust from "./CardTrust";
 
-export default function CardSlider({ trust }) {
+export default function CardSlider({ trust,compliance }) {
   const data = [
     {
       title: "Card One",

@@ -44,38 +44,92 @@ function HeaderSlider({ filteredSlide }) {
           <Image
             src="/banner_ai_m7ru8l.png"
             alt="main bot"
-            width={400}
+            width={1200}
             height={400}
             className="absolute top-[50px] left-[380px] z-10"
           />
-          <Image
-            src="/diamond_a9huzy.png"
-            alt="diamond"
-            width={260}
-            height={260}
-            className="absolute top-[100px] left-[0px]"
-          />
-          <Image
-            src="/egg_ng3ic4.png"
-            alt="egg"
-            width={270}
-            height={270}
-            className="absolute bottom-[100px] right-[20px] z-50"
-          />
-          <Image
-            src="/hexa_qbnay8.png"
-            alt="hexagon"
-            width={120}
-            height={120}
-            className="absolute left-[240px]"
-          />
-          <Image
-            src="/nail_aog1yx.png"
-            alt="nail"
-            width={280}
-            height={280}
-            className="absolute bottom-[0px] left-[200px]"
-          />
+       <motion.div
+  animate={{
+    x: [0, -30, 0, 30, 0],
+    y: [0, -30, 0, -30, 0],
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute top-[100px] left-[0px]"
+>
+  <Image
+    src="/diamond_a9huzy.png"
+    alt="diamond"
+    width={260}
+    height={260}
+  />
+</motion.div>
+
+
+<motion.div
+  animate={{
+    x: [0, -20, 0, 20, 0],
+    y: [0, -20, 0, -20, 0],
+  }}
+  transition={{
+    duration: 5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute left-[240px]"
+>
+  <Image
+    src="/hexa_qbnay8.png"
+    alt="hexagon"
+    width={120}
+    height={120}
+  />
+</motion.div>
+
+
+<motion.div
+  animate={{
+    x: [0, -15, 0, 15, 0],
+    y: [0, -25, 0, -25, 0],
+  }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute bottom-[0px] left-[200px]"
+>
+  <Image
+    src="/nail_aog1yx.png"
+    alt="nail"
+    width={280}
+    height={280}
+  />
+</motion.div>
+
+
+<motion.div
+  animate={{
+    x: [0, 15, 0, -15, 0],
+    y: [0, -20, 0, -20, 0],
+  }}
+  transition={{
+    duration: 5.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute bottom-[100px] right-[20px] z-50"
+>
+  <Image
+    src="/egg_ng3ic4.png"
+    alt="egg"
+    width={270}
+    height={270}
+  />
+</motion.div>
         </div>
       )}
 

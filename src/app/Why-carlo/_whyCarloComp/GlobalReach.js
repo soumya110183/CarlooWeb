@@ -1,5 +1,6 @@
 "use client";
 
+import ContactMap from "@/app/Contact/Contactcomp/MapContainer";
 import { useState } from "react";
 // import WorldMap from "../_subcomp/WorldMap";
 
@@ -57,28 +58,9 @@ export default function GlobalReach() {
         </p>
       </div>
 
-      {/* <div className="w-full max-w-[720px]">
-      <div className="w-full max-w-[600px] h-[300px] bg-[#0F092A] rounded-[36px] p-6">
-        <h4 className="text-[24px] font-bold mb-6">
-          {region}
-        </h4>
-        <ul className="flex flex-col gap-6">
-          {(regionLaws[region] || []).map((law, i) => (
-            <li key={i} className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center">
-                <span className="text-white text-lg">✔️</span>
-              </div>
-              <p className="font-bold text-[20px]">{law}</p>
-            </li>
-          ))}
-        </ul>
-
-        
-      </div>
-      <div className="mt-10">
-          <WorldMap onCountryClick={setSelectedCountry}  />
-        </div>
-      </div> */}
+  <div className="w-full">
+    <ContactMap />
+  </div>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import Experience from "../_components/Experience";
+import OfficeMap from "../_subcomponents/LocationMap";
 import SubScribe from "../About-us/_components/SubScribe";
 import ContactDetails from "./Contactcomp/ContactDetails";
 import ContactForm from "./Contactcomp/ContactForm";
+import ContactMap from "./Contactcomp/MapContainer";
 
 export default function page() {
   return (
@@ -22,6 +24,7 @@ export default function page() {
         </p>
         <ContactDetails />
         <Experience />
+       <ContactMap />
         <div className="pt-32">
           <SubScribe />
         </div>
