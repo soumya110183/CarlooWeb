@@ -226,12 +226,13 @@ export const globalPolicyFrameworksData = [
 export const featuresData = [
   {
     heading: "Policy Monitoring & Enforcement",
+    flex: true,
     paragraph:
       "By continuously monitoring data flows and AI outputs, Carlo ensures that every step of the AI lifecycle is compliant, reducing the risk of data breaches, fines, and non-compliance.",
     img: "keyFeaturesrobot2.png",
   },
   {
-    flex: true,
+    
     heading: "Feedback Loops",
     img: "keyFeatures-robot3.png",
     paragraph:
@@ -239,12 +240,13 @@ export const featuresData = [
   },
   {
     heading: "Multi-Project Scalability",
+    flex: true,
     img: "multi-project scalablity.png",
     paragraph:
       "This feature is crucial for large enterprises with various teams and diverse projects. Carlo makes it easy to maintain consistent compliance across the board, regardless of project complexity or geographical location.",
   },
   {
-    flex: true,
+ 
     heading: "Compliance Dashboard",
     img: "compliance.png",
     paragraph:
@@ -252,6 +254,7 @@ export const featuresData = [
   },
   {
     heading: "Cross-Platform Integration",
+    flex: true,
     img: "cross-platform.png",
     paragraph:
       "This feature ensures that Carlo can be easily incorporated into existing workflows and infrastructure, enabling developers and organizations to implement compliance without disrupting their current systems.",

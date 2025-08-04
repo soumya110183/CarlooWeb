@@ -16,7 +16,7 @@ function HeaderSlider({ filteredSlide }) {
           : ""
       } justify-between text-white`}
     >
-      <div className="z-40 pl-30">
+      <div className={`z-40 pl-30 ${filteredSlide.character === "Second Slide" ? "pr-30" :"pl-30" }"`}>
         <h1 className="text-[48px] font-bold bg-gradient-to-br from-cyan-300 to-purple-200 bg-clip-text text-transparent">
           {filteredSlide.heading}
         </h1>
@@ -134,60 +134,128 @@ function HeaderSlider({ filteredSlide }) {
       )}
 
       {filteredSlide.character === "Second Slide" && (
-        <div className="relative w-[1200px] h-[500px]">
-          <Image
-            src="/pyramid_cb4o7y (1).png"
-            alt="main bot"
-            width={400}
-            height={400}
-            className="absolute top-35 right-0 z-10"
-          />
-          <Image
-            src="/shield_mkqdnn (1).png"
-            alt="main bot"
-            width={300}
-            height={300}
-            className="absolute left-20 bottom-0 z-10"
-          />
-          <Image
-            src="/bar_hyiha8.png"
-            alt="main bot"
-            width={300}
-            height={300}
-            className="absolute left-35 bottom-70 z-10"
-          />
-          <Image
-            src="/gem_le0tlz (1).png"
-            alt="main bot"
-            width={300}
-            height={300}
-            className="absolute left-[380px] bottom-80 z-10"
-          />
+        <div className="relative w-[1000px] h-[500px]">
+          <motion.div
+  animate={{ y: [0, -70, 0] }}
+  transition={{
+    duration: 4,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute top-35 right-0 z-10"
+>
+  <Image
+    src="/pyramid_cb4o7y (1).png"
+    alt="main bot"
+    width={400}
+    height={400}
+  />
+</motion.div>
+
+
+<motion.div
+  animate={{ y: [0, -70, 0] }}
+  transition={{
+    duration: 5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute left-10 bottom-0 z-10"
+>
+  <Image
+    src="/shield_mkqdnn (1).png"
+    alt="main bot"
+    width={300}
+    height={300}
+  />
+</motion.div>
+
+
+<motion.div
+  animate={{ y: [0, -70, 0] }}
+  transition={{
+    duration: 6,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute left-35 bottom-70 z-10"
+>
+  <Image
+    src="/bar_hyiha8.png"
+    alt="main bot"
+    width={300}
+    height={300}
+  />
+</motion.div>
+
+/
+<motion.div
+  animate={{ y: [0, -70, 0] }}
+  transition={{
+    duration: 7,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute left-[380px] bottom-80 z-10"
+>
+  <Image
+    src="/gem_le0tlz (1).png"
+    alt="main bot"
+    width={300}
+    height={300}
+  />
+</motion.div>
         </div>
       )}
 
       {filteredSlide.character === "Third Slide" && (
         <div className="relative w-[1400px] h-[500px]">
-          <Image
-            src="/fog_r7nvlh (1).png"
-            alt="main bot"
-            fill
-            className="absolute top-[10px] w-full z-10 object-cover"
-          />
-          <Image
-            src="/duo_hskh2x (1).png"
-            alt="diamond"
-            width={400}
-            height={400}
-            className="absolute top-[100px] left-[0px] z-70"
-          />
-          <Image
-            src="/egg_ng3ic4.png"
-            alt="egg"
-            width={270}
-            height={270}
-            className="absolute bottom-[1px] right-[220px] z-50"
-          />
+   
+        <Image
+          src="/fog_r7nvlh (1).png"
+          alt="main bot"
+          
+          className="object-cover absolute top-[100px] right-[0px] "
+          width={800}
+          height={800}
+        />
+    
+
+     
+      <motion.div
+        animate={{ y: [0, -30, 0] }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        className="absolute top-[100px] left-[0px] z-70"
+      >
+        <Image
+          src="/duo_hskh2x (1).png"
+          alt="diamond"
+          width={400}
+          height={400}
+        />
+      </motion.div>
+
+      
+      <motion.div
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          duration: 4.5,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        className="absolute bottom-[1px] right-[220px] z-50"
+      >
+        <Image
+          src="/egg_ng3ic4.png"
+          alt="egg"
+          width={270}
+          height={270}
+        />
+      </motion.div>
         </div>
       )}
 

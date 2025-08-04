@@ -3,7 +3,8 @@ import OfficeMap from "../_subcomponents/LocationMap";
 import SubScribe from "../About-us/_components/SubScribe";
 import ContactDetails from "./Contactcomp/ContactDetails";
 import ContactForm from "./Contactcomp/ContactForm";
-import ContactMap from "./Contactcomp/MapContainer";
+import ContactWebMap from "./Contactcomp/ContactWebMap";
+
 
 export default function page() {
   return (
@@ -22,9 +23,10 @@ export default function page() {
         <p className="text-[22px] text-center">
           Queries, complaints and feedback. We will be happy to serve you
         </p>
+        <ContactWebMap />
         <ContactDetails />
+      
         <Experience />
-       <ContactMap />
         <div className="pt-32">
           <SubScribe />
         </div>

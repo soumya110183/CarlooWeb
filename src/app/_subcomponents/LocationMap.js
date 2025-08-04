@@ -44,6 +44,7 @@ export default function OfficeMap() {
       zoom={2}
       scrollWheelZoom={true}
       style={{ height: "500px", width: "100%" }}
+       className="rounded-xl shadow-lg overflow-hidden border border-gray-300  z-0"
     >
       <TileLayer
         attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a>'
