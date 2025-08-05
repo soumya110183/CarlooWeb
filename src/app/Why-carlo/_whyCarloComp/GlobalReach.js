@@ -24,6 +24,38 @@ const regionLaws = {
 };
 
 export default function GlobalReach() {
+  const regions = [
+    {
+      name: "North America",
+      coords: [40.0, -100.0],
+      description: "Offices across the US and Canada",
+    },
+    {
+      name: "Europe",
+      coords: [54.0, 15.0],
+      description: "European presence across EU member states",
+    },
+    {
+      name: "Asia Pacific",
+      coords: [13.0, 100.0],
+      description: "Headquarters in India and regional offices across APAC",
+    },
+    {
+      name: "Africa",
+      coords: [1.5, 17.5],
+      description: "Expansion efforts underway across major African economies",
+    },
+    {
+      name: "Latin America",
+      coords: [-15.0, -60.0],
+      description: "Serving Latin American countries with local partnerships",
+    },
+    {
+      name: "Middle East",
+      coords: [25.0, 45.0],
+      description: "Strong footprint in the UAE and surrounding regions",
+    },
+  ];
   const [selectedCountry, setSelectedCountry] = useState("Australia");
   const region = countryToRegion[selectedCountry] || selectedCountry;
 
@@ -58,9 +90,9 @@ export default function GlobalReach() {
         </p>
       </div>
 
-  <div className="w-full">
-    <ContactMap />
-  </div>
+      <div className="w-full">
+        <ContactMap locations={regions} />
+      </div>
     </div>
   );
 }

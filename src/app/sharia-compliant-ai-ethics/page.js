@@ -3,6 +3,7 @@ import TrustSteps from "../Why-carlo/_subcomp/TrustSteps";
 import HeadingReuse from "../_subcomponents/HeadingReuse";
 import { trustStepsData } from "../_data/data";
 import ContainerProvier from "../About-us/_components/ContainerProvider";
+import Underline from "../_subcomponents/UnderLine";
 
 export default function page() {
   return (
@@ -11,7 +12,8 @@ export default function page() {
         Carlo PEaaS Enforcing Sharia-Compliant <br /> AI Ethics in the Modern
         World
       </h2>
-      <p className="text-[22px] text-center ">
+      <Underline />
+      <p className="text-[22px] text-center max-w-[800px] mx-auto ">
         Carlo PEaaS: Ethical AI and Data Protection Compliance with Global
         Standards like GDPR, CCPA, and the EU AI Act Carlo PEaaS Enforcing
         Sharia-Compliant AI Ethics in the Modern World

@@ -14,6 +14,11 @@ import {
   FaBook,
   FaRobot,
   FaSearch,
+  FaEye,
+  FaClipboardCheck,
+  FaBalanceScaleRight,
+  FaCogs,
+  FaLock,
 } from "react-icons/fa";
 
 export const dataProtectionLawsData = [
@@ -232,7 +237,6 @@ export const featuresData = [
     img: "keyFeaturesrobot2.png",
   },
   {
-    
     heading: "Feedback Loops",
     img: "keyFeatures-robot3.png",
     paragraph:
@@ -246,7 +250,6 @@ export const featuresData = [
       "This feature is crucial for large enterprises with various teams and diverse projects. Carlo makes it easy to maintain consistent compliance across the board, regardless of project complexity or geographical location.",
   },
   {
- 
     heading: "Compliance Dashboard",
     img: "compliance.png",
     paragraph:
@@ -466,5 +469,56 @@ export const featuresGlobalAI = [
       "How Carlo Helps: Enhances AI systems' transparency through detailed reporting.",
     ],
     icon: <FaBook color="black" size={21} />,
+  },
+];
+
+export const aiEthicsPrinciples = [
+  {
+    featureName: "Transparency",
+    featureDetails: [
+      "AI systems must be understandable to all.",
+      "Carlo Enforcement: Carlo logs AI decisions and makes models explainable through visualization dashboards, real-time traceability, and model lineage audits.",
+    ],
+    icon: <FaEye color="black" size={21} />,
+  },
+  {
+    featureName: "Inclusion",
+    featureDetails: [
+      "AI must serve every human being and respect all social groups.",
+      "Carlo Enforcement: Carlo detects exclusionary patterns in training data and monitors demographic disparities in outputs, flagging any systemic bias.",
+    ],
+    icon: <FaUsers color="black" size={21} />,
+  },
+  {
+    featureName: "Responsibility",
+    featureDetails: [
+      "Designers and users of AI must take responsibility for their systems.",
+      "Carlo Enforcement: Enforces accountable version control, tracks who made each model or data change, and binds developers to a responsibility framework with real-time feedback.",
+    ],
+    icon: <FaClipboardCheck color="black" size={21} />,
+  },
+  {
+    featureName: "Impartiality",
+    featureDetails: [
+      "AI must not foster bias or discrimination.",
+      "Carlo Enforcement: Uses fairness metrics, demographic parity testing, and bias detection algorithms to ensure outputs are equitable and unbiased.",
+    ],
+    icon: <FaBalanceScaleRight color="black" size={21} />,
+  },
+  {
+    featureName: "Reliability",
+    featureDetails: [
+      "AI must operate securely and consistently across its lifecycle.",
+      "Carlo Enforcement: Monitors uptime, consistency, safety overrides, and anomaly detection in deployed AI systems.",
+    ],
+    icon: <FaCogs color="black" size={21} />,
+  },
+  {
+    featureName: "Security and Privacy",
+    featureDetails: [
+      "Personal data must be protected and AI systems must prevent misuse.",
+      "Carlo Enforcement: Carlo integrates encryption standards, GDPR-aligned privacy controls, and consent-driven data processing workflows.",
+    ],
+    icon: <FaLock color="black" size={21} />,
   },
 ];
