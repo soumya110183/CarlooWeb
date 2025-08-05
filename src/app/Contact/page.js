@@ -1,5 +1,6 @@
 import Experience from "../_components/Experience";
 import OfficeMap from "../_subcomponents/LocationMap";
+import Underline from "../_subcomponents/UnderLine";
 import SubScribe from "../About-us/_components/SubScribe";
 import ContactDetails from "./Contactcomp/ContactDetails";
 import ContactForm from "./Contactcomp/ContactForm";
@@ -13,6 +14,7 @@ export default function page() {
         <h2 className="text-[48px] font-bold text-center">
           Get in touch with us
         </h2>
+        <Underline />
         <p className="text-[22px] text-center">
           Complete the form, and our team will reach out within 24 hours.
         </p>

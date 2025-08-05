@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function KeyFeatures({ features }) {
-  console.log(features.heading);
+ 
   return (
     <div
       className={`w-full max-w-[1000px] flex ${

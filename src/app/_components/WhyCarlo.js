@@ -10,72 +10,78 @@ export default function WhyCarlo(params) {
         alt="background-image"
         className="absolute inset-0 w-full h-full left-[-700px]  -z-10"
       />
-      <div className="flex max-w-[1200px] justify-between items-center gap-20 mt-35 mx-auto text-white">
-        <div className="h-[616px] w-full relative">
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute top-20 left-36 z-10 ml-4 mt-10">
+      <div className="flex max-w-[1200px] justify-between items-center gap-20 mt-35 mx-auto text-white ">
+        <div className="h-[616px] w-full relative ">
+          <div className="w-[220px] h-[220px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute top-10  z-10 ml-4 mt-10 px-2">
             <div className="relative">
               <Image
                 src="/blue-element.png"
                 alt="blue-element-photo"
                 width={150}
                 height={153}
-                className="absolute top-[-60px] right-0"
+                className="absolute top-[-80px] right-0"
               />
-              <div className="pt-25 pl-4">
+              <div className="pt-15 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
                 <p className="font-semibold text-[15px]">
                   Compliance Frameworks
                 </p>
+                <p className="font-normal text-[14px] mt-2">Align with global standards like GDPR, EU AI Act, HIPAA, and ISO</p>
               </div>
             </div>
           </div>
 
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 z-10 ml-4 mt-10">
+          <div className="w-[220px] h-[220px] px-2 bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 z-10 ml-4 ">
             <div className="relative">
               <Image
                 src="/round-element.png"
                 alt="round-element"
                 width={150}
                 height={153}
-                className="absolute top-[-60px] right-0"
+                className="absolute top-[-80px] right-0"
               />
-              <div className="pt-25 pl-4">
+              <div className="pt-15 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
                 <p className="font-semibold text-[15px]">
                   Real-Time Enforcement
                 </p>
+                <p className="font-normal text-[14px] mt-2">Instant detection and automated enforcement of compliance policies</p>
               </div>
             </div>
           </div>
 
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute bottom-15 left-30 z-10 ml-4 mt-10">
+          <div className="w-[220px] h-[220px] px-2 bg-black/40 backdrop-blur-xl rounded-[14px] absolute bottom-0 left-10 z-10 ml-4 mt-10">
             <div className="relative">
               <Image
                 src="/clock.png"
                 alt="clock"
                 width={150}
                 height={153}
-                className="absolute top-[-60px] right-0"
+                className="absolute top-[-80px] right-0"
               />
-              <div className="pt-25 pl-4">
+              <div className="pt-15 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
                 <p className="font-semibold text-[15px]">Enterprise Scale</p>
+                 <p className="font-normal text-[14px] mt-2">Designed for multi-project, high-volume enterprise deployments.</p>
               </div>
             </div>
           </div>
 
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 bottom-15 z-10 ml-4 mt-10">
+          <div className="w-[220px] h-[220px] px-2 bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 bottom-20 z-10 ml-4 mt-10">
             <div className="relative">
               <Image
                 src="/pattern.png"
                 alt="pattern"
                 width={150}
                 height={153}
-                className="absolute top-[-60px] right-0"
+                className="absolute top-[-80px] right-0"
               />
-              <div className="pt-25 pl-4">
+              <div className="pt-15 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
                 <p className="font-semibold text-[15px]">Virtual Machine</p>
+                <p className="font-normal text-[14px] mt-2">Isolated, secure sandbox for testing and validating compliance.</p>
+                
+
               </div>
             </div>
           </div>

@@ -109,6 +109,7 @@ function Navigation() {
                     if (item.name === "Compliance Frameworks") {
                       setDropdownOpen(!dropdownOpen);
                       setResourcesOpen(false);
+                      
                     } else if (item.name === "Resources") {
                       setResourcesOpen(!resourcesOpen);
                       setDropdownOpen(false);
@@ -125,6 +126,13 @@ function Navigation() {
                         ? "#"
                         : item.href
                     }`}
+
+                      onClick={(e) => {
+    if (item.name === "Compliance Frameworks" || item.name === "Resources") {
+      e.preventDefault(); // ✅ Fixes jump to top
+    }
+  }}
+
                   >
                     <span
                       className={`hover:text-[#C7BFE9] ${
