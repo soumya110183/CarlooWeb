@@ -51,7 +51,7 @@ export default async function page({ params }) {
               className="rounded-lg object-cover"
             />
           </div>
-          <p className="font-normal text-[14px] mt-5">
+          <p className="font-normal text-[14px] mt-5 text-[#C0C0C0]">
            {blogsDetails.content}
           </p>
         </div>
