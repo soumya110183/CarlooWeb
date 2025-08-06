@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { formatDistanceToNow } from "date-fns";
 import { MdDelete } from "react-icons/md";
+import Link from "next/link";
 
 export default function BlogCard({ blog, deleteButton }) {
   const handleDelete = async () => {
@@ -25,7 +26,7 @@ export default function BlogCard({ blog, deleteButton }) {
         <div className="flex items-center gap-2 mb-2 w-full justify-between ">
           <div className="flex gap-2 items-center">
             <Image
-              src="/placeholderperson.png"
+              src="/healthicons_ui-user-profile.png"
               alt="Sreya"
               width={32}
               height={32}
@@ -57,12 +58,12 @@ export default function BlogCard({ blog, deleteButton }) {
         </p>
 <div className="flex w-full justify-between">
 
-        <a
-          href="#"
+        <Link
+          href={`/blog/${blog._id}`}
           className="text-cyan-400 text-sm font-semibold hover:underline mt-2.5"
         >
           READ MORE
-        </a>
+        </Link>
         {deleteButton && (
           <div className="flex justify-end mt-2">
             <button
