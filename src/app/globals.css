@@ -58,3 +58,27 @@ input:-webkit-autofill:active {
   caret-color: white;
   transition: background-color 5000s ease-in-out 0s; /* for some browsers */
 }
+
+.spinner {
+  margin: 3.2rem auto 1.6rem;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #1b2631;         
+  border-right-color: #651FFF;      
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinner-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a2f; 
+}

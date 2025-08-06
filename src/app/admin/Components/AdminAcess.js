@@ -156,7 +156,7 @@ export default function AdminBlogForm({blogs}) {
         Logout
       </button>
                     </div>
-                <div className="w-full max-w-[1200px] mt-10 grid grid-cols-3 gap-10 shrink-0  mx-auto">
+                <div className="w-full max-w-[1200px] mt-10 grid grid-cols-3 gap-10 shrink-0  mx-auto pb-30">
                      {blogs.map((blog) => (
               <BlogCard key={blog._id} blog={blog} deleteButton={true}/>
             ))}

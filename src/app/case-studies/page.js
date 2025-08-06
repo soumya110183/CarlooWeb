@@ -1,5 +1,5 @@
 import Underline from "../_subcomponents/UnderLine";
-import BlogCard from "./_Components/BlogContainer";
+
 import CaseStudy from "./_Components/CaseStudiesContainer";
 
 export default function page(){
