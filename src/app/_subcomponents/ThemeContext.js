@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light"); // Safe default
+  const [theme, setTheme] = useState("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export function ThemeProvider({ children }) {
     localStorage.setItem("theme", theme);
   }, [theme, mounted]);
 
-  if (!mounted) return null; 
+  if (!mounted) return null;
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
