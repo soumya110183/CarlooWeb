@@ -3,11 +3,12 @@
 import { useRef, useState } from "react";
 import Slide from "../_json/Slide.json";
 import HeaderSlider from "../_subcomponents/HeaderSlider";
+import { useTheme } from "../_subcomponents/ThemeContext";
 
 function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
   const scrollRef = useRef(null);
-
+ const {theme}=useTheme()
   const handleScrollTo = (index) => {
     setActiveSlide(index);
     const scrollContainer = scrollRef.current;
@@ -29,7 +30,7 @@ function Hero() {
             const slide = Slide.find((s) => s.character === label);
             return (
               <div key={label} className="w-full flex-shrink-0 snap-start ">
-                <HeaderSlider filteredSlide={slide} label={label} />
+                <HeaderSlider filteredSlide={slide} label={label} theme={theme} />
               </div>
             );
           }
@@ -45,7 +46,7 @@ function Hero() {
               className={`cursor-pointer text-[26px] rounded-full font-bold transition-all duration-400 mt-5 ${
                 activeSlide === index
                   ? "bg-gradient-to-r from-[#a78bfa] to-[#9333ea] bg-clip-text text-transparent"
-                  : "text-white hover:text-purple-300"
+                  : `${theme === "light" ? "text-black" : "text-white"} hover:text-purple-300`
               }`}
             >
               {label}

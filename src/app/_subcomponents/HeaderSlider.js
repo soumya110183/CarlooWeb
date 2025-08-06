@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ButtonPimary from "./ButtonPrimary";
 
-function HeaderSlider({ filteredSlide }) {
+
+function HeaderSlider({ filteredSlide,theme }) {
+
+ 
   return (
     <motion.div
       initial={{ x: "100vw", opacity: 0 }}
@@ -14,7 +17,7 @@ function HeaderSlider({ filteredSlide }) {
         filteredSlide.character === "Fourth Slide"
           ? "flex-row-reverse"
           : ""
-      } justify-between text-white`}
+      } justify-between ${theme === "light" ? "text-black" : "text-white"} `}
     >
       <div
         className={`z-40 pl-30 ${

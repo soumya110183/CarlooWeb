@@ -6,6 +6,12 @@
   --background: #180d49;
   --foreground: #171717;
 }
+
+/* Light theme override */
+.light {
+  --background: #ffffff;
+  --foreground: #000000;
+}
 * {
   box-sizing: border-box;
 }
@@ -29,8 +35,9 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
+  transition: background-color 0.3s, color 0.3s;
   font-family: "montserrat", sans-serif;
 }
 .hide-scrollbar {

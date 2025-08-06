@@ -8,6 +8,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
+import { IoMdSettings } from "react-icons/io";
+
+import { useTheme } from "../_subcomponents/ThemeContext";
 
 function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,6 +18,8 @@ function Navigation() {
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const pathname = usePathname();
+  
+  const {theme}=useTheme()
 
   const navRef = useRef(null);
   const dropdownMenuRef = useRef(null);
@@ -73,12 +78,12 @@ function Navigation() {
         dropdownOpen || resourcesOpen
           ? "bg-black h-[86px]"
           : scrolled
-          ? "bg-[#080223]/70 backdrop-blur-xl h-[65px]"
+          ? ` ${theme === "light" ? "bg-white/40" : "bg-[#080223]/70"} backdrop-blur-xl h-[65px]`
           : "bg-transparent h-[86px]"
       }`}
     >
       <nav
-        className="h-full w-full max-w-[1280px] flex items-center justify-between mx-auto text-white font-mont relative"
+        className={`h-full w-full max-w-[1280px] flex items-center justify-between mx-auto  font-mont relative ${theme === "light" ? "text-black": "text-white"} `}
         ref={navRef}
       >
         <div className="flex items-center gap-10">
@@ -167,14 +172,8 @@ function Navigation() {
         <button className="bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold">
           <a href="https://app.policyenforcement.com/login">SIGN IN</a>
         </button>
-        <button onClick={() => setSettingsOpen(!settingsOpen)}>
-          <Image
-            src="/material-symbols_settings.svg"
-            alt="settings"
-            className="w-[29px]"
-            width={29}
-            height={29}
-          />
+        <button onClick={() => setSettingsOpen(!settingsOpen)} className={`${theme === "light" ? "text-black" : "text-white"}`}>
+         <IoMdSettings size={29} />
         </button>
         {settingsOpen && (
           <SettingsMenu dropdownOpen={settingsOpen} ref={settingsMenuRef} />

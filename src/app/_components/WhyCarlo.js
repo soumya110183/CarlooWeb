@@ -1,6 +1,11 @@
+"use client"
+
 import Image from "next/image";
+import { useTheme } from "../_subcomponents/ThemeContext";
 
 export default function WhyCarlo(params) {
+
+  const {theme} =useTheme()
   return (
     <section className="relative">
       <Image
@@ -10,9 +15,9 @@ export default function WhyCarlo(params) {
         alt="background-image"
         className="absolute inset-0 w-full h-full left-[-700px]  -z-10"
       />
-      <div className="flex max-w-[1200px] justify-between items-center gap-20 mt-35 mx-auto text-white ">
+      <div className={`flex max-w-[1200px] justify-between items-center gap-20 mt-35 mx-auto ${theme === "light" ? "text-black" : "text-white"}  `}>
         <div className="h-[616px] w-full relative ">
-          <div className="w-[220px] h-[220px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute top-10  z-10 ml-4 mt-10 px-2">
+          <div className={`w-[220px] h-[220px] ${theme === "light" ? "bg-white/40" : "bg-black/40"}  bg-black/40 backdrop-blur-xl rounded-[14px] absolute top-10  z-10 ml-4 mt-10 px-2`}>
             <div className="relative">
               <Image
                 src="/blue-element.png"
@@ -31,7 +36,7 @@ export default function WhyCarlo(params) {
             </div>
           </div>
 
-          <div className="w-[220px] h-[220px] px-2 bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 z-10 ml-4 ">
+          <div className={`w-[220px] h-[220px] px-2  ${theme === "light" ? "bg-white/40" : "bg-black/40"}  backdrop-blur-xl rounded-[14px] absolute right-0 z-10 ml-4 `}>
             <div className="relative">
               <Image
                 src="/round-element.png"
@@ -50,7 +55,7 @@ export default function WhyCarlo(params) {
             </div>
           </div>
 
-          <div className="w-[220px] h-[220px] px-2 bg-black/40 backdrop-blur-xl rounded-[14px] absolute bottom-0 left-10 z-10 ml-4 mt-10">
+          <div className={`w-[220px] h-[220px] px-2 ${theme === "light" ? "bg-white/40" : "bg-black/40"} backdrop-blur-xl rounded-[14px] absolute bottom-0 left-10 z-10 ml-4 mt-10`}>
             <div className="relative">
               <Image
                 src="/clock.png"
@@ -67,7 +72,7 @@ export default function WhyCarlo(params) {
             </div>
           </div>
 
-          <div className="w-[220px] h-[220px] px-2 bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 bottom-20 z-10 ml-4 mt-10">
+          <div className={`w-[220px] h-[220px] ${theme === "light" ? "bg-white/40" : "bg-black/40"} px-2 bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 bottom-20 z-10 ml-4 mt-10`}>
             <div className="relative">
               <Image
                 src="/pattern.png"

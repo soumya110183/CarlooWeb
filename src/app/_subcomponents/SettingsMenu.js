@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import ThemeToggle from "./ThemeToggle";
 
-const SettingsMenu = forwardRef(({ dropdownOpen }, ref) => {
+const SettingsMenu = forwardRef(({ dropdownOpen,theme }, ref) => {
   return (
     <div
       ref={ref}
@@ -15,7 +15,7 @@ const SettingsMenu = forwardRef(({ dropdownOpen }, ref) => {
       <div>
         <div className="w-full max-w-[176px] mx-auto mt-5">
           <h4 className="font-bold text-[14px]">Theme Mode</h4>
-          <ThemeToggle />
+          <ThemeToggle  />
         </div>
         <div className="w-full h-[1px] bg-[#424242] mt-5"></div>
         <div className="w-full max-w-[176px] mx-auto mt-5">

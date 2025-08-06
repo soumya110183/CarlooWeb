@@ -4,17 +4,24 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") || "light";
-    }
-    return "light";
-  });
+  const [theme, setTheme] = useState("light"); // Safe default
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    setTheme(savedTheme);
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    const html = document.documentElement;
+    html.classList.remove("light", "dark");
+    html.classList.add(theme);
     localStorage.setItem("theme", theme);
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
+  }, [theme, mounted]);
+
+  if (!mounted) return null; 
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
