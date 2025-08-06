@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import {
   FaTwitter,
@@ -8,10 +10,13 @@ import {
   FaLeaf,
   FaCommentDots,
 } from "react-icons/fa";
+import { useTheme } from "../_subcomponents/ThemeContext";
 
 export default function Footer() {
+
+  const {theme}=useTheme()
   return (
-    <footer className="py-20 px-5 text-white">
+    <footer className={`py-20 px-5 ${theme === "light" ? "text-black" : "text-white"} `}>
       <div className="max-w-[1280px] mx-auto flex flex-wrap justify-between ">
         <div className="max-w-[300px] space-y-4 font-medium">
           <div className="flex items-center gap-2">

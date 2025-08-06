@@ -2,6 +2,8 @@
 
 import ContactMap from "@/app/Contact/Contactcomp/MapContainer";
 import { useState } from "react";
+import SubHeading from "../_subcomp/Subheading";
+import LawList from "../_subcomp/LawList";
 // import WorldMap from "../_subcomp/WorldMap";
 
 const countryToRegion = {
@@ -29,6 +31,7 @@ export default function GlobalReach() {
       name: "North America",
       coords: [40.0, -100.0],
       description: "Offices across the US and Canada",
+      key:"global"
     },
     {
       name: "Europe",
@@ -56,11 +59,9 @@ export default function GlobalReach() {
       description: "Strong footprint in the UAE and surrounding regions",
     },
   ];
-  const [selectedCountry, setSelectedCountry] = useState("Australia");
-  const region = countryToRegion[selectedCountry] || selectedCountry;
 
   return (
-    <div className="w-full max-w-[1280px] px-4 mx-auto flex flex-col lg:flex-row justify-between items-start gap-10 pb-32 text-white">
+    <div className="w-full max-w-[1280px] px-4 mx-auto flex flex-col lg:flex-row justify-between  gap-10 pb-32 text-white items-center">
       {/* Left Side: Text */}
       <div className="w-full max-w-[500px]">
         <h2 className="text-[40px] font-bold">1. Global Reach</h2>
@@ -68,26 +69,12 @@ export default function GlobalReach() {
           <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
           <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
         </div>
-        <p className="font-normal text-[22px] mt-6">
-          A visually engaging interactive world map highlights the regions where
-          Carlo supports compliance. Each region is clickable, displaying the
-          specific laws and frameworks Carlo adheres to.
+        <SubHeading heading={"Ensuring Compliance Across Continents"} />
+        <p className="font-normal text-[22px] mt-3">
+          Carlo simplifies compliance for enterprises and developers by automatically adapting to regional laws and standards.
         </p>
-        <h3
-          className="font-semibold text-[24px] bg-clip-text text-transparent mt-10"
-          style={{
-            background:
-              "linear-gradient(183deg, rgba(182, 154, 239, 1) 0%, rgba(133, 81, 248, 1) 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          Key Feature
-        </h3>
-        <p className="font-normal text-[22px] mt-2">
-          Users can zoom into regions or countries to explore Carlo&apos;
-          compliance solutions tailored to local laws.
-        </p>
+   <LawList />
+       <p className="font-normal text-[22px] mt-3">With Carlo, compliance is no longer a barrier—it&apos;s your global advantage</p>
       </div>
 
       <div className="w-full">

@@ -22,12 +22,7 @@ export default function Introduction() {
           <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
         </div>
         <p className="font-normal text-[22px] mt-6">
-          Carlo PEaaS is more than a compliance platform—it&apos;s your partner
-          in building trust, mitigating risks, and ensuring that every algorithm
-          aligns with global ethical and legal standards. Whether you&apos;re
-          developing AI for healthcare, finance, retail, or IoT, Carlo adapts to
-          your needs and ensures your projects are always compliant and
-          transparent.
+         Carlo PEaaS is more than a compliance platform—it&apos;s your partner in building trust, mitigating risks, and ensuring that every algorithm aligns with global ethical and legal standards. Whether you&apos;re developing AI for healthcare, finance, retail, or IoT, Carlo adapts to your needs and ensures your projects are always compliant and transparent.
         </p>
         <div className="flex items-center mt-12 gap-3">
           <div className="flex items-center gap-3">

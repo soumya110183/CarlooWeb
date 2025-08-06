@@ -9,6 +9,7 @@ export default function ContactWebMap() {
       address:
         " Level 14, UB City, Concorde Towers, 24, Vittal Mallya Rd, KG Halli, D' Souza Layout, Ashok Nagar, Bengaluru, Karnataka 560001",
       phone: "+91 91 4897-4612",
+      key:"contact"
     },
     {
       name: "USA – Fort Lauderdale - Algorethics INC",

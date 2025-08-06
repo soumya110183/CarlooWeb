@@ -1,9 +1,12 @@
 import Card from "../_subcomponents/Card";
+import { useTheme } from "../_subcomponents/ThemeContext";
 
 export default function Research() {
+const {theme}=useTheme()
+
   return (
     <section>
-      <div className="mt-[124px] w-full max-w-[1200px] mx-auto flex items-center justify-between text-white">
+      <div className={`mt-[124px] w-full max-w-[1200px] mx-auto flex items-center justify-between ${theme === "light" ? "text-black" : "text-white"}`}>
         <div>
           <h3 className="text-[46px] font-bold">
             Our Research
