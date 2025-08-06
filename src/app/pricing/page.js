@@ -5,6 +5,7 @@ import PricingInformation from "./_components/PricingInformation";
 import ComplianceTable from "./_components/TierTable";
 
 export default function page(){
+  
 
   
     return(

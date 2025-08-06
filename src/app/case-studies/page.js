@@ -1,5 +1,6 @@
 import Underline from "../_subcomponents/UnderLine";
 import BlogCard from "./_Components/BlogContainer";
+import CaseStudy from "./_Components/CaseStudiesContainer";
 
 export default function page(){
     return(
@@ -13,20 +14,10 @@ export default function page(){
         <p className="text-[22px] text-center w-full max-w-[800px] mx-auto ">
           Carlo PEaaS: Ethical AI and Data Protection Compliance with Global Standards like GDPR, CCPA, and the EU AI Act
         </p>
-         {/* <div className="w-full max-w-[1200px] mt-10 grid grid-cols-3 gap-10 shrink-0 ">
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                 <BlogCard />
-                </div> */}
+         <div className="w-full max-w-[1200px] mt-10 grid grid-cols-3 gap-10 shrink-0 ">
+                <CaseStudy />
+                <CaseStudy />
+                </div>
         </section>
         </div>
     )

@@ -3,6 +3,7 @@ import { useTheme } from "./ThemeContext";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  console.log(theme)
 
   return (
     <div className="flex items-center gap-2 mt-5">

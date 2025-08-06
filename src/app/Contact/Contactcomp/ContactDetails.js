@@ -6,7 +6,7 @@ import ContactMap from "./MapContainer";
 export default function ContactDetails() {
   return (
   
-    <div className="flex mx-auto items-center w-full max-w-[1000px] mt-10 justify-between">
+    <div className="flex mx-auto items-center w-full max-w-[900px] mt-10 justify-between">
   
    
       <div className="w-full max-w-[432px] h-[339px] bg-[#0F092A] rounded-[14px] p-10">

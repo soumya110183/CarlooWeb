@@ -1,6 +1,14 @@
+"use client"
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 
 export default function KeyFeatures({ features }) {
+
+  
+
+  const value=features.flex ? 200 : -200
  
   return (
     <div
@@ -9,6 +17,13 @@ export default function KeyFeatures({ features }) {
       } items-center mx-auto justify-between gap-4`}
     >
       <div className="mt-5">
+          <motion.div
+        className="mt-5"
+        initial={{ opacity: 0, x:value }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <Image
           src={features.img}
           alt={features.heading || "feature image"}
@@ -16,6 +31,7 @@ export default function KeyFeatures({ features }) {
           height={300}
           className="w-[400px] rounded-2xl mt-5 object-cover"
         />
+      </motion.div>
       </div>
       <div>
         <div className="flex gap-2 items-start">
