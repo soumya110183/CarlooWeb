@@ -11,25 +11,16 @@ import CardTrust from "./CardTrust";
 export default function CardSlider({ trust,compliance }) {
   const data = [
     {
-      title: "Card One",
-      description: "Description for card one.",
-      image: "/images/img1.jpg",
+      title: "Certified by the Rome Call for AI Ethics:",
+      description: ["Pioneering fairness, accountability, and human-centered AI development.","Trusted by organizations that value ethical AI as a cornerstone of their innovation."],
+      image: "gdpr.png",
     },
     {
-      title: "Card Two",
-      description: "Description for card two.",
-      image: "/images/img2.jpg",
+      title: "Aligned with GDPR, CCPA, and Global Standards:",
+      description: ["Ensures your AI applications comply with major regulatory frameworks.","Carlo’s proactive risk management minimizes fines, protects data privacy, and fosters user trust."],
+      image: "carlo-peass.png",
     },
-    {
-      title: "Card Three",
-      description: "Description for card three.",
-      image: "/images/img3.jpg",
-    },
-    {
-      title: "Card Four",
-      description: "Description for card four.",
-      image: "/images/img4.jpg",
-    },
+   
   ];
 
   return (
@@ -43,7 +34,7 @@ export default function CardSlider({ trust,compliance }) {
     >
       {data.map((card, index) => (
         <SwiperSlide key={index}>
-          {trust ? <CardTrust /> : <MyCard {...card} />}
+          {trust ? <CardTrust card={card} /> : <MyCard {...card} />}
         </SwiperSlide>
       ))}
     </Swiper>

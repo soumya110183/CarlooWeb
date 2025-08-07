@@ -1,10 +1,15 @@
+
+
 import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
+
 import Image from "next/image";
 import { BsCheck } from "react-icons/bs";
 
 export default function Introduction() {
+
+
   return (
-    <div className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <div className={`w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32`}>
       <div>
         <Image
           width={500}

@@ -7,7 +7,7 @@ import Underline from "../_subcomponents/UnderLine";
 
 export default function page() {
   return (
-    <div className="mt-50 text-white max-w-[1200px] mx-auto">
+    <div className="mt-50 text-foreground max-w-[1200px] mx-auto">
       <h2 className="text-[48px] font-bold text-center">
         Carlo PEaaS Enforcing Sharia-Compliant <br /> AI Ethics in the Modern
         World
@@ -18,7 +18,7 @@ export default function page() {
         Standards like GDPR, CCPA, and the EU AI Act Carlo PEaaS Enforcing
         Sharia-Compliant AI Ethics in the Modern World
       </p>
-      <section className="w-full max-w-[1200px]  mx-auto justify-between text-white pb-32 pt-20">
+      <section className="w-full max-w-[1200px]  mx-auto justify-between text-foreground pb-32 pt-20">
         <div className="w-full ">
           <HeadingReuse heading={"Introduction: The Rome Call for AI Ethics"} />
           <p className="font-normal text-[22px] mt-6">

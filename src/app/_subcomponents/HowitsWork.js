@@ -1,10 +1,10 @@
 "use client"
 
 import Image from "next/image";
-import { useTheme } from "./ThemeContext";
+
 
 export default function HowitsWork({ image, heading, paragraph }) {
-const {theme}=useTheme()
+
 
   return (
     <div className="flex flex-col items-center justify-center relative mx-auto">
@@ -27,11 +27,11 @@ const {theme}=useTheme()
           />
         </div>
 
-        <h3 className={`mt-4 text-black font-bold text-[22px] text-center z-10 ${theme === "light" ? "text-black" : "text-white"}`}>
+        <h3 className={`mt-4  font-bold text-[22px] text-center z-10 text-foreground`}>
           {heading}
         </h3>
 
-        <p className={` text-center text-[16px] z-10 w-full max-w-[389px] ${theme === "light" ? "text-black" : "text-white"}`}>
+        <p className={` text-center text-[16px] z-10 w-full max-w-[389px] text-foreground`}>
           {paragraph}
         </p>
       </div>

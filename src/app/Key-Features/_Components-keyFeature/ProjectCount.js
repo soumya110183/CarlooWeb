@@ -14,7 +14,7 @@ export default function ProjectCount() {
       />
 
       <section
-        className={`w-full max-w-[1200px] flex  items-center mx-auto justify-between text-white pb-32`}
+        className={`w-full max-w-[1200px] flex  items-center mx-auto justify-between text-foreground pb-32`}
       >
         <div className="h-[616px] w-full max-w-[550px] relative">
           <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute top-20 left-36 z-10 ml-4 mt-10">

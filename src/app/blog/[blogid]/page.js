@@ -17,7 +17,7 @@ export default async function page({ params }) {
 
 
   return (
-    <section className="w-full mx-auto mt-35 text-white  max-w-[1280px] px-4 pb-30">
+    <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] px-4 pb-30">
       <h2 className="text-[48px] font-bold text-center">
         Get in touch with us
       </h2>
@@ -36,11 +36,11 @@ export default async function page({ params }) {
                 height={32}
                 className="rounded-full aspect-square object-cover"
               />
-              <span className=" font-medium">{blogsDetails.adminName}</span>
+              <span className=" font-medium text-white">{blogsDetails.adminName}</span>
             </div>
             <p className="text-gray-400 text-sm ">{formatDistanceToNow(new Date(blogsDetails.createdAt), { addSuffix: true })}</p>
           </div>
-          <h2 className="font-bold text-[32px] mt-9">
+          <h2 className="font-bold text-[32px] mt-9 text-white">
             {blogsDetails.title}
           </h2>
           <div className=" relative w-full h-[262px] mt-7">

@@ -9,7 +9,7 @@ export default function WhyChoose() {
         <HeadingReuse heading={"Why Choose Carlo PeaaS?"} />
 
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6">
+          <p className="font-normal text-[22px] mt-6 text-foreground">
             Your Trusted Partner in Ethical AI.
           </p>
         </div>

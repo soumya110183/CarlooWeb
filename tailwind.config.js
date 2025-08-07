@@ -7,6 +7,10 @@ module.exports = {
   darkMode: "class", // <-- enables dark mode via class (controlled by toggle)
   theme: {
     extend: {
+        colors: {
+    background: "var(--background)",
+    foreground: "var(--foreground)",
+  },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

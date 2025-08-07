@@ -2,7 +2,7 @@ import TeamContainer from "./TeamContainer";
 
 export default function MeetTeam() {
   return (
-    <section className="w-full max-w-[1400px]  mx-auto  text-white pb-32">
+    <section className="w-full max-w-[1400px]  mx-auto  text-foreground pb-32">
       <h2 className="text-[48px] font-bold text-center">Meet The Team</h2>
       <p className="text-[22px] font-normal text-center">
         Get to know the minds powering our work

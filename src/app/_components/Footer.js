@@ -23,7 +23,7 @@ export default function Footer() {
             <Image src="/logo.png" alt="Awrora" className="w-[40px]" width={40} height={40} />
             <h2 className="text-xl font-bold">Carlo PEaas</h2>
           </div>
-          <p className="text-gray-300">
+          <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
             Carlo PEaaS by Algorethics helps AI developers and enterprises
             achieve ethical compliance with global standards in real-time. Align
             your AI projects with trust, transparency, and global regulations
@@ -32,73 +32,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap gap-14">
-          {/* <div>
-            <h4 className="font-bold mb-3">Contact</h4>
-            <ul className="space-y-2 text-gray-300 w-full max-w-[250px]">
-              <div>
-                <li className="flex items-center gap-2.5">
-                  <img src="/1f1fa-1f1f8 1.svg" alt=""></img>Algorethics USA
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <img src="/ic_baseline-phone.svg" alt=""></img>+1 929-400-3096
-                </li>
-              </div>
-              <div>
-                <li className="flex items-center gap-2.5">
-                  <img src="/1f1ee-1f1f3 1.svg" alt=""></img>Algorethics India
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <img src="/ic_baseline-phone.svg" alt=""></img>+91 91
-                  4897-4612
-                </li>
-              </div>
-              <div>
-                <li className="flex items-center gap-2.5">
-                  <img src="/1f1e6-1f1ea 1" alt=""></img>Algorethics UAE
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <img src="/ic_baseline-phone.svg" alt=""></img>+971 50 268
-                  2270
-                </li>
-              </div>
-              <div>
-                <li className="flex items-center gap-2.5">
-                  <img src="/1f1ec-1f1ea 1.svg" alt=""></img>Algorethics Georgia
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <img src="/ic_baseline-phone.svg" alt=""></img>+995 598 50 25
-                  55
-                </li>
-              </div>
-              <div>
-                <li className="flex items-center gap-2.5">
-                  <img src="/1f1ec-1f1ea 1.svg" alt=""></img>Algorethics Georgia
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <img src="/ic_baseline-phone.svg" alt=""></img>+995 598 50 25
-                  55
-                </li>
-              </div>
-              <div className="flex flex-col gap-2 mt-5">
-                <li className="flex items-center gap-2.5">
-                  <img src="/mail.svg" alt=""></img>steve@algorethics.ai
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <img src="/mdi_location.svg" alt=""></img>333 Sunset Dr, Apt
-                  204 Fort Lauderdale, FL 33301 USA
-                </li>
-              </div>
-            </ul>
-          </div> */}
+     
 
           <div className="w-full max-w-[185px]">
             <h4 className="font-bold mb-3">Newsletter</h4>
             <p>Subscribe our newsletter to get our latest update & news</p>
           </div>
 
-          <div>
+          <div className={``}>
             <h4 className="font-bold mb-3">Quick Links</h4>
-            <ul className="space-y-2 text-gray-300">
+            <ul className={`space-y-2${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
               <a className="cursor-pointer">
                 <li>Why Carlo</li>
               </a>

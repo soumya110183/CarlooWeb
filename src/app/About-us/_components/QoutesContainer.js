@@ -10,7 +10,7 @@ export default function QoutesContainer({
 
   return (
     <div
-      className={`px-10 py-20 bg-[#651FFF] rounded-[9px] flex items-center justify-center relative`}
+      className={`px-10 py-20 bg-[#651FFF] rounded-[9px] flex items-center justify-center relative text-white`}
     >
       <div className="absolute left-1/2 transform -translate-x-1/2 top-[-30px]  ">
         <IoIosQuote size={60} />

@@ -1,11 +1,16 @@
+
+
 import Image from "next/image";
 import { featuresInterActive } from "@/app/_data/data";
 
 import FeatureAccordions from "@/app/_subcomponents/Accordion";
 
+
 export default function TrustandTransparency() {
+
+
   return (
-    <div className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <div className={`w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32`}>
       <div>
         <Image
           width={700}

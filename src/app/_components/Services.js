@@ -5,12 +5,12 @@ import { useTheme } from "../_subcomponents/ThemeContext";
 
 export default function Services() {
 
-  const {theme}=useTheme()
+
 
 
   return (
     <section>
-      <div className={`w-full max-w-[1200px] flex mx-auto mt-36 justify-between ${theme === "light" ? "text-black" : "text-white"}`}>
+      <div className={`w-full max-w-[1200px] flex mx-auto mt-36 justify-between text-foreground`}>
         <div className="w-full max-w-[434px]">
           <h2 className="text-[32px] font-bold">
             Professional Services that Deliver Results

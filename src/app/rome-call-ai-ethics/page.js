@@ -7,7 +7,7 @@ import Underline from "../_subcomponents/UnderLine";
 
 export default function page() {
   return (
-    <div className="mt-50 text-white ">
+    <div className="mt-50 text-foreground ">
       <h2 className="text-[48px] font-bold text-center">
         Carlo PEaaS: Enforcing Rome Call for <br /> AI Ethics in Every AI
         Project
@@ -17,7 +17,7 @@ export default function page() {
         Carlo PEaaS: Ethical AI and Data Protection Compliance with Global
         Standards like GDPR, CCPA, and the EU AI Act.
       </p>
-      <section className="w-full max-w-[1200px]  mx-auto justify-between text-white pb-32 pt-20">
+      <section className="w-full max-w-[1200px]  mx-auto justify-between text-foreground pb-32 pt-20">
         <div className="w-full ">
           <HeadingReuse heading={"Introduction: The Rome Call for AI Ethics"} />
           <p className="font-normal text-[22px] mt-6">

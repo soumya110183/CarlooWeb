@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 
 
-export default function KeyFeatures({ features,theme }) {
+export default function KeyFeatures({ features }) {
 
 
 
@@ -17,7 +17,7 @@ export default function KeyFeatures({ features,theme }) {
     <div
       className={`w-full max-w-[1000px] flex ${
         features.flex ? "flex-row-reverse" : ""
-      } items-center mx-auto justify-between gap-4 ${theme === "light" ? "text-black" : "text-white"}`}
+      } items-center mx-auto justify-between gap-4 text-foreground`}
     >
       <div className="mt-5">
           <motion.div

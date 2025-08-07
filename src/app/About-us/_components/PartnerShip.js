@@ -3,7 +3,7 @@ import ContainerProvier from "./ContainerProvider";
 
 export default function PartnerShip() {
   return (
-    <section className="w-full max-w-[1200px]  mx-auto  text-white pb-32">
+    <section className="w-full max-w-[1200px]  mx-auto  text-foreground pb-32">
       <div className="w-full max-w-[570px]">
         <HeadingReuse heading={"Partnership Opportunities"} />
 

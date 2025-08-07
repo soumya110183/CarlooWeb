@@ -10,12 +10,12 @@ export default function page(){
   
     return(
         <div>
-            <section className="w-full max-w-[1200px] mx-auto mt-35 text-white">
+            <section className="w-full max-w-[1200px] mx-auto mt-35 text-foreground">
         <h2 className="text-[48px] font-bold text-center">
           Simple, Scalable Pricing for Every Need
         </h2>
         <Underline />
-        <p className="text-[22px] text-center max-w-[800px] mx-auto">
+        <p className="text-[22px] text-center max-w-[800px] mx-auto text-foreground">
           With Carlo PEaaS, you get flexible pricing plans designed to suit startups, growing businesses, and large enterprises. Our tiered pricing ensures you only pay for the features and services you need, making compliance easy, scalable, and cost-effective.
         </p>
         <ComplianceTable />

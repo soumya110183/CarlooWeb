@@ -3,7 +3,7 @@ import { FaCross } from "react-icons/fa";
 
 export default function Ethics() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32">
       <div>
         <Image
           src="/machine-ai 1.png"

@@ -5,7 +5,7 @@ import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
 
 export default function OurTeam() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32 ">
       <div>
         <Image
           width={500}
@@ -18,7 +18,7 @@ export default function OurTeam() {
       <div className="w-full max-w-[570px]">
         <HeadingReuse heading={"Our Team"} />
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6">
+          <p className="font-normal text-[22px] mt-6 text-foreground">
             We are a diverse team of technologists, ethicists, and industry
             experts who bring decades of combined experience in AI development,
             compliance, and regulation. From building cutting-edge AI systems to
@@ -26,7 +26,7 @@ export default function OurTeam() {
             compliance seamless for every AI practitioner.
           </p>
         </div>
-        <div className="flex flex-col gap-3.5 mt-5">
+        <div className="flex flex-col gap-3.5 mt-5 text-foreground">
           <PointsContainer
             title={"Founders"}
             para={"Experts in AI ethics and compliance technologies."}

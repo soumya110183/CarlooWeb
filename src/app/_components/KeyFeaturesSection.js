@@ -1,13 +1,13 @@
-"use client"
+
 
 import KeyFeatures from "../_subcomponents/KeyFeatures";
 import ScrollHeading from "../_subcomponents/ScrollHeading";
 import { KeyfeaturesData } from "../_data/data";
-import { useTheme } from "../_subcomponents/ThemeContext";
+
 
 export default function KeyFeaturesSection() {
 
-    const {theme}=useTheme()
+
   return (
     <section>
       <ScrollHeading
@@ -16,7 +16,7 @@ export default function KeyFeaturesSection() {
       />
       <div className={`flex flex-col gap-16 text-white mt-10 `}>
         {KeyfeaturesData.map((feature, index) => (
-          <KeyFeatures key={index} features={feature} theme={theme} />
+          <KeyFeatures key={index} features={feature}  />
         ))}
       </div>
     </section>

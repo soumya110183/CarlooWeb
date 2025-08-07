@@ -46,7 +46,7 @@ function Hero() {
               className={`cursor-pointer text-[26px] rounded-full font-bold transition-all duration-400 mt-5 ${
                 activeSlide === index
                   ? "bg-gradient-to-r from-[#a78bfa] to-[#9333ea] bg-clip-text text-transparent"
-                  : `${theme === "light" ? "text-black" : "text-white"} hover:text-purple-300`
+                  : `text-foreground hover:text-purple-300`
               }`}
             >
               {label}

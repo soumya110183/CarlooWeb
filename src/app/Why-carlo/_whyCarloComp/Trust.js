@@ -1,9 +1,12 @@
 import Image from "next/image";
 import CardSlider from "../_subcomp/SwiperSlider";
 
+
 export default function Trust() {
+
+
   return (
-    <div className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <div className={`w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32`}>
       <div className="w-full max-w-[570px]">
         <h2 className="text-[40px] font-bold">3. Trust and Transparency</h2>
         <div className="flex gap-2">

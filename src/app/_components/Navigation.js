@@ -76,7 +76,7 @@ function Navigation() {
     <div
       className={`fixed top-0 left-0 right-0 w-full transition-all duration-300 z-[150] ${
         dropdownOpen || resourcesOpen
-          ? "bg-black h-[86px]"
+          ? `${theme === "light" ? "bg-white shadow-2xl" : "bg-black"} h-[86px]`
           : scrolled
           ? ` ${theme === "light" ? "bg-white/40" : "bg-[#080223]/70"} backdrop-blur-xl h-[65px]`
           : "bg-transparent h-[86px]"
@@ -90,16 +90,14 @@ function Navigation() {
           <Link href="/">
             <div className="flex items-center gap-3">
               <Image
-                src="/carlo-logo.png"
+                src={`${theme === "light" ? "/logo-robot-black.png" : "/carlo-logo.png"}`}
                 alt="logo"
                 width={100}
                 height={100}
                 className="w-auto h-auto"
                 priority
               />
-              {/* <span className="font-montserrat text-[18px] font-bold">
-                Carlo peass
-              </span> */}
+          
             </div>
           </Link>
 
@@ -176,7 +174,7 @@ function Navigation() {
          <IoMdSettings size={29} />
         </button>
         {settingsOpen && (
-          <SettingsMenu dropdownOpen={settingsOpen} ref={settingsMenuRef} />
+          <SettingsMenu dropdownOpen={settingsOpen} ref={settingsMenuRef} theme={theme}/>
         )}
       </nav>
 

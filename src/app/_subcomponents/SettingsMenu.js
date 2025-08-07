@@ -2,10 +2,12 @@ import { forwardRef } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 const SettingsMenu = forwardRef(({ dropdownOpen,theme }, ref) => {
+
+  
   return (
     <div
       ref={ref}
-      className={`w-full max-w-[211px] h-[388px] bg-[#282828] rounded-[11px] absolute right-0 top-20 transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
+      className={`w-full max-w-[211px] p-5 shadow-2xl    ${theme === "light" ? "bg-white " : "bg-[#282828]"} rounded-[11px] absolute right-0 top-20 transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
       ${
         dropdownOpen
           ? "opacity-100 translate-y-0 scale-100"
@@ -13,14 +15,14 @@ const SettingsMenu = forwardRef(({ dropdownOpen,theme }, ref) => {
       }`}
     >
       <div>
-        <div className="w-full max-w-[176px] mx-auto mt-5">
+        <div className="w-full max-w-[176px] mx-auto ">
           <h4 className="font-bold text-[14px]">Theme Mode</h4>
           <ThemeToggle  />
         </div>
-        <div className="w-full h-[1px] bg-[#424242] mt-5"></div>
-        <div className="w-full max-w-[176px] mx-auto mt-5">
+        {/* <div className="w-full h-[1px] bg-[#424242] mt-5"></div> */}
+        {/* <div className="w-full max-w-[176px] mx-auto mt-5">
           <h4 className="font-bold text-[14px]">Language</h4>
-        </div>
+        </div> */}
       </div>
     </div>
   );

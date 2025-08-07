@@ -17,14 +17,14 @@ function HeaderSlider({ filteredSlide,theme }) {
         filteredSlide.character === "Fourth Slide"
           ? "flex-row-reverse"
           : ""
-      } justify-between ${theme === "light" ? "text-black" : "text-white"} `}
+      } justify-between text-foreground `}
     >
       <div
         className={`z-40 pl-30 ${
           filteredSlide.character === "Second Slide" ? "pr-30" : "pl-30"
         }"`}
       >
-        <h1 className="text-[48px] font-bold bg-gradient-to-br from-cyan-300 to-purple-200 bg-clip-text text-transparent">
+        <h1 className={`text-[48px] font-bold ${theme === "light" ? "bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-400" : "bg-gradient-to-br from-cyan-300 to-purple-200"}  bg-clip-text text-transparent`}>
           {filteredSlide.heading}
         </h1>
         <p className="text-[28px] font-semibold mt-3.5">
@@ -40,7 +40,7 @@ function HeaderSlider({ filteredSlide,theme }) {
               alt="play button"
             />
           </button>
-          <button className="text-[#00E5FF] bg-transparent p-0 m-0 outline-none border border-[#00E5FF] px-5 py-5 text-[18px] rounded-[36px] nav-text flex items-center justify-center">
+          <button className={`${theme === "light" ? "text-green-600" : "text-[#00E5FF]"} bg-transparent p-0 m-0 outline-none border ${theme === "light" ? "border-green-600" : "border-[#00E5FF]"}  px-5 py-5 text-[18px] rounded-[36px] nav-text flex items-center justify-center`}>
             <a href="https://www.youtube.com/@Algorethics">WATCH INTRO VIDEO</a>
           </button>
         </div>

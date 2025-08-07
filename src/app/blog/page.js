@@ -11,7 +11,7 @@ export default async function Page() {
 
   return (
     <div>
-      <section className="w-full mx-auto mt-35 text-white  max-w-[1280px] px-4 pb-30 ">
+      <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] px-4 pb-30 ">
         <h2 className="text-[48px] font-bold text-center">Blog</h2>
 
         <Underline />

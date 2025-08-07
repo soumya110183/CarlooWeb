@@ -5,7 +5,7 @@ import FeatureAccordions from "@/app/_subcomponents/Accordion";
 
 export default function GlobalPolicy() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32">
       <div className="w-full max-w-[570px]">
         <h2 className="text-[40px] font-bold">
           Global Policy Frameworks: Navigating International AI Standards

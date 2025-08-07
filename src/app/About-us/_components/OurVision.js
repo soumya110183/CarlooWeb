@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function OurVision() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32">
       <div className="w-full max-w-[570px]">
         <HeadingReuse heading={"Our Vision"} />
         <div className="mt-10">
