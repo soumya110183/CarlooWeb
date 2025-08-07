@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Hero from "./_components/Hero";
 
-import Regulation from "./_components/Regulations";
+
 import WhyCarlo from "./_components/WhyCarlo";
 
 import KeyFeaturesSection from "./_components/KeyFeaturesSection";

@@ -13,7 +13,7 @@ export default function Services() {
       <div className={`w-full max-w-[1200px] flex mx-auto mt-36 justify-between text-foreground`}>
         <div className="w-full max-w-[434px]">
           <h2 className="text-[32px] font-bold">
-            Professional Services that Deliver Results
+             Compliance Intelligence That Powers Results
           </h2>
           <div className="flex gap-2 mt-4">
             <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
@@ -21,10 +21,7 @@ export default function Services() {
             <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
           </div>
           <p className="w-full text-[18px] font-medium mt-4">
-            AI (Artifical Intelligence) and ML (MachineLearning) are closely
-            related fields that arefocused on the development of computersystems
-            that can perform tasks that would normally require human
-            intelligence, suchlanguage
+Carlo PEaaS is not just a tool—it&apos;s your real-time compliance co-pilot. Whether you&apos;re developing AI for finance, healthcare, retail, or any regulated industry, Carlo ensures your models stay aligned with global laws and ethical principles from day one.
           </p>
         </div>
         <div className="w-full max-w-[570px]">

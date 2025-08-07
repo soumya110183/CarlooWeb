@@ -13,24 +13,24 @@ export default function HowitsWorkSection() {
           <HowitsWork
             image="/data-flow-diagram 1.png"
             heading="Data Generated"
-            paragraph="AI and ML technologies generate vast amounts of data. Carlo monitors and tracks data in real-time, ensuring compliance from the outset."
+            paragraph="Carlo monitors every data flow, classifying and securing sensitive information."
           />
           <HowitsWork
             image="/marketing-research 1.png"
             heading="Data Stored"
-            paragraph="Carlo ensures data is stored in a compliant manner, aligning with local and international data protection laws, such as GDPR and CCPA."
+            paragraph="Automated encryption compliance checks for frameworks like GDPR, HIPAA, and CCPA."
           />
         </div>
         <div className="w-full max-w-[900px] mx-auto flex">
           <HowitsWork
             image="/coins-chart 1.png"
             heading="Actionable Insights"
-            paragraph="Carlo provides actionable insights by offering feedback & compliance reports. It helps organizations adjust their AI models to meet legal and ethical standards"
+            paragraph="Carlo’s feedback loop refines compliance policies and delivers instant recommendations to developers."
           />
           <HowitsWork
             image="/data-flow-diagram 1.png"
             heading="Data Processing"
-            paragraph="Carlo processes data by detecting and correcting violations. The platform automatically enforces policies to ensure ethical and legal compliance."
+            paragraph="Real-time enforcement of privacy laws, bias audits, and ethical safeguards."
           />
         </div>
       </div>

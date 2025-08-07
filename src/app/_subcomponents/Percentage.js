@@ -25,7 +25,7 @@ export default function Percentage () {
             80%
           </h3>
         </div>
-        <p className="font-bold absolute bottom-3 text-center">Completed projects</p>
+        <p className="font-bold absolute bottom-2 text-center">Compliance Automation Achieved</p>
       </div>
 
       {/* Card 2 */}
@@ -50,7 +50,7 @@ export default function Percentage () {
             70%
           </h3>
         </div>
-        <p className="font-bold absolute bottom-3 text-center">Customer Satisfaction</p>
+        <p className="font-bold absolute bottom-2 text-center">Customer Satisfaction Increase</p>
       </div>
 
       {/* Card 3 */}
@@ -75,7 +75,7 @@ export default function Percentage () {
             70%
           </h3>
         </div>
-        <p className="font-bold absolute bottom-9 text-center">Expert Employees</p>
+        <p className="font-bold absolute bottom-2 text-center">Coverage of Global Regulatory Experts</p>
       </div>
     </div>
   );

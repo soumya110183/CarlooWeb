@@ -1,8 +1,13 @@
+"use client"
+
 import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
+import { useTheme } from "@/app/_subcomponents/ThemeContext";
 import Image from "next/image";
 
 export default function ProjectCount() {
+
+  const {theme}=useTheme()
   return (
     <div className="relative">
       <Image
@@ -17,7 +22,9 @@ export default function ProjectCount() {
         className={`w-full max-w-[1200px] flex  items-center mx-auto justify-between text-foreground pb-32`}
       >
         <div className="h-[616px] w-full max-w-[550px] relative">
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute top-20 left-36 z-10 ml-4 mt-10">
+          <div style={{
+              boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)",
+            }} className={`w-[174px] h-[189px] ${theme === "light" ? "bg-white/40 shadow-2xl": " bg-black/40"} backdrop-blur-xl rounded-[14px] absolute top-20 left-36 z-10 ml-4 mt-10`}>
             <div className="relative">
               <Image
                 src="/blue-element.png"
@@ -33,7 +40,9 @@ export default function ProjectCount() {
             </div>
           </div>
 
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 z-10 ml-4 mt-10">
+          <div style={{
+              boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)",
+            }} className={`w-[174px] h-[189px] ${theme === "light" ? "bg-white/40 shadow-2xl": " bg-black/40"} backdrop-blur-xl rounded-[14px] absolute right-0 z-10 ml-4 mt-10`}>
             <div className="relative">
               <Image
                 src="/round-element.png"
@@ -49,7 +58,9 @@ export default function ProjectCount() {
             </div>
           </div>
 
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute bottom-15 left-30 z-10 ml-4 mt-10">
+          <div style={{
+              boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)",
+            }} className={`w-[174px] h-[189px] ${theme === "light" ? "bg-white/40 shadow-2xl": " bg-black/40"} backdrop-blur-xl rounded-[14px] absolute bottom-15 left-30 z-10 ml-4 mt-10`}>
             <div className="relative">
               <Image
                 src="/clock.png"
@@ -65,7 +76,9 @@ export default function ProjectCount() {
             </div>
           </div>
 
-          <div className="w-[174px] h-[189px] bg-black/40 backdrop-blur-xl rounded-[14px] absolute right-0 bottom-15 z-10 ml-4 mt-10">
+          <div style={{
+              boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)",
+            }} className={`w-[174px] h-[189px] ${theme === "light" ? "bg-white/40 shadow-2xl": " bg-black/40"} backdrop-blur-xl rounded-[14px] absolute right-0 bottom-15 z-10 ml-4 mt-10`}>
             <div className="relative">
               <Image
                 src="/pattern.png"

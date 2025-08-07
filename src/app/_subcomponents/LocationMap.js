@@ -177,8 +177,8 @@ export default function OfficeMap({reach}) {
                 <p className="text-sm italic">{popup.howCarloHelps}</p>
 
                 <div className="flex items-center gap-4 text-sm text-blue-600">
-                  <Link href="#">View Compliance Details →</Link>
-                  <Link href="#">Request a Demo →</Link>
+                  <Link href="/global-policy-frameworks">View Compliance Details →</Link>
+                  <Link href="/Contact">Request a Demo →</Link>
                 </div>
               </div>
             </Popup>

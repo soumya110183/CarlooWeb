@@ -167,9 +167,9 @@ function Navigation() {
           </ul>
         </div>
 
-        <button className="bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold">
-          <a href="https://app.policyenforcement.com/login">SIGN IN</a>
-        </button>
+        <button className="bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold transition-all duration-300 ease-in-out hover:bg-[#311B92] hover:text-[rgb(209,196,233)] hover:shadow-lg hover:scale-105">
+  <a href="https://app.policyenforcement.com/login">SIGN IN</a>
+</button>
         <button onClick={() => setSettingsOpen(!settingsOpen)} className={`${theme === "light" ? "text-black" : "text-white"}`}>
          <IoMdSettings size={29} />
         </button>

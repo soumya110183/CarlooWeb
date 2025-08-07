@@ -17,7 +17,7 @@ function Robot() {
           Like a digital priest, its halo represents purity and precision. It
           validates every data point before it enters the AI pipeline."
           imp={
-            "The Validator ensures that incoming data is clean, structured, and compliant — protecting your AI from bad input before it even begins."
+            "Carlo’s real-time ethical scanner that validates every data point before it enters the AI pipeline. Prevents bad data from poisoning your models."
           }
         />
         <RobootCharacterstics
@@ -25,7 +25,7 @@ function Robot() {
           title={"THE WATCHER"}
           paragraph="The Watcher is Carlo's observant overseer. It monitors AI systems continuously, detecting behavior patterns and potential anomalies. With a tablet in hand, it's always analyzing, always aware — like a control tower for algorithmic safety."
           imp={
-            "The Watcher provides 24/7 oversight of AI operations, identifying risks, anomalies, and performance bottlenecks before they escalate."
+            "A 24/7 compliance overseer that monitors every model output, detects anomalies, and flags violations instantly."
           }
           flex={true}
         />
@@ -34,7 +34,7 @@ function Robot() {
           title={"THE GUARDIAN"}
           paragraph="The Guardian is Carlo's policy enforcer. It ensures that AI systems follow ethical and legal rules — no exceptions. Equipped with a shield of trust, it blocks unauthorized behaviors and safeguards user rights like a digital firewall with judgment."
           imp={
-            "The Guardian enforces AI rules and regulations, blocking harmful outputs and unethical decisions in real time."
+            "Carlo’s policy firewall—automatically enforces compliance rules, blocks unethical outputs, and mitigates risk before deployment."
           }
         />
         <RobootCharacterstics
@@ -42,7 +42,7 @@ function Robot() {
           title={"THE MESSENGER"}
           paragraph="The Messenger is Carlo's communicator. It delivers structured, JSON-based feedback to developers, helping them understand how to fix or improve their AI models. Think of it as a translator between compliance logic and developer action."
           imp={
-            "The Messenger provides clear, actionable feedback to help developers optimize and retrain their AI responsibly."
+            "A developer-first compliance assistant delivering JSON-based feedback, helping you retrain and fix models quickly."
           }
           flex={true}
         />
