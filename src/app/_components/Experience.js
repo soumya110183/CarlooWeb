@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Experience() {
   return (
     <section>
@@ -23,10 +25,11 @@ export default function Experience() {
           </p>
           <div className="flex text-[15px] font-semibold justify-center gap-7 mt-7">
             <button className="p-2.5 bg-black rounded-[37px] ">
-              START FREE TRIAL
+              <Link href={"https://app.policyenforcement.com/login"}> START FREE TRIAL</Link>
+             
             </button>
             <button className="p-2.5 bg-transparent border-2 borderblack text-black rounded-[37px]">
-              TALK TO A COMPLIANCE SUPPORT
+               <Link href={"/Contact"}>TALK TO A COMPLIANCE SUPPORT</Link>
             </button>
           </div>
         </div>

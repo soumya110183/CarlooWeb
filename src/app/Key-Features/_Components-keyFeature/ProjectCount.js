@@ -112,7 +112,7 @@ export default function ProjectCount() {
             </p>
           </div>
           <div className="mt-8">
-            <ButtonPimary buttonText={"About us"} />
+            <ButtonPimary buttonText={"About us"} href={"/About-us"} />
           </div>
         </div>
       </section>

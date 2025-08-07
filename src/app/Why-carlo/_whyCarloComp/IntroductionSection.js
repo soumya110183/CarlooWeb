@@ -50,7 +50,7 @@ export default function Introduction() {
           <p className="font-bold text-[20px] ">Interactive Explainer</p>
         </div>
         <div className="mt-12">
-          <ButtonPimary buttonText={"Read More"} />
+          <ButtonPimary buttonText={"Read More"} href={"/About-us"} />
         </div>
       </div>
     </div>

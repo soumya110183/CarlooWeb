@@ -18,7 +18,7 @@ export default function AllInOne() {
           </p>
         </div>
         <div className="mt-12">
-          <ButtonPimary buttonText={"Read More"} href={"/About"} />
+          <ButtonPimary buttonText={"Read More"} href={"/About-us"} />
         </div>
       </div>
       <div>
