@@ -5,7 +5,7 @@ import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
 
 export default function OurTeam() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32 ">
+    <section className="w-full max-w-[1200px] max-lg:flex-col max-lg:gap-20 flex items-center mx-auto justify-between text-foreground lg:pb-32 pb-15 ">
       <div>
         <Image
           width={500}
@@ -15,7 +15,7 @@ export default function OurTeam() {
           className="w-[500px]"
         />
       </div>
-      <div className="w-full max-w-[570px]">
+      <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"Our Team"} />
         <div className="flex gap-2 items-start">
           <p className="font-normal text-[22px] mt-6 text-foreground">

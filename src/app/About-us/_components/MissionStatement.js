@@ -52,7 +52,7 @@ export default function MissionStatement() {
           </MissionFeatures>
         </div>
       </div>
-      <div >
+      <div  className="w-full">
         <QoutesContainer />
       </div>
     </section>

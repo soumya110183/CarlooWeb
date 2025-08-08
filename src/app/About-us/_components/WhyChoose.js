@@ -4,8 +4,8 @@ import PointsContainer from "./PointsContainer";
 
 export default function WhyChoose() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
-      <div className="w-full max-w-[570px]">
+    <section className="w-full max-w-[1200px] max-lg:flex-col max-lg:gap-20 flex items-center mx-auto justify-between text-white lg:pb-32 pb-15">
+      <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"Why Choose Carlo PeaaS?"} />
 
         <div className="flex gap-2 items-start">
