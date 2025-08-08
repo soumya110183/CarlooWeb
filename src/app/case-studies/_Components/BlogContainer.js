@@ -21,7 +21,7 @@ export default function BlogCard({ blog, deleteButton }) {
     }
   };
   return (
-    <div className="bg-[#0F092A] text-white rounded-2xl p-6 max-w-[350px]  flex justify-between items-start shadow-lg">
+    <div className="bg-[#0F092A] text-white rounded-2xl p-6 max-w-[350px] mx-auto  flex justify-between items-start shadow-lg">
       <div className="flex flex-col justify-between w-full">
         <div className="flex items-center gap-2 mb-2 w-full justify-between ">
           <div className="flex gap-2 items-center">

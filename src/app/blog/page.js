@@ -11,7 +11,7 @@ export default async function Page() {
 
   return (
     <div>
-      <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] overflow-y-hidden px-10 pb-30 ">
+      <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] overflow-y-hidden  lg:px-10 px-5 lg:pb-32 pb-15">
         <h2 className="text-[48px] font-bold text-center">Blog</h2>
 
         <Underline />
@@ -19,7 +19,7 @@ export default async function Page() {
           Carlo PEaaS: Ethical AI and Data Protection Compliance with Global
           Standards like GDPR, CCPA, and the EU AI Act
         </p>
-        <div className="w-full max-w-[1200px] mt-10 grid grid-cols-3 gap-10 shrink-0 ">
+        <div className="w-full max-w-[1200px] mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mx-auto gap-10 shrink-0 ">
           {blogs.map((blog) => (
             <BlogCard key={blog._id} blog={blog} />
           ))}

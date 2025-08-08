@@ -10,7 +10,7 @@ import ContactWebMap from "./Contactcomp/ContactWebMap";
 export default function page() {
   return (
     <div>
-      <section className="w-full mx-auto mt-35 text-foreground overflow-y-hidden lg:px-10 px-5">
+      <section className="w-full mx-auto mt-35 text-foreground overflow-y-hidden lg:px-10 px-5 overflow-x-hidden">
         <h2 className="text-[48px] font-bold text-center">
           Get in touch with us
         </h2>
