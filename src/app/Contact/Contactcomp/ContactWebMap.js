@@ -4,7 +4,7 @@ import ContactMap from "./MapContainer";
 export default function ContactWebMap() {
   
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32 mt-10">
+    <section className="w-full max-w-[1200px] max-lg:flex-col max-lg:gap-20 flex items-center mx-auto justify-between text-foreground lg:pb-32 pb-15 mt-10">
       <div className="w-full max-w-[570px]">
         <HeadingReuse heading={"Explore Our Worldwide Offices"} />
 

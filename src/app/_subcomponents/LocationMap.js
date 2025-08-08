@@ -7,8 +7,8 @@ import Image from "next/image";
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
-  iconUrl: "marker-icon.png",
-  shadowUrl: "marker-shadow.png",
+  iconUrl: "/marker-icon.png",
+  shadowUrl: "/marker-shadow.png",
 });
 
 export default function OfficeMap({reach}) {

@@ -7,7 +7,7 @@ export default function MeetTeam() {
       <p className="text-[22px] font-normal text-center">
         Get to know the minds powering our work
       </p>
-      <div className=" mt-10 mx-auto grid grid-cols-2 gap-11">
+      <div className=" mt-10 mx-auto grid lg:grid-cols-2 grid-cols-1 gap-11">
         <TeamContainer
           img={"StevePhoto.png"}
           name={"Stephen Antony Venansious"}

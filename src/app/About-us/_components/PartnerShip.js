@@ -14,7 +14,7 @@ export default function PartnerShip() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-8 mt-10">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 mt-10">
         <ContainerProvier
           title={"Technology Providers:"}
           paragraph={[
