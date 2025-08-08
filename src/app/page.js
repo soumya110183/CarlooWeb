@@ -17,7 +17,7 @@ import HowitsWorkSection from "./_components/HowitsWorkSectiion";
 export default function Home() {
   return (
     <div>
-      <main>
+      <main className="overflow-y-hidden">
         <Hero />
         <WhyCarlo />
         <KeyFeaturesSection />

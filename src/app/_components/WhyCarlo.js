@@ -43,12 +43,12 @@ export default function WhyCarlo(params) {
         height={700}
         src="/parallax_zqaizh (1) 1.png"
         alt="background-image"
-        className="absolute inset-0 w-full h-full left-[-700px]  -z-10"
+        className="absolute inset-0 w-full h-full left-[-700px] lg:block hidden -z-10"
       />
       <div
-        className={`flex max-w-[1200px] justify-between items-center gap-20 mt-35 mx-auto text-foreground  `}
+        className={`flex max-w-[1200px] max-lg:flex-col justify-between items-center gap-20 mt-35 mx-auto text-foreground  `}
       >
-        <div className="h-[616px] w-full relative ">
+        <div className="h-[616px] w-full relative px-10 ">
           <div
             style={{
               boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)",
@@ -163,8 +163,8 @@ export default function WhyCarlo(params) {
           </div>
         </div>
 
-        <div className="w-full relative">
-           <div className="absolute top-[-40] right-10 z-0">
+        <div className="w-full relative px-10">
+           <div className="absolute top-[-40] right-0 z-0">
                  <LottieShield animationData={animationBot}  />
               </div>
           <h2 className="text-[46px] font-bold z-10">
