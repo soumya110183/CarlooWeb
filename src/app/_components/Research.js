@@ -27,7 +27,7 @@ export default function Research() {
           </p>
         </div>
       </div>
-      <div>
+      <div className="w-full mx-auto">
         <Card />
       </div>
     </section>

@@ -9,17 +9,20 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoMdSettings } from "react-icons/io";
+import Hamburger from "hamburger-react";
 
 import { useTheme } from "../_subcomponents/ThemeContext";
+import NavigationMenu from "../_subcomponents/NavigationMenu";
 
 function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const pathname = usePathname();
-  
-  const {theme}=useTheme()
+
+  const { theme } = useTheme();
 
   const navRef = useRef(null);
   const dropdownMenuRef = useRef(null);
@@ -74,34 +77,41 @@ function Navigation() {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 w-full transition-all duration-300 z-[150] ${
+      className={`fixed px-5 top-0 left-0 right-0 w-full transition-all duration-300 z-[150] ${
         dropdownOpen || resourcesOpen
           ? `${theme === "light" ? "bg-white shadow-2xl" : "bg-black"} h-[86px]`
           : scrolled
-          ? ` ${theme === "light" ? "bg-white/40" : "bg-[#080223]/70"} backdrop-blur-xl h-[65px]`
+          ? ` ${
+              theme === "light" ? "bg-white/40" : "bg-[#080223]/70"
+            } backdrop-blur-xl h-[65px]`
           : "bg-transparent h-[86px]"
       }`}
     >
       <nav
-        className={`h-full w-full max-w-[1280px] flex items-center justify-between mx-auto  font-mont relative ${theme === "light" ? "text-black": "text-white"} `}
+        className={`h-full w-full max-w-[1280px] flex items-center justify-between mx-auto  font-mont relative ${
+          theme === "light" ? "text-black" : "text-white"
+        } `}
         ref={navRef}
       >
         <div className="flex items-center gap-10">
           <Link href="/">
             <div className="flex items-center gap-3">
               <Image
-                src={`${theme === "light" ? "/logo-robot-black.png" : "/carlo-logo.png"}`}
+                src={`${
+                  theme === "light"
+                    ? "/logo-robot-black.png"
+                    : "/carlo-logo.png"
+                }`}
                 alt="logo"
                 width={100}
                 height={100}
                 className="w-auto h-auto"
                 priority
               />
-          
             </div>
           </Link>
 
-          <ul className="flex items-center gap-[20px] text-[16px] font-semibold">
+          <ul className="items-center gap-[20px] text-[16px] font-semibold xl:flex hidden  ">
             {navItems.map((item, i) => {
               const isActive = item.href === pathname;
               return (
@@ -112,7 +122,6 @@ function Navigation() {
                     if (item.name === "Compliance Frameworks") {
                       setDropdownOpen(!dropdownOpen);
                       setResourcesOpen(false);
-                      
                     } else if (item.name === "Resources") {
                       setResourcesOpen(!resourcesOpen);
                       setDropdownOpen(false);
@@ -129,13 +138,14 @@ function Navigation() {
                         ? "#"
                         : item.href
                     }`}
-
-                      onClick={(e) => {
-    if (item.name === "Compliance Frameworks" || item.name === "Resources") {
-      e.preventDefault(); // ✅ Fixes jump to top
-    }
-  }}
-
+                    onClick={(e) => {
+                      if (
+                        item.name === "Compliance Frameworks" ||
+                        item.name === "Resources"
+                      ) {
+                        e.preventDefault(); 
+                      }
+                    }}
                   >
                     <span
                       className={`hover:text-[#C7BFE9] ${
@@ -166,15 +176,26 @@ function Navigation() {
             })}
           </ul>
         </div>
-
-        <button className="bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold transition-all duration-300 ease-in-out hover:bg-[#311B92] hover:text-[rgb(209,196,233)] hover:shadow-lg hover:scale-105">
-  <a href="https://app.policyenforcement.com/login">SIGN IN</a>
-</button>
-        <button onClick={() => setSettingsOpen(!settingsOpen)} className={`${theme === "light" ? "text-black" : "text-white"}`}>
-         <IoMdSettings size={29} />
-        </button>
+        <div className="flex items-center gap-5  justify-between">
+          <button className="sm:block hidden bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold transition-all duration-300 ease-in-out hover:bg-[#311B92] hover:text-[rgb(209,196,233)] hover:shadow-lg hover:scale-105">
+            <a href="https://app.policyenforcement.com/login">SIGN IN</a>
+          </button>
+          <button
+            onClick={() => setSettingsOpen(!settingsOpen)}
+            className={`${theme === "light" ? "text-black" : "text-white"} sm:block hidden`}
+          >
+            <IoMdSettings size={29} />
+          </button>
+          <div className="block xl:hidden">
+            <Hamburger toggled={isOpen} toggle={setOpen}  />
+          </div>
+        </div>
         {settingsOpen && (
-          <SettingsMenu dropdownOpen={settingsOpen} ref={settingsMenuRef} theme={theme}/>
+          <SettingsMenu
+            dropdownOpen={settingsOpen}
+            ref={settingsMenuRef}
+            theme={theme}
+          />
         )}
       </nav>
 
@@ -185,6 +206,14 @@ function Navigation() {
           closeDropdown={() => setDropdownOpen(false)}
         />
       )}
+      {
+        isOpen && (
+          <div className="xl:hidden block">
+
+            <NavigationMenu isOpen={isOpen} navItems={navItems} setIsOpen={setOpen} />
+          </div>
+        )
+      }
     </div>
   );
 }
