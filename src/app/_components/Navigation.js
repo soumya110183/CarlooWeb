@@ -182,7 +182,7 @@ function Navigation() {
           </button>
           <button
             onClick={() => setSettingsOpen(!settingsOpen)}
-            className={`${theme === "light" ? "text-black" : "text-white"} sm:block hidden`}
+            className={`${theme === "light" ? "text-black" : "text-white"} `}
           >
             <IoMdSettings size={29} />
           </button>
