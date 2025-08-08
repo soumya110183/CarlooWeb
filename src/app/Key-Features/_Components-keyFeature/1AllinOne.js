@@ -9,12 +9,11 @@ export default function AllInOne() {
         <HeadingReuse heading={"All-in-One Compliance Platform for AI"} />
         <div className="flex gap-2 items-start">
           <p className="font-regular text-[22px] mt-6">
-            Carlo PEaaS is more than a compliance platform—it&apos;s your
-            partner in building trust, mitigating risks, and ensuring that every
-            algorithm aligns with global ethical and legal standards. Whether
-            you&apos;re developing AI for healthcare, finance, retail, or IoT,
-            Carlo adapts to your needs and ensures your projects are always
-            compliant and transparent.
+            Carlo PEaaS is not just a compliance tool—it&apos;s your automated
+            compliance engineer. From real-time monitoring to intelligent policy
+            enforcement, Carlo ensures every AI model in your stack meets global
+            regulatory and ethical standards, without slowing down your
+            development workflow.
           </p>
         </div>
         <div className="mt-12">

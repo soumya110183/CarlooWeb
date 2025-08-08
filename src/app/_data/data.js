@@ -233,34 +233,34 @@ export const featuresData = [
     heading: "Policy Monitoring & Enforcement",
     flex: true,
     paragraph:
-      "By continuously monitoring data flows and AI outputs, Carlo ensures that every step of the AI lifecycle is compliant, reducing the risk of data breaches, fines, and non-compliance.",
+      " Carlo actively monitors every data stream, inference result, and API transaction in real time. Its policy engine uses pre-built and custom compliance rules to detect violations, block unauthorized actions, and enforce global standards automatically.",
     img: "keyFeaturesrobot2.png",
   },
   {
     heading: "Feedback Loops",
     img: "keyFeatures-robot3.png",
     paragraph:
-      "This feature streamlines the compliance process by providing clear, actionable insights that developers can use to quickly modify models or data inputs to stay compliant.",
+      " Carlo delivers machine-readable feedback for every compliance check. Developers receive JSON-based diagnostics, bias alerts, and recommended fixes that can be integrated directly into CI/CD pipelines.",
   },
   {
     heading: "Multi-Project Scalability",
     flex: true,
     img: "multi-project scalablity.png",
     paragraph:
-      "This feature is crucial for large enterprises with various teams and diverse projects. Carlo makes it easy to maintain consistent compliance across the board, regardless of project complexity or geographical location.",
+      "Carlo was built for scale. Whether you manage one AI model or hundreds across multiple regions, Carlo provides centralized governance with project-level policy control.",
   },
   {
     heading: "Compliance Dashboard",
     img: "compliance.png",
     paragraph:
-      "The dashboard is an essential tool for executives and compliance officers to track real-time compliance, mitigate risks, and make informed decisions based on up-to-date data.",
+      "Carlo’s real-time compliance dashboard gives developers, compliance officers, and executives instant visibility into compliance health. Track violations, review automated enforcement actions, and generate audit-ready reports with a single click.",
   },
   {
     heading: "Cross-Platform Integration",
     flex: true,
     img: "cross-platform.png",
     paragraph:
-      "This feature ensures that Carlo can be easily incorporated into existing workflows and infrastructure, enabling developers and organizations to implement compliance without disrupting their current systems.",
+      " Carlo plugs directly into your development ecosystem. With SDKs, APIs, and containerized deployment, it fits into any modern AI stack without requiring workflow changes.",
   },
 ];
 
