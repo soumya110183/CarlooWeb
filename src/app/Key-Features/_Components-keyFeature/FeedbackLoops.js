@@ -6,9 +6,9 @@ export default function Featureskey({ heading, paragraph, image, flex }) {
     <section
       className={`w-full max-w-[1200px] ${
         flex ? "flex-row-reverse" : "flex"
-      }  flex items-center mx-auto justify-between text-foreground pb-32`}
+      }  flex items-center mx-auto justify-between max-lg:flex-col text-foreground lg:pb-32 pb-15`}
     >
-      <div className="w-full max-w-[570px]">
+      <div className="w-full lg:max-w-[570px] ">
         <HeadingReuse heading={heading} />
         <div className="flex gap-2 items-start">
           <p className="font-normal text-[22px] mt-6">{paragraph}</p>

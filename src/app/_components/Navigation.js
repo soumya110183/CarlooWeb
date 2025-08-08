@@ -77,7 +77,7 @@ function Navigation() {
 
   return (
     <div
-      className={`fixed px-5 top-0 left-0 right-0 w-full transition-all duration-300 z-[150] overflow-y-hidden ${
+      className={`fixed px-5 top-0 left-0 right-0 w-full transition-all duration-300 z-[150]  ${
         dropdownOpen || resourcesOpen
           ? `${theme === "light" ? "bg-white shadow-2xl" : "bg-black"} h-[86px]`
           : scrolled
@@ -88,7 +88,7 @@ function Navigation() {
       }`}
     >
       <nav
-        className={`h-full w-full max-w-[1280px] flex items-center justify-between mx-auto overflow-y-hidden  font-mont relative ${
+        className={`h-full w-full max-w-[1280px] flex items-center justify-between mx-auto   font-mont relative ${
           theme === "light" ? "text-black" : "text-white"
         } `}
         ref={navRef}

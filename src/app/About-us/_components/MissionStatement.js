@@ -8,8 +8,8 @@ import QoutesContainer from "./QoutesContainer";
 
 export default function MissionStatement() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32">
-      <div className="w-full max-w-[570px]">
+    <section className="w-full max-w-[1200px] flex max-lg:flex-col max-lg:gap-20  items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
+      <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"Mission Statement"} />
         <div className="flex gap-2 items-start">
           <p className="font-normal text-[22px] mt-6">
@@ -52,7 +52,7 @@ export default function MissionStatement() {
           </MissionFeatures>
         </div>
       </div>
-      <div className="">
+      <div >
         <QoutesContainer />
       </div>
     </section>

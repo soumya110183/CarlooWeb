@@ -5,7 +5,7 @@ import CaseStudy from "./_Components/CaseStudiesContainer";
 export default function page(){
     return(
         <div>
-          <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] px-4 pb-30">
+          <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] overflow-y-hidden px-10 pb-30">
           <h2 className="text-[48px] font-bold text-center">
                  Case Studies
                </h2>

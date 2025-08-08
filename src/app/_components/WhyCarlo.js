@@ -46,7 +46,7 @@ export default function WhyCarlo(params) {
         className="absolute inset-0 w-full h-full left-[-700px] lg:block hidden -z-10"
       />
       <div
-        className={`flex max-w-[1200px] max-lg:flex-col justify-between items-center gap-20 mt-35 mx-auto text-foreground  `}
+        className={`flex max-w-[1200px] max-lg:flex-col  justify-between items-center gap-20 mt-35 mx-auto text-foreground  `}
       >
         <div className="h-[616px] w-full relative px-10 ">
           <div
@@ -163,7 +163,7 @@ export default function WhyCarlo(params) {
           </div>
         </div>
 
-        <div className="w-full relative px-10">
+        <div className="w-full relative ">
            <div className="absolute top-[-40] right-0 z-0">
                  <LottieShield animationData={animationBot}  />
               </div>

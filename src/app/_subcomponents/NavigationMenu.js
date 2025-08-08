@@ -66,7 +66,7 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
     <div
       ref={menuRef}
       className={`fixed top-0 right-0 h-full w-[300px] bg-gradient-to-b from-black/80 to-black/50 
-        text-white transition-transform duration-500 ease-in-out z-50
+        text-white transition-transform duration-500 ease-in-out 
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
     >
       <div className="p-5">

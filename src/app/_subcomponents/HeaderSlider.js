@@ -20,7 +20,7 @@ function HeaderSlider({ filteredSlide,theme }) {
       } justify-between text-foreground `}
     >
       <div
-        className={`z-40 pl-30 ${
+        className={`z-40 ${
           filteredSlide.character === "Second Slide" ? "pr-30" : "pl-30"
         }"`}
       >
@@ -32,22 +32,23 @@ function HeaderSlider({ filteredSlide,theme }) {
         </p>
         <div className="flex items-center gap-5 mt-10">
           <ButtonPimary buttonText={"GET STARTED"} />
-          <button className="text-white border-none p-0 m-0 outline-none bg-[#651FFF] w-[49px] h-[49px] text-[18px] rounded-full nav-text flex items-center justify-center">
+          <button className="text-white border-none p-0 m-0 outline-none bg-[#651FFF] w-[49px] h-[49px] text-[18px] rounded-full nav-text flex shrink-0 items-center justify-center">
             <Image
               src="/play-512.png"
               width={25}
               height={25}
               alt="play button"
+               layout="fixed"
             />
           </button>
-          <button className={`${theme === "light" ? "text-green-600" : "text-[#00E5FF]"} bg-transparent p-0 m-0 outline-none border ${theme === "light" ? "border-green-600" : "border-[#00E5FF]"}  px-5 py-5 text-[18px] rounded-[36px] nav-text flex items-center justify-center`}>
+          <button className={`${theme === "light" ? "text-green-600" : "text-[#00E5FF]"} bg-transparent p-0 m-0 outline-none border ${theme === "light" ? "border-green-600" : "border-[#00E5FF]"}  px-5 py-5 text-[18px] rounded-[36px] nav-text flex shrink-0 items-center justify-center`}>
             <a href="https://www.youtube.com/@Algorethics">WATCH INTRO VIDEO</a>
           </button>
         </div>
       </div>
 
       {filteredSlide.character === "First Slide" && (
-        <div className="relative w-[1400px] h-[500px]">
+        <div className="relative hidden lg:block  w-[1400px] h-[500px]">
           <Image
             src="/banner_ai_m7ru8l.png"
             alt="main bot"
@@ -128,7 +129,7 @@ function HeaderSlider({ filteredSlide,theme }) {
       )}
 
       {filteredSlide.character === "Second Slide" && (
-        <div className="relative w-[1000px] h-[500px]">
+        <div className="relative hidden lg:block w-[1000px] h-[500px]">
           <motion.div
             animate={{ y: [0, -70, 0] }}
             transition={{
@@ -198,7 +199,7 @@ function HeaderSlider({ filteredSlide,theme }) {
       )}
 
       {filteredSlide.character === "Third Slide" && (
-        <div className="relative w-[1400px] h-[500px]">
+        <div className="relative hidden lg:block w-[1400px] h-[500px]">
           <Image
             src="/fog_r7nvlh (1).png"
             alt="main bot"
@@ -239,7 +240,7 @@ function HeaderSlider({ filteredSlide,theme }) {
       )}
 
       {filteredSlide.character === "Fourth Slide" && (
-        <div className="relative w-[1400px] h-[500px]">
+        <div className="relative hidden lg:block w-[1400px] h-[500px]">
           <Image
             src="/banner_ai_m7ru8l.png"
             alt="main bot"

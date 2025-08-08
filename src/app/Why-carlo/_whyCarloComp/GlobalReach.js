@@ -14,9 +14,9 @@ export default function GlobalReach() {
 
 
   return (
-    <div className={`w-full max-w-[1280px] px-4 mx-auto flex flex-col lg:flex-row justify-between  gap-10 pb-32 text-foreground items-center`}>
+    <div className={`w-full max-w-[1280px]  mx-auto flex flex-col lg:flex-row justify-between  gap-10 lg:pb-32 pb-15 text-foreground items-center`}>
       {/* Left Side: Text */}
-      <div className="w-full max-w-[500px]">
+      <div className="w-full lg:max-w-[500px]">
         <h2 className="text-[40px] font-bold">1. Global Reach</h2>
         <div className="flex gap-2">
           <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>

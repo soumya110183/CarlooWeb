@@ -9,7 +9,7 @@ export default function Introduction() {
 
 
   return (
-    <div className={`w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32`}>
+    <div className={`w-full max-w-[1200px] flex max-lg:flex-col-reverse  items-center mx-auto justify-between text-foreground lg:pb-32 pb-15`}>
       <div>
         <Image
           width={500}
@@ -19,7 +19,7 @@ export default function Introduction() {
           className="w-[500px]"
         />
       </div>
-      <div className="w-full max-w-[570px]">
+      <div className="w-full lg:max-w-[570px]">
         <h2 className="text-[40px] font-bold">Why Carlo</h2>
         <div className="flex gap-2">
           <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
@@ -31,20 +31,20 @@ export default function Introduction() {
         </p>
         <div className="flex items-center mt-12 gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center shrink-0">
               <BsCheck className="text-white text-xl" size={25} />
             </div>
             <p className="font-bold text-[20px] ">Global Reach</p>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center">
+            <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center shrink-0">
               <BsCheck className="text-white text-xl" size={25} />
             </div>
             <p className="font-bold text-[20px] ">Trust and Transparency</p>
           </div>
         </div>
         <div className="flex items-center gap-3 mt-6">
-          <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center shrink-0">
             <BsCheck className="text-white text-xl" size={25} />
           </div>
           <p className="font-bold text-[20px] ">Interactive Explainer</p>

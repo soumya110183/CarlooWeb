@@ -9,7 +9,7 @@ function page() {
   
 
   return (
-    <div className="mt-25">
+    <div className="mt-25 overflow-y-hidden sm:px-10 px-5">
       <Introduction />
       <GlobalReach />
       <TrustandTransparency />

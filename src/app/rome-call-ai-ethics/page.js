@@ -7,7 +7,7 @@ import Underline from "../_subcomponents/UnderLine";
 
 export default function page() {
   return (
-    <div className="mt-50 text-foreground ">
+    <div className="mt-50 text-foreground overflow-y-hidden px-10 ">
       <h2 className="text-[48px] font-bold text-center">
         Carlo PEaaS: Enforcing Rome Call for <br /> AI Ethics in Every AI
         Project

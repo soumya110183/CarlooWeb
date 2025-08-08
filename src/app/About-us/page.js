@@ -8,7 +8,7 @@ import WhyChoose from "./_components/WhyChoose";
 
 export default function page(){
     return(
-        <div className="mt-35"> 
+        <div className="mt-35 overflow-y-hidden px-10"> 
             <MissionStatement />
             <OurVision />
             <OurTeam />

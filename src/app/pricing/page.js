@@ -10,7 +10,7 @@ export default function page(){
   
     return(
         <div>
-            <section className="w-full max-w-[1200px] mx-auto mt-35 text-foreground">
+            <section className="w-full max-w-[1200px] mx-auto mt-35 text-foreground overflow-y-hidden px-10">
         <h2 className="text-[48px] font-bold text-center">
           Simple, Scalable Pricing for Every Need
         </h2>

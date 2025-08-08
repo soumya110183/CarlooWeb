@@ -15,13 +15,13 @@ export default function ProjectCount() {
         height={700}
         src="/parallax_zqaizh (1) 1.png"
         alt="background-image"
-        className="absolute inset-0 w-full h-full left-[-700px]  -z-10"
+        className="absolute inset-0 w-full h-full left-[-700px] lg:block hidden  -z-10"
       />
 
       <section
-        className={`w-full max-w-[1200px] flex  items-center mx-auto justify-between text-foreground pb-32`}
+        className={`w-full max-w-[1200px] flex max-lg:flex-col items-center mx-auto justify-between text-foreground pb-32`}
       >
-        <div className="h-[616px] w-full max-w-[550px] relative">
+        <div className="h-[616px] mx-auto w-full lg:w-[550px] relative">
           <div style={{
               boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)",
             }} className={`w-[174px] h-[189px] ${theme === "light" ? "bg-white/40 shadow-2xl": " bg-black/40"} backdrop-blur-xl rounded-[14px] absolute top-20 left-36 z-10 ml-4 mt-10`}>
@@ -96,7 +96,7 @@ export default function ProjectCount() {
             </div>
           </div>
         </div>
-        <div className="w-full max-w-[570px]">
+        <div className="w-full lg:max-w-[570px]">
           <HeadingReuse
             heading={
               "Carlo - Making AI Compliance Effortless, Ethical, and Built Right Into Your Workflow."

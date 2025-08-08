@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function AllInOne() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32">
-      <div className="w-full max-w-[570px]">
+    <section className="w-full max-w-[1200px] max-lg:flex-col flex items-center mx-auto justify-between text-foreground lg:pb-32 pb-15 ">
+      <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"All-in-One Compliance Platform for AI"} />
         <div className="flex gap-2 items-start">
           <p className="font-regular text-[22px] mt-6">

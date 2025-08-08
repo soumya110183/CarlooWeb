@@ -6,7 +6,7 @@ import SubScribeSection from "./_Components-keyFeature/SubsScribeSection";
 
 export default function page() {
   return (
-    <div className="mt-40">
+    <div className="mt-40 overflow-y-hidden lg:px-10 px-5">
       <AllInOne />
       {featuresData.map((feature, index) => (
         <Featureskey

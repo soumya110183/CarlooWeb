@@ -10,7 +10,7 @@ export default function TrustandTransparency() {
 
 
   return (
-    <div className={`w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32`}>
+    <div className={`w-full max-w-[1200px] max-lg:flex-col flex items-center mx-auto justify-between text-foreground lg:pb-32 pb-15`}>
       <div>
         <Image
           width={700}
@@ -19,7 +19,7 @@ export default function TrustandTransparency() {
           alt="robot-validator"
         />
       </div>
-      <div className="w-full max-w-[570px]">
+      <div className="w-full lg:max-w-[570px]">
         <h2 className="text-[40px] font-bold">2. Interactive Explainer</h2>
         <div className="flex gap-2">
           <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
