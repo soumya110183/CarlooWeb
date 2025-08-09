@@ -12,7 +12,7 @@ export default async function page(){
     return(
         <div className="pt-10">
             <AdminBlogForm blogs={blogs} />
-            <CaseStudyForm />
+            {/* <CaseStudyForm /> */}
 
          
 
