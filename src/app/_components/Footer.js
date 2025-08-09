@@ -6,9 +6,10 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaCommentDots,
+ 
 } from "react-icons/fa";
 import { useTheme } from "../_subcomponents/ThemeContext";
+import Link from "next/link";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -17,7 +18,7 @@ export default function Footer() {
     <footer className={`py-16 px-5 ${theme === "light" ? "text-black" : "text-white"}`}>
       <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-12">
         
-        {/* Brand and description */}
+  
         <div className="w-full lg:max-w-[300px] space-y-4 font-medium">
           <div className="flex items-center gap-2">
             <Image src="/logo.png" alt="Awrora" className="w-[40px]" width={40} height={40} />
@@ -31,7 +32,7 @@ export default function Footer() {
           <p>Copyright ©2025 Algorethics.ai</p>
         </div>
 
-        {/* Quick Links and Newsletter */}
+
         <div className="flex flex-col sm:flex-row flex-wrap gap-12 lg:gap-20">
           <div className="max-w-[185px]">
             <h4 className="font-bold mb-3">Newsletter</h4>
@@ -41,14 +42,14 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-3">Quick Links</h4>
             <ul className={`space-y-2 ${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
-              <li className="cursor-pointer">Why Carlo</li>
-              <li className="cursor-pointer">Pricing</li>
-              <li className="cursor-pointer">Contact</li>
+              <li className="cursor-pointer"><Link href={"/Why-carlo"} >Why Carlo</Link></li>
+              <li className="cursor-pointer"><Link href={"/pricing"} >Pricing</Link></li>
+              <li className="cursor-pointer"><Link href={"/Contact"} >Contact</Link></li>
             </ul>
           </div>
         </div>
 
-        {/* Social and Input */}
+       
         <div className="w-full sm:max-w-[300px] space-y-6">
           <div className="flex gap-4">
             {[FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (

@@ -23,7 +23,7 @@ function Robot() {
         <RobootCharacterstics
           img="/watcher.png"
           title={"THE WATCHER"}
-          paragraph="The Watcher is Carlo's observant overseer. It monitors AI systems continuously, detecting behavior patterns and potential anomalies. With a tablet in hand, it's always analyzing, always aware — like a control tower for algorithmic safety."
+          paragraph="The Watcher is Carlo's observant overseer. It monitors AI systems continuously, detecting behavior patterns and potential anomalies."
           imp={
             "A 24/7 compliance overseer that monitors every model output, detects anomalies, and flags violations instantly."
           }

@@ -14,7 +14,7 @@ export default function Introduction() {
         <Image
           width={500}
           height={580}
-          src="/WhyRobot.png"
+          src="/Why-carlo-robot.png"
           alt="robot-validator"
           className="w-[500px]"
         />

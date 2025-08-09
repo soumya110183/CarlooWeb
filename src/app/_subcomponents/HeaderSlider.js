@@ -17,7 +17,7 @@ function HeaderSlider({ filteredSlide,theme }) {
         filteredSlide.character === "Fourth Slide"
           ? "flex-row-reverse"
           : ""
-      } justify-between text-foreground `}
+      } justify-between text-foreground  `}
     >
       <div
         className={`z-40 ${

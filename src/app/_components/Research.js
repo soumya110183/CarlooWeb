@@ -21,9 +21,7 @@ export default function Research() {
         </div>
         <div className="w-full max-w-[800px]">
           <p className="font-medium text-[22px]">
-            AI is the broader concept of machines being able to perform tasks
-            that would normally require human intelligence, such as visual
-            perception, speech recognition, and language translation.
+           Artificial Intelligence (AI) is the overarching concept of machines capable of performing tasks that typically require human intelligence — such as visual perception, speech recognition, decision-making, and language translation.
           </p>
         </div>
       </div>

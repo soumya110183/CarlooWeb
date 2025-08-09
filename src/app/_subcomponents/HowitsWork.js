@@ -18,7 +18,7 @@ export default function HowitsWork({ image, heading, paragraph }) {
         ></div>
 
         
-        <div className="relative z-10 w-[100px] h-[100px]">
+        <div className="relative z-10 w-[200px] h-[200px]">
           <Image
             src={image}
             alt="Preprocessing"
@@ -27,7 +27,7 @@ export default function HowitsWork({ image, heading, paragraph }) {
           />
         </div>
 
-        <h3 className={`mt-4  font-bold text-[22px] text-center z-10 text-foreground`}>
+        <h3 className={`mt-2 font-bold text-[22px] text-center z-10 text-foreground`}>
           {heading}
         </h3>
 

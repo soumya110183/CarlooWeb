@@ -23,7 +23,7 @@ function Hero() {
     <div className="relative w-full mt-25 mx-auto">
       <div
         ref={scrollRef}
-        className="flex mx-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth  no-scrollbar"
+        className="flex mx-auto overflow-y-hidden w-full snap-x snap-mandatory scroll-smooth  no-scrollbar"
       >
         {["First Slide", "Second Slide", "Third Slide", "Fourth Slide"].map(
           (label, i) => {

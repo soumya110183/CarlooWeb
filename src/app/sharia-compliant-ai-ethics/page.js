@@ -1,9 +1,10 @@
 import Image from "next/image";
-import TrustSteps from "../Why-carlo/_subcomp/TrustSteps";
+
 import HeadingReuse from "../_subcomponents/HeadingReuse";
-import { trustStepsData } from "../_data/data";
+import { islamicEthicsPrinciples} from "../_data/data";
 import ContainerProvier from "../About-us/_components/ContainerProvider";
 import Underline from "../_subcomponents/UnderLine";
+import ShariaContent from "./ShariaContent";
 
 export default function page() {
   return (
@@ -38,48 +39,16 @@ export default function page() {
             {/* {trustStepsData.map((item, index) => (
               <TrustSteps key={index} title={item.title} steps={item.steps} />
             ))} */}
-            <ContainerProvier
-              title={
-                "1. Maqasid al-Sharia (The Higher Objectives of Islamic Law):"
-              }
-              paragraph={[
-                "The preservation of religion, life, intellect, lineage, and property is foundational to all ethical decision-making in Islamic systems.",
-                "• Carlo Enforcement: Carlo deploys AI value-alignment metrics and risk assessments that evaluate whether model outputs jeopardize these protected domains. It halts deployment of systems that violate these principles until corrective action is taken.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"2. Adl and Ihsan (Justice and Benevolence):"}
-              paragraph={[
-                "Equity, compassion, and the avoidance of exploitation are core to Islamic values.",
-                "• Carlo Enforcement: Carlo audits output distributions in AI applications for discriminatory patterns. Whether in lending decisions or employment recommendations, it flags outputs that exhibit structural injustice.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"3. Darar (Avoidance of Harm):"}
-              paragraph={[
-                "Harm, whether physical, social, or psychological, must be proactively avoided.",
-                "• Carlo Enforcement: Risk-sensitive applications like autonomous vehicles, biometric surveillance, and medical diagnostics are run through Carlo's ethical safety module that calculates risk scores and requires human oversight at defined thresholds.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"4. Halal and Haram (Permissibility Framework):"}
-              paragraph={[
-                "AI must not be used to support or promote haram (prohibited) activities such as gambling, interest-based financial services (riba), alcohol, pornography, or unethical marketing.",
-                "• Carlo Enforcement: Carlo includes a contextual classifier trained to identify and restrict integration with haram content APIs, datasets, or user workflows. It also enables domain whitelisting to restrict AI use to halal-aligned business processes.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"5. Amanah and Taklif (Trust and Accountability):"}
-              paragraph={[
-                "The ethical trust placed on developers, engineers, and decision-makers must be preserved.",
-                "• Carlo Enforcement: Every change to the AI system—from dataset manipulation to final output—is logged with identity tracking and tamper-proof logs. This creates full accountability and governance transparency for Sharia compliance reviews.",
-              ]}
-            />
+                {islamicEthicsPrinciples.map((item, index) => (
+                    <ContainerProvier
+                      key={index}
+                      title={item.title}
+                      icon={item.icon}
+                      paragraph={item.paragraph}
+                    />
+                  ))}
           </div>
+          <ShariaContent />
         </div>
       </section>
     </div>

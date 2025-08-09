@@ -11,24 +11,24 @@ export default function HowitsWorkSection() {
       <div className="mt-10 flex flex-col gap-10 text-white">
         <div className="w-full max-w-[900px] mx-auto flex">
           <HowitsWork
-            image="/data-flow-diagram 1.png"
+            image="/vecteezy_stunning-artistic-holographic-data-interface-with-complex_59437502.png"
             heading="Data Generated"
             paragraph="Carlo monitors every data flow, classifying and securing sensitive information."
           />
           <HowitsWork
-            image="/marketing-research 1.png"
+            image="/vecteezy_serene-abstract-holographic-data-storage-device-with_60152598.png"
             heading="Data Stored"
             paragraph="Automated encryption compliance checks for frameworks like GDPR, HIPAA, and CCPA."
           />
         </div>
         <div className="w-full max-w-[900px] mx-auto flex">
           <HowitsWork
-            image="/coins-chart 1.png"
+            image="/vecteezy_nostalgic-spectacular-big-data-analytics-graph-no-background_60062308.png"
             heading="Actionable Insights"
             paragraph="Carlo’s feedback loop refines compliance policies and delivers instant recommendations to developers."
           />
           <HowitsWork
-            image="/data-flow-diagram 1.png"
+            image="/vecteezy_impressive-futuristic-holographic-display-floating_60066530.png"
             heading="Data Processing"
             paragraph="Real-time enforcement of privacy laws, bias audits, and ethical safeguards."
           />

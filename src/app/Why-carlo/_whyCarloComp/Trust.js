@@ -24,7 +24,7 @@ export default function Trust() {
 
       <div>
         <Image
-          src="/Trustrobot.png"
+          src="/TrustRobot.png"
           alt="robot-validator"
           width={500}
           height={500}

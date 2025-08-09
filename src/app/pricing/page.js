@@ -18,7 +18,7 @@ export default function page(){
         <p className="text-[22px] text-center max-w-[800px] mx-auto text-foreground">
           With Carlo PEaaS, you get flexible pricing plans designed to suit startups, growing businesses, and large enterprises. Our tiered pricing ensures you only pay for the features and services you need, making compliance easy, scalable, and cost-effective.
         </p>
-        <ComplianceTable />
+        {/* <ComplianceTable /> */}
         <ComplianceFeatureTable />
         <PricingInformation />
         <SubScribe />

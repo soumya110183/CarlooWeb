@@ -1,19 +1,22 @@
 "use client"
 
 import { useTheme } from "@/app/_subcomponents/ThemeContext";
-import { FaCheck } from "react-icons/fa";
 
-export default function ContainerProvier({ title, paragraph }) {
+
+export default function ContainerProvier({ title, paragraph,icon }) {
 
 const {theme}=useTheme()
 
   return (
-    <div className={`bg-foreground ${theme === "light" ? "text-white" : "text-black"} px-5 flex items-center justify-center rounded-3xl py-5`}>
+   <div
+  className={`bg-foreground ${theme === "light" ? "text-white" : "text-black"} 
+    px-10 flex   rounded-3xl py-10 min-h-[250px]`}
+>
       <div>
-        <div className="flex">
-          {/* <div className="bg-[#651FFF] rounded-full p-2 w-10 h-10 flex items-center justify-center shrink-0 ">
-                      <FaCheck className="text-white text-sm" />
-                    </div> */}
+        <div className="flex items-center gap-2">
+          <div className="bg-[#C3C3C3] rounded-full p-2 w-10 h-10 flex items-center justify-center shrink-0 ">
+                      {icon}
+                    </div>
           <h3 className="font-bold text-[20px]">{title}</h3>
         </div>
         <div className="flex flex-col gap-2 mt-2">

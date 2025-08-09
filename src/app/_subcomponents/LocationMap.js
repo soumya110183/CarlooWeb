@@ -5,11 +5,22 @@ import L from "leaflet";
 import Link from "next/link";
 import Image from "next/image";
 
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconUrl: "/marker-icon.png",
-  shadowUrl: "/marker-shadow.png",
-});
+const createHTMLRoundIcon = (imgSrc) => {
+  return L.divIcon({
+    html: `
+      <div style="
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        overflow:hidden;">
+        <img src="${imgSrc}" style="width:100%;height:100%;object-fit:cover;" />
+      </div>
+    `,
+    className: "",
+    iconSize: [40, 40], 
+  });
+};
+
 
 export default function OfficeMap({reach}) {
 
@@ -52,7 +63,7 @@ export default function OfficeMap({reach}) {
   const regionPopupData = {
     "North America": {
       coords: [37.0902, -95.7129],
-      icon: "/1f1fa-1f1f8 1.svg",
+      icon: "/Nau_flag.webp",
       title: "North American Regulations",
       frameworks: [
         { name: "CCPA", description: "California Consumer Privacy Act" },
@@ -63,7 +74,7 @@ export default function OfficeMap({reach}) {
     },
     Europe: {
       coords: [54.526, 15.2551],
-      icon: "/icons/europe.png",
+      icon: "/european-union-logo-flag-european-union-with-eu-letters-middle_330426-575.avif",
       title: "European Compliance Laws",
       frameworks: [
         { name: "GDPR", description: "General Data Protection Regulation" },
@@ -74,7 +85,7 @@ export default function OfficeMap({reach}) {
     },
     "Asia-Pacific": {
       coords: [7.8731, 80.7718],
-      icon: "/icons/asia-pacific.png",
+      icon: "/226681367_120292296987517_8521060763350313449_n.jpg",
       title: "Asia-Pacific Frameworks",
       frameworks: [
         { name: "PIPL", description: "China’s Personal Information Protection Law" },
@@ -85,7 +96,7 @@ export default function OfficeMap({reach}) {
     },
     Africa: {
       coords: [-1.9579, 30.1127],
-      icon: "/icons/africa.png",
+      icon: "/african-union-logo.jpg",
       title: "African Data Laws",
       frameworks: [
         { name: "POPIA", description: "Protection of Personal Information Act (South Africa)" },
@@ -95,7 +106,7 @@ export default function OfficeMap({reach}) {
     },
     "Latin America": {
       coords: [-14.235, -51.9253],
-      icon: "/icons/latin-america.png",
+      icon: "/1200px-Flag_of_UNASUR.svg.png",
       title: "Latin American Regulations",
       frameworks: [
         { name: "LGPD", description: "Lei Geral de Proteção de Dados (Brazil)" },
@@ -105,7 +116,7 @@ export default function OfficeMap({reach}) {
     },
     "Middle East": {
       coords: [25.276987, 55.296249],
-      icon: "/icons/middle-east.png",
+      icon: "/tg7twp3sbd961.jpg",
       title: "Middle Eastern Principles",
       frameworks: [
         { name: "GCC Principles", description: "Gulf Cooperation Council Data Protection Principles" }
@@ -152,7 +163,7 @@ export default function OfficeMap({reach}) {
         ))
       ) : (
         Object.entries(regionPopupData).map(([regionName, popup], idx) => (
-          <Marker key={idx} position={popup.coords}>
+          <Marker key={idx} position={popup.coords} icon={createHTMLRoundIcon(popup.icon)}>
             <Popup>
               <div className="space-y-3 text-gray-800">
                 <div className="flex items-center space-x-3">

@@ -1,9 +1,10 @@
 import Image from "next/image";
 import TrustSteps from "../Why-carlo/_subcomp/TrustSteps";
 import HeadingReuse from "../_subcomponents/HeadingReuse";
-import { trustStepsData } from "../_data/data";
+import {containerData } from "../_data/data";
 import ContainerProvier from "../About-us/_components/ContainerProvider";
 import Underline from "../_subcomponents/UnderLine";
+import RomeCallContent from "./RomeCallContent";
 
 export default function page() {
   return (
@@ -35,57 +36,19 @@ export default function page() {
             standards and day-to-day development.
           </p>
           <div className="grid grid-cols-2 gap-8 mt-10">
-            {/* {trustStepsData.map((item, index) => (
-              <TrustSteps key={index} title={item.title} steps={item.steps} />
-            ))} */}
-            <ContainerProvier
-              title={"Transparency:"}
-              paragraph={[
-                "AI systems must be understandable to all.",
-                "• Carlo Enforcement: Carlo logs AI decisions and makes models explainable through visualization dashboards, real-time traceability, and model lineage audits.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"Inclusion:"}
-              paragraph={[
-                "AI must serve every human being and respect all social groups.",
-                "• Carlo Enforcement: Carlo detects exclusionary patterns in training data and monitors demographic disparities in outputs, flagging any systemic bias.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"Responsibility:"}
-              paragraph={[
-                "Designers and users of AI must take responsibility for their systems.",
-                "• Carlo Enforcement: Enforces accountable version control, tracks who made each model or data change, and binds developers to a responsibility framework with real-time feedback.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"Impartiality:"}
-              paragraph={[
-                "AI must not foster bias or discrimination.",
-                "• Carlo Enforcement: Uses fairness metrics, demographic parity testing, and bias detection algorithms to ensure outputs are equitable and unbiased.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"Reliability:"}
-              paragraph={[
-                "AI must operate securely and consistently across its lifecycle.",
-                "• Carlo Enforcement: Monitors uptime, consistency, safety overrides, and anomaly detection in deployed AI systems.",
-              ]}
-            />
-
-            <ContainerProvier
-              title={"Security and Privacy:"}
-              paragraph={[
-                "Personal data must be protected and AI systems must prevent misuse.",
-                "• Carlo Enforcement: Carlo integrates encryption standards, GDPR-aligned privacy controls, and consent-driven data processing workflows.",
-              ]}
-            />
+       
+             
+      {containerData.map((item, index) => (
+        <ContainerProvier
+          key={index}
+          title={item.title}
+          icon={item.icon}
+          paragraph={item.paragraph}
+        />
+      ))}
+   
           </div>
+          <RomeCallContent />
         </div>
       </section>
     </div>
