@@ -6,13 +6,13 @@ import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 
 export default async function page({ params }) {
-  const blogId = params.blogid;
+const blogTitle =params.blogid;
 
-  console.log("Blog ID from URL:", blogId);
+
 
   await connectToDatabase();
-
-  const blogsDetails = await blog.findById(blogId).lean();
+  
+  const blogsDetails = await blog.findOne({ slug: blogTitle }).lean();
 
 
 
@@ -51,9 +51,12 @@ export default async function page({ params }) {
               className="rounded-lg object-cover"
             />
           </div>
-          <p className="font-normal text-[14px] mt-5 text-[#C0C0C0]">
-           {blogsDetails.content}
-          </p>
+          <p
+  className="font-normal text-[14px] mt-5 text-[#C0C0C0]"
+  style={{ whiteSpace: 'pre-line' }}
+>
+  {blogsDetails.content}
+</p>
         </div>
       </div>
     </section>

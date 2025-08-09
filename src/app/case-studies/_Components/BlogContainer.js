@@ -59,7 +59,7 @@ export default function BlogCard({ blog, deleteButton }) {
 <div className="flex w-full justify-between">
 
         <Link
-          href={`/blog/${blog._id}`}
+          href={`/blog/${blog.slug}`}
           className="text-cyan-400 text-sm font-semibold hover:underline mt-2.5"
         >
           READ MORE

@@ -2,7 +2,7 @@
 
 import mongoose from 'mongoose';
 
-const BlogSchema = new mongoose.Schema(
+const casestudy = new mongoose.Schema(
   {
     image: {
       type: String, 
@@ -31,4 +31,4 @@ const BlogSchema = new mongoose.Schema(
 );
 
 
-export default mongoose.models.Blog || mongoose.model('Blog', BlogSchema);
+export default mongoose.models.casestudy || mongoose.model('casestudy', casestudy);

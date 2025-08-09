@@ -1,5 +1,6 @@
-import BlogCard from "../case-studies/_Components/BlogContainer";
+
 import AdminBlogForm from "./Components/AdminAcess";
+import CaseStudyForm from "./Components/CaseStudyForm";
 
 export default async function page(){
 
@@ -11,6 +12,7 @@ export default async function page(){
     return(
         <div className="pt-10">
             <AdminBlogForm blogs={blogs} />
+            <CaseStudyForm />
 
          
 

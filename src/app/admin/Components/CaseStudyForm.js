@@ -1,42 +1,22 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import Login from "./Login";
-import BlogCard from "@/app/case-studies/_Components/BlogContainer";
+import { useState } from "react";
 
-export default function AdminBlogForm({blogs}) {
- 
- 
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [image, setImage] = useState(null);
-  const [message, setMessage] = useState('');
-  const [adminName, setAdminName] = useState('');
-  const [password, setPassword] = useState('');
-  const [accessGranted, setAccessGranted] = useState(false);
-  const [error, setError] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+export default function CaseStudyForm(){
 
-  
+     const [title, setTitle] = useState('');
+      const [content, setContent] = useState('');
+      const [image, setImage] = useState(null);
+      const [message, setMessage] = useState('');
+      const [adminName, setAdminName] = useState('');
+     
+     
+   
+      const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
-  useEffect(() => {
-    const isLoggedIn = sessionStorage.getItem('adminAccess') === 'true';
-    if (isLoggedIn) setAccessGranted(true);
-  }, []);
 
-  const handlePasswordSubmit = (e) => {
-    e.preventDefault();
-    if (password === correctPassword) {
-      setAccessGranted(true);
-      sessionStorage.setItem('adminAccess', 'true');
-    } else {
-      setError("❌ Incorrect password");
-    }
-  };
-
-  const uploadImageToCloudinary = async () => {
+      const uploadImageToCloudinary = async () => {
     const formData = new FormData();
     formData.append('image', image);
 
@@ -61,7 +41,7 @@ export default function AdminBlogForm({blogs}) {
         setIsSubmitting(true);
       const imageUrl = await uploadImageToCloudinary();
 
-      const res = await fetch('/api/blogs', {
+      const res = await fetch('/api/casestudy', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -87,24 +67,11 @@ export default function AdminBlogForm({blogs}) {
     location.reload();
   }
   };
-
-  if (!accessGranted) {
-    return (
-      <Login
-        error={error}
-        handlePasswordSubmit={handlePasswordSubmit}
-        setPassword={setPassword}
-        password={password}
-      />
-    );
-  }
-
-  return (
-    <>
-    <div className="max-w-xl mx-auto mt-20 p-6  bg-[#0F092A] rounded-xl shadow-2xl text-white">
+    return(
+          <div className="max-w-xl mx-auto mt-20 p-6  bg-[#0F092A] rounded-xl shadow-2xl text-white">
       <h1 className="text-2xl font-bold mb-4">Add New Blog</h1>
       {message && <p className="mb-4 text-green-500">{message}</p>}
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+      <form onSubmit={handleSubmit}  className="flex flex-col space-y-4">
         <input
           type="text"
           placeholder="Admin Name"
@@ -145,26 +112,5 @@ export default function AdminBlogForm({blogs}) {
       </form>
 
     </div>
-    <div className="flex justify-center">
-
-      <button
-        type="button"
-        onClick={() => {
-            sessionStorage.removeItem('adminAccess');
-            location.reload();
-        }}
-        className="bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold mt-5 "
-        >
-        Logout
-      </button>
-                    </div>
-                <div className="w-full max-w-[1200px] mt-10 grid grid-cols-3 gap-10 shrink-0  mx-auto pb-15">
-                     {blogs.map((blog) => (
-              <BlogCard key={blog._id} blog={blog} deleteButton={true}/>
-            ))}
-                     
-                   
-                    </div>
-      </>
-  );
+    )
 }
