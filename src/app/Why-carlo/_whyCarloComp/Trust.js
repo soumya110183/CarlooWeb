@@ -1,12 +1,11 @@
 import Image from "next/image";
 import CardSlider from "../_subcomp/SwiperSlider";
 
-
 export default function Trust() {
-
-
   return (
-    <div className={`w-full max-w-[1200px] flex max-lg:flex-col items-center mx-auto justify-between text-foreground lg:pb-32 pb-15`}>
+    <div
+      className={`w-full max-w-[1200px] flex max-lg:flex-col items-center mx-auto justify-between text-foreground lg:pb-32 pb-15`}
+    >
       <div className="w-full lg:max-w-[570px]">
         <h2 className="text-[40px] font-bold">3. Trust and Transparency</h2>
         <div className="flex gap-2">
@@ -24,7 +23,7 @@ export default function Trust() {
 
       <div>
         <Image
-          src="/TrustRobot.png"
+          src="/Trustrobot-image.png"
           alt="robot-validator"
           width={500}
           height={500}

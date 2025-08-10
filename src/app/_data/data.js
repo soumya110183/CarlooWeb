@@ -1,30 +1,38 @@
-import { FaBrain, FaComments, FaFileAlt, FaHeart, FaShieldAlt } from "react-icons/fa";
-import {  } from "react-icons/fa";
+import {
+  FaBrain,
+  FaComments,
+  FaFileAlt,
+  FaHeart,
+  FaShieldAlt,
+} from "react-icons/fa";
+import {} from "react-icons/fa";
 
 import {
-  FaEye, FaUsers, FaUserShield, FaBalanceScale, FaCheckCircle, FaLock,
+  FaEye,
+  FaUsers,
+  FaUserShield,
+  FaBalanceScale,
+  FaCheckCircle,
+  FaLock,
   FaGlobe,
   FaGavel,
-
   FaHandshake,
   FaScroll,
   FaLandmark,
-
   FaSyncAlt,
   FaFlag,
   FaLightbulb,
   FaBook,
   FaRobot,
   FaSearch,
-
   FaClipboardCheck,
   FaBalanceScaleRight,
   FaCogs,
-  FaCloud, FaIndustry,  FaRocket, FaUniversity 
-
+  FaCloud,
+  FaIndustry,
+  FaRocket,
+  FaUniversity,
 } from "react-icons/fa";
-
-
 
 export const providersData = [
   {
@@ -112,7 +120,6 @@ export const islamicEthicsPrinciples = [
   },
 ];
 
-
 export const dataProtectionLawsData = [
   {
     title: "🛡️ General Data Protection Regulation (GDPR):",
@@ -199,50 +206,50 @@ export const containerData = [
     title: "Transparency:",
     paragraph: [
       "AI systems must be understandable to all.",
-      "• Carlo Enforcement: Carlo logs AI decisions and makes models explainable through visualization dashboards, real-time traceability, and model lineage audits."
+      "• Carlo Enforcement: Carlo logs AI decisions and makes models explainable through visualization dashboards, real-time traceability, and model lineage audits.",
     ],
-    icon: <FaEye color="black" size={22} />
+    icon: <FaEye color="black" size={22} />,
   },
   {
     title: "Inclusion:",
     paragraph: [
       "AI must serve every human being and respect all social groups.",
-      "• Carlo Enforcement: Carlo detects exclusionary patterns in training data and monitors demographic disparities in outputs, flagging any systemic bias."
+      "• Carlo Enforcement: Carlo detects exclusionary patterns in training data and monitors demographic disparities in outputs, flagging any systemic bias.",
     ],
-    icon: <FaUsers color="black" size={22} />
+    icon: <FaUsers color="black" size={22} />,
   },
   {
     title: "Responsibility:",
     paragraph: [
       "Designers and users of AI must take responsibility for their systems.",
-      "• Carlo Enforcement: Enforces accountable version control, tracks who made each model or data change, and binds developers to a responsibility framework with real-time feedback."
+      "• Carlo Enforcement: Enforces accountable version control, tracks who made each model or data change, and binds developers to a responsibility framework with real-time feedback.",
     ],
-    icon: <FaUserShield color="black" size={22} />
+    icon: <FaUserShield color="black" size={22} />,
   },
   {
     title: "Impartiality:",
     paragraph: [
       "AI must not foster bias or discrimination.",
-      "• Carlo Enforcement: Uses fairness metrics, demographic parity testing, and bias detection algorithms to ensure outputs are equitable and unbiased."
+      "• Carlo Enforcement: Uses fairness metrics, demographic parity testing, and bias detection algorithms to ensure outputs are equitable and unbiased.",
     ],
-    icon: <FaBalanceScale color="black" size={22} />
+    icon: <FaBalanceScale color="black" size={22} />,
   },
   {
     title: "Reliability:",
     paragraph: [
       "AI must operate securely and consistently across its lifecycle.",
-      "• Carlo Enforcement: Monitors uptime, consistency, safety overrides, and anomaly detection in deployed AI systems."
+      "• Carlo Enforcement: Monitors uptime, consistency, safety overrides, and anomaly detection in deployed AI systems.",
     ],
-    icon: <FaCheckCircle color="black" size={22} />
+    icon: <FaCheckCircle color="black" size={22} />,
   },
   {
     title: "Security and Privacy:",
     paragraph: [
       "Personal data must be protected and AI systems must prevent misuse.",
-      "• Carlo Enforcement: Carlo integrates encryption standards, GDPR-aligned privacy controls, and consent-driven data processing workflows."
+      "• Carlo Enforcement: Carlo integrates encryption standards, GDPR-aligned privacy controls, and consent-driven data processing workflows.",
     ],
-    icon: <FaLock color="black" size={22} />
-  }
+    icon: <FaLock color="black" size={22} />,
+  },
 ];
 export const globalPolicyFrameworksData = [
   {
@@ -303,31 +310,32 @@ export const featuresData = [
     flex: true,
     paragraph:
       " Carlo actively monitors every data stream, inference result, and API transaction in real time. Its policy engine uses pre-built and custom compliance rules to detect violations, block unauthorized actions, and enforce global standards automatically.",
-    img: "keyFeaturesrobot2.png",
+    img: "policyrobot.png",
   },
   {
     heading: "Feedback Loops",
-    img: "keyFeatures-robot3.png",
+    img: "feedbak-robot.png",
     paragraph:
       " Carlo delivers machine-readable feedback for every compliance check. Developers receive JSON-based diagnostics, bias alerts, and recommended fixes that can be integrated directly into CI/CD pipelines.",
   },
   {
     heading: "Multi-Project Scalability",
     flex: true,
-    img: "multi-project scalablity.png",
+    img: "multi-project.png",
     paragraph:
       "Carlo was built for scale. Whether you manage one AI model or hundreds across multiple regions, Carlo provides centralized governance with project-level policy control.",
   },
   {
     heading: "Compliance Dashboard",
-    img: "compliance.png",
+    img: "dashboard.png",
     paragraph:
       "Carlo’s real-time compliance dashboard gives developers, compliance officers, and executives instant visibility into compliance health. Track violations, review automated enforcement actions, and generate audit-ready reports with a single click.",
   },
   {
     heading: "Cross-Platform Integration",
     flex: true,
-    img: "cross-platform.png",
+    img: "cross-platfrom.png",
+
     paragraph:
       " Carlo plugs directly into your development ecosystem. With SDKs, APIs, and containerized deployment, it fits into any modern AI stack without requiring workflow changes.",
   },
@@ -400,7 +408,7 @@ export const featuresInternational = [
     featureName: "G7 International Guiding Principles for Advanced AI",
     featureDetails: [
       "Provides a globally recognized framework for responsible AI development, deployment, and governance.",
-      "How Carlo Helps: Ensures AI systems follow G7-aligned ethical standards, enhance transparency, and meet global legal obligations."
+      "How Carlo Helps: Ensures AI systems follow G7-aligned ethical standards, enhance transparency, and meet global legal obligations.",
     ],
     icon: <FaGlobe color="black" size={22} />,
   },
@@ -408,7 +416,7 @@ export const featuresInternational = [
     featureName: "UN Algorithmic Impact Assessment Guidelines",
     featureDetails: [
       "Outlines a global framework for evaluating the societal, ethical, and human rights impacts of AI systems.",
-      "How Carlo Helps: Monitors and assesses AI performance to maximize public benefit, reduce risks, and maintain alignment with UN principles."
+      "How Carlo Helps: Monitors and assesses AI performance to maximize public benefit, reduce risks, and maintain alignment with UN principles.",
     ],
     icon: <FaGavel color="black" size={20} />,
   },
@@ -416,7 +424,7 @@ export const featuresInternational = [
     featureName: "World Economic Forum AI Ethics Guidelines",
     featureDetails: [
       "Promotes ethical, transparent, and inclusive AI adoption across industries worldwide.",
-      "How Carlo Helps: Delivers tailored compliance solutions for industry-specific AI applications."
+      "How Carlo Helps: Delivers tailored compliance solutions for industry-specific AI applications.",
     ],
     icon: <FaUsers color="black" size={21} />,
   },
@@ -424,15 +432,16 @@ export const featuresInternational = [
     featureName: "OECD AI Principles",
     featureDetails: [
       "Encourages cross-border collaboration and adoption of ethical AI practices.",
-      "How Carlo Helps: Supports multinational enterprises in achieving consistent, global AI compliance."
+      "How Carlo Helps: Supports multinational enterprises in achieving consistent, global AI compliance.",
     ],
     icon: <FaHandshake color="black" size={22} />,
   },
   {
-    featureName: "UNESCO Recommendation on the Ethics of Artificial Intelligence",
+    featureName:
+      "UNESCO Recommendation on the Ethics of Artificial Intelligence",
     featureDetails: [
       "Defines human-centered standards for ethical AI use across the globe.",
-      "How Carlo Helps: Embeds UNESCO’s ethical principles into AI system design and governance."
+      "How Carlo Helps: Embeds UNESCO’s ethical principles into AI system design and governance.",
     ],
     icon: <FaScroll color="black" size={21} />,
   },
@@ -440,27 +449,27 @@ export const featuresInternational = [
     featureName: "European Commission's Coordinated Plan on AI",
     featureDetails: [
       "Drives AI innovation and coordinated policy implementation across EU member states.",
-      "How Carlo Helps: Aligns systems with EU policies to enable harmonized, cross-country AI deployment."
+      "How Carlo Helps: Aligns systems with EU policies to enable harmonized, cross-country AI deployment.",
     ],
     icon: <FaLandmark color="black" size={21} />,
   },
   {
-    featureName: "Council of Europe Framework Convention on AI, Human Rights, Democracy, and the Rule of Law",
+    featureName:
+      "Council of Europe Framework Convention on AI, Human Rights, Democracy, and the Rule of Law",
     featureDetails: [
       "Establishes binding legal standards for AI accountability and human rights protection.",
-      "How Carlo Helps: Implements governance models that fully comply with Council of Europe values."
+      "How Carlo Helps: Implements governance models that fully comply with Council of Europe values.",
     ],
     icon: <FaBalanceScale color="black" size={21} />,
   },
 ];
-
 
 export const featuresGlobalAI = [
   {
     featureName: "European Union AI Act",
     featureDetails: [
       "Creates a comprehensive legal framework for building and deploying trustworthy AI.",
-      "How Carlo Helps: Continuously monitors high-risk AI systems to ensure full compliance with EU regulations."
+      "How Carlo Helps: Continuously monitors high-risk AI systems to ensure full compliance with EU regulations.",
     ],
     icon: <FaBalanceScale color="black" size={21} />,
   },
@@ -468,7 +477,7 @@ export const featuresGlobalAI = [
     featureName: "Ethics Guidelines for Trustworthy AI (EU)",
     featureDetails: [
       "Promotes AI that is transparent, accountable, and fair across all use cases.",
-      "How Carlo Helps: Automates bias detection and improves model explainability for greater trust."
+      "How Carlo Helps: Automates bias detection and improves model explainability for greater trust.",
     ],
     icon: <FaSearch color="black" size={21} />,
   },
@@ -476,7 +485,7 @@ export const featuresGlobalAI = [
     featureName: "UNESCO Recommendation on AI Ethics",
     featureDetails: [
       "Encourages responsible AI adoption in education, research, and policymaking.",
-      "How Carlo Helps: Delivers actionable insights to maintain ethical integrity throughout AI lifecycles."
+      "How Carlo Helps: Delivers actionable insights to maintain ethical integrity throughout AI lifecycles.",
     ],
     icon: <FaGlobe color="black" size={21} />,
   },
@@ -484,7 +493,7 @@ export const featuresGlobalAI = [
     featureName: "OECD AI Principles",
     featureDetails: [
       "Ensures AI technologies uphold human rights, fairness, and democratic values.",
-      "How Carlo Helps: Monitors compliance with OECD benchmarks and provides targeted corrective guidance."
+      "How Carlo Helps: Monitors compliance with OECD benchmarks and provides targeted corrective guidance.",
     ],
     icon: <FaScroll color="black" size={21} />,
   },
@@ -492,7 +501,7 @@ export const featuresGlobalAI = [
     featureName: "IEEE Global Initiative on AI Ethics",
     featureDetails: [
       "Focuses on embedding ethics into the design, development, and deployment of intelligent systems.",
-      "How Carlo Helps: Applies ethical safeguards during every stage of AI system creation and operation."
+      "How Carlo Helps: Applies ethical safeguards during every stage of AI system creation and operation.",
     ],
     icon: <FaRobot color="black" size={21} />,
   },
@@ -500,7 +509,7 @@ export const featuresGlobalAI = [
     featureName: "Council of Europe's Framework Convention on AI",
     featureDetails: [
       "Defines binding legal standards for AI governance and protection of human rights.",
-      "How Carlo Helps: Aligns AI systems with human-centric governance and accountability principles."
+      "How Carlo Helps: Aligns AI systems with human-centric governance and accountability principles.",
     ],
     icon: <FaLandmark color="black" size={21} />,
   },
@@ -508,7 +517,7 @@ export const featuresGlobalAI = [
     featureName: "Algorithmic Justice League Guidelines",
     featureDetails: [
       "Advocates for fairness, accountability, and transparency in algorithmic decision-making.",
-      "How Carlo Helps: Identifies and corrects biases in datasets and algorithms to ensure equitable outcomes."
+      "How Carlo Helps: Identifies and corrects biases in datasets and algorithms to ensure equitable outcomes.",
     ],
     icon: <FaSyncAlt color="black" size={21} />,
   },
@@ -516,7 +525,7 @@ export const featuresGlobalAI = [
     featureName: "Japan's AI Governance Guidelines",
     featureDetails: [
       "Sets forth principles for responsible and transparent AI governance in Japan.",
-      "How Carlo Helps: Delivers customized compliance strategies for Japan-specific AI applications."
+      "How Carlo Helps: Delivers customized compliance strategies for Japan-specific AI applications.",
     ],
     icon: <FaFlag color="black" size={21} />,
   },
@@ -524,7 +533,7 @@ export const featuresGlobalAI = [
     featureName: "UK National AI Strategy",
     featureDetails: [
       "Promotes AI-driven innovation while safeguarding ethical and regulatory standards.",
-      "How Carlo Helps: Tracks and supports compliance throughout the AI innovation process."
+      "How Carlo Helps: Tracks and supports compliance throughout the AI innovation process.",
     ],
     icon: <FaLightbulb color="black" size={21} />,
   },
@@ -532,12 +541,11 @@ export const featuresGlobalAI = [
     featureName: "Singapore Model AI Governance Framework",
     featureDetails: [
       "Provides practical guidance for enhancing AI transparency and explainability.",
-      "How Carlo Helps: Improves system clarity with in-depth reporting and documentation."
+      "How Carlo Helps: Improves system clarity with in-depth reporting and documentation.",
     ],
     icon: <FaBook color="black" size={21} />,
   },
 ];
-
 
 export const aiEthicsPrinciples = [
   {

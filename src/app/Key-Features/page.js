@@ -15,6 +15,7 @@ export default function page() {
           heading={feature.heading}
           paragraph={feature.paragraph}
           image={feature.img}
+          size={feature?.size}
         />
       ))}
       <ProjectCount />

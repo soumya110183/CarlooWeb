@@ -1,7 +1,13 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import Image from "next/image";
 
-export default function Featureskey({ heading, paragraph, image, flex }) {
+export default function Featureskey({
+  heading,
+  paragraph,
+  image,
+  flex,
+  size = 500,
+}) {
   return (
     <section
       className={`w-full max-w-[1200px] ${
@@ -19,8 +25,8 @@ export default function Featureskey({ heading, paragraph, image, flex }) {
           src={`/${image}`}
           alt={image ? image : "image "}
           className="w-[500px]"
-          width={500}
-          height={500}
+          width={size}
+          height={size}
         />
       </div>
     </section>
