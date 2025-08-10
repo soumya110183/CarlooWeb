@@ -1,12 +1,19 @@
+import Image from "next/image";
 import Card from "../_subcomponents/Card";
 
-
 export default function Research() {
-
-
   return (
-    <section>
-      <div className={`mt-[124px] w-full max-w-[1200px] mx-auto flex items-center justify-between text-foreground`}>
+    <section className="relative w-full">
+      <Image
+        width={500}
+        height={500}
+        src="/card.png"
+        alt="card"
+        className=" absolute top-0 left-[-100] z-[-1] "
+      />
+      <div
+        className={`mt-[124px] w-full max-w-[1200px] mx-auto flex items-center justify-between text-foreground`}
+      >
         <div>
           <h3 className="text-[46px] font-bold">
             Our Research
@@ -21,7 +28,10 @@ export default function Research() {
         </div>
         <div className="w-full max-w-[800px]">
           <p className="font-medium text-[22px]">
-           Artificial Intelligence (AI) is the overarching concept of machines capable of performing tasks that typically require human intelligence — such as visual perception, speech recognition, decision-making, and language translation.
+            Artificial Intelligence (AI) is the overarching concept of machines
+            capable of performing tasks that typically require human
+            intelligence — such as visual perception, speech recognition,
+            decision-making, and language translation.
           </p>
         </div>
       </div>

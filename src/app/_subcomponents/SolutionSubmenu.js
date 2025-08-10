@@ -4,7 +4,7 @@ function SolutionSubmenu({ ref, dropdownOpen }) {
   return (
     <div
       ref={ref}
-      className={`w-full px-5 py-5 absolute left-1/2 transform -translate-x-1/2 top-14 bg-black/50 text-white backdrop-blur-lg  rounded-2xl
+      className={`w-full max-w-[20%] px-5 py-5 absolute left-1/2 transform -translate-x-1/2 top-20 bg-black/50 text-white backdrop-blur-lg  rounded-2xl
       transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
       ${
         dropdownOpen

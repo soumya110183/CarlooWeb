@@ -187,15 +187,15 @@ function Navigation() {
                     ref={resourcesMenuRef}
                   />
                 )}
-                {solutionsOpen && item.name === "Solutions" && (
-                  <SolutionSubmenu
-                    dropdownOpen={solutionsOpen}
-                    ref={solutionsMenuRef}
-                  />
-                )}
               </li>
             );
           })}
+          {solutionsOpen && (
+            <SolutionSubmenu
+              dropdownOpen={solutionsOpen}
+              ref={solutionsMenuRef}
+            />
+          )}
         </ul>
 
         <div className="flex items-center gap-5  justify-between">
