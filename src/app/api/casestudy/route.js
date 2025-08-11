@@ -46,9 +46,9 @@ export async function DELETE(req) {
   }
 
   try {
-    await Blog.findByIdAndDelete(id);
-    return NextResponse.json({ message: 'Blog deleted successfully' }, { status: 200 });
+    await casestudy.findByIdAndDelete(id);
+    return NextResponse.json({ message: 'caseStudy deleted successfully' }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to delete blog' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to delete CaseStudy' }, { status: 500 });
   }
 }

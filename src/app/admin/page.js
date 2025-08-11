@@ -9,9 +9,14 @@ export default async function page(){
   });
 
   const blogs = await res.json();
+      const resCase = await fetch("https://carlo-peass-71nb.vercel.app/api/casestudy", {
+    cache: "no-store", 
+  });
+
+  const caseStudy = await resCase.json();
     return(
         <div className="pt-10">
-            <AdminBlogForm blogs={blogs} />
+            <AdminBlogForm blogs={blogs} casestudy={caseStudy} />
             {/* <CaseStudyForm /> */}
 
          

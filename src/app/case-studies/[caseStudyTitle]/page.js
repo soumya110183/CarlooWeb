@@ -1,25 +1,26 @@
 import Underline from "@/app/_subcomponents/UnderLine";
 import { connectToDatabase } from "@/lib/mongodb";
-import blog from "@/modals/blog";
+import casestudy from "@/modals/casestudy";
 import { formatDistanceToNow } from "date-fns";
 
 import Image from "next/image";
 
 export default async function page({ params }) {
-const blogTitle =params.blogid;
+const caseStudyTitle =params.caseStudyTitle;
 
 
 
   await connectToDatabase();
   
-  const blogsDetails = await blog.findOne({ slug: blogTitle }).lean();
+  const casestudyDetails = await casestudy.findOne({ slug: caseStudyTitle }).lean();
+  console.log(casestudyDetails)
 
 
 
   return (
     <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] px-4 pb-30">
       <h2 className="text-[48px] font-bold text-center">
-        blog
+        Case Study
       </h2>
       <Underline />
       {/* <p className="text-[22px] text-center">
@@ -36,16 +37,16 @@ const blogTitle =params.blogid;
                 height={32}
                 className="rounded-full aspect-square object-cover"
               />
-              <span className=" font-medium text-white">{blogsDetails.adminName}</span>
+              <span className=" font-medium text-white">{casestudyDetails.adminName}</span>
             </div>
-            <p className="text-gray-400 text-sm ">{formatDistanceToNow(new Date(blogsDetails.createdAt), { addSuffix: true })}</p>
+            <p className="text-gray-400 text-sm ">{formatDistanceToNow(new Date(casestudyDetails.createdAt), { addSuffix: true })}</p>
           </div>
           <h2 className="font-bold text-[32px] mt-9 text-white">
-            {blogsDetails.title}
+            {casestudyDetails.title}
           </h2>
           <div className=" relative w-full h-[262px] mt-7">
             <Image
-              src={blogsDetails.image || "/placeholderimage.png"}
+              src={casestudyDetails.image || "/placeholderimage.png"}
               alt="Blog Thumbnail"
               fill
               className="rounded-lg object-cover"
@@ -55,7 +56,7 @@ const blogTitle =params.blogid;
   className="font-normal text-[14px] mt-5 text-[#C0C0C0]"
   style={{ whiteSpace: 'pre-line' }}
 >
-  {blogsDetails.content}
+  {casestudyDetails.content}
 </p>
         </div>
       </div>

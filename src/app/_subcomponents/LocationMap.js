@@ -11,8 +11,8 @@ const createHTMLRoundIcon = (imgSrc) => {
       <div style="
         width:40px;
         height:40px;
-        border-radius:50%;
-        overflow:hidden;">
+        border-radius:20px;
+        ">
         <img src="${imgSrc}" style="width:100%;height:100%;object-fit:cover;" />
       </div>
     `,
@@ -21,41 +21,7 @@ const createHTMLRoundIcon = (imgSrc) => {
   });
 };
 
-export default function OfficeMap({ reach }) {
-  const locations = [
-    {
-      name: "India – Bengaluru - Fairway Technologies",
-      coords: [12.9716, 77.5946],
-      address:
-        " Level 14, UB City, Concorde Towers, 24, Vittal Mallya Rd, KG Halli, D' Souza Layout, Ashok Nagar, Bengaluru, Karnataka 560001",
-      phone: "+91 91 4897-4612",
-      key: "contact",
-      icon: "/1f1ee-1f1f3 1.svg",
-    },
-    {
-      name: "USA – Fort Lauderdale - Algorethics INC",
-      coords: [26.1224, -80.1373],
-      address: "333 Sunset Drive, Fort Lauderdale, FL 33301, USA",
-      phone: "+1 929-400-3096",
-      icon: "/1f1fa-1f1f8 1.svg",
-    },
-    {
-      name: "UAE – Dubai -  Algorethics LLC",
-      coords: [25.2048, 55.2708],
-      address:
-        "101 Raina Business Center, Behind Mall of the Emirates, Al Barsha, Dubai, UAE",
-      phone: "+971 50 268 2270",
-      icon: "/1f1e6-1f1ea 1.svg",
-    },
-    {
-      name: "Georgia – Tbilisi - Algorethics AI",
-      coords: [41.7151, 44.8271],
-      address: "9 Petritsi Street, 0132, Tbilisi, Georgia",
-      phone: "+995 598 50 25 55",
-      icon: "/1f1ec-1f1ea 1.svg",
-    },
-  ];
-
+export default function OfficeMap({ locations, reach, setCurrentLoc }) {
   const regionPopupData = {
     "North America": {
       coords: [37.0902, -95.7129],
@@ -179,6 +145,12 @@ export default function OfficeMap({ reach }) {
               key={idx}
               position={loc.coords}
               icon={createHTMLRoundIcon(loc.icon)}
+              eventHandlers={{
+                click: () => {
+                 
+               setCurrentLoc(loc); 
+                },
+              }}
             >
               <Popup>
                 <div className="flex items-center space-x-3">

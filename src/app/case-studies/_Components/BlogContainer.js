@@ -4,12 +4,17 @@ import { formatDistanceToNow } from "date-fns";
 import { MdDelete } from "react-icons/md";
 import Link from "next/link";
 
-export default function BlogCard({ blog, deleteButton }) {
+export default function BlogCard({ blog,casestudy, deleteButton }) {
+
+ const contents=blog ? blog : casestudy
+ const pathName=blog ? "blog" :"case-studies"
+ const apiPath=blog ? "blogs" :"casestudy"
+
   const handleDelete = async () => {
     const confirmed = confirm("Are you sure you want to delete this blog?");
     if (!confirmed) return;
 
-    const res = await fetch(`/api/blogs?id=${blog._id}`, {
+    const res = await fetch(`/api/${apiPath}?id=${contents._id}`, {
       method: "DELETE",
     });
 
@@ -32,34 +37,34 @@ export default function BlogCard({ blog, deleteButton }) {
               height={32}
               className="rounded-full aspect-square object-cover"
             />
-            <span className="text-sm font-medium">{blog.adminName}</span>
+            <span className="text-sm font-medium">{contents.adminName}</span>
           </div>
           <p className="text-gray-400 text-sm ">
-          {formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}
+          {formatDistanceToNow(new Date(contents.createdAt), { addSuffix: true })}
         </p>
         </div>
           <div className=" relative w-full h-[180px] mt-4">
             <Image
-              src={blog.image || "/placeholderimage.png"}
-              alt="Blog Thumbnail"
+              src={contents.image || "/placeholderimage.png"}
+              alt="contents Thumbnail"
               fill
               className="rounded-lg object-cover"
             />
           </div>
 
         <h2 className="text-lg font-semibold leading-snug mt-2.5">
-          {blog.title}
+          {contents.title}
         </h2>
 
         
 
         <p className="text-sm text-gray-300 mt-2.5">
-          {blog.content.split(" ").slice(0, 20).join(" ")}...
+          {contents.content.split(" ").slice(0, 20).join(" ")}...
         </p>
 <div className="flex w-full justify-between">
 
         <Link
-          href={`/blog/${blog.slug}`}
+          href={`/${pathName}/${contents.slug}`}
           className="text-cyan-400 text-sm font-semibold hover:underline mt-2.5"
         >
           READ MORE

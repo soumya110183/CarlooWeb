@@ -2,7 +2,7 @@ import Experience from "../_components/Experience";
 import OfficeMap from "../_subcomponents/LocationMap";
 import Underline from "../_subcomponents/UnderLine";
 import SubScribe from "../About-us/_components/SubScribe";
-import ContactDetails from "./Contactcomp/ContactDetails";
+
 import ContactForm from "./Contactcomp/ContactForm";
 import ContactWebMap from "./Contactcomp/ContactWebMap";
 
@@ -26,7 +26,7 @@ export default function page() {
           Queries, complaints and feedback. We will be happy to serve you
         </p>
         <ContactWebMap />
-        <ContactDetails />
+      
       
         <Experience />
         <div className="pt-32">

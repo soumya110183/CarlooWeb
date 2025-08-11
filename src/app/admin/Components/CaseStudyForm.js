@@ -69,7 +69,7 @@ export default function CaseStudyForm(){
   };
     return(
           <div className="max-w-xl mx-auto mt-20 p-6  bg-[#0F092A] rounded-xl shadow-2xl text-white">
-      <h1 className="text-2xl font-bold mb-4">Add New Blog</h1>
+      <h1 className="text-2xl font-bold mb-4">Add New Case Study</h1>
       {message && <p className="mb-4 text-green-500">{message}</p>}
       <form onSubmit={handleSubmit}  className="flex flex-col space-y-4">
         <input
@@ -82,14 +82,14 @@ export default function CaseStudyForm(){
         />
         <input
           type="text"
-          placeholder="Blog title"
+          placeholder="Case Study title"
           className=" p-2 rounded  border-b border-gray-600 focus:outline-none focus:border-[#651FFF] py-2 placeholder-gray-500 transition-colors duration-200"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
         />
         <textarea
-          placeholder="Blog content"
+          placeholder="Case Study content"
           className="border border-gray-600 p-2 rounded h-40 focus:outline-none text-white focus:border-[#651FFF]"
           value={content}
           onChange={(e) => setContent(e.target.value)}
