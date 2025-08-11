@@ -68,13 +68,13 @@ export default function CardSlider() {
       modules={[Navigation]}
       navigation
       spaceBetween={20}
-      slidesPerView={1}
+      slidesPerView={3}
       grabCursor={true}
       className="px-4"
     >
       {globalCompliancePlan.map((card, index) => (
       <SwiperSlide key={index}>
-  <div className=" flex items-center justify-center">
+  <div className=" flex shrink-0 items-center justify-center">
     <ComplianceCard plan={card} />
   </div>
 </SwiperSlide>

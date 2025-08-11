@@ -1,11 +1,17 @@
+"use client"
+
+
 import Underline from "../_subcomponents/UnderLine";
 import SubScribe from "../About-us/_components/SubScribe";
+
+
 import ComplianceFeatureTable from "./_components/FeatureTable";
 import PricingInformation from "./_components/PricingInformation";
 import ComplianceTable from "./_components/TierTable";
 
 export default function page(){
-  
+   
+
 
   
     return(
@@ -22,7 +28,9 @@ export default function page(){
         <ComplianceFeatureTable />
         <PricingInformation />
         <SubScribe />
+    
         </section>
+      
         </div>
     )
 }

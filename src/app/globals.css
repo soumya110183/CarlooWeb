@@ -5,6 +5,8 @@
 :root {
   --background: #180d49;
   --foreground: #ffffff;
+   --primary: #651FFF;
+  
 }
 
 /* Light theme override */
