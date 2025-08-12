@@ -15,20 +15,19 @@ export async function GET() {
 export async function POST(req) {
   await connectToDatabase();
   const body = await req.json();
-  const { adminName,title, content, image } = body;
- 
+  const { adminName, title, blocks, image } = body;  // blocks instead of content
 
-  if (!adminName ||!title || !content || !image) {
-    return NextResponse.json({ error: 'Title, content, and image are required' }, { status: 400 });
+  if (!adminName || !title || !image || !blocks || !Array.isArray(blocks)) {
+    return NextResponse.json({ error: 'Title, adminName, image, and blocks are required' }, { status: 400 });
   }
 
-    const slug = title
+  const slug = title
     .toString()
     .toLowerCase()
     .trim()
     .replace(/[\s\W-]+/g, "-");
 
-  const newBlog = await Blog.create({ title,slug, content, image,adminName });
+  const newBlog = await Blog.create({ title, slug, blocks, image, adminName });
   return NextResponse.json(newBlog, { status: 201 });
 }
 

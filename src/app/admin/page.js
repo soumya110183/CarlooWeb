@@ -1,5 +1,6 @@
 
 import AdminBlogForm from "./Components/AdminAcess";
+import BlogEditorForm from "./Components/BlogEditorForm";
 import CaseStudyForm from "./Components/CaseStudyForm";
 
 export default async function page(){
@@ -15,11 +16,11 @@ export default async function page(){
 
   const caseStudy = await resCase.json();
     return(
-        <div className="pt-10">
-            <AdminBlogForm blogs={blogs} casestudy={caseStudy} />
+        <div className="pt-20">
+            {/* <AdminBlogForm blogs={blogs} casestudy={caseStudy} /> */}
             {/* <CaseStudyForm /> */}
 
-         
+         <BlogEditorForm />
 
         </div>
     )

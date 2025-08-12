@@ -1,3 +1,4 @@
+// /app/api/upload/route.js
 import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
 
@@ -6,12 +7,6 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
 
 export async function POST(req) {
   const data = await req.formData();
@@ -33,5 +28,9 @@ export async function POST(req) {
       .end(buffer);
   });
 
-  return NextResponse.json({ url: uploadResult.secure_url });
+  // Return both URL and public_id
+  return NextResponse.json({
+    url: uploadResult.secure_url,
+    public_id: uploadResult.public_id,
+  });
 }

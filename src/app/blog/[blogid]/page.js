@@ -4,6 +4,7 @@ import blog from "@/modals/blog";
 import { formatDistanceToNow } from "date-fns";
 
 import Image from "next/image";
+import BlogEditor from "./TestForm";
 
 export default async function page({ params }) {
 const blogTitle =params.blogid;
@@ -58,6 +59,10 @@ const blogTitle =params.blogid;
   {blogsDetails.content}
 </p>
         </div>
+      </div>
+      <div className="mt-5">
+
+      <BlogEditor />
       </div>
     </section>
   );
