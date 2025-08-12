@@ -6,7 +6,7 @@ const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
   const [mounted, setMounted] = useState(false);
-    const [openCheckout, setCheckOut] = useState(false);
+  const [price, setPrice] = useState({});
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "dark";
@@ -25,7 +25,7 @@ export function ThemeProvider({ children }) {
   if (!mounted) return null;
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme,openCheckout,setCheckOut }}>
+    <ThemeContext.Provider value={{ theme, setTheme, price, setPrice }}>
       {children}
     </ThemeContext.Provider>
   );

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-export default function PriceCalculate({ oneMonthPrice }) {
+export default function PriceCalculate({ oneMonthPrice, setPrice }) {
   const [currency, setCurrency] = useState("USD");
   const [duration, setDuration] = useState(3);
 
@@ -26,10 +26,18 @@ export default function PriceCalculate({ oneMonthPrice }) {
   const convertedTotal = (discountedPrice * conversionRate).toFixed(2);
   const convertedMonthly = (monthlyPrice * conversionRate).toFixed(2);
 
+  useEffect(() => {
+    setPrice({
+      total: Number(convertedTotal),
+      monthly: Number(convertedMonthly),
+      currency: currency,
+    });
+  }, [convertedTotal, convertedMonthly, currency, setPrice]);
+
   return (
-    <div className="bg-white w-full max-w-[577px] rounded-[8px] shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
+    <div className="bg-white w-full max-w-[577px] rounded-[8px]  shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
       <h3 className="font-semibold text-[18px]">Seed Compliance</h3>
-      <div className="w-full h-[1px] bg-gray-300 mt-5"></div>
+      <div className="w-full h-[1px] bg-gray-300 mt-4"></div>
 
       <div className="flex justify-between mt-5">
         <div className="relative w-48">
