@@ -1,5 +1,6 @@
 import Underline from "../_subcomponents/UnderLine";
 import BlogCard from "../case-studies/_Components/BlogContainer";
+import BlogSecondContainer from "./BlogSecondContainer";
 
 export default async function Page() {
   const res = await fetch("https://carlo-peass-71nb.vercel.app/api/blogs", {
@@ -7,6 +8,8 @@ export default async function Page() {
   });
 
   const blogs = await res.json();
+  
+  console.log(blogs)
   
 
   return (
@@ -19,10 +22,15 @@ export default async function Page() {
           Carlo PEaaS: Ethical AI and Data Protection Compliance with Global
           Standards like GDPR, CCPA, and the EU AI Act
         </p>
-        <div className="w-full max-w-[1200px] mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mx-auto gap-10 shrink-0 ">
+        {/* <div className="w-full bg-white max-w-[1200px] mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 mx-auto gap-10 shrink-0 ">
           {blogs.map((blog) => (
             <BlogCard key={blog._id} blog={blog} />
           ))}
+        </div> */}
+        <div className="bg-white flex w-full mt-10">
+
+        <BlogCard blog={blogs[0]} />
+        <BlogSecondContainer />
         </div>
       </section>
     </div>

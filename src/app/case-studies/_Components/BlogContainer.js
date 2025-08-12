@@ -26,29 +26,15 @@ export default function BlogCard({ blog,casestudy, deleteButton }) {
     }
   };
   return (
-    <div className="bg-[#0F092A] text-white rounded-2xl p-6 max-w-[350px] mx-auto  flex justify-between items-start shadow-lg">
+    <div className=" text-black rounded-2xl p-6 max-w-[350px]   flex justify-between items-start ">
       <div className="flex flex-col justify-between w-full">
-        <div className="flex items-center gap-2 mb-2 w-full justify-between ">
-          <div className="flex gap-2 items-center">
-            <Image
-              src="/healthicons_ui-user-profile.png"
-              alt="Sreya"
-              width={32}
-              height={32}
-              className="rounded-full aspect-square object-cover"
-            />
-            <span className="text-sm font-medium">{contents.adminName}</span>
-          </div>
-          <p className="text-gray-400 text-sm ">
-          {formatDistanceToNow(new Date(contents.createdAt), { addSuffix: true })}
-        </p>
-        </div>
-          <div className=" relative w-full h-[180px] mt-4">
+    
+          <div className=" relative w-full h-[180px] ">
             <Image
               src={contents.image || "/placeholderimage.png"}
               alt="contents Thumbnail"
               fill
-              className="rounded-lg object-cover"
+              className=" object-cover"
             />
           </div>
 
@@ -58,9 +44,24 @@ export default function BlogCard({ blog,casestudy, deleteButton }) {
 
         
 
-        <p className="text-sm text-gray-300 mt-2.5">
-          {contents.content.split(" ").slice(0, 20).join(" ")}...
+     <p className="text-sm text-gray-800 mt-2.5">
+  {getPreviewText(contents.blocks)}
+</p>
+    <div className="flex items-center gap-2 mb-2 mt-3 w-full justify-between ">
+          <div className="flex gap-2 items-center">
+            {/* <Image
+              src="/healthicons_ui-user-profile.png"
+              alt="Sreya"
+              width={32}
+              height={32}
+              className="rounded-full aspect-square object-cover"
+            /> */}
+            <span className="text-sm font-medium">{contents.adminName}</span>
+          </div>
+          <p className="text-gray-800 text-sm ">
+          {formatDistanceToNow(new Date(contents.createdAt), { addSuffix: true })}
         </p>
+        </div>
 <div className="flex w-full justify-between">
 
         <Link
@@ -83,4 +84,21 @@ export default function BlogCard({ blog,casestudy, deleteButton }) {
       </div>
     </div>
   );
+}
+
+function getPreviewText(blocks) {
+  if (!blocks || !Array.isArray(blocks)) return "";
+
+  // Find the first text block with content
+  const firstTextBlock = blocks.find(block => block.type === "text" && block.content);
+
+  if (!firstTextBlock) return ""; // fallback if no text block
+
+  // Strip HTML tags for a clean preview
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = firstTextBlock.content;
+  const text = tempDiv.textContent || tempDiv.innerText || "";
+
+  // Limit to 20 words for preview
+  return text.split(" ").slice(0, 20).join(" ") + "...";
 }

@@ -3,6 +3,7 @@ import AdminBlogForm from "./Components/AdminAcess";
 import BlogEditorForm from "./Components/BlogEditorForm";
 import CaseStudyForm from "./Components/CaseStudyForm";
 
+
 export default async function page(){
 
       const res = await fetch("https://carlo-peass-71nb.vercel.app/api/blogs", {
@@ -20,7 +21,8 @@ export default async function page(){
             {/* <AdminBlogForm blogs={blogs} casestudy={caseStudy} /> */}
             {/* <CaseStudyForm /> */}
 
-         <BlogEditorForm />
+         <BlogEditorForm  blogs={blogs} />
+        
 
         </div>
     )
