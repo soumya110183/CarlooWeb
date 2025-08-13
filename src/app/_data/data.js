@@ -1,9 +1,11 @@
 import {
   FaBrain,
+  FaCoins,
   FaComments,
   FaFileAlt,
   FaHeart,
   FaShieldAlt,
+  FaVoteYea,
 } from "react-icons/fa";
 import {} from "react-icons/fa";
 
@@ -32,7 +34,9 @@ import {
   FaIndustry,
   FaRocket,
   FaUniversity,
+   FaChartLine, FaBell,
 } from "react-icons/fa";
+
 
 export const providersData = [
   {
@@ -596,4 +600,136 @@ export const aiEthicsPrinciples = [
     ],
     icon: <FaLock color="black" size={21} />,
   },
+];
+
+
+export const aiCompliancePrinciples = [
+  {
+    featureName: "Transparency",
+    featureDetails: [
+      "AI systems must be understandable to all.",
+      "Carlo logs AI decisions and makes models explainable via dashboards, traceability, and audits."
+    ],
+    icon: <FaEye color="black" size={21} />,
+  },
+  {
+    featureName: "Inclusion",
+    featureDetails: [
+      "AI must serve every human being and respect all social groups.",
+      "Carlo detects exclusionary patterns in training data and monitors demographic disparities."
+    ],
+    icon: <FaUsers color="black" size={21} />,
+  },
+  {
+    featureName: "Responsibility",
+    featureDetails: [
+      "Designers and users of AI must take responsibility.",
+      "Carlo enforces version control, tracks changes, and ensures real-time accountability."
+    ],
+    icon: <FaClipboardCheck color="black" size={21} />,
+  },
+  {
+    featureName: "Impartiality",
+    featureDetails: [
+      "AI must not foster bias or discrimination.",
+      "Carlo uses fairness metrics, demographic parity testing, and bias detection algorithms."
+    ],
+    icon: <FaBalanceScaleRight color="black" size={21} />,
+  },
+  {
+    featureName: "Reliability",
+    featureDetails: [
+      "AI must operate securely and consistently.",
+      "Carlo monitors uptime, consistency, safety overrides, and anomaly detection."
+    ],
+    icon: <FaCogs color="black" size={21} />,
+  },
+  {
+    featureName: "Security and Privacy",
+    featureDetails: [
+      "Personal data must be protected and AI must prevent misuse.",
+      "Carlo integrates encryption, GDPR-aligned privacy controls, and consent-driven workflows."
+    ],
+    icon: <FaLock color="black" size={21} />,
+  },
+];
+
+export const featuresCompliance = [
+  {
+    featureName: "Live Monitoring Dashboards",
+    featureDetails: [
+      "Track the real-time health of your AI systems. Carlo monitors:",
+      "• Bias ratios across demographic segments",
+      "• Prediction explainability scores",
+      "• Accuracy and drift analysis",
+      "• Consent verification on data usage",
+    ],
+    icon: <FaChartLine color="black" size={25} />,
+  },
+  {
+    featureName: "Automated Alerts",
+    featureDetails: [
+      "Whenever a compliance threshold is breached—such as an AI model showing race or gender-based bias—Carlo flags it instantly.",
+      "Alerts are issued to developers and compliance officers.",
+      "Notifications can be integrated into Slack, Microsoft Teams, or your CI/CD pipeline.",
+    ],
+    icon: <FaBell color="black" size={23} />,
+  },
+  {
+    featureName: "Audit Logs",
+    featureDetails: [
+      "Every action, test, and remediation is logged.",
+      "Logs can be exported for internal stakeholders, auditors, and regulators.",
+      "Supports a complete documentation strategy for compliance.",
+    ],
+    icon: <FaFileAlt color="black" size={23} />,
+  },
+  {
+    featureName: "Multi-Jurisdictional Framework Mapping",
+    featureDetails: [
+      "Carlo maps your AI system's risk profile against major compliance standards:",
+      "• EU AI Act — high-risk model classification, transparency checks",
+      "• GDPR/CCPA — data minimization, user consent logs",
+      "• UAE & India — AI and privacy regulations",
+    ],
+    icon: <FaGlobe color="black" size={23} />,
+  },
+];
+
+export const cryptoComplianceData = [
+  {
+    title: "Anomaly Detection Engine",
+    paragraph: [
+      "Detects flash-loan attacks, reentrancy exploits, and wash trading in real time.",
+      "Monitors gas spikes and mempool manipulation as indicators of suspicious activity."
+    ],
+    icon: <FaShieldAlt color="black" size={22} />
+  },
+  {
+    title: "DAO Governance Transparency",
+    paragraph: [
+      "Visualize proposal flows, voting timelines, and quorum patterns.",
+      "Identify voter centralization and influence disparities.",
+      "Generate governance fairness scores."
+    ],
+    icon: <FaVoteYea color="black" size={22} />
+  },
+  {
+    title: "Tokenomics Audits",
+    paragraph: [
+      "Track token release schedules and vesting cliffs.",
+      "Flag wallet clusters that may pose centralization risks.",
+      "Monitor liquidity pool stability and slippage."
+    ],
+    icon: <FaCoins color="black" size={22} />
+  },
+  {
+    title: "Compliance & Risk Dashboards",
+    paragraph: [
+      "Live scores for operational health, decentralization, and ethical exposure.",
+      "Exportable reports for investors, partners, and compliance regulators.",
+      "Weekly snapshots delivered to founders, auditors, and DAO treasurers."
+    ],
+    icon: <FaChartLine color="black" size={22} />
+  }
 ];

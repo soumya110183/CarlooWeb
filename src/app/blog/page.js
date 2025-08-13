@@ -16,10 +16,10 @@ export default async function Page() {
 
       <div className="bg-white flex w-full mt-10 gap-6">
         {/* First blog (big card) */}
-        {blogs.length > 0 && <BlogCard blog={blogs[0]} />}
+        {blogs.length > 0 && <BlogCard blog={blogs[0]}/>}
 
         {/* Remaining blogs (small stacked cards) */}
-        <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-2 gap-2">
           {blogs.slice(1).map((blog) => (
             <BlogSecondContainer key={blog._id} blog={blog} />
           ))}

@@ -26,7 +26,7 @@ export default function BlogCard({ blog,casestudy, deleteButton }) {
     }
   };
   return (
-    <div className=" text-black rounded-2xl p-6 max-w-[350px]   flex justify-between items-start ">
+    <div className=" text-black rounded-2xl p-6 max-w-[400px]   flex justify-between items-start ">
       <div className="flex flex-col justify-between w-full">
     
           <div className=" relative w-full h-[180px] ">
@@ -48,16 +48,18 @@ export default function BlogCard({ blog,casestudy, deleteButton }) {
   {getPreviewText(contents.blocks)}
 </p>
     <div className="flex items-center gap-2 mb-2 mt-3 w-full justify-between ">
-          <div className="flex gap-2 items-center">
-            {/* <Image
+             <div className="flex items-center shrink-0 gap-3">
+          <div className="flex items-center justify-center rounded-full bg-gray-300">
+            <Image
               src="/healthicons_ui-user-profile.png"
-              alt="Sreya"
+              alt="Author"
               width={32}
               height={32}
               className="rounded-full aspect-square object-cover"
-            /> */}
-            <span className="text-sm font-medium">{contents.adminName}</span>
+            />
           </div>
+          <span className="text-sm font-medium">{contents.adminName}</span>
+        </div>
           <p className="text-gray-800 text-sm ">
           {formatDistanceToNow(new Date(contents.createdAt), { addSuffix: true })}
         </p>
@@ -76,7 +78,7 @@ export default function BlogCard({ blog,casestudy, deleteButton }) {
               onClick={handleDelete}
               className="text-white hover:underline"
             >
-              <MdDelete size={24} />
+              <MdDelete size={24} color="black" />
             </button>
           </div>
         )}

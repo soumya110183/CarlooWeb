@@ -23,7 +23,7 @@ export default function OurVision() {
         <Image
           width={500}
           height={580}
-          src="/WhyRobot.png"
+          src="/vision.png"
           alt="robot-validator"
           className="w-[500px]"
         />

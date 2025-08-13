@@ -14,20 +14,18 @@ function SolutionSubmenu({ ref, dropdownOpen }) {
     >
       <ul className="font-medium text-[14px] space-y-1.5 ">
         <li>
-          <Link href="/pricing">AI Compliance</Link>
+          <Link href="/solutions/ai-compliance">AI Compliance</Link>
         </li>
         <li>
-          <Link href="/blog">Blockchain & DeFi Monitoring</Link>
+          <Link href="/solutions/blockchain-monitoring">Blockchain & DeFi Monitoring</Link>
         </li>
         <li>
-          <Link href="/case-studies">Smart Contract Audits</Link>
+          <Link href="/solutions/smart-contract-audit">Smart Contract Audits</Link>
         </li>
         <li>
           <Link href="/case-studies">Ethical Certification (Carlo Badge)</Link>
         </li>
-        <li>
-          <Link href="/case-studies">RAK DAO Setup & Ethical Compliance</Link>
-        </li>
+       
       </ul>
     </div>
   );
