@@ -16,10 +16,11 @@ import StartForFree from "./_components/StartForFree";
 
 export default function Page() {
   return (
-    <div className="mt-50 ">
+    <div className="mt-50 max-w-[1200px] mx-auto">
     
       <h2 className="text-[48px] font-bold text-center">
-        Simple, Scalable Pricing for Every Need
+        Building Responsible AI: Carlo&apos;s Comprehensive AI Compliance Platform
+
       </h2>
       <Underline />
       <p className="text-[22px] text-justify max-w-[1200px] mx-auto text-foreground pb-30">

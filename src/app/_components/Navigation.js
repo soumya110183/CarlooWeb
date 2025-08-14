@@ -194,6 +194,7 @@ function Navigation() {
             <SolutionSubmenu
               dropdownOpen={solutionsOpen}
               ref={solutionsMenuRef}
+              close={setSolutionsOpen}
             />
           )}
         </ul>

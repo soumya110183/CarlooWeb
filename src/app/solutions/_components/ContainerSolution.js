@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ContainerSolution({ array }) {
   return (
-    <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 mt-10">
+    <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10  mt-10">
       {array.map((item, index) => (
         <motion.div
           key={index}

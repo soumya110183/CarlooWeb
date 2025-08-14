@@ -35,8 +35,8 @@ import {
   FaRocket,
   FaUniversity,
    FaChartLine, FaBell,
+    FaCertificate, FaStar
 } from "react-icons/fa";
-
 
 export const providersData = [
   {
@@ -732,4 +732,37 @@ export const cryptoComplianceData = [
     ],
     icon: <FaChartLine color="black" size={22} />
   }
+];
+
+export const certificationLevelsData = [
+  {
+    title: "Verified (Basic)",
+    paragraph: [
+      "Passed foundational ethical checks",
+      "Completes data privacy scan",
+      "Meets Carlo minimum transparency score",
+      "Ideal for early-stage platforms seeking validation",
+    ],
+    icon: <FaCheckCircle color="black" size={22} />,
+  },
+  {
+    title: "Certified (Pro)",
+    paragraph: [
+      "Aligns with major global frameworks: EU AI Act, ISO/IEC AI, GDPR, SEC, DFSA, UAE ADGM",
+      "Includes AI explainability testing, fairness benchmarking, and privacy deep scans",
+      "Suitable for companies going through audits, licensing, or Series A+ funding rounds",
+    ],
+    icon: <FaCertificate color="black" size={22} />,
+  },
+  {
+    title: "Trusted+ (Elite)",
+    paragraph: [
+      "Open-source component verification",
+      "Community engagement scoring",
+      "Independent expert committee review",
+      "ESG and DEI metrics alignment",
+      "Most comprehensive, designed for major protocols, unicorns, or public-sector AI",
+    ],
+    icon: <FaStar color="black" size={22} />,
+  },
 ];
