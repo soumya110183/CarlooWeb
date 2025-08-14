@@ -38,6 +38,7 @@ function Navigation() {
     { name: "Key Features", href: "/Key-Features" },
     { name: "Solutions", href: "/Solutions" },
     { name: "Resources", href: "/Resources" },
+    { name: "Rak Dao", href: "/rak-dao" },
     { name: "Contact", href: "/Contact" },
     { name: "About Us", href: "/About-us" },
   ];
@@ -97,7 +98,7 @@ function Navigation() {
       }`}
     >
       <nav
-        className={`h-full w-full max-w-[1280px] flex items-center justify-between mx-auto   font-mont relative ${
+        className={`h-full w-full max-w-[1350px] flex items-center justify-between mx-auto   font-mont relative ${
           theme === "light" ? "text-black" : "text-white"
         } `}
         ref={navRef}
