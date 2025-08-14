@@ -24,9 +24,9 @@ export default function GetStartedCarlo() {
         </p>
 
         <div className="mt-6 space-y-2">
-          <p>Email: <a href="mailto:steve@algorethics.ai" className="text-blue-600 underline">steve@algorethics.ai</a></p>
-          <p>Dashboard: <a href="https://policyenforcement.com" target="_blank" className="text-blue-600 underline">https://policyenforcement.com</a></p>
-          <p>Learn More: <a href="https://www.algorethics.info" target="_blank" className="text-blue-600 underline">www.algorethics.info</a></p>
+          <p>Email: <a href="mailto:steve@algorethics.ai" className="text-[#651FFF] underline">steve@algorethics.ai</a></p>
+          <p>Dashboard: <a href="https://policyenforcement.com" target="_blank" className="text-[#651FFF] underline">https://policyenforcement.com</a></p>
+          <p>Learn More: <a href="https://www.algorethics.info" target="_blank" className="text-[#651FFF] underline">www.algorethics.info</a></p>
         </div>
       </div>
 

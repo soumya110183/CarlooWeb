@@ -40,7 +40,7 @@ const auditData = [
 
 export default function WhatCarloAudits() {
   return (
-    <section className="w-full max-w-[1200px] mx-auto px-4 lg:pb-32 pb-16 text-foreground">
+    <section className="w-full max-w-[1200px] mx-auto  lg:pb-32 pb-15 text-foreground">
       <HeadingReuse heading="What Carlo Audits for" />
 
       <div className="grid md:grid-cols-2 gap-10 mt-10">

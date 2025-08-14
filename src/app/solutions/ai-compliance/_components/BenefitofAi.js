@@ -9,6 +9,7 @@ import {
   FaGlobe,
   FaHeart
 } from "react-icons/fa";
+import ContainerSolution from "../../_components/ContainerSolution";
 
 export default function BenefitOfAi() {
 const benefit = [
@@ -47,25 +48,10 @@ const benefit = [
   return (
     <section className="w-full max-w-[1200px] flex max-lg:flex-col flex-row-reverse max-lg:gap-20 items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
       <div className="w-full ">
-        <HeadingReuse
-          heading={
-            "Carlo’s AI Compliance Suite: Integrated, Intelligent, and Scalable"
-          }
-        />
-         <div className="max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-10  mt-10">
-        {benefit.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-center p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white "
-          >
-            {item.icon}
-            <h3 className="mt-4 text-xl font-semibold text-black">{item.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground text-black">
-              {item.description}
-            </p>
-          </div>
-        ))}
-      </div>
+        <h2 className="text-4xl font-bold text-center mb-8">
+        Carlo’s AI Compliance Suite: Integrated, Intelligent, and Scalable
+      </h2>
+        <ContainerSolution array={benefit} />
       </div>
         
     </section>

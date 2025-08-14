@@ -17,7 +17,7 @@ import StartForFree from "./_components/StartForFree";
 export default function Page() {
   return (
     <div className="mt-50 ">
-      {/* Hero / Intro Section */}
+    
       <h2 className="text-[48px] font-bold text-center">
         Simple, Scalable Pricing for Every Need
       </h2>
@@ -33,7 +33,7 @@ export default function Page() {
         vision systems, or e-commerce recommendations.
       </p>
 
-      {/* What is AI Compliance */}
+      
       <WhatisAi />
 
       <CarloCompliance />
@@ -41,18 +41,17 @@ export default function Page() {
       <WhoCanBenefit />
     <BenefitOfAi />
 
-      {/* Real-Time Use Cases */}
+     
      <RealTimeUseCases />
      <CarloPipelineIntegration />
 
-      {/* Integration */}
+   
      
 
-      {/* Compliance-as-a-Service */}
+ 
     <ComplianceAsAService />
     <StartForFree />
 
-      {/* CTA */}
       <section className="w-full max-w-[1200px] mx-auto pb-32">
         <HeadingReuse heading={"Join the Ethical AI Movement"} />
         <p className="mt-6 text-lg">

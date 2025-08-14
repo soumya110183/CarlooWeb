@@ -1,34 +1,55 @@
 import { featuresCompliance } from "@/app/_data/data";
-import FeatureAccordions from "@/app/_subcomponents/Accordion";
+
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
-import PointsContainer from "@/app/About-us/_components/PointsContainer";
-import Image from "next/image";
+
+
+import {
+  FaExchangeAlt,
+  FaPiggyBank,
+  FaUsersCog,
+  FaImage,
+  FaCoins,
+  FaProjectDiagram
+} from "react-icons/fa";
+import ContainerSolution from "../../_components/ContainerSolution";
 
 export default function WhyCarloMonito() {
     const cryptoProtocols = [
   {
+    icon: <FaExchangeAlt className="text-blue-500 text-4xl" />,
     title: "Decentralized Exchanges (DEXs)",
-    para: "Track liquidity manipulation, sudden volume spikes, flash-loan attacks, and front-running behavior."
+    description:
+      "Track liquidity manipulation, sudden volume spikes, flash-loan attacks, and front-running behavior."
   },
   {
+    icon: <FaPiggyBank className="text-green-500 text-4xl" />,
     title: "Lending, Yield Farming, and Staking Protocols",
-    para: "Assess protocol sustainability, collateral risks, and validator fairness."
+    description:
+      "Assess protocol sustainability, collateral risks, and validator fairness."
   },
   {
+    icon: <FaUsersCog className="text-purple-500 text-4xl" />,
     title: "DAOs and Governance Models",
-    para: "Audit proposal creation, voter engagement, power concentration, and procedural fairness."
+    description:
+      "Audit proposal creation, voter engagement, power concentration, and procedural fairness."
   },
   {
+    icon: <FaImage className="text-pink-500 text-4xl" />,
     title: "NFT Projects and Royalties",
-    para: "Check contract transparency, creator payout logic, and metadata permanence."
+    description:
+      "Check contract transparency, creator payout logic, and metadata permanence."
   },
   {
+    icon: <FaCoins className="text-yellow-500 text-4xl" />,
     title: "Tokenomics & Launches",
-    para: "Evaluate token supply structures, deflation/inflation mechanics, and wallet concentration."
+    description:
+      "Evaluate token supply structures, deflation/inflation mechanics, and wallet concentration."
   },
   {
+    icon: <FaProjectDiagram className="text-red-500 text-4xl" />,
     title: "Cross-Chain Intelligence",
-    para: "Track bridges, inter-chain transactions, and behavioral patterns across Ethereum, Solana, Polygon, Avalanche, and others."
+    description:
+      "Track bridges, inter-chain transactions, and behavioral patterns across Ethereum, Solana, Polygon, Avalanche, and others."
   }
 ];
 
@@ -43,17 +64,7 @@ export default function WhyCarloMonito() {
         <p className="font-normal text-[20px] leading-relaxed text-justify mt-6">
          Our DeFi Monitoring system applies to a wide range of decentralized platforms and use cases:
         </p>
-      <div className="flex flex-col gap-3.5 mt-10 text-foreground">
-           {cryptoProtocols.map((industries,index)=>(
-             <PointsContainer
-                        title={industries.title}
-                        para={
-                         industries.para
-                        }
-                        key={index}
-                      />
-           ))}
-            </div>
+      <ContainerSolution array={cryptoProtocols} />
       </div>
     </section>
   );

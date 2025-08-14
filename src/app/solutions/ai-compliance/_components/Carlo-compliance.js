@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function CarloCompliance() {
   return (
-    <section className="w-full max-w-[1200px] flex max-lg:flex-col flex-row-reverse max-lg:gap-16 items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
+    <section className="w-full max-w-[1200px] flex max-lg:flex-col  max-lg:gap-16  mx-auto justify-between text-foreground lg:pb-32 pb-15">
       {/* Left: Accordion Features */}
-      <div className="w-full lg:max-w-[570px]">
+      <div className="w-full lg:max-w-[570px] h-[400px] mt-15">
         <FeatureAccordions features={featuresCompliance} />
       </div>
 

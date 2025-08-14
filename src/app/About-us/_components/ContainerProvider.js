@@ -1,20 +1,24 @@
 "use client";
 
 import { useTheme } from "@/app/_subcomponents/ThemeContext";
+import { motion } from "framer-motion";
 
 export default function ContainerProvier({ title, paragraph, icon }) {
   const { theme } = useTheme();
 
   return (
-    <div
-      className={` ${
-        theme === "light" ? "text-white bg-[#0F092A] " : "text-black bg-white"
-      } 
-    px-10 flex   rounded-3xl py-10 min-h-[250px]`}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className={`${
+        theme === "light" ? "text-white bg-[#0F092A]" : "text-black bg-white"
+      } px-10 flex rounded-3xl py-10 min-h-[250px]`}
     >
       <div>
         <div className="flex items-center gap-2">
-          <div className="bg-[#C3C3C3] rounded-full p-2 w-10 h-10 flex items-center justify-center shrink-0 ">
+          <div className="bg-[#C3C3C3] rounded-full p-2 w-10 h-10 flex items-center justify-center shrink-0">
             {icon}
           </div>
           <h3 className="font-bold text-[20px]">{title}</h3>
@@ -27,6 +31,6 @@ export default function ContainerProvier({ title, paragraph, icon }) {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

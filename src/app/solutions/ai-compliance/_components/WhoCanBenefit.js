@@ -8,6 +8,7 @@ import {
   FaChalkboardTeacher,
   FaRobot
 } from "react-icons/fa";
+import ContainerSolution from "../../_components/ContainerSolution";
 
 export default function WhoCanBenefit() {
  const industries = [
@@ -45,24 +46,11 @@ export default function WhoCanBenefit() {
   return (
     <section className="w-full max-w-[1200px] flex max-lg:flex-col max-lg:gap-20 items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
       <div className="w-full ">
-        <HeadingReuse
-          heading={"Who Can Benefit from Carlo’s AI Compliance Tools?"}
-        />
+        <h2 className="text-4xl font-bold text-center mb-8">
+        Who Can Benefit from Carlo’s AI Compliance Tools?
+      </h2>
 
-       <div className="max-w-6xl grid md:grid-cols-2 lg:grid-cols-3 gap-10  mt-10">
-        {industries.map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-center p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white "
-          >
-            {item.icon}
-            <h3 className="mt-4 text-xl font-semibold text-black">{item.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground text-black">
-              {item.description}
-            </p>
-          </div>
-        ))}
-      </div>
+     <ContainerSolution array={industries} />
       </div>
     
     </section>

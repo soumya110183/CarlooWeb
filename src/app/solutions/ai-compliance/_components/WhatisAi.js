@@ -3,11 +3,13 @@ import Image from "next/image";
 
 export default function WhatisAi() {
   return (
-    <section className="w-full max-w-[1200px] flex max-lg:flex-col max-lg:gap-16 items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
+    <section className="w-full max-w-[1200px] mx-auto flex items-center justify-between text-foreground lg:pb-32 pb-15 max-lg:flex-col max-lg:gap-16">
+      
+      {/* Left Text Section */}
       <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"What is AI Compliance?"} />
 
-        <p className="font-normal text-[20px] leading-relaxed mt-6 text-justify">
+        <p className="mt-6 text-[20px] leading-relaxed text-justify">
           AI compliance is the alignment of an organization&apos;s AI development and deployment 
           processes with globally accepted legal, regulatory, and ethical frameworks. With emerging 
           regulations such as the <strong>European Union&apos;s AI Act</strong>, 
@@ -27,13 +29,14 @@ export default function WhatisAi() {
         </ul>
       </div>
 
-      <div className="flex justify-center">
+      {/* Right Image Section */}
+      <div className="flex justify-center lg:justify-end">
         <Image
           width={500}
           height={580}
           src="/vision.png"
           alt="robot-validator"
-          className="w-[500px] rounded-2xl "
+          className="w-[500px] max-w-full rounded-2xl"
         />
       </div>
     </section>

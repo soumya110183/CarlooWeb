@@ -2,6 +2,10 @@ import Underline from "@/app/_subcomponents/UnderLine";
 import WhyEthicalSmart from "./_componets/WhyEthicalSmart";
 import WhatCarloAudits from "./_componets/WhatCarloAudits";
 import KeyDeliverables from "./_componets/KeyDeliverables";
+import SupportedBlockChains from "./_componets/SupportedBlockChains";
+import UseCasesWhenToAudit from "./_componets/UseCasesWhenToAudit";
+import AuditProcess from "./_componets/AuditProcess";
+import PricingPackages from "./_componets/PricingPackages";
 
 export default function page() {
   return (
@@ -33,6 +37,10 @@ export default function page() {
       <WhyEthicalSmart />
       <WhatCarloAudits />
       <KeyDeliverables />
+      <SupportedBlockChains />
+      <UseCasesWhenToAudit />
+      <AuditProcess />
+      <PricingPackages />
     </div>
   );
 }
