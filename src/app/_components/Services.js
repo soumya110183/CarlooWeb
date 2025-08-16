@@ -4,12 +4,12 @@ import { useTheme } from "../_subcomponents/ThemeContext";
 
 export default function Services() {
   return (
-    <section>
+    <section className="sm:px-10 px-5">
       <div
-        className={`w-full max-w-[1200px] flex mx-auto mt-36 justify-between text-foreground`}
+        className={`w-full max-w-[1200px] flex max-lg:flex-col items-center gap-10 mx-auto mt-36 justify-between text-foreground`}
       >
-        <div className="w-full max-w-[434px]">
-          <h2 className="text-[32px] font-bold">
+        <div className="w-full lg:max-w-[434px]">
+          <h2 className="sm:text-[32px] text-[28px] font-bold">
             Compliance Intelligence That Powers Results
           </h2>
           <div className="flex gap-2 mt-4">
@@ -26,9 +26,9 @@ export default function Services() {
         </div>
         <div className="w-full max-w-[570px]">
           <Percentage />
-          <div className="flex items-center w-full justify-between mt-3.5">
+          <div className="flex items-center max-sm:flex-col w-full justify-between lg:mt-5 mt-10">
             <div>
-              <h3 className="font-bold text-[24px]">
+              <h3 className="font-bold text-[24px] max-sm:text-[20px]">
                 Have any question about us?
               </h3>
               <p className="text-[16px] font-medium">

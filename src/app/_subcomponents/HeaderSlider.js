@@ -2,10 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ButtonPimary from "./ButtonPrimary";
 
-
-function HeaderSlider({ filteredSlide,theme }) {
-
- 
+function HeaderSlider({ filteredSlide, theme }) {
   return (
     <motion.div
       initial={{ x: "100vw", opacity: 0 }}
@@ -24,7 +21,13 @@ function HeaderSlider({ filteredSlide,theme }) {
           filteredSlide.character === "Second Slide" ? "pr-30" : "pl-30"
         }"`}
       >
-        <h1 className={`text-[48px] font-bold ${theme === "light" ? "bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-400" : "bg-gradient-to-br from-cyan-300 to-purple-200"}  bg-clip-text text-transparent`}>
+        <h1
+          className={`text-[48px] font-bold ${
+            theme === "light"
+              ? "bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-400"
+              : "bg-gradient-to-br from-cyan-300 to-purple-200"
+          }  bg-clip-text text-transparent`}
+        >
           {filteredSlide.heading}
         </h1>
         <p className="text-[28px] font-semibold mt-3.5">
@@ -38,10 +41,16 @@ function HeaderSlider({ filteredSlide,theme }) {
               width={25}
               height={25}
               alt="play button"
-               layout="fixed"
+              layout="fixed"
             />
           </button>
-          <button className={`${theme === "light" ? "text-green-600" : "text-[#00E5FF]"} bg-transparent p-0 m-0 outline-none border ${theme === "light" ? "border-green-600" : "border-[#00E5FF]"}  px-5 py-5 text-[18px] rounded-[36px] nav-text flex shrink-0 items-center justify-center`}>
+          <button
+            className={`${
+              theme === "light" ? "text-green-600" : "text-[#00E5FF]"
+            } bg-transparent p-0 m-0 outline-none border ${
+              theme === "light" ? "border-green-600" : "border-[#00E5FF]"
+            }  px-5 py-5 text-[18px] rounded-[36px] nav-text flex shrink-0 items-center justify-center`}
+          >
             <a href="https://www.youtube.com/@Algorethics">WATCH INTRO VIDEO</a>
           </button>
         </div>

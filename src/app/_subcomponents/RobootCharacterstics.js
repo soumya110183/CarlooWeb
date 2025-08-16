@@ -1,14 +1,9 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 function RobootCharacterstics({ img, title, paragraph, imp, flex }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: flex ? 100 : -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`w-full max-w-[1000px] mx-auto flex ${
+    <div
+      className={`w-full max-w-[1000px] mx-auto  flex max-lg:flex-col ${
         flex ? "flex-row-reverse" : "flex"
       } justify-between text-white items-center my-12`}
     >
@@ -22,19 +17,23 @@ function RobootCharacterstics({ img, title, paragraph, imp, flex }) {
         />
       </div>
       <div className={`max-w-[601px] text-foreground`}>
-        <h3 className={`text-[40px] font-bold w-full`}>{title}</h3>
-        <p className="text-[22px] font-medium mt-3.5">{paragraph}</p>
-        <div className="flex gap-3 items-center mt-8">
+        <h3 className={`md:text-[40px] font-bold w-full text-2xl sm:text-3xl`}>
+          {title}
+        </h3>
+        <p className="md:text-[22px] font-medium mt-3.5 text-base sm:text-[18px]">
+          {paragraph}
+        </p>
+        <div className="flex max-md:flex-col   gap-3 md:items-center mt-8">
           <Image
             src="/material-icon-theme_robots.png"
             alt="icon-robo"
             width={37}
             height={37}
           />
-          <p className="text-[18px] font-semibold">{imp}</p>
+          <p className="md:text-[18px] text-base font-semibold">{imp}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

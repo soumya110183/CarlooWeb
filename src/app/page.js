@@ -1,8 +1,7 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Hero from "./_components/Hero";
-
 
 import WhyCarlo from "./_components/WhyCarlo";
 
@@ -17,7 +16,7 @@ import HowitsWorkSection from "./_components/HowitsWorkSectiion";
 export default function Home() {
   return (
     <div>
-      <main className="overflow-y-hidden px-10">
+      <main className=" overflow-hidden ">
         <Hero />
         <WhyCarlo />
         <KeyFeaturesSection />

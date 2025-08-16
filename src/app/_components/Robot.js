@@ -3,12 +3,12 @@ import ScrollHeading from "../_subcomponents/ScrollHeading";
 
 function Robot() {
   return (
-    <section>
+    <section className="sm:px-10 px-5">
       <ScrollHeading
         heading={"ETHICAL GUARDIANS"}
         paragraph={"Carlo Protecting AI Integrity and Compliance in Real Time"}
       />
-      <div className="py-10 flex flex-col gap-16">
+      <div className="py-10 flex flex-col md:gap-16 gap-10">
         <RobootCharacterstics
           img="/validator-robot.png"
           title={"THE VALIDATOR"}

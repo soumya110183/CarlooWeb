@@ -9,13 +9,13 @@ export default function Research() {
         height={500}
         src="/card.png"
         alt="card"
-        className=" absolute top-0 left-[-100] z-[-1] "
+        className=" absolute top-0 left-[-100] z-[-1] md:block hidden "
       />
       <div
-        className={`mt-[124px] w-full max-w-[1200px] mx-auto flex items-center justify-between text-foreground`}
+        className={`mt-[124px] w-full max-w-[1200px] mx-auto flex max-lg:flex-col max-lg:gap-5 lg:items-center justify-between text-foreground max-lg:px-10 max-sm:px-5`}
       >
         <div>
-          <h3 className="text-[46px] font-bold">
+          <h3 className="sm:text-[46px] text-[32px] font-bold">
             Our Research
             <br />
             And Projects
@@ -27,7 +27,7 @@ export default function Research() {
           </div>
         </div>
         <div className="w-full max-w-[800px]">
-          <p className="font-medium text-[22px]">
+          <p className="font-medium lg:text-[22px] text-base sm:text-[18px]">
             Artificial Intelligence (AI) is the overarching concept of machines
             capable of performing tasks that typically require human
             intelligence — such as visual perception, speech recognition,

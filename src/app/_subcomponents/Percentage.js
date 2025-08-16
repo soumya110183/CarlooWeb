@@ -1,82 +1,138 @@
-import Image from "next/image";
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-export default function Percentage () {
+export default function Percentage() {
+  const data = [
+    {
+      value: 80,
+      caption: "Compliance Automation Achieved",
+      gradient: [
+        { offset: "0%", color: "#8b5cf6" },
+        { offset: "100%", color: "#3b82f6" },
+      ],
+    },
+    {
+      value: 70,
+      caption: "Customer Satisfaction Increase",
+      gradient: [
+        { offset: "0%", color: "#10b981" },
+        { offset: "100%", color: "#22d3ee" },
+      ],
+    },
+    {
+      value: 70,
+      caption: "Coverage of Global Regulatory Experts",
+      gradient: [
+        { offset: "0%", color: "#f87171" },
+        { offset: "100%", color: "#ef4444" },
+      ],
+    },
+  ];
+
+  // Initialize counts for all items
+  const [counts, setCounts] = useState(data.map(() => 0));
+  const [animated, setAnimated] = useState(data.map(() => false));
+
+  const arcLength = 126; // semi-circle path length
+
+  const handleInView = (index, targetValue) => {
+    if (animated[index]) return; // Prevent re-animation
+
+    setAnimated((prev) => {
+      const newAnimated = [...prev];
+      newAnimated[index] = true;
+      return newAnimated;
+    });
+
+    let start = 0;
+    const step = targetValue / 60;
+    const counter = setInterval(() => {
+      start += step;
+      if (start >= targetValue) {
+        start = targetValue;
+        clearInterval(counter);
+      }
+      setCounts((prev) => {
+        const newCounts = [...prev];
+        newCounts[index] = Math.round(start);
+        return newCounts;
+      });
+    }, 30);
+  };
+
   return (
-    <div className="flex w-full justify-between">
-      {/* Card 1 */}
-      <div className="relative">
-        <div className="relative inline-block">
-          <Image
-            src="/Frame 56.png"
-            alt="Preprocessing"
-            width={157}
-            height={156}
-            className="object-contain"
-          />
-          <h3
-            className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-14 text-[24px] font-semibold"
-            style={{
-              background:
-                "linear-gradient(183deg, rgba(182, 154, 239, 1) 0%, rgba(133, 81, 248, 1) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            80%
-          </h3>
-        </div>
-        <p className="font-bold absolute bottom-2 text-center">Compliance Automation Achieved</p>
-      </div>
+    <div className="w-full flex flex-wrap justify-center gap-12 mt-8">
+      {data.map((item, index) => (
+        <motion.div
+          key={index}
+          className="flex flex-col items-center text-center max-w-[220px]"
+          viewport={{ once: true, amount: 0.6 }}
+          onViewportEnter={() => handleInView(index, item.value)}
+        >
+          {/* Semi-circle Progress */}
+          <div className="relative w-[160px] h-[80px]">
+            <svg
+              className="w-full h-full"
+              viewBox="0 0 100 50"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Gradient Definition */}
+              <defs>
+                <linearGradient
+                  id={`gradient-${index}`}
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  {item.gradient.map((g, i) => (
+                    <stop key={i} offset={g.offset} stopColor={g.color} />
+                  ))}
+                </linearGradient>
+              </defs>
 
-      {/* Card 2 */}
-      <div className="relative">
-        <div className="relative inline-block">
-          <Image
-            src="/Frame 57.png"
-            alt="Preprocessing"
-            width={157}
-            height={156}
-            className="object-contain"
-          />
-          <h3
-            className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-14 text-[24px] font-semibold"
-            style={{
-              background:
-                "linear-gradient(183deg, rgba(182, 154, 239, 1) 0%, rgba(133, 81, 248, 1) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            70%
-          </h3>
-        </div>
-        <p className="font-bold absolute bottom-2 text-center">Customer Satisfaction Increase</p>
-      </div>
+              {/* Background Arc (Gray) */}
+              <path
+                d="M10,50 A40,40 0 0,1 90,50"
+                fill="transparent"
+                stroke="#374151"
+                strokeWidth="10"
+                strokeLinecap="round"
+              />
 
-      {/* Card 3 */}
-      <div className="relative">
-        <div className="relative inline-block">
-          <Image
-            src="/Frame 58.png"
-            alt="Preprocessing"
-            width={157}
-            height={156}
-            className="object-contain"
-          />
-          <h3
-            className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-14 text-[24px] font-semibold"
-            style={{
-              background:
-                "linear-gradient(183deg, rgba(182, 154, 239, 1) 0%, rgba(133, 81, 248, 1) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            70%
-          </h3>
-        </div>
-        <p className="font-bold absolute bottom-2 text-center">Coverage of Global Regulatory Experts</p>
-      </div>
+              {/* Animated Progress Arc (Colored) */}
+              <motion.path
+                d="M10,50 A40,40 0 0,1 90,50"
+                fill="transparent"
+                stroke={`url(#gradient-${index})`}
+                strokeWidth="10"
+                strokeLinecap="round"
+                strokeDasharray={arcLength}
+                strokeDashoffset={arcLength}
+                initial={{ strokeDashoffset: arcLength }}
+                whileInView={{
+                  strokeDashoffset: arcLength - (arcLength * item.value) / 100,
+                }}
+                transition={{ duration: 1.8, ease: "easeInOut" }}
+                viewport={{ once: true, amount: 0.6 }}
+              />
+            </svg>
+
+            {/* Percentage text */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-[-10] flex items-center justify-center">
+              <h3 className="text-[18px] sm:text-[24px] font-bold text-white">
+                {counts[index]}%
+              </h3>
+            </div>
+          </div>
+
+          {/* Caption */}
+          <p className="font-bold sm:text-[16px] text-[14px] leading-snug mt-3 text-white">
+            {item.caption}
+          </p>
+        </motion.div>
+      ))}
     </div>
   );
 }

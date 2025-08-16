@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTheme } from "../_subcomponents/ThemeContext";
-import animationBot from "../../../public/animations/animation-bot.json"
+import animationBot from "../../../public/animations/animation-bot.json";
 import LottieShield from "../LottieAnimations/LottieForm";
 
 export default function WhyCarlo(params) {
@@ -37,7 +37,7 @@ export default function WhyCarlo(params) {
 
   const { theme } = useTheme();
   return (
-    <section className="relative">
+    <section className="relative sm:px-10 px-5  ">
       <Image
         width={1500}
         height={700}
@@ -58,14 +58,14 @@ export default function WhyCarlo(params) {
             }  bg-black/40 backdrop-blur-xl rounded-[14px] absolute top-10  z-10 ml-4 mt-10 px-2`}
           >
             <div className="relative">
-                <Image
-                              src="/3d-rendering-social-media-icon.png"
-                              alt="blue-element-photo"
-                              width={150}
-                              height={153}
-                              className="absolute top-[-60px] right-[-30]"
-                            />
-            
+              <Image
+                src="/3d-rendering-social-media-icon.png"
+                alt="blue-element-photo"
+                width={150}
+                height={153}
+                className="absolute top-[-60px] right-[-30]"
+              />
+
               <div className="pt-15 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
                 <p className="font-semibold text-[15px]">
@@ -122,7 +122,7 @@ export default function WhyCarlo(params) {
                 alt="clock"
                 width={150}
                 height={153}
-                 className="absolute top-[-60px] right-[-30]"
+                className="absolute top-[-60px] right-[-30]"
               />
               <div className="pt-15 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
@@ -149,7 +149,7 @@ export default function WhyCarlo(params) {
                 alt="pattern"
                 width={150}
                 height={153}
-                 className="absolute top-[-60px] right-[-50]"
+                className="absolute top-[-60px] right-[-50]"
               />
               <div className="pt-15 pl-4">
                 <h4 className="font-bold text-3xl">+200</h4>
@@ -164,10 +164,10 @@ export default function WhyCarlo(params) {
         </div>
 
         <div className="w-full relative ">
-           <div className="absolute top-[-40] right-0 z-0">
-                 <LottieShield animationData={animationBot}  />
-              </div>
-          <h2 className="text-[46px] font-bold z-10">
+          <div className="absolute top-[-40] right-0 z-0 max-lg:hidden">
+            <LottieShield animationData={animationBot} />
+          </div>
+          <h2 className="lg:text-[46px] text-[32px] font-bold z-10">
             Why Carlo is our <br />
             Complicance Partner
           </h2>
@@ -176,28 +176,24 @@ export default function WhyCarlo(params) {
             <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
           </div>
           <div className="flex flex-col gap-3 mt-5">
-            {whycarlo.map((text,index) => (
+            {whycarlo.map((text, index) => (
               <div key={index}>
-
                 <div key={index} className="flex items-center  shrink-0 gap-2">
                   <div
-                    className="rounded-full shrink-0"
+                    className="rounded-full shrink-0 sm:w-[18px] sm:h-[18px] w-[14px] h-[14px]"
                     style={{
-                      width: "18px",
-                      height: "18px",
                       background:
                         "linear-gradient(183deg, rgba(182, 154, 239, 1) 0%, rgba(133, 81, 248, 1) 100%)",
                     }}
                   ></div>
-                  <p className="text-[20px] font-semibold">{text.heading}</p>
-                  
-                  
-                  
+                  <p className="md:text-[20px] text-base sm:text-[18px]  font-semibold">
+                    {text.heading}
+                  </p>
                 </div>
-                <p className="text-[20px] font-medium">{text.details}</p>
+                <p className="md:text-[20px] text-base sm:text-[18px]  font-medium">
+                  {text.details}
+                </p>
               </div>
-              
-              
             ))}
           </div>
         </div>

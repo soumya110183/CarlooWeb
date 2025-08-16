@@ -6,16 +6,16 @@ import PartnerShip from "./_components/PartnerShip";
 import SubScribe from "./_components/SubScribe";
 import WhyChoose from "./_components/WhyChoose";
 
-export default function page(){
-    return(
-        <div className="mt-35 overflow-y-hidden lg:px-10 px-5"> 
-            <MissionStatement />
-            <OurVision />
-            <OurTeam />
-            <WhyChoose />
-            <PartnerShip />
-            <MeetTeam />
-            <SubScribe />
-        </div>
-    )
+export default function page() {
+  return (
+    <div className="mt-35 overflow-y-hidden lg:px-10 px-5">
+      <MissionStatement />
+      <OurVision />
+      <OurTeam />
+      <WhyChoose />
+      <PartnerShip />
+      <MeetTeam />
+      <SubScribe />
+    </div>
+  );
 }

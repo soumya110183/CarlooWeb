@@ -8,7 +8,7 @@ import { useTheme } from "../_subcomponents/ThemeContext";
 function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
   const scrollRef = useRef(null);
- const {theme}=useTheme()
+  const { theme } = useTheme();
   const handleScrollTo = (index) => {
     setActiveSlide(index);
     const scrollContainer = scrollRef.current;
@@ -20,17 +20,21 @@ function Hero() {
   };
 
   return (
-    <div className="relative w-full mt-25 mx-auto">
+    <div className="relative w-full mt-25 mx-auto sm:px-10 px-5 ">
       <div
         ref={scrollRef}
-        className="flex mx-auto overflow-y-hidden w-full snap-x snap-mandatory scroll-smooth  no-scrollbar"
+        className="flex mx-auto overflow-y-hidden overflow-x-scroll  w-full snap-x snap-mandatory scroll-smooth  no-scrollbar"
       >
         {["First Slide", "Second Slide", "Third Slide", "Fourth Slide"].map(
           (label, i) => {
             const slide = Slide.find((s) => s.character === label);
             return (
               <div key={label} className="w-full flex-shrink-0 snap-start ">
-                <HeaderSlider filteredSlide={slide} label={label} theme={theme} />
+                <HeaderSlider
+                  filteredSlide={slide}
+                  label={label}
+                  theme={theme}
+                />
               </div>
             );
           }
