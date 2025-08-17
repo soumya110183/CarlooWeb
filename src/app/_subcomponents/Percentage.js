@@ -121,14 +121,14 @@ export default function Percentage() {
 
             {/* Percentage text */}
             <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-[-10] flex items-center justify-center">
-              <h3 className="text-[18px] sm:text-[24px] font-bold text-white">
+              <h3 className="text-[18px] sm:text-[24px] font-bold text-foreground">
                 {counts[index]}%
               </h3>
             </div>
           </div>
 
           {/* Caption */}
-          <p className="font-bold sm:text-[16px] text-[14px] leading-snug mt-3 text-white">
+          <p className="font-bold sm:text-[16px] text-[14px] leading-snug mt-3 text-foreground">
             {item.caption}
           </p>
         </motion.div>

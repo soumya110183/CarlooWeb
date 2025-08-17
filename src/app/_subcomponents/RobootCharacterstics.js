@@ -30,7 +30,7 @@ function RobootCharacterstics({ img, title, paragraph, imp, flex }) {
             width={37}
             height={37}
           />
-          <p className="md:text-[18px] text-base font-semibold">{imp}</p>
+          <p className="md:text-[18px] text-base font-medium italic">{imp}</p>
         </div>
       </div>
     </div>

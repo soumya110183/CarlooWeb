@@ -16,11 +16,7 @@ function HeaderSlider({ filteredSlide, theme }) {
           : ""
       } justify-between text-foreground  `}
     >
-      <div
-        className={`z-40 ${
-          filteredSlide.character === "Second Slide" ? "pr-30" : "pl-30"
-        }"`}
-      >
+      <div className={`z-40 lg:px-30 sm:px-10 `}>
         <h1
           className={`lg:text-[48px] max-sm:text-center sm:text-4xl text-[28px] font-bold ${
             theme === "light"

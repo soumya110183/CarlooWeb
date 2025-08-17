@@ -20,7 +20,7 @@ function Hero() {
   };
 
   return (
-    <div className="relative w-full mt-25 mx-auto sm:px-10 px-5 ">
+    <div className="relative w-full mt-25 mx-auto  ">
       <div
         ref={scrollRef}
         className="flex mx-auto overflow-y-hidden overflow-x-scroll  w-full snap-x snap-mandatory scroll-smooth  no-scrollbar"
