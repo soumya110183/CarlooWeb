@@ -22,7 +22,7 @@ function HeaderSlider({ filteredSlide, theme }) {
         }"`}
       >
         <h1
-          className={`text-[48px] font-bold ${
+          className={`lg:text-[48px] max-sm:text-center sm:text-4xl text-[28px] font-bold ${
             theme === "light"
               ? "bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-400"
               : "bg-gradient-to-br from-cyan-300 to-purple-200"
@@ -30,12 +30,12 @@ function HeaderSlider({ filteredSlide, theme }) {
         >
           {filteredSlide.heading}
         </h1>
-        <p className="text-[28px] font-semibold mt-3.5">
+        <p className="lg:text-[28px] max-sm:text-center sm:text-[24px] text-[18px]  font-semibold mt-3.5">
           {filteredSlide.paragraph}
         </p>
-        <div className="flex items-center gap-5 mt-10">
-          <ButtonPimary buttonText={"GET STARTED"} />
-          <button className="text-white border-none p-0 m-0 outline-none bg-[#651FFF] w-[49px] h-[49px] text-[18px] rounded-full nav-text flex shrink-0 items-center justify-center">
+        <div className="flex items-center gap-5 mt-10 max-md:flex-col">
+          <ButtonPimary buttonText={"GET STARTED"} width={true} />
+          <button className="text-white md:flex hidden border-none p-0 m-0 outline-none bg-[#651FFF] w-[49px] h-[49px] text-[18px] rounded-full nav-text  shrink-0 items-center justify-center">
             <Image
               src="/play-512.png"
               width={25}
@@ -49,7 +49,7 @@ function HeaderSlider({ filteredSlide, theme }) {
               theme === "light" ? "text-green-600" : "text-[#00E5FF]"
             } bg-transparent p-0 m-0 outline-none border ${
               theme === "light" ? "border-green-600" : "border-[#00E5FF]"
-            }  px-5 py-5 text-[18px] rounded-[36px] nav-text flex shrink-0 items-center justify-center`}
+            }  px-5 max-sm:w-full sm:py-5 py-4 text-[18px]  max-sm:text-base rounded-[36px] nav-text flex shrink-0 items-center justify-center`}
           >
             <a href="https://www.youtube.com/@Algorethics">WATCH INTRO VIDEO</a>
           </button>

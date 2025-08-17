@@ -47,7 +47,7 @@ function Hero() {
             <button
               key={label}
               onClick={() => handleScrollTo(index)}
-              className={`cursor-pointer text-[26px] rounded-full font-bold transition-all duration-400 mt-5 ${
+              className={`cursor-pointer lg:text-[26px] sm:text-[20px] text-[14px] rounded-full font-bold transition-all duration-400 mt-5 ${
                 activeSlide === index
                   ? "bg-gradient-to-r from-[#a78bfa] to-[#9333ea] bg-clip-text text-transparent"
                   : `text-foreground hover:text-purple-300`

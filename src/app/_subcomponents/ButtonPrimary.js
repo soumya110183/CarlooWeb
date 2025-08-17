@@ -1,13 +1,19 @@
 import Link from "next/link";
 import React from "react";
 
-export default function ButtonPimary({ buttonText,href,size="18" }) {
+export default function ButtonPimary({
+  buttonText,
+  href,
+  size = "18",
+  width = false,
+}) {
   return (
-    <button className={`text-white border-none   outline-none bg-[#651FFF] flex shrink-0 font-bold   px-7 py-5 text-${size} rounded-[36px] nav-text`}>
-      <Link href={href ? href : "#"}>
-       {buttonText}
-      </Link>
-     
+    <button
+      className={`text-white border-none max-sm:text-base ${
+        width && "max-sm:w-full"
+      }  items-center justify-center   outline-none bg-[#651FFF] flex shrink-0 font-bold   px-7 sm:py-5 py-4 text-${size} rounded-[36px] nav-text`}
+    >
+      <Link href={href ? href : "#"}>{buttonText}</Link>
     </button>
   );
 }

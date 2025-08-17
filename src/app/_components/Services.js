@@ -36,7 +36,7 @@ export default function Services() {
               </p>
             </div>
 
-            <button className="text-white border-none  m-0  outline-none bg-[#651FFF]   p-2.5 text-[15px] rounded-[36px] font-semibold">
+            <button className="text-white border-none  m-0  outline-none bg-[#651FFF] max-sm:mt-5   p-2.5 text-[15px] rounded-[36px] font-semibold">
               <Link href={"/Contact"}> Contact Us</Link>
             </button>
           </div>
