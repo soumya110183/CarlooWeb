@@ -7,7 +7,7 @@ const OfficeMap = dynamic(() => import("../../_subcomponents/LocationMap"), {
 
 export default function ContactMap({reach,locations,setCurrentLoc}) {
   return (
-    <section className="flex justify-center items-center py-10">
+    <section className="flex justify-center items-center ">
       <OfficeMap  reach={reach} locations={locations}  setCurrentLoc={setCurrentLoc}/>
     </section>
   );

@@ -6,8 +6,8 @@ import FeatureAccordions from "../_subcomponents/Accordion";
 
 export default function page() {
   return (
-    <div className="mt-50">
-      <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+    <div className="mt-50 px-5 sm:px-10">
+      <section className="w-full max-w-[1200px] flex max-lg:flex-col items-center mx-auto justify-between text-white lg:pb-32 pb-15">
         <div className="w-full max-w-[570px]">
           <HeadingReuse
             heading={"Ethical AI Guidelines: Building Responsible AI Systems"}

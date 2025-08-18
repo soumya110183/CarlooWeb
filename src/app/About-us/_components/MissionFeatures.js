@@ -5,8 +5,8 @@ export default function MissionFeatures({ children, title, para }) {
         {children}
       </div>
 
-      <h3 className="font-semibold text-[22px] mt-1.5 ">{title}</h3>
-      <p className="font-normal text-[18px] mt-1.5">{para}</p>
+      <h3 className="font-semibold md:text-[22px] text-base sm:text-[18px] mt-1.5 ">{title}</h3>
+      <p className="font-normal text-sm sm:text-[18px]  mt-1.5">{para}</p>
     </div>
   );
 }

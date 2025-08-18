@@ -4,6 +4,7 @@ import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ContactMap from "./MapContainer";
 import ContactDetails from "./ContactDetails";
 import { useState } from "react";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function ContactWebMap() {
 
@@ -49,12 +50,7 @@ export default function ContactWebMap() {
         <HeadingReuse heading={"Explore Our Worldwide Offices"} />
 
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6">
-            Carlo is committed to empowering organizations with compliance
-            solutions across the globe. Our interactive map below highlights our
-            key international offices. Click on each pin to reveal detailed
-            office addresses and contact information.
-          </p>
+          <ParagraphReUse paragraph={"Carlo is committed to empowering organizations with compliance solutions across the globe. Our interactive map below highlights our key international offices. Click on each pin to reveal detailed office addresses and contact information."} />
         </div>
           <ContactDetails currentLoc={currentLoc} />
       </div>

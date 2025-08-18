@@ -1,12 +1,11 @@
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import TeamContainer from "./TeamContainer";
 
 export default function MeetTeam() {
   return (
     <section className="w-full max-w-[1400px]  mx-auto  text-foreground pb-32">
-      <h2 className="text-[48px] font-bold text-center">Meet The Team</h2>
-      <p className="text-[22px] font-normal text-center">
-        Get to know the minds powering our work
-      </p>
+      <h2 className="lg:text-[48px] text-[28px] sm:text-[32px] font-bold text-center ">Meet The Team</h2>
+      <ParagraphReUse paragraph={"Get to know the minds powering our work"} center={true} />
       <div className=" mt-10 mx-auto grid lg:grid-cols-2 grid-cols-1 gap-11">
         <TeamContainer
           img={"StevePhoto.png"}

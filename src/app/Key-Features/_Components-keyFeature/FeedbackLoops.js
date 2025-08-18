@@ -17,7 +17,7 @@ export default function Featureskey({
       <div className="w-full lg:max-w-[570px] ">
         <HeadingReuse heading={heading} />
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6">{paragraph}</p>
+          <p className="font-normal md:text-[22px] text-base sm:text-[18px] mt-6">{paragraph}</p>
         </div>
       </div>
       <div>

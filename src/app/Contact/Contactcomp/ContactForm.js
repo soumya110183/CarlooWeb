@@ -54,7 +54,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full max-w-4xl p-8 bg-[#0F092A] rounded-xl shadow-2xl mx-auto mt-10">
+    <div className="w-full max-w-4xl p-8 max-sm:p-4 bg-[#0F092A]  rounded-xl  shadow-2xl mx-auto mt-10 max-sm:mt-4">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
           <div>
@@ -181,7 +181,7 @@ const ContactForm = () => {
         <div className="flex justify-start mt-8">
           <button
             type="submit"
-            className="px-8 py-3 text-lg font-semibold text-white rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-neutral-900 bg-[#651FFF] hover:from-purple-700 hover:to-indigo-700"
+            className="px-8 py-3 text-lg max-sm:w-full font-semibold text-white rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-neutral-900 bg-[#651FFF] hover:from-purple-700 hover:to-indigo-700"
             disabled={status === "Sending..."}
           >
             Send Message

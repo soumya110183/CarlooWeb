@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ButtonPimary from "./ButtonPrimary";
+import IntroVideoButton from "./IntroVideoButton";
 
 function HeaderSlider({ filteredSlide, theme }) {
   return (
@@ -40,15 +41,7 @@ function HeaderSlider({ filteredSlide, theme }) {
               layout="fixed"
             />
           </button>
-          <button
-            className={`${
-              theme === "light" ? "text-green-600" : "text-[#00E5FF]"
-            } bg-transparent p-0 m-0 outline-none border ${
-              theme === "light" ? "border-green-600" : "border-[#00E5FF]"
-            }  px-5 max-sm:w-full sm:py-5 py-4 text-[18px]  max-sm:text-base rounded-[36px] nav-text flex shrink-0 items-center justify-center`}
-          >
-            <a href="https://www.youtube.com/@Algorethics">WATCH INTRO VIDEO</a>
-          </button>
+       <IntroVideoButton />
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 "use client"
 
 
+import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 import Underline from "../_subcomponents/UnderLine";
 import SubScribe from "../About-us/_components/SubScribe";
 
@@ -16,14 +17,12 @@ export default function page(){
   
     return(
         <div>
-            <section className="w-full max-w-[1200px] mx-auto mt-35 text-foreground overflow-y-hidden lg:px-10 px-5">
-        <h2 className="text-[48px] font-bold text-center">
+            <section className="w-full max-w-[1200px] mx-auto mt-35 text-foreground overflow-hidden lg:px-10 px-5">
+      <h2 className=" lg:text-[48px] text-[28px] sm:text-[32px] font-bold text-center">
           Simple, Scalable Pricing for Every Need
         </h2>
         <Underline />
-        <p className="text-[22px] text-center max-w-[800px] mx-auto text-foreground">
-          With Carlo PEaaS, you get flexible pricing plans designed to suit startups, growing businesses, and large enterprises. Our tiered pricing ensures you only pay for the features and services you need, making compliance easy, scalable, and cost-effective.
-        </p>
+       <ParagraphReUse paragraph={"With Carlo PEaaS, you get flexible pricing plans designed to suit startups, growing businesses, and large enterprises. Our tiered pricing ensures you only pay for the features and services you need, making compliance easy, scalable, and cost-effective."} />
         {/* <ComplianceTable /> */}
         <ComplianceFeatureTable />
         <PricingInformation />

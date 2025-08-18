@@ -2,6 +2,8 @@ import Image from "next/image";
 import { featuresInterActive } from "@/app/_data/data";
 
 import FeatureAccordions from "@/app/_subcomponents/Accordion";
+import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function TrustandTransparency() {
   return (
@@ -17,22 +19,8 @@ export default function TrustandTransparency() {
         />
       </div>
       <div className="w-full lg:max-w-[570px]">
-        <h2 className="text-[40px] font-bold">
-          2. How Carlo Seamlessly Integrates into Your AI Project Effortless
-          Ethical Compliance, Built for Developers
-        </h2>
-        <div className="flex gap-2">
-          <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-
-          <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-        </div>
-        <p className="font-normal text-[22px] mt-6">
-          Carlo integrates seamlessly into your AI workflow, providing real-time
-          monitoring, policy enforcement, feedback, and compliance assurance.
-          With an intuitive UI and developer-ready APIs, its plug-and-play
-          modules adapt to any architecture—LLMs, computer vision, predictive
-          models, or multi-modal systems.
-        </p>
+       <HeadingReuse heading={"2. How Carlo Seamlessly Integrates into Your AI Project Effortless Ethical Compliance, Built for Developers"} />
+      <ParagraphReUse paragraph={"Carlo integrates seamlessly into your AI workflow, providing real-time monitoring, policy enforcement, feedback, and compliance assurance. With an intuitive UI and developer-ready APIs, its plug-and-play modules adapt to any architecture—LLMs, computer vision, predictive models, or multi-modal systems."} />
         <div className="mt-4 h-[300px]">
           <FeatureAccordions features={featuresInterActive} />
         </div>

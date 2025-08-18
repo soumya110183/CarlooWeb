@@ -1,7 +1,7 @@
 export default function HeadingReuse({heading}){
  return (
     <>
-          <h2 className="text-[40px] font-bold text-foreground">
+          <h2 className=" font-bold text-foreground lg:text-[40px] text-[28px] sm:text-[32px] ">
           {heading}
         </h2>
         <div className="flex gap-2">

@@ -1,6 +1,7 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import Image from "next/image";
 import PointsContainer from "./PointsContainer";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function WhyChoose() {
   return (
@@ -9,9 +10,7 @@ export default function WhyChoose() {
         <HeadingReuse heading={"Why Choose Carlo PeaaS?"} />
 
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6 text-foreground">
-            Your Trusted Partner in Ethical AI.
-          </p>
+         <ParagraphReUse paragraph={"Your Trusted Partner in Ethical AI."} />
         </div>
         <div className="flex flex-col gap-3.5 mt-5">
           <PointsContainer
@@ -36,7 +35,7 @@ export default function WhyChoose() {
         <Image
           width={500}
           height={580}
-          src="/WhyRobot.png"
+          src="/WhychooseUs.png"
           alt="robot-validator"
           className="w-[500px]"
         />

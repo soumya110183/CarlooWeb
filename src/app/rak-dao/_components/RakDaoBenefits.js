@@ -37,11 +37,11 @@ export default function WhatYouGetSection() {
         {whatYouGetData.map((section, idx) => (
           <div
             key={idx}
-            className="bg-white p-6 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
+            className="bg-white p-6 max-sm:p-4 rounded-2xl shadow-xl hover:scale-105 transition-transform duration-300"
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="text-black">{section.icon}</span>
-              <h3 className="text-black text-2xl font-semibold">{section.title}</h3>
+              <h3 className="text-black text-[20px] max-sm:text-base font-semibold">{section.title}</h3>
             </div>
             <ul className="space-y-3 text-black text-lg">
               {section.items.map((item, i) => (
@@ -49,7 +49,7 @@ export default function WhatYouGetSection() {
                   <span className="mt-1 text-white/90">
                     <FaCheckCircle size={18} color="black" />
                   </span>
-                  <span>{item}</span>
+                  <span className="font-normal max-sm:text-[14px]">{item}</span>
                 </li>
               ))}
             </ul>

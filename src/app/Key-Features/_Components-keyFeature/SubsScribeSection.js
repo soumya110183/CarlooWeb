@@ -1,4 +1,5 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import SubScriptionForm from "@/app/_subcomponents/SubScriptionForm";
 import Image from "next/image";
 import {
@@ -21,10 +22,7 @@ export default function SubScribeSection() {
           heading={"Subscribe to the newsletter and receive notifications."}
         />
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6">
-            Sign up for updates and stay informed about the latest developments
-            and be a part of our community and get the latest news and insights
-          </p>
+          <ParagraphReUse paragraph={"Sign up for updates and stay informed about the latest developments and be a part of our community and get the latest news and insights"} />
         </div>
         <SubScriptionForm />
         <div className="flex gap-4 mt-4">

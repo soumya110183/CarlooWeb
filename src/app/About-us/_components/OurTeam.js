@@ -2,6 +2,7 @@ import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import Image from "next/image";
 import PointsContainer from "./PointsContainer";
 import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function OurTeam() {
   return (
@@ -18,13 +19,7 @@ export default function OurTeam() {
       <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"Our Team"} />
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6 text-foreground">
-            We are a diverse team of technologists, ethicists, and industry
-            experts who bring decades of combined experience in AI development,
-            compliance, and regulation. From building cutting-edge AI systems to
-            shaping global ethical frameworks, our team is dedicated to making
-            compliance seamless for every AI practitioner.
-          </p>
+          <ParagraphReUse paragraph={"We are a diverse team of technologists, ethicists, and industryexperts who bring decades of combined experience in AI development, compliance, and regulation. From building cutting-edge AI systems to shaping global ethical frameworks, our team is dedicated to making compliance seamless for every AI practitioner."} />
         </div>
         <div className="flex flex-col gap-3.5 mt-5 text-foreground">
           <PointsContainer

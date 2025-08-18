@@ -1,12 +1,27 @@
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import { MdDelete } from "react-icons/md";
 
 export default function BlogSecondContainer({ blog, casestudy, deleteButton }) {
   const contents = blog ? blog : casestudy;
   const pathName = blog ? "blog" : "case-studies";
   const apiPath = blog ? "blogs" : "casestudy";
+  const handleDelete = async () => {
+    const confirmed = confirm("Are you sure you want to delete this blog?");
+    if (!confirmed) return;
 
+    const res = await fetch(`/api/${apiPath}?id=${contents._id}`, {
+      method: "DELETE",
+    });
+
+    if (res.ok) {
+      alert("✅ Blog deleted!");
+      location.reload();
+    } else {
+      alert("❌ Failed to delete blog.");
+    }
+  };
   return (
     <div className="w-full max-w-96 p-6">
       <div className="flex text-black justify-between gap-5">
@@ -32,6 +47,16 @@ export default function BlogSecondContainer({ blog, casestudy, deleteButton }) {
             >
               READ MORE
             </Link>
+               {deleteButton && (
+                      <div className="flex justify-end mt-2">
+                        <button
+                          onClick={handleDelete}
+                          className="text-white hover:underline"
+                        >
+                          <MdDelete size={24} color="black" />
+                        </button>
+                      </div>
+                    )}
           </div>
         </div>
       </div>

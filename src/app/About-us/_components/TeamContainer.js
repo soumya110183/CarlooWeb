@@ -7,7 +7,7 @@ export default function TeamContainer({ img, name, role, details }) {
   const { theme } = useTheme();
   return (
     <div
-      className={`bg-[#0F092A] px-10 items-center text-white justify-items-center rounded-3xl py-10 "`}
+      className={`bg-[#0F092A] px-10 max-sm:px-4 items-center text-white justify-items-center rounded-3xl py-10 "`}
     >
       <div>
         <div className="relative w-56 h-56 rounded-full border border-white overflow-hidden mx-auto">
@@ -19,9 +19,9 @@ export default function TeamContainer({ img, name, role, details }) {
             className="object-cover w-full h-full"
           />
         </div>
-        <h3 className="font-bold text-center text-[24px] mt-3">{name}</h3>
+        <h3 className="font-bold text-center md:text-[22px] text-base sm:text-[18px] mt-3">{name}</h3>
 
-        <p className="font-semibold text-[18px] text-center">{role}</p>
+        <p className="font-semibold text-[18px] max-sm:text-base text-center">{role}</p>
         <p
           className="font-normal  text-[16px] mt-2.5  "
           style={{ whiteSpace: "pre-line" }}

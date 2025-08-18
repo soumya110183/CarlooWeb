@@ -2,19 +2,13 @@ import TrustSteps from "@/app/Why-carlo/_subcomp/TrustSteps";
 import Image from "next/image";
 import { featuresInternational } from "@/app/_data/data";
 import FeatureAccordions from "@/app/_subcomponents/Accordion";
+import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 
 export default function GlobalPolicy() {
   return (
-    <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-foreground pb-32">
+    <section className="w-full max-w-[1200px] flex max-lg:flex-col items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
       <div className="w-full max-w-[570px]">
-        <h2 className="text-[40px] font-bold">
-          Global Policy Frameworks: Navigating International AI Standards
-        </h2>
-        <div className="flex gap-2">
-          <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-
-          <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-        </div>
+      <HeadingReuse heading={"Global Policy Frameworks: Navigating International AI Standards"} />
         <div className="mt-9 h-[600px]">
           <FeatureAccordions features={featuresInternational} />
         </div>

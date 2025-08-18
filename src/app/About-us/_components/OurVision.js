@@ -1,6 +1,7 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import QoutesContainer from "./QoutesContainer";
 import Image from "next/image";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function OurVision() {
   return (
@@ -12,11 +13,7 @@ export default function OurVision() {
         </div>
 
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6">
-            We envision a global AI ecosystem where innovation and ethics
-            coexist harmoniously, driving progress while respecting privacy,
-            fairness, and accountability.
-          </p>
+         <ParagraphReUse paragraph={"We envision a global AI ecosystem where innovation and ethics coexist harmoniously, driving progress while respecting privacy, fairness, and accountability."} />
         </div>
       </div>
       <div>

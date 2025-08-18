@@ -5,6 +5,7 @@ import { FaShieldAlt } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa";
 import { FaBalanceScale } from "react-icons/fa";
 import QoutesContainer from "./QoutesContainer";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function MissionStatement() {
   return (
@@ -12,14 +13,8 @@ export default function MissionStatement() {
       <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"Mission Statement"} />
         <div className="flex gap-2 items-start">
-          <p className="font-normal text-[22px] mt-6">
-            Our mission is to enable developers, companies, and enterprises to
-            innovate fearlessly while adhering to global data protection laws
-            and ethical AI guidelines. We believe that responsible AI
-            development is not just a regulatory requirement—it is a moral
-            imperative.
-          </p>
-          <div></div>
+         <ParagraphReUse paragraph={"Our mission is to enable developers, companies, and enterprises to innovate fearlessly while adhering to global data protection laws and ethical AI guidelines. We believe that responsible AI development is not just a regulatory requirement—it is a moral imperative."} />
+          
         </div>
         <div className="grid grid-cols-2 w-full gap-5 mt-6">
           <MissionFeatures

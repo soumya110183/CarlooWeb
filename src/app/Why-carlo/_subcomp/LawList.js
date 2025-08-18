@@ -14,7 +14,7 @@ export default function LawList(){
       {laws.map((item, index) => {
         const [region, regulations] = item.split(": ");
         return (
-          <h3 key={index} className="text-[18px]">
+          <h3 key={index} className="lg:text-[18px] text-base">
             <strong>{region}:</strong> {regulations}
           </h3>
         );

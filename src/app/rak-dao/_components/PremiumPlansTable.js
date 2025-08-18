@@ -1,5 +1,4 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
-import { FaCheck } from "react-icons/fa";
 
 const premiumPlansData = [
   {
@@ -34,9 +33,11 @@ const premiumPlansData = [
 
 const PremiumPlansTable = () => {
   return (
-    <div className=" p-4 font-sans text-gray-200 mt-10 pb-32">
-        <HeadingReuse heading={"Premium Compliance Plans"} />
-      <div className="w-full max-w-7xl rounded-xl overflow-hidden shadow-xl bg-gray-800 mt-10">
+    <div className="p-4 font-sans text-gray-200 mt-10 pb-32">
+      <HeadingReuse heading={"Premium Compliance Plans"} />
+
+      {/* Desktop Table */}
+      <div className="hidden md:block w-full max-w-7xl rounded-xl overflow-hidden shadow-xl bg-gray-800 mt-10">
         <table className="w-full border-collapse">
           <thead>
             <tr className="bg-[#5d3fd3] text-white text-sm font-semibold uppercase tracking-wider">
@@ -64,13 +65,30 @@ const PremiumPlansTable = () => {
             ))}
           </tbody>
         </table>
-
-      
       </div>
-        <p className="text-[22px] text-center w-full mt-10 text-foreground">
-         <strong>Bonus:</strong> Every paid plan includes a 20% discount if you incorporate through Algorethics.
 
-        </p>
+      {/* Mobile Cards */}
+      <div className="md:hidden mt-8 space-y-6">
+        {premiumPlansData.map((row, idx) => (
+          <div
+            key={idx}
+            className="rounded-xl bg-[#2c2c44] shadow-md p-5 border border-gray-700"
+          >
+            <h3 className="text-lg font-bold text-white">{row.plan}</h3>
+            <p className="text-sm text-gray-300 mt-1">{row.idealFor}</p>
+            <div className="mt-3 flex items-center justify-between text-sm">
+              <span className="font-semibold text-[#5d3fd3]">AED {row.monthlyAED}</span>
+              <span className="text-gray-400">({row.monthlyUSD})</span>
+            </div>
+            <p className="mt-3 text-gray-300 text-sm">{row.includes}</p>
+          </div>
+        ))}
+      </div>
+
+      <p className="md:text-[22px] text-base sm:text-[18px]  text-center w-full mt-10 max-sm:mt-4 text-foreground">
+        <strong>Bonus:</strong> Every paid plan includes a 20% discount if you incorporate through
+        Algorethics.
+      </p>
     </div>
   );
 };

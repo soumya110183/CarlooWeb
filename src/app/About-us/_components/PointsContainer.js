@@ -7,8 +7,8 @@ export default function PointsContainer({ title, para }) {
         <FaCheck className="text-white text-sm" />
       </div>
       <div>
-        <h3 className="text-[20px] font-bold">{title}</h3>
-        <p className="font-normal text-[18px]">{para}</p>
+        <h3 className="text-[20px] max-sm:text-base font-bold">{title}</h3>
+        <p className="font-normal text-[18px] max-sm:text-sm">{para}</p>
       </div>
     </div>
   );

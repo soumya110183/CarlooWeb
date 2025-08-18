@@ -23,11 +23,7 @@ export default function GetStartedCarlo() {
           Whether you’re a DAO steward, DeFi engineer, or NFT platform founder, Carlo gives you the tools to de-risk your operations and raise your ethical credibility in a trust-starved ecosystem.
         </p>
 
-        <div className="mt-6 space-y-2">
-          <p>Email: <a href="mailto:steve@algorethics.ai" className="text-[#651FFF] underline">steve@algorethics.ai</a></p>
-          <p>Dashboard: <a href="https://policyenforcement.com" target="_blank" className="text-[#651FFF] underline">https://policyenforcement.com</a></p>
-          <p>Learn More: <a href="https://www.algorethics.info" target="_blank" className="text-[#651FFF] underline">www.algorethics.info</a></p>
-        </div>
+       
       </div>
 
       {/* Image */}

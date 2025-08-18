@@ -7,6 +7,7 @@ import StarterKit from "@tiptap/starter-kit";
 import Underline from "@tiptap/extension-underline";
 import Link from "@tiptap/extension-link";
 import ImageExtension from "@tiptap/extension-image";
+import BlogSecondContainer from "@/app/blog/BlogSecondContainer";
 
 // ✅ Separate component for text blocks to isolate useEditor hook
 function TextBlock({ content, index, onUpdate, onAddBlock, onRemoveBlock }) {
@@ -152,7 +153,7 @@ function ImageBlock({ src, publicId, index, onImageUpload, onImageDelete, onAddB
   );
 }
 
-export default function BlogEditorForm() {
+export default function BlogEditorForm({blogs}) {
   const [title, setTitle] = useState("");
   const [mainImage, setMainImage] = useState("");
   const [mainImagePublicId, setMainImagePublicId] = useState("");
@@ -397,6 +398,9 @@ const handleSubmit = async (e) => {
   }
 
   return (
+    <div>
+
+   
     <div className="max-w-4xl mx-auto p-6 space-y-6 bg-[#0F092A] rounded-xl shadow-2xl text-white">
       <h1 className="text-2xl font-bold">Blog Editor</h1>
       {message && <p className={message.includes('❌') ? 'text-red-500' : 'text-green-500'}>{message}</p>}
@@ -551,5 +555,11 @@ const handleSubmit = async (e) => {
         </div>
       </div>
     </div>
+     <div className="max-w-[1200px] grid grid-cols-3 gap-2 mx-auto mt-10">
+              {blogs.slice(1).map((blog) => (
+                <BlogSecondContainer key={blog._id} blog={blog} deleteButton={true} />
+              ))}
+            </div>
+     </div>
   );
 }

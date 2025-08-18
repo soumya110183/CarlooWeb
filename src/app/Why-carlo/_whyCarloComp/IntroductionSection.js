@@ -1,11 +1,19 @@
 
 
 import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
+import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 import Image from "next/image";
 import { BsCheck } from "react-icons/bs";
 
 export default function Introduction() {
+  
+  const features = [
+  "Global Reach",
+  "Trust and Transparency",
+  "Interactive Explainer",
+];
 
 
   return (
@@ -20,36 +28,19 @@ export default function Introduction() {
         />
       </div>
       <div className="w-full lg:max-w-[570px]">
-        <h2 className="text-[40px] font-bold">Why Carlo</h2>
-        <div className="flex gap-2">
-          <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-
-          <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
-        </div>
-        <p className="font-normal text-[22px] mt-6">
-         Carlo PEaaS is more than a compliance platform—it&apos;s your partner in building trust, mitigating risks, and ensuring that every algorithm aligns with global ethical and legal standards. Whether you&apos;re developing AI for healthcare, finance, retail, or IoT, Carlo adapts to your needs and ensures your projects are always compliant and transparent.
-        </p>
-        <div className="flex items-center mt-12 gap-3">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center shrink-0">
-              <BsCheck className="text-white text-xl" size={25} />
-            </div>
-            <p className="font-bold text-[20px] ">Global Reach</p>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center shrink-0">
-              <BsCheck className="text-white text-xl" size={25} />
-            </div>
-            <p className="font-bold text-[20px] ">Trust and Transparency</p>
-          </div>
-        </div>
-        <div className="flex items-center gap-3 mt-6">
-          <div className="w-8 h-8 rounded-full bg-[#651FFF] flex items-center justify-center shrink-0">
+       <HeadingReuse heading={"Why Carlo"} />
+        <ParagraphReUse paragraph={" Carlo PEaaS is more than a compliance platform—it&apos;s your partner in building trust, mitigating risks, and ensuring that every algorithm aligns with global ethical and legal standards. Whether you&apos;re developing AI for healthcare, finance, retail, or IoT, Carlo adapts to your needs and ensures your projects are always compliant and transparent."} />
+         <div className="lg:mt-12 mt-5 flex flex-col sm:flex-row sm:flex-wrap lg:gap-6 gap-4">
+      {features.map((feature, idx) => (
+        <div key={idx} className="flex items-center gap-3">
+          <div className="lg:w-8 lg:h-8 w-5 h-5 rounded-full bg-[#651FFF] flex items-center justify-center shrink-0">
             <BsCheck className="text-white text-xl" size={25} />
           </div>
-          <p className="font-bold text-[20px] ">Interactive Explainer</p>
+          <p className="font-bold lg:text-[20px] sm:text-[18px] text-base">{feature}</p>
         </div>
-        <div className="mt-12">
+      ))}
+    </div>
+        <div className="lg:mt-12 mt-6">
           <ButtonPimary buttonText={"Read More"} href={"/About-us"} />
         </div>
       </div>

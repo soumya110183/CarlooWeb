@@ -98,23 +98,29 @@ function Navigation() {
       }`}
     >
       <nav
-        className={`h-full w-full max-w-[1350px] flex items-center justify-between mx-auto   font-mont relative ${
+        className={`h-full w-full  ${
+          theme === "light" ? "max-w-[1400px]" : "max-w-[1350px]"
+        } flex items-center justify-between mx-auto   font-mont relative ${
           theme === "light" ? "text-black" : "text-white"
         } `}
         ref={navRef}
       >
         <Link href="/">
           <div className="flex items-center gap-3">
-            <Image
-              src={`${
-                theme === "light" ? "/logo-robot-black.png" : "/carlo-logo.png"
-              }`}
-              alt="logo"
-              width={120}
-              height={120}
-              className="w-auto h-auto"
-              priority
-            />
+            <div className={`relative  ${theme === "light" ? "w-40 h-40" : "w-34 h-34"}`}>
+             
+              <Image
+                src={
+                  theme === "light"
+                    ? "/logo-robot-black.png"
+                    : "/carlo-logo.png"
+                }
+                alt="logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
         </Link>
 
