@@ -41,7 +41,7 @@ function Hero() {
         )}
       </div>
 
-      <div className="flex gap-5 mx-auto justify-center mt-5">
+      <div className="px-5 flex gap-5 mx-auto justify-center mt-5">
         {["The Validator", "The Watcher", "The Guardian", "The Messenger"].map(
           (label, index) => (
             <button
