@@ -99,7 +99,7 @@ function Navigation() {
     >
       <nav
         className={`h-full w-full  ${
-          theme === "light" ? "max-w-[1400px]" : "max-w-[1350px]"
+          theme === "light" ? "max-w-[1400px]" : "max-w-[1400px]"
         } flex items-center justify-between mx-auto   font-mont relative ${
           theme === "light" ? "text-black" : "text-white"
         } `}
@@ -107,7 +107,7 @@ function Navigation() {
       >
         <Link href="/">
           <div className="flex items-center gap-3">
-            <div className={`relative  ${theme === "light" ? "w-40 h-40" : "w-34 h-34"}`}>
+            <div className={`relative  ${theme === "light" ? "w-45 h-45" : "w-40 h-40"}`}>
              
               <Image
                 src={

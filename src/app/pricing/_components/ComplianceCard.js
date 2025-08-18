@@ -18,22 +18,22 @@ export default function ComplianceCard({ plan }) {
       style={{ backgroundColor: "#5d3fd3" }}
     >
       <div>
-        {/* Price */}
+     
         <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
           {plan.price}
         </div>
 
-        {/* Title */}
+      
         <div className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
           {plan.title}
         </div>
 
-        {/* Description */}
+        
         <p className="text-gray-200 mb-6 text-xs sm:text-sm md:text-base leading-relaxed">
           {plan.description}
         </p>
 
-        {/* Features */}
+    
         <ul className="space-y-3 mb-5">
           {plan.features.map((feature, index) => (
             <li
@@ -54,10 +54,11 @@ export default function ComplianceCard({ plan }) {
         </ul>
       </div>
 
-    
+    <Link href={`/pricing/${slugify(plan.title)}`}>
       <button className="w-full bg-white text-[#5d3fd3] font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg text-center transition-transform transform hover:scale-105 text-sm sm:text-base md:text-lg">
-        <Link href={`/pricing/${slugify(plan.title)}`}>Choose Plan</Link>
+        Choose Plan
       </button>
+      </Link>
     </div>
   );
 }

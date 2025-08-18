@@ -13,10 +13,7 @@ export default function ReadyToLead() {
           Ethical excellence isn’t optional in today’s global digital economy. Get certified. Get trusted. Get ahead.
         </p>
 
-        <div className="mt-6 space-y-2">
-          <p>Email: <a href="mailto:steve@algorethics.ai" className="text-[#651FFF] underline">steve@algorethics.ai</a></p>
-          <p>Platform: <a href="https://policyenforcement.com" target="_blank" className="text-[#651FFF] underline">https://policyenforcement.com</a></p>
-        </div>
+     
       </div>
 
       {/* Image */}

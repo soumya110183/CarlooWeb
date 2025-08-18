@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { useTheme } from "../_subcomponents/ThemeContext";
 import Link from "next/link";
+import SocialMediaIcon from "../_subcomponents/SocialmediaIcon";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -51,14 +52,7 @@ export default function Footer() {
 
        
         <div className="w-full sm:max-w-[300px] space-y-6">
-          <div className="flex gap-4">
-            {[FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
-              <Icon
-                key={idx}
-                className="text-white bg-black rounded-full p-2 w-8 h-8 cursor-pointer hover:scale-105 transition"
-              />
-            ))}
-          </div>
+          <SocialMediaIcon />
 
           <div className="flex items-center bg-black border border-gray-600 rounded-[10px] overflow-hidden max-w-[300px] pr-4">
             <input

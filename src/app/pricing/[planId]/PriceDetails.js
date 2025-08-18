@@ -9,7 +9,7 @@ export default function PriceDetails({ planTitle }) {
   return (
     <div className="w-full flex justify-between mt-10">
       <PriceCalculate planTitle={planTitle} setPrice={setPrice} />
-      <OrderSummary price={price} />
+      <OrderSummary price={price} planTitle={planTitle} />
     </div>
   );
 }

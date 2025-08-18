@@ -1,5 +1,6 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
+import SocialMediaIcon from "@/app/_subcomponents/SocialmediaIcon";
 import SubScriptionForm from "@/app/_subcomponents/SubScriptionForm";
 import Image from "next/image";
 import {
@@ -25,16 +26,7 @@ export default function SubScribeSection() {
           <ParagraphReUse paragraph={"Sign up for updates and stay informed about the latest developments and be a part of our community and get the latest news and insights"} />
         </div>
         <SubScriptionForm />
-        <div className="flex gap-4 mt-4">
-          {[FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn].map(
-            (Icon, idx) => (
-              <Icon
-                key={idx}
-                className="text-white bg-black rounded-full p-2 w-8 h-8 cursor-pointer hover:scale-105 transition"
-              />
-            )
-          )}
-        </div>
+     <SocialMediaIcon />
       </div>
       <div>
         <Image

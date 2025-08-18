@@ -19,34 +19,7 @@ export default function BookCarloAudit() {
           Request a Quote or Consultation
         </p>
 
-        <div className="mt-4 space-y-2">
-          <p>
-            Email:{" "}
-            <a href="mailto:steve@algorethics.ai" className="text-[#651FFF] underline">
-              steve@algorethics.ai
-            </a>
-          </p>
-          <p>
-            Auditor Access:{" "}
-            <a
-              href="https://policyenforcement.com"
-              target="_blank"
-              className="text-[#651FFF] underline"
-            >
-              https://policyenforcement.com
-            </a>
-          </p>
-          <p>
-            Learn More:{" "}
-            <a
-              href="https://www.algorethics.info"
-              target="_blank"
-              className="text-[#651FFF] underline"
-            >
-              www.algorethics.info
-            </a>
-          </p>
-        </div>
+ 
       </div>
 
       {/* Image */}

@@ -21,20 +21,7 @@ export default function JoinEthicalAIMovement() {
           Book a demo. Test your first model. Join the ecosystem shaping the future of AI.
         </p>
 
-        <div className="mt-6 space-y-2 text-[20px]">
-          <p>
-            📩 Email:{" "}
-            <a href="mailto:steve@algorethics.ai" className="text-[#651FFF] underline">
-              steve@algorethics.ai
-            </a>
-          </p>
-          <p>
-            🌐 Dashboard:{" "}
-            <a href="https://policyenforcement.com" target="_blank" className="text-[#651FFF] underline">
-              policyenforcement.com
-            </a>
-          </p>
-        </div>
+  
       </div>
 
       {/* Image */}

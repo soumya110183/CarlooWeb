@@ -1,4 +1,8 @@
+import Link from "next/link";
+
 export default function OrderSummary({ price }) {
+
+  
   return (
     <div className="bg-white w-full max-w-[492px]  rounded-[8px] shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
       <h3 className="font-semibold text-[18px]">Order Summary</h3>
@@ -10,12 +14,15 @@ export default function OrderSummary({ price }) {
           {price.total + " " + price.currency}
         </h4>
       </div>
+      <Link href={"/pricing/checkout"}>
       <button
         type="submit"
         className="bg-[#651FFF] text-white px-4 py-2 w-full rounded hover:bg-blue-700 disabled:opacity-60 mt-10 "
       >
         Continue
       </button>
+      </Link>
+    
     </div>
   );
 }
