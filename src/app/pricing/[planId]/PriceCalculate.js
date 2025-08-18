@@ -1,72 +1,13 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-export default function PriceCalculate({ planTitle, setPrice }) {
+export default function PriceCalculate({ plan, setPrice }) {
   const [currency, setCurrency] = useState("USD");
   const [duration, setDuration] = useState(3);
-  console.log(planTitle);
-  const globalCompliancePlan = [
-    {
-      price: "$6.99/mo",
-      title: "Seed Compliance",
-      slug: "seed-compliance",
-      description: "Perfect for small teams starting their compliance journey.",
-      features: [
-        { name: "Basic GDPR & CCPA support", available: true },
-        { name: "Real-time monitoring (2 projects)", available: true },
-        { name: "Email Support", available: true },
-        { name: "Feedback loops", available: false },
-        { name: "Compliance dashboard", available: false },
-      ],
-    },
-    {
-      price: "$29/mo",
-      title: "Growth Compliance",
-      slug: "growth-compliance",
-      description:
-        "For growing teams needing expanded regional coverage and insights.",
-      features: [
-        { name: "Everything in Seed", available: true },
-        { name: "Multi-region support (GDPR, LGPD, PIPL)", available: true },
-        { name: "Feedback loops & basic developer alerts", available: true },
-        { name: "Compliance dashboard", available: true },
-        { name: "Priority Email Support", available: false },
-      ],
-    },
-    {
-      price: "$49/mo",
-      title: "Pro Compliance",
-      slug: "pro-compliance",
-      description:
-        "Designed for maturing companies in regulated sectors like health, fintech, and retail.",
-      features: [
-        { name: "All Growth features", available: true },
-        { name: "Unlimited projects", available: true },
-        { name: "Audit logs", available: true },
-        { name: "Role-based access (up to 5 users)", available: true },
-        { name: "Priority Phone & Email Support", available: true },
-      ],
-    },
-    {
-      price: "$199/mo",
-      title: "Infinite Compliance",
-      slug: "infinite-compliance",
-      description:
-        "Complete AI ethics compliance suite with advanced customization.",
-      features: [
-        { name: "All Global features", available: true },
-        { name: "On-premises deployment", available: true },
-        { name: "Custom rule engine", available: true },
-        { name: "AI-powered continuous validation", available: true },
-        { name: "24/7 Dedicated Support & Onboarding", available: true },
-        { name: "Internal team training", available: true },
-      ],
-    },
-  ];
 
-  const plan = globalCompliancePlan.find((p) => p.slug === planTitle);
-  console.log(plan);
-  const oneMonthPrice = parseFloat(plan.price.replace(/[^0-9.-]+/g, ""));
+  const oneMonthPrice = plan.price;
 
   const exchangeRates = {
     USD: 1,
@@ -99,7 +40,7 @@ export default function PriceCalculate({ planTitle, setPrice }) {
 
   return (
     <div className="bg-white w-full max-w-[577px] rounded-[8px]  shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
-      <h3 className="font-semibold text-[18px]">{plan.title}</h3>
+      <h3 className="font-semibold text-[18px]">{plan.tier} compliance</h3>
       <div className="w-full h-[1px] bg-gray-300 mt-4"></div>
 
       <div className="flex justify-between mt-5">

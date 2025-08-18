@@ -45,7 +45,9 @@ export default function ProjectCards() {
           style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)" }}
           className={`w-[174px] h-[189px] sm:w-[200px] sm:h-[200px] 
             ${theme === "light" ? "bg-white/40" : "bg-black/40"} 
-            backdrop-blur-xl rounded-[14px] absolute ${card.className} z-10 px-2 
+            backdrop-blur-xl rounded-[14px] absolute ${
+              card.className
+            } z-10 px-2 
             max-lg:static max-lg:w-full`}
         >
           <div className="relative">
@@ -54,7 +56,7 @@ export default function ProjectCards() {
               alt={card.text}
               width={150}
               height={153}
-              className="absolute top-[-60px] right-0"
+              className="absolute top-[-70px] right-[-30]"
             />
             <div className="pt-14 pl-4">
               <h4 className="font-bold text-2xl sm:text-3xl">{card.title}</h4>

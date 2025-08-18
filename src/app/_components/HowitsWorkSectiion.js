@@ -5,7 +5,7 @@ export default function HowitsWorkSection() {
   return (
     <section className="sm:px-10 px-5">
       <ScrollHeading
-        heading="HOW IT'S  WORK"
+        heading="HOW CARLO WORKS"
         paragraph="From data generation to actionable insights, Carlo PEaaS empowers AI developers and enterprises to maintain global compliance effortlessly, ensuring trust and transparency throughout the AI lifecycle"
       />
       <div className="mt-10 grid md:grid-cols-2 grid-cols-1 max-w-[900px] mx-auto gap-10 text-white">
