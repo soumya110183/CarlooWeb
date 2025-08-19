@@ -23,7 +23,7 @@ export async function POST(req) {
         Phone: ${phone}
         Message: ${message}
       `,
-    });
+    });``
 
     return new Response(
       JSON.stringify({ message: "Email sent successfully" }),

@@ -21,20 +21,22 @@ const OrderForm = () => {
     username: "",
     password: "",
     communication: "",
+    subscriptionPlan: "",
+    billingFrequency: "",
+    referralCode: "",
+    preferredLanguage: "",
   });
 
-  // 🔹 Reusable input styles
   const inputClass =
     "mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm " +
     "focus:outline-none focus:ring-indigo-500 focus:border-indigo-500";
-
 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
-
+  // ✅ Validation per step
   const validateStep = () => {
     switch (currentStep) {
       case 1:
@@ -64,8 +66,15 @@ const OrderForm = () => {
           formData.password.trim() &&
           formData.communication.trim()
         );
+      case 5:
+        return (
+          formData.subscriptionPlan.trim() &&
+          formData.billingFrequency.trim() &&
+          formData.preferredLanguage.trim()
+          // referralCode is optional
+        );
       default:
-        return true; 
+        return true;
     }
   };
 
@@ -77,6 +86,13 @@ const OrderForm = () => {
 
   const prevStep = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
+  };
+
+  // ✅ Final submit
+  const handleSubmit = async () => {
+    console.log("Final Payload:", formData);
+    alert("🎉 Registration Completed!");
+    // Here you can call fetch("/api/submit", { method:"POST", body: JSON.stringify(formData) })
   };
 
   return (
@@ -105,14 +121,10 @@ const OrderForm = () => {
         ))}
       </div>
 
-      {/* Account Type */}
+      {/* Account Type (always visible) */}
       <div className="flex gap-6 mb-6">
         <label className="flex items-center gap-2 font-semibold text-gray-700 cursor-pointer">
-          <input
-            type="radio"
-            name="account"
-            className="form-radio text-indigo-600 h-4 w-4"
-          />
+          <input type="radio" name="account" className="form-radio h-4 w-4" />
           Already have an account?
         </label>
         <label className="flex items-center gap-2 font-semibold text-gray-700 cursor-pointer">
@@ -120,7 +132,7 @@ const OrderForm = () => {
             type="radio"
             name="account"
             defaultChecked
-            className="form-radio text-indigo-600 h-4 w-4"
+            className="form-radio h-4 w-4"
           />
           Register
         </label>
@@ -138,75 +150,27 @@ const OrderForm = () => {
                 <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
                   First name*
                 </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className={inputClass}
-                  required
-                />
+                <input id="firstName" value={formData.firstName} onChange={handleChange} className={inputClass} required />
               </div>
               <div className="flex-1">
                 <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
                   Last name*
                 </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className={inputClass}
-                  required
-                />
+                <input id="lastName" value={formData.lastName} onChange={handleChange} className={inputClass} required />
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-6">
               <div className="flex-1">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email address*
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={inputClass}
-                  required
-                />
+                <input id="email" type="email" value={formData.email} onChange={handleChange} className={inputClass} required />
               </div>
-
               <div className="flex-1">
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
                   Phone number*
                 </label>
-                <div
-                  className={
-                    "mt-1 flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-md shadow-sm " +
-                    "focus-within:ring-indigo-500 focus-within:border-indigo-500"
-                  }
-                >
-                  <select
-                    className="bg-transparent focus:outline-none text-gray-700"
-                    defaultValue="+91"
-                  >
-                    <option value="+91">🇮🇳 +91</option>
-                    <option value="+1">🇺🇸 +1</option>
-                    <option value="+44">🇬🇧 +44</option>
-                    <option value="+61">🇦🇺 +61</option>
-                    <option value="+81">🇯🇵 +81</option>
-                  </select>
-                  <input
-                    type="tel"
-                    id="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="flex-1 focus:outline-none"
-                    placeholder="Enter number"
-                    required
-                  />
-                </div>
+                <input id="phone" type="tel" value={formData.phone} onChange={handleChange} className={inputClass} required />
               </div>
             </div>
           </>
@@ -241,26 +205,50 @@ const OrderForm = () => {
           </div>
         )}
 
-        {/* Navigation */}
-        <div className="flex justify-between mt-8">
-          <button
-            type="button"
-            className="bg-gray-300 text-black px-6 py-3 rounded hover:bg-gray-400 disabled:opacity-50"
-            onClick={prevStep}
-            disabled={currentStep === 1}
-          >
-            Previous
-          </button>
+        {/* Step 5 */}
+        {currentStep === 5 && (
+          <div className="space-y-4">
+            <input id="subscriptionPlan" value={formData.subscriptionPlan} onChange={handleChange} type="text" placeholder="Subscription Plan" className={inputClass} />
+            <input id="billingFrequency" value={formData.billingFrequency} onChange={handleChange} type="text" placeholder="Billing Frequency" className={inputClass} />
+            <input id="referralCode" value={formData.referralCode} onChange={handleChange} type="text" placeholder="Referral Code (Optional)" className={inputClass} />
+            <input id="preferredLanguage" value={formData.preferredLanguage} onChange={handleChange} type="text" placeholder="Preferred Language" className={inputClass} />
+          </div>
+        )}
 
-          <button
-            type="button"
-            className="bg-[#651FFF] text-white px-6 py-3 rounded hover:bg-blue-700 disabled:opacity-50"
-            onClick={nextStep}
-            disabled={!validateStep() || currentStep === totalSteps}
-          >
-            Next
-          </button>
-        </div>
+        {/* Step 6 (Final) */}
+        {currentStep === 6 && (
+          <div className="text-center">
+            <button
+              type="button"
+              onClick={handleSubmit}
+              className="bg-[#651FFF] text-white px-8 py-4 rounded hover:bg-blue-700"
+            >
+              🎉 Complete Registration
+            </button>
+          </div>
+        )}
+
+        {/* Navigation */}
+        {currentStep < 6 && (
+          <div className="flex justify-between mt-8">
+            <button
+              type="button"
+              className="bg-gray-300 text-black px-6 py-3 rounded hover:bg-gray-400 disabled:opacity-50"
+              onClick={prevStep}
+              disabled={currentStep === 1}
+            >
+              Previous
+            </button>
+            <button
+              type="button"
+              className="bg-[#651FFF] text-white px-6 py-3 rounded hover:bg-blue-700 disabled:opacity-50"
+              onClick={nextStep}
+              disabled={!validateStep() || currentStep === totalSteps}
+            >
+              Next
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );

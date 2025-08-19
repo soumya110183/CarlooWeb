@@ -11,8 +11,8 @@ export default function OurTeam() {
         <Image
           width={500}
           height={580}
-          src="/teamrobo.png"
-          alt="robot-validator"
+          src="/team-robot.png"
+          alt="teamrobot"
           className="w-[500px]"
         />
       </div>
@@ -40,7 +40,7 @@ export default function OurTeam() {
           />
         </div>
         <div className="mt-5">
-          <ButtonPimary buttonText={"Contact Us"} size="16" />
+          <ButtonPimary buttonText={"Contact Us"} size="16" href={"/Contact"}/>
         </div>
       </div>
     </section>

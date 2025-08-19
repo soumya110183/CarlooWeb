@@ -5,6 +5,7 @@ import Underline from "../_subcomponents/UnderLine";
 import SubScribe from "../About-us/_components/SubScribe";
 
 import ContactForm from "./Contactcomp/ContactForm";
+import ContactUs from "./Contactcomp/ContactUs";
 import ContactWebMap from "./Contactcomp/ContactWebMap";
 
 
@@ -23,6 +24,7 @@ export default function page() {
         </h2>
        <ParagraphReUse paragraph={"Queries, complaints and feedback. We will be happy to serve you"} center={true} />
         <ContactWebMap />
+        <ContactUs />
       
       
         <Experience />

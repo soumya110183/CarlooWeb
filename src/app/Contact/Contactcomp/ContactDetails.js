@@ -29,6 +29,9 @@ export default function ContactDetails({currentLoc}) {
           <h3 className="text-[16px] font-medium mt-4">
              📞 {currentLoc.phone}
           </h3>
+          <h3 className="text-[16px] font-medium mt-4">
+             📧 Info@algorethics.ai
+          </h3>
         </div>
       </div>
     </div>
