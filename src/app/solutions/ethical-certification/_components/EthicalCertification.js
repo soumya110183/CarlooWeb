@@ -1,9 +1,16 @@
 "use client";
 
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
-import { FaShieldAlt, FaBalanceScale, FaLock, FaUsers, FaLeaf } from "react-icons/fa";
+import {
+  FaShieldAlt,
+  FaBalanceScale,
+  FaLock,
+  FaUsers,
+  FaLeaf,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import ContainerSolution from "../../_components/ContainerSolution";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function EthicalCertification() {
   const features = [
@@ -42,14 +49,17 @@ export default function EthicalCertification() {
   return (
     <section className="w-full max-w-[1200px] mx-auto text-foreground lg:pb-32 pb-15 ">
       <div className="w-full lg:max-w-[570px]   mb-10">
-        <HeadingReuse heading={"What Is the Carlo Ethical Certification Badge?"} />
-        <p className="font-normal text-[20px] leading-relaxed mt-6 text-justify">
-          The Carlo Badge is a public-facing certification granted to platforms, applications, protocols,
-          and companies that pass a rigorous ethics, fairness, compliance, and governance validation process.
-        </p>
+        <HeadingReuse
+          heading={"What Is the Carlo Ethical Certification Badge?"}
+        />
+        <ParagraphReUse
+          paragraph={
+            "The Carlo Badge is a public-facing certification granted to platforms, applications, protocols, and companies that pass a rigorous ethics, fairness, compliance, and governance validation process."
+          }
+        />
       </div>
 
-    <ContainerSolution array={features} />
+      <ContainerSolution array={features} />
     </section>
   );
 }

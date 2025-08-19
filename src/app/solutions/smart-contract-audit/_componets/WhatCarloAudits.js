@@ -1,4 +1,16 @@
-import { FaCode, FaBalanceScale, FaShieldAlt, FaLock, FaGasPump, FaHandshake, FaGavel, FaChartPie, FaFileContract, FaUserShield, FaDatabase } from "react-icons/fa";
+import {
+  FaCode,
+  FaBalanceScale,
+  FaShieldAlt,
+  FaLock,
+  FaGasPump,
+  FaHandshake,
+  FaGavel,
+  FaChartPie,
+  FaFileContract,
+  FaUserShield,
+  FaDatabase,
+} from "react-icons/fa";
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 
 const auditData = [
@@ -14,8 +26,14 @@ const auditData = [
   {
     title: "Ethical Logic Detection",
     items: [
-      { icon: <FaHandshake />, text: "Rug-pull potential in liquidity withdrawal functions" },
-      { icon: <FaGavel />, text: "Centralized mint authority or token freeze powers" },
+      {
+        icon: <FaHandshake />,
+        text: "Rug-pull potential in liquidity withdrawal functions",
+      },
+      {
+        icon: <FaGavel />,
+        text: "Centralized mint authority or token freeze powers",
+      },
       { icon: <FaBalanceScale />, text: "Stealth fees or taxation logic" },
       { icon: <FaUserShield />, text: "Governance override clauses" },
     ],
@@ -31,9 +49,18 @@ const auditData = [
   {
     title: "Compliance-Linked Reviews",
     items: [
-      { icon: <FaFileContract />, text: "Compatibility with SEC and EU MiCA requirements" },
-      { icon: <FaUserShield />, text: "Consumer protection fairness (DFSA/UAE)" },
-      { icon: <FaDatabase />, text: "GDPR/CCPA linkage for data-using contracts" },
+      {
+        icon: <FaFileContract />,
+        text: "Compatibility with SEC and EU MiCA requirements",
+      },
+      {
+        icon: <FaUserShield />,
+        text: "Consumer protection fairness (DFSA/UAE)",
+      },
+      {
+        icon: <FaDatabase />,
+        text: "GDPR/CCPA linkage for data-using contracts",
+      },
     ],
   },
 ];
@@ -46,10 +73,15 @@ export default function WhatCarloAudits() {
       <div className="grid md:grid-cols-2 gap-10 mt-10">
         {auditData.map((section, index) => (
           <div key={index}>
-            <h3 className="text-xl font-semibold mb-4">{section.title}</h3>
+            <h3 className="text-xl max-sm:text-[18px] font-semibold mb-4">
+              {section.title}
+            </h3>
             <ul className="space-y-3">
               {section.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-lg">
+                <li
+                  key={i}
+                  className="flex items-start gap-3 text-lg max-sm:text-base"
+                >
                   <span className="text-primary text-xl">{item.icon}</span>
                   <span>{item.text}</span>
                 </li>

@@ -30,7 +30,7 @@ const whatYouGetData = [
 
 export default function WhatYouGetSection() {
   return (
-    <section className="w-full max-w-[1200px] mx-auto px-4 lg:pb-32 pb-16 text-foreground">
+    <section className="w-full max-w-[1200px] mx-auto  lg:pb-32 pb-16 text-foreground">
       <HeadingReuse heading="What You Get" />
 
       <div className="grid md:grid-cols-2 gap-10 mt-12">
@@ -41,7 +41,9 @@ export default function WhatYouGetSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="text-black">{section.icon}</span>
-              <h3 className="text-black text-[20px] max-sm:text-base font-semibold">{section.title}</h3>
+              <h3 className="text-black text-[20px] max-sm:text-base font-semibold">
+                {section.title}
+              </h3>
             </div>
             <ul className="space-y-3 text-black text-lg">
               {section.items.map((item, i) => (

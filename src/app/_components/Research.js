@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Card from "../_subcomponents/Card";
+import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 
 export default function Research() {
   return (
@@ -27,12 +28,11 @@ export default function Research() {
           </div>
         </div>
         <div className="w-full max-w-[800px]">
-          <p className="font-medium lg:text-[22px] text-base sm:text-[18px]">
-            Artificial Intelligence (AI) is the overarching concept of machines
-            capable of performing tasks that typically require human
-            intelligence — such as visual perception, speech recognition,
-            decision-making, and language translation.
-          </p>
+          <ParagraphReUse
+            paragraph={
+              "Artificial Intelligence (AI) is the overarching concept of machines capable of performing tasks that typically require human intelligence — such as visual perception, speech recognition, decision-making, and language translation."
+            }
+          />
         </div>
       </div>
       <div className="w-full mx-auto">

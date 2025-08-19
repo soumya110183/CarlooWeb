@@ -1,19 +1,19 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import Image from "next/image";
 
 export default function ReadyToLead() {
   return (
-    <section className="w-full max-w-[1200px] flex flex-row-reverse items-center gap-16 lg:gap-24 mx-auto text-foreground lg:pb-32 pb-16 ">
-      
+    <section className="w-full max-w-[1200px] flex max-lg:flex-col flex-row-reverse items-center gap-16 lg:gap-24 mx-auto text-foreground lg:pb-32 pb-16 ">
       {/* Text Content */}
       <div className="w-full ">
         <HeadingReuse heading={"Ready to Lead Ethically?"} />
-        
-        <p className="font-normal text-[20px] leading-relaxed mt-4">
-          Ethical excellence isn’t optional in today’s global digital economy. Get certified. Get trusted. Get ahead.
-        </p>
 
-     
+        <ParagraphReUse
+          paragraph={
+            "Ethical excellence isn’t optional in today’s global digital economy. Get certified. Get trusted. Get ahead."
+          }
+        />
       </div>
 
       {/* Image */}

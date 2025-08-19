@@ -1,7 +1,13 @@
 "use client";
 
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
-import { FaHashtag, FaFileAlt, FaGlobe, FaClock, FaCheckCircle } from "react-icons/fa";
+import {
+  FaHashtag,
+  FaFileAlt,
+  FaGlobe,
+  FaClock,
+  FaCheckCircle,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function VerificationAndMeta() {
@@ -43,10 +49,16 @@ export default function VerificationAndMeta() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: idx * 0.15, ease: "easeOut" }}
-            whileHover={{ scale: 1.03, boxShadow: "0px 12px 25px rgba(0,0,0,0.15)", transition: { duration: 0.2 } }}
+            whileHover={{
+              scale: 1.03,
+              boxShadow: "0px 12px 25px rgba(0,0,0,0.15)",
+              transition: { duration: 0.2 },
+            }}
           >
             <div className="flex-shrink-0">{item.icon}</div>
-            <p className="text-lg font-semibold text-black ">{item.title}</p>
+            <p className="text-lg max-sm:text-base font-semibold text-black ">
+              {item.title}
+            </p>
           </motion.div>
         ))}
       </div>

@@ -11,13 +11,13 @@ import BookCarloAudit from "./_componets/BookCarloAudit";
 
 export default function page() {
   return (
-    <div className="mt-50 w-full max-w-[1200px] mx-auto">
+    <div className="mt-50 w-full max-w-[1200px] text-foreground overflow-hidden lg:px-10 px-5 mx-auto">
       {/* Hero / Intro Section */}
-      <h2 className="text-[48px] font-bold text-center">
+      <h2 className=" lg:text-[48px] text-[28px] sm:text-[32px] font-bold text-center ">
         Unlock Confidence with Ethical Smart Contract Audits
       </h2>
       <Underline />
-      <p className="text-[22px]  max-w-[1200px] mx-auto text-foreground pb-30 text-justify">
+      <p className=" leading-relaxed font-normal text-foreground md:text-[20px] text-base sm:text-[18px] lg:mt-6 mt-4 pb-30 max-lg:pb-15 text-justify">
         Smart contracts are the foundational building blocks of Web3 ecosystems.
         They automate trust, enable decentralized finance, govern DAOs, and
         power everything from NFTs to cross-chain token swaps. Yet, with great

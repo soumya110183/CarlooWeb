@@ -13,7 +13,7 @@ export default function PricingPackages() {
   };
 
   return (
-    <section className="w-full max-w-[1200px] mx-auto lg:pb-32 pb-15 text-foreground px-6">
+    <section className="w-full max-w-[1200px] mx-auto lg:pb-32 pb-15 text-foreground ">
       <h2 className="text-4xl font-bold text-center mb-10">
         Pricing & Packages
       </h2>
@@ -24,11 +24,7 @@ export default function PricingPackages() {
           price="AED 1,350 (~USD 370)"
           value="standard"
           turnaround="5–7 business days"
-          perks={[
-            "Audit report",
-            "Ethical scorecard",
-            "Certification badge",
-          ]}
+          perks={["Audit report", "Ethical scorecard", "Certification badge"]}
           selected={selectedOption === "standard"}
           onSelect={handleSelect}
         />

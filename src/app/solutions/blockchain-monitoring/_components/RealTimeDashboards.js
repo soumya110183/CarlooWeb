@@ -1,35 +1,40 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import Image from "next/image";
 
 export default function RealTimeDashboards() {
   return (
-    <section className="w-full max-w-[1200px] flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24 mx-auto text-foreground lg:pb-32 pb-16 px-4">
-      
+    <section className="w-full max-w-[1200px] flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24 mx-auto text-foreground lg:pb-32 pb-16 ">
       {/* Text Content */}
       <div className="w-full ma ">
         <HeadingReuse heading={"Real-Time Dashboards Built for Action"} />
-        
-        <p className="font-normal text-[20px] leading-relaxed text-justify mt-2">
-          With Carlo’s unified interface, you gain:
-        </p>
 
-        <ul className="mt-4 space-y-3 list-disc list-inside text-lg leading-relaxed">
+        <ParagraphReUse
+          paragraph={"With Carlo’s unified interface, you gain:"}
+        />
+
+        <ul className="mt-4 space-y-3 list-disc list-inside text-lg max-sm:text-base leading-relaxed">
           <li>
-            <strong>Governance Health Scores:</strong> Voting participation, proposal throughput, and voter diversity indicators.
+            <strong>Governance Health Scores:</strong> Voting participation,
+            proposal throughput, and voter diversity indicators.
           </li>
           <li>
-            <strong>Whale Risk Analytics:</strong> Wallet concentration maps and voting power exposure.
+            <strong>Whale Risk Analytics:</strong> Wallet concentration maps and
+            voting power exposure.
           </li>
           <li>
-            <strong>Compliance Heatmaps:</strong> Geographies and jurisdictions of user wallets and smart contract deployments.
+            <strong>Compliance Heatmaps:</strong> Geographies and jurisdictions
+            of user wallets and smart contract deployments.
           </li>
           <li>
-            <strong>Cross-Chain Visualizations:</strong> Interactive graphs showing behavior across supported chains.
+            <strong>Cross-Chain Visualizations:</strong> Interactive graphs
+            showing behavior across supported chains.
           </li>
         </ul>
 
         <p className="font-normal text-[20px] leading-relaxed text-justify mt-4">
-          All insights are digestible, filterable, and backed by exportable audit trails.
+          All insights are digestible, filterable, and backed by exportable
+          audit trails.
         </p>
       </div>
 

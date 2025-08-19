@@ -20,7 +20,7 @@ function RobootCharacterstics({ img, title, paragraph, imp, flex }) {
         <h3 className={`md:text-[40px] font-bold w-full text-2xl sm:text-3xl`}>
           {title}
         </h3>
-        <p className="md:text-[22px] font-medium mt-3.5 text-base sm:text-[18px]">
+        <p className="md:text-[20px] font-medium mt-3.5 text-base sm:text-[18px]">
           {paragraph}
         </p>
         <div className="flex max-md:flex-col   gap-3 md:items-center mt-8">

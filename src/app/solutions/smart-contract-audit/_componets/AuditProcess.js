@@ -59,7 +59,7 @@ const steps = [
 
 export default function AuditProcessTimeline() {
   return (
-    <section className="w-full max-w-[1200px] mx-auto lg:pb-32 pb-15 text-black px-6">
+    <section className="w-full max-w-[1200px] mx-auto lg:pb-32 pb-15 text-black ">
       <h2 className="text-4xl text-foreground font-bold text-center mb-12">
         Audit Process & Timeline
       </h2>

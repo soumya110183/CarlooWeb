@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 
 export default function Experience() {
   return (
@@ -18,12 +19,11 @@ export default function Experience() {
             Effortlessly
           </h3>
 
-          <p className="font-medium text-base sm:text-lg md:text-xl lg:text-[22px] text-center text-black max-w-[900px] mx-auto mt-4">
-            Explore how Carlo PEaaS simplifies AI compliance with real-time
-            monitoring, automated enforcement, and actionable insights. See for
-            yourself how easy it is to ensure trust and transparency in your AI
-            systems
-          </p>
+          <ParagraphReUse
+            paragraph={
+              "Explore how Carlo PEaaS simplifies AI compliance with real-time monitoring, automated enforcement, and actionable insights. See for yourself how easy it is to ensure trust and transparency in your AI systems"
+            }
+          />
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7 mt-6">
             {/* Button 1 */}

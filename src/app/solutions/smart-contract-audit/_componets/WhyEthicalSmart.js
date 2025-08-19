@@ -1,6 +1,7 @@
 import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import Image from "next/image";
+import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
 export default function WhyEthicalSmart() {
   return (
@@ -9,20 +10,20 @@ export default function WhyEthicalSmart() {
       <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading="Why Ethical Smart Contract Audits Matter" />
 
-        <p className="font-normal text-[20px] leading-relaxed text-justify mt-6">
-          Most audits today focus purely on <strong>technical correctness</strong> — checking for bugs, validating math, and securing functions.
-          That’s essential, but in an era where decentralized platforms manage <strong>billions in value</strong> and touch
-          millions of users, <span className="text-primary font-semibold">it’s not enough</span>.
-        </p>
+        <ParagraphReUse
+          paragraph={
+            "Most audits today focus purely on technical correctness — checking for bugs, validating math, and securing functions. That’s essential, but in an era where decentralized platforms manage billions in value and touch millions of users, it’s not enough."
+          }
+        />
 
-        <p className="font-normal text-[20px] leading-relaxed text-justify mt-4">
+        <p className="font-normal text-[20px] max-sm:text-[18px] leading-relaxed text-justify mt-4">
           What if the code allows:
         </p>
 
         <ul className="mt-4 space-y-3 leading-relaxed">
           <li className="flex items-start gap-3">
-            <FaExclamationTriangle className="text-red-500 mt-[4px]" />
-            A founder to mint unlimited tokens post-launch
+            <FaExclamationTriangle className="text-red-500 mt-[4px]" />A founder
+            to mint unlimited tokens post-launch
           </li>
           <li className="flex items-start gap-3">
             <FaExclamationTriangle className="text-red-500 mt-[4px]" />
@@ -34,13 +35,15 @@ export default function WhyEthicalSmart() {
           </li>
         </ul>
 
-        <p className="font-normal text-[20px] leading-relaxed text-justify mt-6">
+        <p className="font-normal text-[20px] max-sm:text-base leading-relaxed text-justify mt-6">
           These aren’t just <strong>technical risks</strong> — they are{" "}
-          <span className="text-primary font-semibold">ethical failures</span> waiting to happen.
+          <span className="text-primary font-semibold">ethical failures</span>{" "}
+          waiting to happen.
         </p>
 
-        <p className="font-normal text-[20px] leading-relaxed text-justify mt-6">
-          <strong>Carlo</strong> redefines the standard for smart contract auditing:
+        <p className="font-normal text-[20px]  max-sm:text-base leading-relaxed text-justify mt-6">
+          <strong>Carlo</strong> redefines the standard for smart contract
+          auditing:
         </p>
 
         <ul className="mt-4 space-y-3 leading-relaxed">
@@ -62,15 +65,15 @@ export default function WhyEthicalSmart() {
           </li>
         </ul>
       </div>
-       <div className="w-full  flex justify-center">
-              <Image
-                src="/vision.png"
-                alt="real-time-dashboards"
-                width={500}
-                height={580}
-                className="w-full max-w-[500px] h-auto object-contain rounded-2xl"
-              />
-            </div>
+      <div className="w-full  flex justify-center">
+        <Image
+          src="/vision.png"
+          alt="real-time-dashboards"
+          width={500}
+          height={580}
+          className="w-full max-w-[500px] h-auto object-contain rounded-2xl"
+        />
+      </div>
     </section>
   );
 }

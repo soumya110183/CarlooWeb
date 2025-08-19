@@ -1,6 +1,12 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import Image from "next/image";
-import { FaFileAlt, FaSearch, FaChartLine, FaCertificate, FaGlobe } from "react-icons/fa";
+import {
+  FaFileAlt,
+  FaSearch,
+  FaChartLine,
+  FaCertificate,
+  FaGlobe,
+} from "react-icons/fa";
 
 export default function CertificationProcess() {
   const steps = [
@@ -53,8 +59,12 @@ export default function CertificationProcess() {
                   {step.icon}
                 </div>
                 <div>
-                  <p className="font-semibold text-lg">{step.title}</p>
-                  <p className="text-foreground/80">{step.text}</p>
+                  <p className="font-semibold text-lg max-sm:text-base">
+                    {step.title}
+                  </p>
+                  <p className="text-foreground/80 max-sm:text-sm">
+                    {step.text}
+                  </p>
                 </div>
               </li>
             ))}

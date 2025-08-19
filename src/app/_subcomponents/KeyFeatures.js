@@ -52,7 +52,7 @@ export default function KeyFeatures({ features }) {
             {features.heading}
           </h3>
         </div>
-        <p className="md:text-[22px] text-base sm:text-[18px] w-full max-w-[488px] font-medium mt-5">
+        <p className="md:text-[20px] text-base sm:text-[18px] w-full max-w-[488px] font-medium mt-5">
           {features.paragraph}
         </p>
       </div>
