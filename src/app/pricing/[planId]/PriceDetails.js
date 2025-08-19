@@ -14,7 +14,7 @@ export default function PriceDetails({ plan }) {
      
       {formComp ? <OrderForm /> :  <PriceCalculate plan={plan} setPrice={setPrice} /> }
       
-      <OrderSummary price={price} setFormComp={setFormComp}/>
+      <OrderSummary price={price} setFormComp={setFormComp} formComp={formComp}/>
     </div>
   );
 }

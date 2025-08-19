@@ -2,10 +2,72 @@
 
 import { useTheme } from "@/app/_subcomponents/ThemeContext";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default function OrderSummary({setFormComp}) {
+export default function OrderSummary({ setFormComp, formComp }) {
   const { price, setPrice } = useTheme();
+  const [user, setUser] = useState(null);
+  const [status, setStatus] = useState(true);
+  
 
+  useEffect(() => {
+    const token = sessionStorage.getItem("authToken");
+    if (token) {
+      setUser(token);
+    }
+  }, []);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const registerData = {
+      pricing_tier: "seed",
+      billing_cycle: "monthly",
+      success_url: "https://example.com/success",
+      cancel_url: "https://example.com/cancel",
+      discount_code: "WELCOME10",
+    };
+
+    setStatus(false);
+
+    try {
+      console.log("Sending data:", JSON.stringify(registerData, null, 2));
+
+      const response = await fetch(
+        "https://carlo.algorethics.ai/api/subscription/checkout",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            Authorization: `Bearer ${user}`,
+          },
+          body: JSON.stringify(registerData),
+        }
+      );
+
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+
+      if (response.ok) {
+        setStatus(true);
+        const data = await response.json();
+        
+         window.location.href = data.data.checkout_url;
+        console.log("Success:", data);
+      
+      } else {
+        const errorText = await response.text();
+        console.error("Error response:", response.status, errorText);
+        setStatus(
+          `Failed to register: ${response.status} ${response.statusText}`
+        );
+      }
+    } catch (error) {
+      console.error("Network/Submission error:", error);
+      setStatus(`Network error: ${error.message}`);
+    }
+  }
   return (
     <div className="bg-white w-full max-w-[492px]  rounded-[8px] shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
       <h3 className="font-semibold text-[18px]">Order Summary</h3>
@@ -17,15 +79,26 @@ export default function OrderSummary({setFormComp}) {
           {price.total + " " + price.currency}
         </h4>
       </div>
-    
+      {formComp ? (
+        
         <button
-        onClick={() => setFormComp(true)}
           type="submit"
-          className="bg-[#651FFF] text-white px-4 py-2 w-full rounded hover:bg-blue-700 disabled:opacity-60 mt-10 "
+          onClick={(e) => handleSubmit(e)}
+          disabled={!user} // 🔹 disable if no token
+          className={`px-4 py-2 w-full rounded mt-10 text-white ${
+            !user
+              ? "bg-gray-400 cursor-not-allowed" // disabled style
+              : "bg-[#651FFF] hover:bg-blue-700"
+          }`}
         >
+          {status ? "Submit Payment" : "Redirecting" }
+          
+        </button>
+      ) : (
+        <button onClick={() => setFormComp(true)} type="submit" className={`px-4 py-2 w-full rounded mt-10 text-white bg-[#651FFF] hover:bg-blue-700 `}>
           Continue
         </button>
-      
+      )}
     </div>
   );
 }

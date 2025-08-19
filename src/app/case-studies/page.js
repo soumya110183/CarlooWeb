@@ -10,7 +10,7 @@ export default async function page() {
   });
 
   const casestudy = await res.json();
-  console.log(casestudy);
+
   return (
     <div>
       <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] overflow-y-hidden px-10 pb-30">

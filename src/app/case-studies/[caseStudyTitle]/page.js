@@ -13,7 +13,7 @@ const caseStudyTitle =params.caseStudyTitle;
   await connectToDatabase();
   
   const casestudyDetails = await casestudy.findOne({ slug: caseStudyTitle }).lean();
-  console.log(casestudyDetails)
+ 
 
 
 

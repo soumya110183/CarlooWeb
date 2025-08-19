@@ -10,7 +10,7 @@ export default async function page({ params }) {
 
   const proPlan = data.find((plan) => plan.tier === planTitle);
 
-  console.log(proPlan);
+  
 
   return (
     <div>

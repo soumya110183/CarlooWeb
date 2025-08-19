@@ -61,7 +61,7 @@ export default async function PricingInformation() {
       ].filter(Boolean),
     };
   });
-  console.log(globalCompliancePlan);
+
 
   return (
     <section className="w-full max-w-[1200px] mx-auto text-foreground pb-32">

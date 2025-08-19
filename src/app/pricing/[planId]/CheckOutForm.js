@@ -3,8 +3,10 @@ import React, { useState } from "react";
 const OrderForm = () => {
   const totalSteps = 6;
   const [currentStep, setCurrentStep] = useState(1);
+  const [status, setStatus] = useState(true);
+  const [showForm, setShowForm] = useState(true);
+  const [loginData, setLoginData] = useState({ username: "", password: "" });
 
-  // 🔹 Form state
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -35,8 +37,10 @@ const OrderForm = () => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
-
-  // ✅ Validation per step
+  const handleChangeLogin = (e) => {
+    const { id, value } = e.target;
+    setLoginData((prev) => ({ ...prev, [id]: value }));
+  };
   const validateStep = () => {
     switch (currentStep) {
       case 1:
@@ -88,16 +92,111 @@ const OrderForm = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
   };
 
-  // ✅ Final submit
-  const handleSubmit = async () => {
-    console.log("Final Payload:", formData);
-    alert("🎉 Registration Completed!");
-    // Here you can call fetch("/api/submit", { method:"POST", body: JSON.stringify(formData) })
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const registerData = {
+      user_info: {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        phone_number: formData.phone,
+      },
+      account_setup: {
+        username: formData.username,
+        password: formData.password,
+        preferred_communication_channel: formData.communication,
+      },
+    };
+
+    setStatus(false);
+
+    try {
+      console.log("Sending data:", JSON.stringify(registerData, null, 2));
+
+      const response = await fetch(
+        "https://carlo.algorethics.ai/api/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+
+            Accept: "application/json",
+          },
+          body: JSON.stringify(registerData),
+        }
+      );
+
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+
+      if (response.ok) {
+        setStatus(true);
+        const data = await response.json();
+        sessionStorage.setItem("authToken", data.accessToken);
+        console.log("Success:", data);
+      } else {
+        const errorText = await response.text();
+        console.error("Error response:", response.status, errorText);
+        setStatus(
+          `Failed to register: ${response.status} ${response.statusText}`
+        );
+      }
+    } catch (error) {
+      console.error("Network/Submission error:", error);
+      setStatus(`Network error: ${error.message}`);
+    }
   };
 
+  async function loginFunction(e) {
+    e.preventDefault();
+
+    const registerData = {
+     username:loginData.username,
+     password:loginData.password
+    };
+
+    setStatus(false);
+
+    try {
+      console.log("Sending data:", JSON.stringify(registerData, null, 2));
+
+      const response = await fetch(
+        "https://carlo.algorethics.ai/api/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+
+            Accept: "application/json",
+          },
+          body: JSON.stringify(registerData),
+        }
+      );
+
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+
+      if (response.ok) {
+        setStatus(true);
+        const data = await response.json();
+        sessionStorage.setItem("authToken", data.accessToken);
+
+        console.log("Success:", data);
+      } else {
+        const errorText = await response.text();
+        console.error("Error response:", response.status, errorText);
+        setStatus(
+          `Failed to register: ${response.status} ${response.statusText}`
+        );
+      }
+    } catch (error) {
+      console.error("Network/Submission error:", error);
+      setStatus(`Network error: ${error.message}`);
+    }
+  }
   return (
     <div className="flex-1 bg-white rounded-[8px] shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
-      {/* Progress Bar */}
       <div className="flex items-center mb-6">
         {Array.from({ length: totalSteps }, (_, i) => (
           <div key={i} className="flex-1 flex items-center">
@@ -121,10 +220,14 @@ const OrderForm = () => {
         ))}
       </div>
 
-      {/* Account Type (always visible) */}
       <div className="flex gap-6 mb-6">
         <label className="flex items-center gap-2 font-semibold text-gray-700 cursor-pointer">
-          <input type="radio" name="account" className="form-radio h-4 w-4" />
+          <input
+            type="radio"
+            name="account"
+            className="form-radio h-4 w-4"
+            onClick={() => setShowForm(false)}
+          />
           Already have an account?
         </label>
         <label className="flex items-center gap-2 font-semibold text-gray-700 cursor-pointer">
@@ -133,121 +236,293 @@ const OrderForm = () => {
             name="account"
             defaultChecked
             className="form-radio h-4 w-4"
+            onClick={() => setShowForm(true)}
           />
           Register
         </label>
       </div>
 
       {/* Form */}
+
       <form className="space-y-6">
         <h2 className="text-xl font-semibold text-gray-800">Billing address</h2>
 
-        {/* Step 1 */}
-        {currentStep === 1 && (
+        {showForm ? (
+          <div>
+            {currentStep === 1 && (
+              <>
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <div className="flex-1">
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      First name*
+                    </label>
+                    <input
+                      id="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className={inputClass}
+                      required
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Last name*
+                    </label>
+                    <input
+                      id="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className={inputClass}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <div className="flex-1">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Email address*
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={inputClass}
+                      required
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Phone number*
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={inputClass}
+                      required
+                    />
+                  </div>
+                </div>
+              </>
+            )}
+
+            {currentStep === 2 && (
+              <div className="space-y-4">
+                <input
+                  id="companyName"
+                  value={formData.companyName}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Company Name"
+                  className={inputClass}
+                />
+                <input
+                  id="industry"
+                  value={formData.industry}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Industry"
+                  className={inputClass}
+                />
+                <input
+                  id="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Website"
+                  className={inputClass}
+                />
+                <input
+                  id="companySize"
+                  value={formData.companySize}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Company Size"
+                  className={inputClass}
+                />
+                <input
+                  id="country"
+                  value={formData.country}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Country"
+                  className={inputClass}
+                />
+              </div>
+            )}
+
+            {currentStep === 3 && (
+              <div className="space-y-4">
+                <input
+                  id="primaryUseCase"
+                  value={formData.primaryUseCase}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Primary Use Case"
+                  className={inputClass}
+                />
+                <input
+                  id="numberOfProjects"
+                  value={formData.numberOfProjects}
+                  onChange={handleChange}
+                  type="number"
+                  placeholder="Number of Projects"
+                  className={inputClass}
+                />
+                <input
+                  id="complianceFrameworks"
+                  value={formData.complianceFrameworks}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Compliance Frameworks"
+                  className={inputClass}
+                />
+              </div>
+            )}
+
+            {currentStep === 4 && (
+              <div className="space-y-4">
+                <input
+                  id="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Username"
+                  className={inputClass}
+                />
+                <input
+                  id="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  type="password"
+                  placeholder="Password"
+                  className={inputClass}
+                />
+                <select
+                  id="communication"
+                  value={formData.communication}
+                  onChange={handleChange}
+                  className={inputClass}
+                >
+                  <option value="">Select Communication Channel</option>
+                  <option value="email">Email</option>
+                </select>
+              </div>
+            )}
+
+            {currentStep === 5 && (
+              <div className="space-y-4">
+                <input
+                  id="subscriptionPlan"
+                  value={formData.subscriptionPlan}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Subscription Plan"
+                  className={inputClass}
+                />
+                <input
+                  id="billingFrequency"
+                  value={formData.billingFrequency}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Billing Frequency"
+                  className={inputClass}
+                />
+                <input
+                  id="referralCode"
+                  value={formData.referralCode}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Referral Code (Optional)"
+                  className={inputClass}
+                />
+                <input
+                  id="preferredLanguage"
+                  value={formData.preferredLanguage}
+                  onChange={handleChange}
+                  type="text"
+                  placeholder="Preferred Language"
+                  className={inputClass}
+                />
+              </div>
+            )}
+
+            {currentStep === 6 && (
+              <div className="text-center">
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  className="bg-[#651FFF] text-white px-8 py-4 rounded hover:bg-blue-700"
+                >
+                  {status ? "Complete Registration" : "Registering"}
+                </button>
+              </div>
+            )}
+
+            {currentStep < 6 && (
+              <div className="flex justify-between mt-8">
+                <button
+                  type="button"
+                  className="bg-gray-300 text-black px-6 py-3 rounded hover:bg-gray-400 disabled:opacity-50"
+                  onClick={prevStep}
+                  disabled={currentStep === 1}
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  className="bg-[#651FFF] text-white px-6 py-3 rounded hover:bg-blue-700 disabled:opacity-50"
+                  onClick={nextStep}
+                  disabled={!validateStep() || currentStep === totalSteps}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
           <>
-            <div className="flex flex-col sm:flex-row gap-6">
-              <div className="flex-1">
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                  First name*
-                </label>
-                <input id="firstName" value={formData.firstName} onChange={handleChange} className={inputClass} required />
-              </div>
-              <div className="flex-1">
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-                  Last name*
-                </label>
-                <input id="lastName" value={formData.lastName} onChange={handleChange} className={inputClass} required />
-              </div>
+            {" "}
+            <div className="space-y-4">
+              <input
+                id="username"
+                value={loginData.username}
+                onChange={handleChangeLogin}
+                type="text"
+                placeholder="username"
+                className={inputClass}
+              />
+              <input
+                id="password"
+                value={loginData.password}
+                onChange={handleChangeLogin}
+                type="password"
+                placeholder="password"
+                className={inputClass}
+              />
             </div>
-            <div className="flex flex-col sm:flex-row gap-6">
-              <div className="flex-1">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email address*
-                </label>
-                <input id="email" type="email" value={formData.email} onChange={handleChange} className={inputClass} required />
-              </div>
-              <div className="flex-1">
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                  Phone number*
-                </label>
-                <input id="phone" type="tel" value={formData.phone} onChange={handleChange} className={inputClass} required />
-              </div>
-            </div>
+            <button
+              onClick={loginFunction}
+              type="submit"
+              className={`px-4 py-2 w-full rounded mt-5 text-white bg-[#651FFF] hover:bg-blue-700 `}
+            >
+              Login
+            </button>
           </>
-        )}
-
-        {/* Step 2 */}
-        {currentStep === 2 && (
-          <div className="space-y-4">
-            <input id="companyName" value={formData.companyName} onChange={handleChange} type="text" placeholder="Company Name" className={inputClass} />
-            <input id="industry" value={formData.industry} onChange={handleChange} type="text" placeholder="Industry" className={inputClass} />
-            <input id="website" value={formData.website} onChange={handleChange} type="text" placeholder="Website" className={inputClass} />
-            <input id="companySize" value={formData.companySize} onChange={handleChange} type="text" placeholder="Company Size" className={inputClass} />
-            <input id="country" value={formData.country} onChange={handleChange} type="text" placeholder="Country" className={inputClass} />
-          </div>
-        )}
-
-        {/* Step 3 */}
-        {currentStep === 3 && (
-          <div className="space-y-4">
-            <input id="primaryUseCase" value={formData.primaryUseCase} onChange={handleChange} type="text" placeholder="Primary Use Case" className={inputClass} />
-            <input id="numberOfProjects" value={formData.numberOfProjects} onChange={handleChange} type="number" placeholder="Number of Projects" className={inputClass} />
-            <input id="complianceFrameworks" value={formData.complianceFrameworks} onChange={handleChange} type="text" placeholder="Compliance Frameworks" className={inputClass} />
-          </div>
-        )}
-
-        {/* Step 4 */}
-        {currentStep === 4 && (
-          <div className="space-y-4">
-            <input id="username" value={formData.username} onChange={handleChange} type="text" placeholder="Username" className={inputClass} />
-            <input id="password" value={formData.password} onChange={handleChange} type="password" placeholder="Password" className={inputClass} />
-            <input id="communication" value={formData.communication} onChange={handleChange} type="text" placeholder="Preferred Communication Channel" className={inputClass} />
-          </div>
-        )}
-
-        {/* Step 5 */}
-        {currentStep === 5 && (
-          <div className="space-y-4">
-            <input id="subscriptionPlan" value={formData.subscriptionPlan} onChange={handleChange} type="text" placeholder="Subscription Plan" className={inputClass} />
-            <input id="billingFrequency" value={formData.billingFrequency} onChange={handleChange} type="text" placeholder="Billing Frequency" className={inputClass} />
-            <input id="referralCode" value={formData.referralCode} onChange={handleChange} type="text" placeholder="Referral Code (Optional)" className={inputClass} />
-            <input id="preferredLanguage" value={formData.preferredLanguage} onChange={handleChange} type="text" placeholder="Preferred Language" className={inputClass} />
-          </div>
-        )}
-
-        {/* Step 6 (Final) */}
-        {currentStep === 6 && (
-          <div className="text-center">
-            <button
-              type="button"
-              onClick={handleSubmit}
-              className="bg-[#651FFF] text-white px-8 py-4 rounded hover:bg-blue-700"
-            >
-              🎉 Complete Registration
-            </button>
-          </div>
-        )}
-
-        {/* Navigation */}
-        {currentStep < 6 && (
-          <div className="flex justify-between mt-8">
-            <button
-              type="button"
-              className="bg-gray-300 text-black px-6 py-3 rounded hover:bg-gray-400 disabled:opacity-50"
-              onClick={prevStep}
-              disabled={currentStep === 1}
-            >
-              Previous
-            </button>
-            <button
-              type="button"
-              className="bg-[#651FFF] text-white px-6 py-3 rounded hover:bg-blue-700 disabled:opacity-50"
-              onClick={nextStep}
-              disabled={!validateStep() || currentStep === totalSteps}
-            >
-              Next
-            </button>
-          </div>
         )}
       </form>
     </div>
