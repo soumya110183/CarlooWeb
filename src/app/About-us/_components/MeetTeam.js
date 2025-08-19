@@ -56,7 +56,7 @@ export default function MeetTeam() {
           }
         />
         <TeamContainer
-          img={"ullas.jfif"}
+          img={"ullas.jpg"}
           name={"Ullas Krishnan MPhil, LLB"}
           role={"Ethical AI Developer Advocate"}
           details={
