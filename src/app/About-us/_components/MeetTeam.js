@@ -55,6 +55,14 @@ export default function MeetTeam() {
             "Ketevan Kimbarishvili is a qualified lawyer with a Master's degree in Law and a strong track record in data protection, compliance, and legal advisory across public and private sectors. As the Data Protection & Compliance Officer at Algorethics, she leads our efforts in legal updates, government and industry engagement, and compliance training initiatives.\n\nKetevan previously served as the Data Protection Officer at the LEPL State Care Agency, where she implemented regulatory standards and privacy frameworks. She is also a certified trainer, currently teaching the “Personal Data Protection” course at BMCC Center, empowering professionals with knowledge on privacy laws and digital rights. Her legal acumen and hands-on experience in data governance strengthen Algorethics’ mission to align AI development with international data protection standards, ethical compliance, and regulatory readiness."
           }
         />
+        <TeamContainer
+          img={"ullas.jfif"}
+          name={"Ullas Krishnan MPhil, LLB"}
+          role={"Ethical AI Developer Advocate"}
+          details={
+            "With over 20+ years of experience in the IT and Software industry, I combine deep technical expertise with strong legal and compliance knowledge, holding a Bachelor’s degree in Law with specialization in the Indian IT Act, IP Act, and Trademark regulations. I have guided enterprises in implementing ethical and responsible AI practices, including the design of a Compliance Sandbox for Carlo Pass to evaluate and validate third-party LLM models against global regulations, aligned with the European AI Act 2025.\n\n My career spans architecting enterprise IT and cloud solutions, driving IoT and AI implementations, and ensuring that innovation is balanced with governance and accountability. This unique blend of technology leadership, legal acumen, and AI ethics positions me as a results-driven professional who bridges the gap between cutting-edge innovation and responsible compliance, enabling enterprises to modernize securely and responsibly across global markets."
+          }
+        />
       </div>
     </section>
   );

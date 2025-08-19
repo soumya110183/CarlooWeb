@@ -3,7 +3,7 @@
 import { useTheme } from "@/app/_subcomponents/ThemeContext";
 import Link from "next/link";
 
-export default function OrderSummary() {
+export default function OrderSummary({setFormComp}) {
   const { price, setPrice } = useTheme();
 
   return (
@@ -17,14 +17,15 @@ export default function OrderSummary() {
           {price.total + " " + price.currency}
         </h4>
       </div>
-      <Link href={"/pricing/checkout"}>
+    
         <button
+        onClick={() => setFormComp(true)}
           type="submit"
           className="bg-[#651FFF] text-white px-4 py-2 w-full rounded hover:bg-blue-700 disabled:opacity-60 mt-10 "
         >
           Continue
         </button>
-      </Link>
+      
     </div>
   );
 }
