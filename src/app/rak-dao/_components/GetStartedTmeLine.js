@@ -70,7 +70,7 @@ export default function GetStartedTimeline() {
           <Image
             width={500}
             height={580}
-            src="/vision.png"
+            src="/startToday.png"
             alt="get-started-timeline"
             className="w-[500px] object-contain"
           />

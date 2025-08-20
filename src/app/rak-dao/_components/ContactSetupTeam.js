@@ -19,7 +19,7 @@ export default function ContactSetupTeam() {
       {/* Image */}
       <div className="w-full lg:max-w-[500px]">
         <Image
-          src="/vision.png"
+          src="/contactOurSetup.png"
           alt="contact-setup-team"
           width={500}
           height={580}
