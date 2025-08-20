@@ -87,7 +87,7 @@ export default function ComplianceAsAService() {
         <Image
           width={500}
           height={580}
-          src="/vision.png"
+          src="/bookrobot.png"
           alt="carlo-pipeline-integration"
           className="w-[500px] object-contain"
         />

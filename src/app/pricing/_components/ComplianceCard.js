@@ -10,8 +10,8 @@ export default function ComplianceCard({ plan }) {
     return title
       .toLowerCase()
       .trim()
-      .replace(/\s+/g, "-") // spaces → hyphens
-      .replace(/[^a-z0-9-]/g, ""); // remove non-alphanumeric except hyphens
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, ""); 
   };
 
   return (

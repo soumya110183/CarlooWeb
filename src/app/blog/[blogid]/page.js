@@ -28,7 +28,8 @@ export default async function page({ params }) {
         mainImage={blogDetails.image}
         title={blogDetails.title}
         adminName={blogDetails.adminName}
-        blocks={blogDetails.blocks} 
+        blocks={blogDetails.blocks}
+        adminPhoto={blogDetails.adminPhoto} 
       />
     </section>
   );

@@ -1,4 +1,4 @@
-// /app/api/upload/route.js
+
 import { NextResponse } from 'next/server';
 import { v2 as cloudinary } from 'cloudinary';
 
@@ -28,7 +28,7 @@ export async function POST(req) {
       .end(buffer);
   });
 
-  // Return both URL and public_id
+ 
   return NextResponse.json({
     url: uploadResult.secure_url,
     public_id: uploadResult.public_id,

@@ -1,9 +1,10 @@
 import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import { FaRegEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 
-export default function BlogSecondContainer({ blog, casestudy, deleteButton }) {
+export default function BlogSecondContainer({ blog, casestudy, deleteButton,editButton }) {
   const contents = blog ? blog : casestudy;
   const pathName = blog ? "blog" : "case-studies";
   const apiPath = blog ? "blogs" : "casestudy";
@@ -55,6 +56,19 @@ export default function BlogSecondContainer({ blog, casestudy, deleteButton }) {
                         >
                           <MdDelete size={24} color="black" />
                         </button>
+                      </div>
+                    )}
+               {editButton && (
+                      <div className="flex justify-end mt-2">
+                        <Link href={`/admin/${contents.slug}`}>
+                        
+                        <button
+                        
+                          className="text-white hover:underline"
+                        >
+                          <FaRegEdit size={24} color="black" />
+                        </button>
+                        </Link>
                       </div>
                     )}
           </div>

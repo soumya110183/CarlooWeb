@@ -51,7 +51,7 @@ export default function BlogCard({ blog,casestudy, deleteButton }) {
              <div className="flex items-center shrink-0 gap-3">
           <div className="flex items-center justify-center rounded-full bg-gray-300">
             <Image
-              src="/healthicons_ui-user-profile.png"
+              src={contents.adminPhoto ? contents.adminPhoto: "/healthicons_ui-user-profile.png" }
               alt="Author"
               width={32}
               height={32}

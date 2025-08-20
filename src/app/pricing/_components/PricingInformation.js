@@ -1,6 +1,7 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ComplianceCard from "./ComplianceCard";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
+import PricingButtonAndCards from "./PricingButtonAndCArds";
 
 export default async function PricingInformation() {
   const res = await fetch("https://carlo.algorethics.ai/api/pricing", {
@@ -70,11 +71,7 @@ export default async function PricingInformation() {
         <ParagraphReUse paragraph="AI is the broader concept of machines being able to carry out tasks in a way that would normally require human intelligence." />
       </div>
 
-      <div className="w-full grid  md:grid-cols-3 sm:grid-cols-2 grid-cols-1 max-sm:mx-auto gap-5 mt-10">
-        {globalCompliancePlan.map((card, index) => (
-          <ComplianceCard plan={card} key={index} />
-        ))}
-      </div>
+      <PricingButtonAndCards plan={globalCompliancePlan} />
     </section>
   );
 }

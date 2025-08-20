@@ -11,6 +11,7 @@ export default function Percentage() {
         { offset: "0%", color: "#8b5cf6" },
         { offset: "100%", color: "#3b82f6" },
       ],
+      shadowColor: "#8b5cf6",
     },
     {
       value: 70,
@@ -19,6 +20,7 @@ export default function Percentage() {
         { offset: "0%", color: "#10b981" },
         { offset: "100%", color: "#22d3ee" },
       ],
+      shadowColor: "#10b981",
     },
     {
       value: 70,
@@ -27,6 +29,7 @@ export default function Percentage() {
         { offset: "0%", color: "#f87171" },
         { offset: "100%", color: "#ef4444" },
       ],
+      shadowColor: "#f87171",
     },
   ];
 
@@ -71,7 +74,7 @@ export default function Percentage() {
           onViewportEnter={() => handleInView(index, item.value)}
         >
           {/* Semi-circle Progress */}
-          <div className="relative w-[160px] h-[80px]">
+                      <div className="relative w-[160px] h-[80px]">
             <svg
               className="w-full h-full"
               viewBox="0 0 100 50"
@@ -90,6 +93,8 @@ export default function Percentage() {
                     <stop key={i} offset={g.offset} stopColor={g.color} />
                   ))}
                 </linearGradient>
+                
+
               </defs>
 
               {/* Background Arc (Gray) */}
@@ -111,23 +116,27 @@ export default function Percentage() {
                 strokeDasharray={arcLength}
                 strokeDashoffset={arcLength}
                 initial={{ strokeDashoffset: arcLength }}
-                whileInView={{
-                  strokeDashoffset: arcLength - (arcLength * item.value) / 100,
+                animate={{
+                  strokeDashoffset: animated[index] 
+                    ? arcLength - (arcLength * item.value) / 100 
+                    : arcLength,
                 }}
-                transition={{ duration: 1.8, ease: "easeInOut" }}
-                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 1.8, ease: "easeInOut", delay: 0.3 }}
+                style={{
+                  filter: `drop-shadow(0 0 6px ${item.shadowColor}60)`,
+                }}
               />
             </svg>
 
-            {/* Percentage text */}
+           
             <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-[-10] flex items-center justify-center">
-              <h3 className="text-[18px] sm:text-[24px] font-bold text-foreground">
+              <h3 className="text-[18px] sm:text-[24px] font-bold text-white">
                 {counts[index]}%
               </h3>
             </div>
           </div>
 
-          {/* Caption */}
+         
           <p className="font-bold sm:text-[16px] text-[14px] leading-snug mt-3 text-foreground">
             {item.caption}
           </p>

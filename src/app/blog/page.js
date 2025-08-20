@@ -8,6 +8,7 @@ export default async function Page() {
   });
 
   const blogs = await res.json();
+  console.log(blogs)
 
   return (
     <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] lg:px-10 px-5 lg:pb-32 pb-15">

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function WhatisAi() {
   return (
     <section className="w-full max-w-[1200px] mx-auto flex items-center justify-between text-foreground mt-10 lg:pb-32 pb-15 max-lg:flex-col max-lg:gap-16">
-      {/* Left Text Section */}
+     
       <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"What is AI Compliance?"} />
 
@@ -43,13 +43,13 @@ export default function WhatisAi() {
         </ul>
       </div>
 
-      {/* Right Image Section */}
+  
       <div className="flex justify-center lg:justify-end">
         <Image
           width={500}
           height={580}
-          src="/vision.png"
-          alt="robot-validator"
+          src="/ai-compliance.png"
+          alt="ai-compliance.png"
           className="w-[500px] max-w-full rounded-2xl"
         />
       </div>

@@ -19,11 +19,13 @@ export default function Experience() {
             Effortlessly
           </h3>
 
-          <ParagraphReUse
-            paragraph={
-              "Explore how Carlo PEaaS simplifies AI compliance with real-time monitoring, automated enforcement, and actionable insights. See for yourself how easy it is to ensure trust and transparency in your AI systems"
-            }
-          />
+         <p
+        className={` leading-relaxed font-normal text-black md:text-[20px] text-base sm:text-[18px] lg:mt-6 mt-4 
+         
+        `}
+      >
+        Explore how Carlo PEaaS simplifies AI compliance with real-time monitoring, automated enforcement, and actionable insights. See for yourself how easy it is to ensure trust and transparency in your AI systems
+      </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7 mt-6">
             {/* Button 1 */}

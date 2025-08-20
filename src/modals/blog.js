@@ -11,6 +11,7 @@ const BlogSchema = new mongoose.Schema(
   {
     image: { type: String, required: true },  // main image URL
     adminName: { type: String, required: true },
+    adminPhoto: { type: String, required: false },
     title: { type: String, required: true },
     slug: { type: String, required: true, unique: true },
     blocks: [BlockSchema],  // <- updated field to store blocks

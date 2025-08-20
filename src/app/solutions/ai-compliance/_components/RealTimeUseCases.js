@@ -38,7 +38,7 @@ export default function RealTimeUseCases() {
         <Image
           width={500}
           height={580}
-          src="/vision.png"
+          src="/realtime.png"
           alt="robot-validator"
           className="w-[500px] object-contain"
         />

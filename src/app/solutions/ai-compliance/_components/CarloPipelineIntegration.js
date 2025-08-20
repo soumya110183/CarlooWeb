@@ -84,7 +84,7 @@ export default function CarloPipelineIntegration() {
           <Image
             width={500}
             height={580}
-            src="/vision.png"
+            src="/aidevelopment.png"
             alt="carlo-pipeline-integration"
             className="w-[500px] object-contain"
           />
