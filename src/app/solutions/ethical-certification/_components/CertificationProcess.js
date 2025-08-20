@@ -44,9 +44,9 @@ export default function CertificationProcess() {
         <HeadingReuse heading={"The Certification Process"} />
       </div>
 
-      <div className="flex max-lg:flex-col-reverse flex-row-reverse gap-10 lg:gap-16 mt-12">
+      <div className="flex max-lg:flex-col-reverse flex-row-reverse gap-10 lg:gap-16 mt-12 items-center ">
         {/* Left: Timeline */}
-        <div className="relative flex-1">
+        <div className="relative flex-1 h-[400px]">
           {/* Vertical Line */}
           <div className="absolute left-[14px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#5d3fd3] via-purple-400 to-[#5d3fd3]"></div>
 
@@ -76,7 +76,7 @@ export default function CertificationProcess() {
           <Image
             width={500}
             height={580}
-            src="/vision.png"
+            src="/certification.png"
             alt="certification-process"
             className="w-[500px] object-contain"
           />

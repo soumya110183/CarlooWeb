@@ -36,7 +36,7 @@ export default function BenefitsOfCertification() {
         <Image
           width={500}
           height={580}
-          src="/vision.png"
+          src="/benefit.png"
           alt="carlo-certification-benefits"
           className="w-[500px] rounded-2xl"
         />

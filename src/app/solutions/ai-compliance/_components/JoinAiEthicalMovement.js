@@ -29,7 +29,7 @@ export default function JoinEthicalAIMovement() {
       {/* Image */}
       <div className="w-full lg:max-w-[500px]">
         <Image
-          src="/vision.png"
+          src="/carlo-robot.png"
           alt="ethical-ai-join"
           width={500}
           height={580}

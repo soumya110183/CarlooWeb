@@ -55,7 +55,7 @@ export default function StartForFree() {
         <Image
           width={500}
           height={580}
-          src="/vision.png"
+          src="/startforFree.png"
           alt="start-for-free"
           className="w-[500px]"
         />

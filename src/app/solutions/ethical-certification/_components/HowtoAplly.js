@@ -46,7 +46,7 @@ export default function HowToApply() {
       {/* Image */}
       <div className="w-full ">
         <Image
-          src="/vision.png"
+          src="/howtoApply.png"
           alt="how-to-apply-carlo"
           width={500}
           height={580}

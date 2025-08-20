@@ -23,7 +23,7 @@ export default function BookCarloAudit() {
       {/* Image */}
       <div className="w-full">
         <Image
-          src="/vision.png"
+          src="/bookyourCarlo.png"
           alt="book-carlo-audit"
           width={500}
           height={580}

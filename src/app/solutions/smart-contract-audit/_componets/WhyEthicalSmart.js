@@ -67,7 +67,7 @@ export default function WhyEthicalSmart() {
       </div>
       <div className="w-full  flex justify-center">
         <Image
-          src="/vision.png"
+          src="/WhyEthical.png"
           alt="real-time-dashboards"
           width={500}
           height={580}

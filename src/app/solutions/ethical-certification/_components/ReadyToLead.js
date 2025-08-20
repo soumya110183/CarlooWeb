@@ -19,7 +19,7 @@ export default function ReadyToLead() {
       {/* Image */}
       <div className="w-full ">
         <Image
-          src="/vision.png"
+          src="/readytoLead.png"
           alt="ready-to-lead-ethically"
           width={500}
           height={580}
