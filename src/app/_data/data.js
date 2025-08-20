@@ -1,9 +1,14 @@
 import {
   FaBrain,
+  FaBuilding,
   FaCoins,
   FaComments,
+  FaExchangeAlt,
   FaFileAlt,
+  FaGamepad,
+  FaGraduationCap,
   FaHeart,
+  FaHeartbeat,
   FaShieldAlt,
   FaVoteYea,
 } from "react-icons/fa";
@@ -767,45 +772,44 @@ export const certificationLevelsData = [
   },
 ];
 
-
 export const targetAudienceData = [
   {
     title: "Web3 Startups & DAOs",
     paragraph: [
-      "NFT platforms",
-      "Decentralized Exchanges (DEXs)",
-      "DAO governance token projects",
-      "Metaverse and GameFi studios"
+      { text: "NFT platforms", icon: <FaCoins size={14} /> },
+      { text: "Decentralized Exchanges (DEXs)", icon: <FaExchangeAlt size={14} /> },
+      { text: "DAO governance token projects", icon: <FaVoteYea size={14} /> },
+      { text: "Metaverse and GameFi studios", icon: <FaGamepad size={14} /> }
     ],
-    icon: <FaUsers color="black" size={22} />
+    icon: <FaUsers size={22} />
   },
   {
     title: "AI Startups",
     paragraph: [
-      "AI-powered SaaS platforms",
-      "NLP and LLM product companies",
-      "AI in healthcare, finance, and education",
-      "Algorithm transparency or fairness-focused tools"
+      { text: "AI-powered SaaS platforms", icon: <FaRobot size={14} /> },
+      { text: "NLP and LLM product companies", icon: <FaBook size={14} /> },
+      { text: "AI in healthcare, finance, and education", icon: <FaHeartbeat size={14} /> },
+      { text: "Algorithm transparency or fairness-focused tools", icon: <FaBalanceScale size={14} /> }
     ],
-    icon: <FaBrain color="black" size={22} />
+    icon: <FaBrain size={22} />
   },
   {
     title: "Regulated or Data-Centric Tech Companies",
     paragraph: [
-      "FinTech or InsurTech platforms",
-      "MarTech and AdTech using behavioral data",
-      "Identity or authentication platforms",
-      "EdTech and RegTech scaling to global markets"
+      { text: "FinTech or InsurTech platforms", icon: <FaUniversity size={14} /> },
+      { text: "MarTech and AdTech using behavioral data", icon: <FaChartLine size={14} /> },
+      { text: "Identity or authentication platforms", icon: <FaShieldAlt size={14} /> },
+      { text: "EdTech and RegTech scaling to global markets", icon: <FaGraduationCap size={14} /> }
     ],
-    icon: <FaUsers color="black" size={22} />
+    icon: <FaUsers size={22} />
   },
   {
     title: "Global Businesses Expanding to MENA",
     paragraph: [
-      "Companies seeking a trusted UAE base",
-      "Teams preparing for funding with ESG and compliance requirements",
-      "Businesses targeting ethical governance as a brand differentiator"
+      { text: "Companies seeking a trusted UAE base", icon: <FaBuilding size={14} /> },
+      { text: "Teams preparing for funding with ESG and compliance requirements", icon: <FaBalanceScale size={14} /> },
+      { text: "Businesses targeting ethical governance as a brand differentiator", icon: <FaGlobe size={14} /> }
     ],
-    icon: <FaGlobe color="black" size={22} />
+    icon: <FaGlobe size={22} />
   }
 ];

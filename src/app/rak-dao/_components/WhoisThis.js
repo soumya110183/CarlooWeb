@@ -2,6 +2,7 @@ import { targetAudienceData } from "@/app/_data/data";
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import ContainerProvier from "@/app/About-us/_components/ContainerProvider";
+import ContainerProvider2 from "@/app/About-us/_components/ContainerProvider2";
 
 
 export default function WhoisThis(){
@@ -10,14 +11,21 @@ export default function WhoisThis(){
                
               
                <div className="w-full ">
-                 <HeadingReuse heading={"Who Is This For?"} />
+                      <h2 className=" font-bold text-foreground lg:text-[38px] text-[28px] sm:text-[32px] ">
+         Who Is This For?
+        </h2>
+        <div className="flex gap-2">
+          <div className="w-4 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
+
+          <div className="w-24 h-3 rounded-full bg-gradient-to-r from-pink-300 via-cyan-300 to-pink-200"></div>
+        </div>
                  
                  <ParagraphReUse paragraph={"Our bundled RAK DAO + Algorethics offering is ideal for:"} />
          
                 
                <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 max-sm:gap-5 lg:mt-10 mt-4">
                       {targetAudienceData.map((item, index) => (
-                       <ContainerProvier
+                       <ContainerProvider2
                          key={index}
                          title={item.title}
                          paragraph={item.paragraph}

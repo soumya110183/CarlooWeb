@@ -63,23 +63,23 @@ const PremiumPlansTable = () => {
             {premiumPlansData.map((row, idx) => (
               <tr
                 key={idx}
-                className={`border-b border-gray-700 ${
-                  idx % 2 === 0 ? "bg-[#2c2c44]" : "bg-[#2c2c44]"
+                className={`border-b text-black border-gray-700 ${
+                  idx % 2 === 0 ? "bg-[#ffffff]" : "bg-[#ffffff]"
                 }`}
               >
-                <td className="py-4 px-6 font-medium border-r border-gray-700">
+                <td className="py-4 px-6 font-semibold border-r border-gray-700">
                   {row.plan}
                 </td>
-                <td className="py-4 px-6 border-r border-gray-700">
+                <td className="py-4 px-6  font-semibold border-r border-gray-700">
                   {row.idealFor}
                 </td>
-                <td className="py-4 px-6 text-center border-r border-gray-700">
+                <td className="py-4 px-6 font-semibold text-center border-r border-gray-700">
                   {row.monthlyAED}
                 </td>
-                <td className="py-4 px-6 text-center border-r border-gray-700">
+                <td className="py-4 px-6 font-semibold text-center border-r border-gray-700">
                   {row.monthlyUSD}
                 </td>
-                <td className="py-4 px-6">{row.includes}</td>
+                <td className="py-4 px-6 font-semibold">{row.includes}</td>
               </tr>
             ))}
           </tbody>

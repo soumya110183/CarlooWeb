@@ -1,8 +1,13 @@
+"use client"
 
+import { useTheme } from "@/app/_subcomponents/ThemeContext";
 import ContainerSolution from "@/app/solutions/_components/ContainerSolution";
+import Image from "next/image";
 import { FaCheckCircle, FaShieldAlt, FaGlobe, FaUsers, FaRocket } from "react-icons/fa";
 
 export default function WhyLaunchWithUs() {
+
+  const {theme}=useTheme()
   const launchBenefits = [
     {
       icon: <FaShieldAlt className="text-blue-500 text-4xl" />,
@@ -34,9 +39,13 @@ export default function WhyLaunchWithUs() {
   return (
     <section className="w-full max-w-[1200px] flex max-lg:flex-col flex-row-reverse max-lg:gap-20 items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
       <div className="w-full">
+        <div className="flex items-center gap-5">
+         
+
         <h2 className="text-4xl font-bold text-center mb-8">
           Why Launch With Us?
         </h2>
+        </div>
         <ContainerSolution array={launchBenefits} />
       </div>
     </section>

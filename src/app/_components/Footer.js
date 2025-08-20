@@ -16,8 +16,8 @@ export default function Footer() {
   const { theme } = useTheme();
 
   return (
-    <footer className={`py-16 px-5 ${theme === "light" ? "text-black" : "text-white"}`}>
-      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-12">
+    <footer className={`py-16 px-5 ${theme === "light" ? "text-black" : "text-white"} `}>
+      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-12 ">
         
   
         <div className="w-full lg:max-w-[300px] space-y-4 font-medium">

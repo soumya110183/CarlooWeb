@@ -1,6 +1,7 @@
 
 
 
+import BlogsAndCaseStudy from "./Components/BlogAndCaseStudy";
 import BlogEditorForm from "./Components/BlogEditorForm";
 
 
@@ -24,27 +25,7 @@ export default async function page() {
     ]);
 
     return (
-      <div className="pt-30">
-        <div className="flex justify-center items-center gap-5 mx-auto pb-20">
-
-          <button
-       
-        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-      >
-        Blogs
-      </button>
-
-      <button
-       
-        className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
-      >
-        Case Study
-      </button>
-        </div>
-        {/* <AdminBlogForm blogs={blogs} casestudy={caseStudy} /> */}
-        {/* <CaseStudyForm /> */}
-        <BlogEditorForm blogs={blogs} />
-      </div>
+    <BlogsAndCaseStudy blogs={blogs} caseStudy={caseStudy} />
     );
   } catch (error) {
     console.error("Error fetching data:", error);

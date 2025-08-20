@@ -41,7 +41,7 @@ export default function WhatYouGetSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="text-black">{section.icon}</span>
-              <h3 className="text-black text-[20px] max-sm:text-base font-semibold">
+              <h3 className="text-black text-[22px] max-sm:text-base font-semibold">
                 {section.title}
               </h3>
             </div>
@@ -51,7 +51,7 @@ export default function WhatYouGetSection() {
                   <span className="mt-1 text-white/90">
                     <FaCheckCircle size={18} color="black" />
                   </span>
-                  <span className="font-normal max-sm:text-[14px]">{item}</span>
+                  <span className="font-semibold max-sm:text-[14px]">{item}</span>
                 </li>
               ))}
             </ul>

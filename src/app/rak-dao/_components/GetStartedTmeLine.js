@@ -70,7 +70,7 @@ export default function GetStartedTimeline() {
           <Image
             width={500}
             height={580}
-            src="/startToday.png"
+            src="/robot-rak.png"
             alt="get-started-timeline"
             className="w-[500px] object-contain"
           />
