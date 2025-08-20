@@ -75,7 +75,7 @@ const PricingCard = ({
       style={{ backgroundColor: "#5d3fd3", color: "white" }}
       onClick={() => onSelect(value)}
     >
-      {/* Header */}
+     
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-xl font-bold">{title}</h3>
         <div
@@ -89,11 +89,11 @@ const PricingCard = ({
         </div>
       </div>
 
-      {/* Price */}
+     
       <p className="text-lg font-semibold mb-2">{price}</p>
       <p className="text-sm text-white/80 mb-4">{turnaround}</p>
 
-      {/* Perks */}
+      
       <ul className="space-y-2 text-sm">
         {perks.map((perk, idx) => (
           <li key={idx} className="flex items-center gap-2">
@@ -102,12 +102,13 @@ const PricingCard = ({
         ))}
       </ul>
 
-      {/* Button */}
+     <Link href={`/pricing`}>
       <button className="w-full bg-white text-[#5d3fd3] font-bold py-3 px-6 rounded-lg text-center transition-transform transform hover:scale-105 mt-6">
-        <Link href={`/pricing/${parseFloat(price.replace(/[^0-9.]/g, ""))}`}>
+        
           Choose Plan
-        </Link>
+        
       </button>
+      </Link>
     </motion.div>
   );
 };

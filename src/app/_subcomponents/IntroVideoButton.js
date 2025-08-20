@@ -6,7 +6,7 @@ export default function IntroVideoButton({ theme }) {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center max-sm:w-full">
       {/* Button */}
       <button
         onClick={() => setShowVideo(true)}

@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import { useTheme } from "@/app/_subcomponents/ThemeContext";
+import React, { useEffect, useState } from "react";
 
 const OrderForm = () => {
   const totalSteps = 6;
   const [currentStep, setCurrentStep] = useState(1);
   const [status, setStatus] = useState(true);
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useState(false);
   const [loginData, setLoginData] = useState({ username: "", password: "" });
+  
+  const {loggedIn,setLoggedIn}=useTheme()
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -28,6 +31,14 @@ const OrderForm = () => {
     referralCode: "",
     preferredLanguage: "",
   });
+
+   useEffect(() => {
+    const token = sessionStorage.getItem("loggedIN");
+    if (token) {
+      setLoggedIn(true);
+
+    }
+  },);
 
   const inputClass =
     "mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm " +
@@ -75,7 +86,7 @@ const OrderForm = () => {
           formData.subscriptionPlan.trim() &&
           formData.billingFrequency.trim() &&
           formData.preferredLanguage.trim()
-          // referralCode is optional
+        
         );
       default:
         return true;
@@ -180,7 +191,9 @@ const OrderForm = () => {
       if (response.ok) {
         setStatus(true);
         const data = await response.json();
+        setLoggedIn(true)
         sessionStorage.setItem("authToken", data.accessToken);
+         sessionStorage.setItem("loggedIN", true);
 
         console.log("Success:", data);
       } else {
@@ -197,7 +210,7 @@ const OrderForm = () => {
   }
   return (
     <div className="flex-1 bg-white rounded-[8px] shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
-      <div className="flex items-center mb-6">
+      {showForm &&  <div className="flex items-center mb-6">
         {Array.from({ length: totalSteps }, (_, i) => (
           <div key={i} className="flex-1 flex items-center">
             <div
@@ -218,13 +231,15 @@ const OrderForm = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> }
+     
 
       <div className="flex gap-6 mb-6">
         <label className="flex items-center gap-2 font-semibold text-gray-700 cursor-pointer">
           <input
             type="radio"
             name="account"
+            defaultChecked
             className="form-radio h-4 w-4"
             onClick={() => setShowForm(false)}
           />
@@ -234,7 +249,7 @@ const OrderForm = () => {
           <input
             type="radio"
             name="account"
-            defaultChecked
+            
             className="form-radio h-4 w-4"
             onClick={() => setShowForm(true)}
           />
@@ -494,9 +509,10 @@ const OrderForm = () => {
               </div>
             )}
           </div>
-        ) : (
+        ) : !loggedIn ? (
+           
           <>
-            {" "}
+          
             <div className="space-y-4">
               <input
                 id="username"
@@ -523,7 +539,7 @@ const OrderForm = () => {
               Login
             </button>
           </>
-        )}
+        ) : <div>your logged in successfully</div>}
       </form>
     </div>
   );

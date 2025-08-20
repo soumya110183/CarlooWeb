@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function OrderSummary({ setFormComp, formComp }) {
-  const { price, setPrice } = useTheme();
+  const { price, setPrice,loggedIn,setLoggedIn } = useTheme();
+   
   const [user, setUser] = useState(null);
   const [status, setStatus] = useState(true);
   
@@ -14,8 +15,9 @@ export default function OrderSummary({ setFormComp, formComp }) {
     const token = sessionStorage.getItem("authToken");
     if (token) {
       setUser(token);
+
     }
-  }, []);
+  }, [loggedIn]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -84,7 +86,7 @@ export default function OrderSummary({ setFormComp, formComp }) {
         <button
           type="submit"
           onClick={(e) => handleSubmit(e)}
-          disabled={!user} // 🔹 disable if no token
+          disabled={!user} 
           className={`px-4 py-2 w-full rounded mt-10 text-white ${
             !user
               ? "bg-gray-400 cursor-not-allowed" // disabled style
