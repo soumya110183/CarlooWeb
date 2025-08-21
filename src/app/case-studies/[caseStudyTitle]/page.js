@@ -2,6 +2,8 @@ import Underline from "@/app/_subcomponents/UnderLine";
 import BlogContent from "@/app/blog/[blogid]/BlogContent";
 import { connectToDatabase } from "@/lib/mongodb";
 import casestudy from "@/modals/casestudy";
+import Link from "next/link";
+import { IoArrowBack } from "react-icons/io5";
 
 
 export default async function page({ params }) {
@@ -22,9 +24,17 @@ const caseStudyTitle =params.caseStudyTitle;
         Case Study
       </h2>
       <Underline />
-      {/* <p className="text-[22px] text-center">
-        Complete the form, and our team will reach out within 24 hours.
-      </p> */}
+      <div className="flex justify-end">
+  <Link
+    href={"/case-studies"}
+    className="text-[#651FFF] text-base font-bold flex gap-1 items-center 
+               transition-all duration-300 hover:text-[#4e12d9] 
+               hover:gap-2 rounded-full px-2 py-3 hover:bg-[#651FFF]/10"
+  >
+    <IoArrowBack size={25} />
+    Back to Casestudy
+  </Link>
+</div>
       <BlogContent
              mainImage={casestudyDetails.image}
              title={casestudyDetails.title}

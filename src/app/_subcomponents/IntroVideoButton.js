@@ -1,9 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { IoCloseCircleSharp } from "react-icons/io5";
 
 export default function IntroVideoButton({ theme }) {
   const [showVideo, setShowVideo] = useState(false);
+
+    useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        setShowVideo(false);
+      }
+    };
+
+    if (showVideo) {
+      window.addEventListener("keydown", handleEsc);
+    } else {
+      window.removeEventListener("keydown", handleEsc);
+    }
+
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [showVideo]);
+  
 
   return (
     <div className="flex flex-col items-center max-sm:w-full">
@@ -23,15 +41,20 @@ export default function IntroVideoButton({ theme }) {
       {showVideo && (
         <div
           onClick={() => setShowVideo(false)} 
-          className="fixed inset-0  bg-opacity-70 flex items-center justify-center z-50"
+          
+          className="fixed inset-0  bg-opacity-70 flex items-center justify-center z-200"
         >
+          
          
           <div
-            className="relative w-[90%] md:w-[70%] aspect-video  rounded-lg overflow-hidden"
+            className="relative w-[90%] md:w-[70%] aspect-video  rounded-lg "
             onClick={(e) => e.stopPropagation()}
           >
+            <button className="absolute right-0" onClick={()=>setShowVideo(false)}>
+                      <IoCloseCircleSharp color="white" size={39} />
+                  </button>
             <iframe
-              className="w-full h-full"
+              className="w-[100%] mx-auto h-full"
               src="https://www.youtube.com/embed/74UzC8rZXzc?autoplay=1"
               title="YouTube video player"
               frameBorder="0"

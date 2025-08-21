@@ -3,9 +3,9 @@ import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 
 export default function Experience() {
   return (
-    <section className=" sm:px-10 ">
+    <section className=" sm:px-10 pb-30 ">
       <div
-        className="w-full max-w-[1000px] mx-auto rounded-[18px] sm:rounded-[40px] lg:rounded-[50px] mt-16 sm:mt-20 lg:mt-[222px] text-white p-6 sm:p-10 lg:p-16"
+        className="w-full max-w-[1000px] mx-auto rounded-[18px] sm:rounded-[40px] lg:rounded-[50px] mt-16 sm:mt-20 lg:mt-[222px] text-white p-6 sm:p-10 lg:p-16 "
         style={{
           background:
             "linear-gradient(173deg, rgba(138, 252, 253, 1) 0%, rgba(227, 199, 217, 1) 100%)",

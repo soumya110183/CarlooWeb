@@ -33,11 +33,11 @@ export default function Footer() {
 
   return (
     <footer
-      className={`py-16 px-5 ${
-        theme === "light" ? "text-black" : "text-white"
+      className={`py-16  px-5 ${
+        theme === "light" ? "text-black bg-[#f0efef]" : "text-white bg-[#1f1063]"
       } `}
     >
-      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-12 ">
+      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row flex-wrap  justify-between gap-12 ">
         <div className="w-full lg:max-w-[300px] space-y-4 font-medium">
           <div className="flex items-center gap-2">
             <Image
@@ -104,9 +104,12 @@ export default function Footer() {
         </div>
 
         <div className="w-full sm:max-w-[300px] space-y-6">
-          <SocialMediaIcon />
+           <h4 className="font-bold mb-3">News Letter</h4>
+           <p>Subscribe to our newsletter and stay updated with the latest news, insights, 
+  and exclusive offers delivered straight to your inbox.</p>
 
           <CompactSubscriptionForm />
+          <SocialMediaIcon />
         </div>
       </div>
     </footer>
