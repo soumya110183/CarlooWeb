@@ -31,7 +31,7 @@ export default function ProjectCount() {
             }
           />
           <div className="flex gap-2 items-start">
-            <ParagraphReUse paragraph={"AI is the broader concept of machines being able to carry out tasks in a way that would normally require human intelligence. This can include things like image recognition, speech recognition, and decision making. ML is a specific type of AI that involves the use of algorithms that can learn from data."} />
+            <ParagraphReUse paragraph={"Carlo is an AI compliance platform designed to monitor, detect, and enforce ethical standards across projects. It validates outputs against global regulations, flags risks, and provides real-time feedback for safer AI adoption. Carlo helps organizations integrate transparency, accountability, and trust directly into their workflows without disrupting productivity."} />
           </div>
           <div className="lg:mt-8 mt-4">
             <ButtonPimary buttonText={"About us"} href={"/About-us"} />
