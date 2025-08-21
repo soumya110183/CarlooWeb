@@ -38,8 +38,8 @@ export default function SolutionSubmenu({ ref, dropdownOpen, close }) {
               onClick={() => close(false)}
               className={`block px-2 py-1 transition-colors duration-200 ${
                 pathname === link.href
-                  ? "text-[#7A5BFF]"
-                  : "hover:text-[#7A5BFF]"
+                  ? "text-[#00d4fa]"
+                  : "hover:text-[#00d4fa]"
               }`}
             >
               {link.title}

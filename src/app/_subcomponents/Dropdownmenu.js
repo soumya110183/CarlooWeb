@@ -57,7 +57,9 @@ const DropDownMenu = forwardRef(({ dropdownOpen, closeDropdown }, ref) => {
             <Link
               href={item.href}
               key={index}
-              className="flex flex-col items-center gap-1 max-w-[204px] hover:opacity-90 transition"
+              className={`flex flex-col items-center gap-1 max-w-[204px] hover:opacity-90 transition ${
+                isActive ? "text-[#00d4fa]" : "hover:text-[#00d4fa]"
+              }`}
               onClick={closeDropdown}
             >
               <div className="w-[90px] h-[90px] rounded-full  p-1 flex items-center justify-center shrink-0">

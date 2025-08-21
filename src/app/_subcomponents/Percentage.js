@@ -74,7 +74,7 @@ export default function Percentage() {
           onViewportEnter={() => handleInView(index, item.value)}
         >
           {/* Semi-circle Progress */}
-                      <div className="relative w-[160px] h-[80px]">
+          <div className="relative w-[160px] h-[80px]">
             <svg
               className="w-full h-full"
               viewBox="0 0 100 50"
@@ -93,8 +93,6 @@ export default function Percentage() {
                     <stop key={i} offset={g.offset} stopColor={g.color} />
                   ))}
                 </linearGradient>
-                
-
               </defs>
 
               {/* Background Arc (Gray) */}
@@ -117,8 +115,8 @@ export default function Percentage() {
                 strokeDashoffset={arcLength}
                 initial={{ strokeDashoffset: arcLength }}
                 animate={{
-                  strokeDashoffset: animated[index] 
-                    ? arcLength - (arcLength * item.value) / 100 
+                  strokeDashoffset: animated[index]
+                    ? arcLength - (arcLength * item.value) / 100
                     : arcLength,
                 }}
                 transition={{ duration: 1.8, ease: "easeInOut", delay: 0.3 }}
@@ -128,15 +126,13 @@ export default function Percentage() {
               />
             </svg>
 
-           
             <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-[-10] flex items-center justify-center">
-              <h3 className="text-[18px] sm:text-[24px] font-bold text-white">
+              <h3 className="text-[18px] sm:text-[24px] font-bold text-foreground">
                 {counts[index]}%
               </h3>
             </div>
           </div>
 
-         
           <p className="font-bold sm:text-[16px] text-[14px] leading-snug mt-3 text-foreground">
             {item.caption}
           </p>
