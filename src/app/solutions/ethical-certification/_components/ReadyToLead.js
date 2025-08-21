@@ -1,3 +1,4 @@
+import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import Image from "next/image";
@@ -14,6 +15,10 @@ export default function ReadyToLead() {
             "Ethical excellence isn’t optional in today’s global digital economy. Get certified. Get trusted. Get ahead."
           }
         />
+        <div className="mt-5">
+
+        <ButtonPimary buttonText={"Sign Up"} href={"https://app.policyenforcement.com/login"} />
+        </div>
       </div>
 
       {/* Image */}

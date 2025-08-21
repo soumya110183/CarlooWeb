@@ -72,7 +72,7 @@ export default function ShariaContent() {
 
       <section>
         <h3 className="font-bold text-[20px] mb-2">
-          Expanded Use Cases for Carlo’s Sharia Module
+        Use Cases for Carlo’s Sharia Module
         </h3>
         <ul className="space-y-2">
           {expandedUseCases.map(({ icon: Icon, title, text }, index) => (
