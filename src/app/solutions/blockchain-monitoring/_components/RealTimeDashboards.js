@@ -41,7 +41,7 @@ export default function RealTimeDashboards() {
       {/* Image */}
       <div className="w-full  flex justify-center">
         <Image
-          src="/vision.png"
+          src="/realtimeDashboard.png"
           alt="real-time-dashboards"
           width={500}
           height={580}

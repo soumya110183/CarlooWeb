@@ -44,7 +44,7 @@ export default function BlockchainDeFiMonitoring() {
         <Image
           width={500}
           height={580}
-          src="/vision.png"
+          src="/whyblockchain.png"
           alt="blockchain-defi-monitoring"
           className="w-[500px] rounded-2xl "
         />

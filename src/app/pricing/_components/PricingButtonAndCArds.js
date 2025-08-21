@@ -10,7 +10,7 @@ export default function PricingButtonAndCards({plan}){
      const premiumPlansData = [
   {
     tier: "free-credence",
-    price: "AED 0 / ~$0",
+    price: "$0",
     title: "Free Credence Plan",
     description: "Ideal for all RAK DAO setups.",
     features: [
@@ -21,7 +21,7 @@ export default function PricingButtonAndCards({plan}){
   },
   {
     tier: "innovator-essentials",
-    price: "AED 96 / ~$26.20",
+    price: "$26.20",
     title: "Innovator Essentials",
     description: "Ideal for early-stage projects.",
     features: [
@@ -32,7 +32,7 @@ export default function PricingButtonAndCards({plan}){
   },
   {
     tier: "blockchain-guardian",
-    price: "AED 160 / ~$43.70",
+    price: "$43.70",
     title: "Blockchain Guardian",
     description: "Perfect for scaling protocols.",
     features: [
@@ -43,7 +43,7 @@ export default function PricingButtonAndCards({plan}){
   },
   {
     tier: "ethical-pinnacle-suite",
-    price: "AED 180 / ~$49.00",
+    price: "$49.00",
     title: "Ethical Pinnacle Suite",
     description: "Tailored for enterprises.",
     features: [

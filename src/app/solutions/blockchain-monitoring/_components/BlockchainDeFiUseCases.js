@@ -35,7 +35,7 @@ export default function BlockchainDeFiUseCases() {
       {/* Image */}
       <div className="w-full ">
         <Image
-          src="/vision.png"
+          src="/useCases.png"
           alt="blockchain-defi-use-cases"
           width={500}
           height={580}
