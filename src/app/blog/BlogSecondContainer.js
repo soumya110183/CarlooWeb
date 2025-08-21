@@ -60,7 +60,10 @@ export default function BlogSecondContainer({ blog, casestudy, deleteButton,edit
                     )}
                {editButton && (
                       <div className="flex justify-end mt-2">
-                        <Link href={`/admin/${contents.slug}`}>
+                        <Link href={{
+  pathname: `/admin/${contents.slug}`,
+  query: { edit:pathName }
+}}>
                         
                         <button
                         

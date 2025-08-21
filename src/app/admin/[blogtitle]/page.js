@@ -2,9 +2,12 @@ import { connectToDatabase } from "@/lib/mongodb";
 import EditBlog from "../_subComponents/EditBlog";
 import blog from "@/modals/blog";
 
+
 export default async function page({params}){
 
      const blogTitle = params.blogtitle;
+     
+ 
     
       await connectToDatabase();
     

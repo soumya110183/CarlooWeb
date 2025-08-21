@@ -31,7 +31,7 @@ function HeaderSlider({ filteredSlide, theme }) {
           {filteredSlide.paragraph}
         </p>
         <div className="flex items-center gap-5 mt-10 max-md:flex-col">
-          <ButtonPimary buttonText={"GET STARTED"} width={true} />
+          <ButtonPimary buttonText={"GET STARTED"} width={true} href={"https://app.policyenforcement.com/login"} />
           <button className="text-white md:flex hidden border-none p-0 m-0 outline-none bg-[#651FFF] w-[49px] h-[49px] text-[18px] rounded-full nav-text  shrink-0 items-center justify-center">
             <Image
               src="/play-512.png"

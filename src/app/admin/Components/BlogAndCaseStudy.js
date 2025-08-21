@@ -23,14 +23,19 @@ export default function BlogsAndCaseStudy({ blogs, caseStudy }) {
           Case Study
         </button>
       </div>
-      {caseStudy < 0 ? (
-        <BlogEditorForm
-          blogs={switchData ? caseStudy : blogs}
-          switchData={switchData}
-        />
+
+      {switchData ? (
+        caseStudy.length < 0 ? (
+          <div>CaseStudy is Empty</div>
+        ) : (
+          <BlogEditorForm
+            blogs={caseStudy}
+            switchData={switchData}
+          />
+        )
       ) : (
         <BlogEditorForm
-          blogs={switchData ? caseStudy : blogs}
+          blogs={blogs}
           switchData={switchData}
         />
       )}
