@@ -35,7 +35,7 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        setStatus("Message sent successfully!");
+        setStatus("Thank you for contacting Carlo PEaaS. Your request has been logged, and our compliance experts will be in touch within 24 hours.");
 
         setFormData({
           name: "",
