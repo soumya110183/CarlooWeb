@@ -5,13 +5,14 @@ import Image from "next/image";
 import BlogSecondContainer from "@/app/blog/BlogSecondContainer";
 import TextBlock from "../_subComponents/TextBlock";
 import { ImageBlock } from "../_subComponents/ImageBlock";
+import casestudy from "@/modals/casestudy";
 
 
 
 
 
 
-export default function BlogEditorForm({blogs}) {
+export default function BlogEditorForm({blogs,switchData}) {
   const [title, setTitle] = useState("");
   const [mainImage, setMainImage] = useState("");
   const [mainImagePublicId, setMainImagePublicId] = useState("");
@@ -27,6 +28,9 @@ export default function BlogEditorForm({blogs}) {
   const [password, setPassword] = useState("");
   const [accessGranted, setAccessGranted] = useState(false);
   const [error, setError] = useState("");
+
+  const contentBlogOrCase=switchData ? true : false 
+  
 
   const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
@@ -294,7 +298,7 @@ export default function BlogEditorForm({blogs}) {
   return (
     <div>
       <div className="max-w-4xl mx-auto p-6 space-y-6 bg-[#0F092A] rounded-xl shadow-2xl text-white">
-        <h1 className="text-2xl font-bold">Blog Editor</h1>
+        <h1 className="text-2xl font-bold">{contentBlogOrCase ? "Case Study" : "Blog"} Editor</h1>
 
         {message && (
           <p className={message.includes('❌') ? 'text-red-500' : 'text-green-500'}>
@@ -514,9 +518,14 @@ export default function BlogEditorForm({blogs}) {
       </div>
 
       <div className="max-w-[1200px] bg-white grid grid-cols-3 gap-2 mx-auto mt-10">
-        {blogs.map((blog) => (
-          <BlogSecondContainer key={blog._id} blog={blog} deleteButton={true} editButton={true} />
-        ))}
+
+        {
+          switchData ?  blogs.map((blog,index) => (
+          <BlogSecondContainer key={index} casestudy={blog} deleteButton={true} editButton={true} />
+        )) :blogs.map((blog,index) => (
+          <BlogSecondContainer key={index} blog={blog} deleteButton={true} editButton={true} />
+        ))
+}
       </div>
     </div>
   );

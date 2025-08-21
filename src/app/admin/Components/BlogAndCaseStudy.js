@@ -30,7 +30,7 @@ export default function BlogsAndCaseStudy({blogs,caseStudy}){
                </div>
                {/* <AdminBlogForm blogs={blogs} casestudy={caseStudy} /> */}
                {/* <CaseStudyForm /> */}
-               <BlogEditorForm blogs={switchData ? caseStudy :blogs}  />
+               <BlogEditorForm blogs={switchData ? caseStudy :blogs} switchData={switchData}  />
              </div>
     )
 }

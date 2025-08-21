@@ -6,6 +6,7 @@ const OrderForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [status, setStatus] = useState(true);
   const [showForm, setShowForm] = useState(false);
+  const [accountCreate, setAccountCreate] = useState(false);
   const [loginData, setLoginData] = useState({ username: "", password: "" });
   
   const {loggedIn,setLoggedIn}=useTheme()
@@ -36,6 +37,7 @@ const OrderForm = () => {
     const token = sessionStorage.getItem("loggedIN");
     if (token) {
       setLoggedIn(true);
+     
 
     }
   },);
@@ -145,6 +147,8 @@ const OrderForm = () => {
         setStatus(true);
         const data = await response.json();
         sessionStorage.setItem("authToken", data.accessToken);
+        setAccountCreate(true)
+        setLoggedIn(true)
         console.log("Success:", data);
       } else {
         const errorText = await response.text();
@@ -260,7 +264,7 @@ const OrderForm = () => {
       {/* Form */}
 
       <form className="space-y-6">
-        <h2 className="text-xl font-semibold text-gray-800">Billing address</h2>
+       
 
         {showForm ? (
           <div>
@@ -478,13 +482,14 @@ const OrderForm = () => {
 
             {currentStep === 6 && (
               <div className="text-center">
-                <button
+                {accountCreate ? <div>Congrats Your Account is Created Sucessfully</div> :  <button
                   type="button"
                   onClick={handleSubmit}
                   className="bg-[#651FFF] text-white px-8 py-4 rounded hover:bg-blue-700"
                 >
                   {status ? "Complete Registration" : "Registering"}
-                </button>
+                </button>}
+               
               </div>
             )}
 
@@ -539,7 +544,7 @@ const OrderForm = () => {
               Login
             </button>
           </>
-        ) : <div>your logged in successfully</div>}
+        ) : <div>your logged in successfully you can now continue your payment</div>}
       </form>
     </div>
   );

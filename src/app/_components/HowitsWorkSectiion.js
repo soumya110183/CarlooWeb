@@ -16,8 +16,8 @@ export default function HowitsWorkSection() {
         />
         <HowitsWork
           image="/vecteezy_stylized-encrypted-folder-3d-illustration_14219609.png"
-          heading="Data Stored"
-          paragraph="Automated encryption compliance checks for frameworks like GDPR, HIPAA, and CCPA."
+          heading="Privacy"
+          paragraph="Carlo enforces compliance , ensuring privacy and security remain intact at every step"
         />
 
         <HowitsWork

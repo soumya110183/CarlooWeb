@@ -1,20 +1,20 @@
 import mongoose from 'mongoose';
 
 const BlockSchema = new mongoose.Schema({
-  type: { type: String, required: true }, // 'text' or 'image'
-  content: String,  // for text blocks
-  src: String,      // for image blocks
-  publicId: String, // for Cloudinary images
+  type: { type: String, required: true }, 
+  content: String,  
+  src: String,      
+  publicId: String, 
 });
 
 const BlogSchema = new mongoose.Schema(
   {
-    image: { type: String, required: true },  // main image URL
+    image: { type: String, required: true }, 
     adminName: { type: String, required: true },
     adminPhoto: { type: String, required: false },
     title: { type: String, required: true },
     slug: { type: String, required: true, unique: true },
-    blocks: [BlockSchema],  // <- updated field to store blocks
+    blocks: [BlockSchema],  
   },
   {
     timestamps: true,
