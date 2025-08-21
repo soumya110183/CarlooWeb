@@ -4,11 +4,11 @@ import { useState } from "react";
 
 export default function SubScriptionForm({ maxw }) {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Subscribing...");
+    setStatus(false);
 
     try {
       const response = await fetch("/api/subscribe", {
@@ -20,10 +20,12 @@ export default function SubScriptionForm({ maxw }) {
       });
 
       if (response.ok) {
-        setStatus("✅ Thank you for subscribing!");
+        setStatus(true);
+       alert("✅ Thank you for subscribing!");
         setEmail(""); // reset input
       } else {
         setStatus("❌ Subscription failed. Please try again.");
+        alert("❌ Subscription failed. Please try again.");
       }
     } catch (error) {
       console.error("Subscription error:", error);
@@ -52,12 +54,10 @@ export default function SubScriptionForm({ maxw }) {
         disabled={status === "Subscribing..."}
         className="bg-[#651FFF] p-2.5 hover:bg-purple-600 text-white font-semibold rounded-[10px] transition"
       >
-        Subscribe
+        {status ? "Subscribe" : "Subscribing"}
       </button>
 
-      {status && (
-        <p className="text-sm text-gray-300 ml-3 whitespace-nowrap">{status}</p>
-      )}
+     
     </form>
   );
 }

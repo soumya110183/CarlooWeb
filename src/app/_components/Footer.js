@@ -11,6 +11,7 @@ import {
 import { useTheme } from "../_subcomponents/ThemeContext";
 import Link from "next/link";
 import SocialMediaIcon from "../_subcomponents/SocialmediaIcon";
+import CompactSubscriptionForm from "../_subcomponents/footerSubScription";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -54,14 +55,7 @@ export default function Footer() {
         <div className="w-full sm:max-w-[300px] space-y-6">
           <SocialMediaIcon />
 
-          <div className="flex items-center bg-black border border-gray-600 rounded-[10px] overflow-hidden max-w-[300px] pr-4">
-            <input
-              type="email"
-              placeholder="Enter Your Email"
-              className="bg-black text-white text-sm px-4 py-3 outline-none w-full placeholder:font-medium placeholder:text-white"
-            />
-            <Image src="/material-symbols_send.svg" alt="send button" width={24} height={24} />
-          </div>
+        <CompactSubscriptionForm />
         </div>
       </div>
     </footer>
