@@ -22,7 +22,7 @@ export default function CompactSubscriptionForm({ maxw }) {
       });
 
       if (response.ok) {
-        alert("✅ Thank you for subscribing!");
+        alert("Thank you for subscribing! 🎉 You’re now part of the Carlo community. Expect updates on AI compliance, new features, and research straight to your inbox");
         setEmail("");
       } else {
         alert("❌ Subscription failed. Please try again.");

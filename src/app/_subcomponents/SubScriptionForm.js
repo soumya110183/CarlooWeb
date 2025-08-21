@@ -21,7 +21,7 @@ export default function SubScriptionForm({ maxw }) {
 
       if (response.ok) {
         setStatus(true);
-       alert("✅ Thank you for subscribing!");
+       alert("Thank you for subscribing! 🎉 You’re now part of the Carlo community. Expect updates on AI compliance, new features, and research straight to your inbox");
         setEmail(""); // reset input
       } else {
         setStatus("❌ Subscription failed. Please try again.");
@@ -51,10 +51,10 @@ export default function SubScriptionForm({ maxw }) {
       />
       <button
         type="submit"
-        disabled={status === "Subscribing..."}
+        disabled={status ===false}
         className="bg-[#651FFF] p-2.5 hover:bg-purple-600 text-white font-semibold rounded-[10px] transition"
       >
-        {status ? "Subscribe" : "Subscribing"}
+        {status ? "Subscribe" : "Subscribing.."}
       </button>
 
      
