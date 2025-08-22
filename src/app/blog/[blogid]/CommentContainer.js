@@ -1,5 +1,6 @@
 "use client";
 
+import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -101,9 +102,11 @@ export default function CommentContainer({ blogId, comments = [] }) {
             />
             <div>
               <div className="flex items-center gap-2">
-                <p className="font-bold">{c.name}</p>
+                <p className="font-semibold">{c.name}</p>
                 <span className="text-gray-500 text-sm">
-                  {new Date(c.createdAt).toLocaleString()}
+                  {formatDistanceToNow(new Date(c.createdAt), {
+                                  addSuffix: true,
+                                })}
                 </span>
               </div>
               <p>{c.text}</p>
