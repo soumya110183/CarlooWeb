@@ -41,7 +41,7 @@ function HeaderSlider({ filteredSlide, theme }) {
               layout="fixed"
             />
           </button>
-       <IntroVideoButton />
+       <IntroVideoButton theme={theme} />
         </div>
       </div>
 

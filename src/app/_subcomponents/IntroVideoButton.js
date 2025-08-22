@@ -26,16 +26,19 @@ export default function IntroVideoButton({ theme }) {
   return (
     <div className="flex flex-col items-center max-sm:w-full">
       {/* Button */}
-      <button
-        onClick={() => setShowVideo(true)}
-        className={`${
-          theme === "light" ? "text-green-600" : "text-[#00E5FF]"
-        } bg-transparent p-0 m-0 outline-none border ${
-          theme === "light" ? "border-green-600" : "border-[#00E5FF]"
-        } px-5 max-sm:w-full sm:py-5 py-4 text-[18px] max-sm:text-base rounded-[36px] nav-text flex shrink-0 items-center justify-center`}
-      >
-        WATCH INTRO VIDEO
-      </button>
+ <button
+  onClick={() => setShowVideo(true)}
+  className={`${
+    theme === "light" ? "text-green-600" : "text-[#00E5FF]"
+  } bg-transparent p-0 m-0 outline-none border ${
+    theme === "light" ? "border-green-600" : "border-[#00E5FF]"
+  } px-5 max-sm:w-full sm:py-5 py-4 text-[18px] max-sm:text-base rounded-[36px] nav-text flex shrink-0 items-center justify-center
+    transition-all duration-300
+    hover:shadow-lg hover:scale-105 font-bold`}
+>
+  WATCH INTRO VIDEO
+</button>
+
 
       {/* Modal Overlay */}
       {showVideo && (

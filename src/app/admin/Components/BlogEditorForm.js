@@ -519,9 +519,15 @@ export default function BlogEditorForm({blogs,switchData}) {
       </div>
 
       <div className="max-w-[1200px] bg-white grid grid-cols-3 gap-2 mx-auto mt-10">
-      {blogs.map((blog,index)=>(
+
+        {
+          switchData ? blogs.map((blog,index)=>(
          <BlogSecondContainer key={index} casestudy={blog} deleteButton={true} editButton={true} />
-      ))}
+      )) : blogs.map((blog,index)=>(
+         <BlogSecondContainer key={index} blog={blog} deleteButton={true} editButton={true} />
+      ))
+        }
+      
 
       
       </div>

@@ -24,10 +24,10 @@ export default function Footer() {
     { href: "/Why-carlo", label: "Research" }, 
   ];
   const navPolicy = [
-    { href: "/Privacy Policy", label: "Privacy Policy" },
-    { href: "/Terms of Use", label: "Terms of Use" },
-    { href: "/Cookie Policy", label: "Cookie Policy" },
-    { href: "/Ethical AI Policy", label: "Ethical AI Policy" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms-of-use", label: "Terms of Use" },
+    { href: "/cookie-policy", label: "Cookie Policy" },
+    { href: "/ethical-ai-policy", label: "Ethical AI Policy" },
     
   ];
 
