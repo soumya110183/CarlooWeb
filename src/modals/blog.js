@@ -7,6 +7,13 @@ const BlockSchema = new mongoose.Schema({
   publicId: String, 
 });
 
+const CommentSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true },
+  text: { type: String, required: true },
+  createdAt: { type: Date, default: Date.now },
+});
+
 const BlogSchema = new mongoose.Schema(
   {
     image: { type: String, required: true }, 
@@ -15,6 +22,7 @@ const BlogSchema = new mongoose.Schema(
     title: { type: String, required: true },
     slug: { type: String, required: true, unique: true },
     blocks: [BlockSchema],  
+     comments: [CommentSchema],
   },
   {
     timestamps: true,

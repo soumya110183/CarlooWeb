@@ -1,6 +1,7 @@
 import Image from "next/image";
+import CommentContainer from "./CommentContainer";
 
-export default function BlogContent({ mainImage, title, adminName, blocks,adminPhoto }) {
+export default function BlogContent({ mainImage, title, adminName, blocks,adminPhoto,blogId,comments }) {
 
   const groupBlocksForPreview = () => {
     const grouped = [];
@@ -26,6 +27,8 @@ export default function BlogContent({ mainImage, title, adminName, blocks,adminP
   };
 
   return (
+    <>
+    
     <div className="bg-white p-6 rounded-lg shadow-lg text-black">
       {mainImage && (
         <Image
@@ -86,5 +89,9 @@ export default function BlogContent({ mainImage, title, adminName, blocks,adminP
         })}
       </div>
     </div>
+    <div className="bg-white p-6 rounded-lg shadow-lg text-black mt-10 ">
+    <CommentContainer blogId={blogId} comments={comments} />
+    </div>
+    </>
   );
 }

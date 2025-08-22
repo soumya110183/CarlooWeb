@@ -36,13 +36,13 @@ export default function Footer() {
     >
       <div className=" mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-5">
         <div className="w-full lg:max-w-[300px] space-y-4 font-medium">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <Image
-              src="/logo.png"
+              src="/carlo-log.png"
               alt="Awrora"
-              className="w-[40px]"
-              width={40}
-              height={40}
+             
+              width={70}
+              height={70}
             />
             <h2 className="text-xl font-bold">Carlo PEaaS</h2>
           </div>
