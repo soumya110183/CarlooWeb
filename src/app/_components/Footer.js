@@ -35,7 +35,7 @@ export default function Footer() {
       }`}
     >
       <div className="mx-auto max-w-[1400px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-        {/* Logo + About + Address */}
+        
         <div className="space-y-4 font-medium">
           <div className="flex items-center gap-2">
             <Image
@@ -56,13 +56,13 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-3">Address</h4>
             <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
-              <li>📧 steve@algorethics.ai</li>
               <li>📍 333 Sunset Dr, Apt 204, Fort Lauderdale, FL 33301 USA</li>
+              <li>📧 steve@algorethics.ai</li>
             </ul>
           </div>
         </div>
 
-        {/* Legal + Contact */}
+        
         <div>
           <h4 className="font-bold mb-3">Legal</h4>
           <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2 mb-6`}>
@@ -92,7 +92,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Quick Links */}
+     
         <div>
           <h4 className="font-bold mb-3">Quick Links</h4>
           <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
@@ -106,7 +106,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Newsletter */}
+       
         <div className="space-y-6">
           <h4 className="font-bold mb-3">Newsletter</h4>
           <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
@@ -118,7 +118,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Divider + Copyright */}
+      
       <div className="mt-10 w-full border-t-[.5px] border-gray-600/40 pt-5 ">
         <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} text-sm text-center`}>
           Copyright ©2025 Algorethics.ai

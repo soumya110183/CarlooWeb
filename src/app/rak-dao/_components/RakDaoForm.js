@@ -36,7 +36,7 @@ export default function RakDaoForm({setShowVideo}) {
         return newData;
       }
 
-      // Handle nested objects (applicant, company, token, consent, etc.)
+      
       if (section && field) {
         if (type === "checkbox" && Array.isArray(newData[section][field])) {
           if (checked) {
@@ -54,7 +54,7 @@ export default function RakDaoForm({setShowVideo}) {
         return newData;
       }
 
-      // Handle top-level values
+      
       newData[name] = type === "checkbox" ? checked : value;
       return newData;
     });
