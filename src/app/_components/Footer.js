@@ -38,11 +38,11 @@ export default function Footer() {
         <div className="w-full lg:max-w-[300px] space-y-4 font-medium">
           <div className="flex items-center  gap-1">
             <Image
-              src="/carlo-logo-.png"
+              src={`${theme === "light" ? "/logo black-carlo.png":"/carlo-logo-.png"}`}
               alt="Awrora"
              
-              width={30}
-              height={30}
+              width={40}
+              height={40}
             />
             <h2 className="text-xl font-bold">Carlo PEaaS</h2>
           </div>
