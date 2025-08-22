@@ -22,10 +22,10 @@ export default async function page() {
           Standards like GDPR, CCPA, and the EU AI Act
         </p>
         <div className="bg-white flex w-full mt-10 gap-6">
-          {/* First blog (big card) */}
+          
           {casestudy.length > 0 && <BlogCard casestudy={casestudy[0]} />}
 
-          {/* Remaining blogs (small stacked cards) */}
+          
           <div className="grid grid-cols-2 gap-2">
             {casestudy.slice(1).map((casestudy) => (
               <BlogSecondContainer key={casestudy._id} casestudy={casestudy} />

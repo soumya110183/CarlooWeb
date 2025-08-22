@@ -75,7 +75,10 @@ export default function BlogSecondContainer({
           </div>
 
           <Link
-            href={`/blog/${contents.slug}`}
+             href={{
+                    pathname: `/${pathName}/${contents.slug}`,
+                    query: { content: apiPath },
+                  }}
             className="text-cyan-400 text-sm font-semibold hover:underline mt-2"
           >
             READ MORE

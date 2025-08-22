@@ -43,6 +43,7 @@ export default async function page({ params }) {
         adminPhoto={serializedBlog.adminPhoto}
         blogId={serializedBlog._id} 
         comments={serializedBlog.comments} 
+        casestudy={false}
       />
     </section>
   );

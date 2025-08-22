@@ -7,6 +7,8 @@ import { IoArrowBack } from "react-icons/io5";
 
 
 export default async function page({ params }) {
+
+  
 const caseStudyTitle =params.caseStudyTitle;
 
 
@@ -14,10 +16,20 @@ const caseStudyTitle =params.caseStudyTitle;
   await connectToDatabase();
   
   const casestudyDetails = await casestudy.findOne({ slug: caseStudyTitle }).lean();
+
+   const serializedBlog = {
+    ...casestudyDetails,
+    _id: casestudyDetails._id.toString(),
+    comments: casestudyDetails.comments?.map((c) => ({
+      ...c,
+      _id: c._id.toString(),
+      createdAt: c.createdAt.toISOString(),
+    })),
+  };
  
 
 
-
+console.log(serializedBlog)
   return (
     <section className="w-full mx-auto mt-35 text-foreground max-w-[1280px] px-4 pb-30">
       <h2 className="text-[48px] font-bold text-center">
@@ -35,13 +47,16 @@ const caseStudyTitle =params.caseStudyTitle;
     Back to Casestudy
   </Link>
 </div>
-      <BlogContent
-             mainImage={casestudyDetails.image}
-             title={casestudyDetails.title}
-             adminName={casestudyDetails.adminName}
-             blocks={casestudyDetails.blocks}
-             adminPhoto={casestudyDetails.adminPhoto} 
-           />
+    <BlogContent
+            mainImage={serializedBlog.image}
+            title={serializedBlog.title}
+            adminName={serializedBlog.adminName}
+            blocks={serializedBlog.blocks}
+            adminPhoto={serializedBlog.adminPhoto}
+            blogId={serializedBlog._id} 
+            comments={serializedBlog.comments} 
+            casestudy={true}
+          />
     </section>
   );
 }

@@ -4,22 +4,22 @@ import { formatDistanceToNow } from "date-fns";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function CommentContainer({ blogId, comments = [] }) {
+export default function CommentContainer({ blogId, comments = [] ,casestudy}) {
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
-  const [commentList, setCommentList] = useState(comments); // <-- initialize with prop
+  const [commentList, setCommentList] = useState(comments);
   const [loading, setLoading] = useState(false);
 
   
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name || !email || !comment) return;
-
+console.log(blogId)
     setLoading(true);
     try {
-      const res = await fetch("/api/blogs/comment", {
+      const res = await fetch(`/api/${casestudy? "casestudy" : "blogs"}/comment`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ blogId, name, email, text: comment }),
