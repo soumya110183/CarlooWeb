@@ -34,15 +34,15 @@ export default function Footer() {
           : "text-white bg-[#1f1063]"
       }`}
     >
-      <div className=" mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-5">
+      <div className=" mx-auto max-w-[90%] flex flex-col lg:flex-row flex-wrap justify-between gap-5">
         <div className="w-full lg:max-w-[300px] space-y-4 font-medium">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center  gap-1">
             <Image
-              src="/carlo-log.png"
+              src="/carlo-logo-.png"
               alt="Awrora"
              
-              width={70}
-              height={70}
+              width={30}
+              height={30}
             />
             <h2 className="text-xl font-bold">Carlo PEaaS</h2>
           </div>
@@ -55,11 +55,20 @@ export default function Footer() {
             achieve ethical compliance with global standards in real-time. Align
             your AI projects with trust, transparency, and global regulations.
           </p>
+           <h4 className="font-bold mb-3">Address</h4>
+          <ul
+            className={`space-y-2 ${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}
+          >
+              <li>📧 steve@algorethics.ai</li>
+            <li>📍 333 Sunset Dr, Apt 204, Fort Lauderdale, FL 33301 USA</li>
+          </ul>
           <p>Copyright ©2025 Algorethics.ai</p>
         </div>
 
         <div className="flex flex-col sm:flex-row flex-wrap gap-12 lg:gap-20">
-          <div className="max-w-[185px]">
+          <div className="">
             <h4 className="font-bold mb-3">Legal</h4>
             <ul
               className={`space-y-2 ${
@@ -74,6 +83,18 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+             <h4 className="font-bold mb-3 mt-13.5">Contact Us</h4>
+          <ul
+            className={`space-y-2 ${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}
+          >
+            <li className="flex items-center gap-2"><span><CountryFlagSvg country={"usa"} /></span>Algorethics USA: +1 929-400-3096</li>
+             <li className="flex items-center gap-2"><span><CountryFlagSvg country={"india"} /></span>Algorethics India: +91 91 4897-4612</li>
+             <li className="flex items-center gap-2"><span><CountryFlagSvg country={"uae"} /></span>Algorethics UAE: +971 50 268 2270</li>
+             <li className="flex items-center gap-2"><span><CountryFlagSvg country={"georgia"} /></span>Algorethics Georgia: +995 598 50 25 55</li>
+          
+          </ul>
           </div>
 
           <div>
@@ -107,7 +128,7 @@ export default function Footer() {
           <SocialMediaIcon />
         </div>
 
-        <div className="w-full sm:max-w-[300px] space-y-4">
+        {/* <div className="w-full sm:max-w-[300px] space-y-4">
           <h4 className="font-bold mb-3">Contact Us</h4>
           <ul
             className={`space-y-2 ${
@@ -118,10 +139,20 @@ export default function Footer() {
              <li className="flex items-center gap-2"><span><CountryFlagSvg country={"india"} /></span>Algorethics India: +91 91 4897-4612</li>
              <li className="flex items-center gap-2"><span><CountryFlagSvg country={"uae"} /></span>Algorethics UAE: +971 50 268 2270</li>
              <li className="flex items-center gap-2"><span><CountryFlagSvg country={"georgia"} /></span>Algorethics Georgia: +995 598 50 25 55</li>
-            <li>📧 steve@algorethics.ai</li>
-            <li>📍 333 Sunset Dr, Apt 204, Fort Lauderdale, FL 33301 USA</li>
+          
           </ul>
         </div>
+           <div className="w-full sm:max-w-[300px] space-y-4">
+          <h4 className="font-bold mb-3">Address</h4>
+          <ul
+            className={`space-y-2 ${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}
+          >
+              <li>📧 steve@algorethics.ai</li>
+            <li>📍 333 Sunset Dr, Apt 204, Fort Lauderdale, FL 33301 USA</li>
+          </ul>
+        </div> */}
       </div>
     </footer>
   );

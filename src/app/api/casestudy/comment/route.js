@@ -27,7 +27,7 @@ export async function POST(req) {
 
     return new Response(JSON.stringify({ message: "Comment added!", comments: blogDb.comments }), { status: 200 });
   } catch (err) {
-    console.error("Error in POST /api/blogs/comment:", err);
+    console.error("Error in POST /api/blogs/casestudy:", err);
     return new Response(JSON.stringify({ message: "Server error" }), { status: 500 });
   }
 }

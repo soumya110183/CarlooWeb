@@ -2,7 +2,7 @@ import Underline from "../_subcomponents/UnderLine";
 import BlogSecondContainer from "../blog/BlogSecondContainer";
 import BlogCard from "./_Components/BlogContainer";
 
-import CaseStudy from "./_Components/CaseStudiesContainer";
+
 
 export default async function page() {
   const res = await fetch("https://carlo-peass-71nb.vercel.app/api/casestudy", {
