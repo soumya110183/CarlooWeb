@@ -20,14 +20,12 @@ const complianceDropdown = [
     img: "/gdpr.jpg",
   },
   {
-    title:
-      "Carlo PEaaS: Enforcing Rome Call for AI Ethics in Every AI Project",
+    title: "Carlo PEaaS: Enforcing Rome Call for AI Ethics in Every AI Project",
     href: "/rome-call-ai-ethics",
     img: "/romecallfor aiethics.png",
   },
   {
-    title:
-      "Carlo PEaaS: Enforcing Sharia-Compliant AI Ethics in the Modern World",
+    title: "Carlo PEaaS: Enforcing Sharia-Compliant AI Ethics in the Modern World",
     href: "/sharia-compliant-ai-ethics",
     img: "/sharia.png",
   },
@@ -39,9 +37,18 @@ const resourcesDropdown = [
   { title: "Case Studies", href: "/case-studies" },
 ];
 
+const solutionsDropdown = [
+  { title: "AI Compliance", href: "/solutions/ai-compliance" },
+  { title: "Blockchain & DeFi Monitoring", href: "/solutions/blockchain-monitoring" },
+  { title: "Smart Contract Audits", href: "/solutions/smart-contract-audit" },
+  { title: "Ethical Certification (Carlo Badge)", href: "/solutions/ethical-certification" },
+];
+
 export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
   const [showComplianceSubmenu, setShowComplianceSubmenu] = useState(false);
   const [showResourcesSubmenu, setShowResourcesSubmenu] = useState(false);
+  const [showSolutionsSubmenu, setShowSolutionsSubmenu] = useState(false);
+
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -50,6 +57,7 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
         setIsOpen(false);
         setShowComplianceSubmenu(false);
         setShowResourcesSubmenu(false);
+        setShowSolutionsSubmenu(false);
       }
     }
 
@@ -65,8 +73,8 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
   return (
     <div
       ref={menuRef}
-      className={`fixed top-0 right-0 h-full w-[300px] bg-gradient-to-b from-black/80 to-black/50 
-        text-white transition-transform duration-500 ease-in-out 
+      className={`fixed top-0 right-0 h-screen w-[300px] bg-gradient-to-b from-black/90 to-black/70 
+        text-white transition-transform duration-500 ease-in-out z-[200] overflow-y-auto
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
     >
       <div className="p-5">
@@ -89,11 +97,11 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
                     onClick={() => {
                       setShowComplianceSubmenu((prev) => !prev);
                       setShowResourcesSubmenu(false);
+                      setShowSolutionsSubmenu(false);
                     }}
                   >
                     {item.name}
                   </button>
-
                   {showComplianceSubmenu && (
                     <ul className="mt-2 space-y-3 pl-3 border-l border-white/20">
                       {complianceDropdown.map((subItem, subIndex) => (
@@ -124,11 +132,11 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
                     onClick={() => {
                       setShowResourcesSubmenu((prev) => !prev);
                       setShowComplianceSubmenu(false);
+                      setShowSolutionsSubmenu(false);
                     }}
                   >
                     {item.name}
                   </button>
-
                   {showResourcesSubmenu && (
                     <ul className="mt-2 space-y-2 pl-3 border-l border-white/20">
                       {resourcesDropdown.map((res, i) => (
@@ -138,6 +146,33 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
                             className="block text-sm hover:bg-white/10 p-2 rounded-md"
                           >
                             {res.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : item.name === "Solutions" ? (
+                <>
+                  <button
+                    className="text-left w-full"
+                    onClick={() => {
+                      setShowSolutionsSubmenu((prev) => !prev);
+                      setShowComplianceSubmenu(false);
+                      setShowResourcesSubmenu(false);
+                    }}
+                  >
+                    {item.name}
+                  </button>
+                  {showSolutionsSubmenu && (
+                    <ul className="mt-2 space-y-2 pl-3 border-l border-white/20">
+                      {solutionsDropdown.map((sol, i) => (
+                        <li key={i}>
+                          <Link
+                            href={sol.href}
+                            className="block text-sm hover:bg-white/10 p-2 rounded-md"
+                          >
+                            {sol.title}
                           </Link>
                         </li>
                       ))}

@@ -1,6 +1,6 @@
 export default function Spinner() {
   return (
-    <div>
+    <div >
       <div className="spinner"></div>
     </div>
   );

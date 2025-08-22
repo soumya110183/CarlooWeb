@@ -3,7 +3,7 @@ import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 
 export default function Experience() {
   return (
-    <section className=" sm:px-10 pb-30 ">
+    <section className="px-5 sm:px-10 pb-30 ">
       <div
         className="w-full max-w-[1000px] mx-auto rounded-[18px] sm:rounded-[40px] lg:rounded-[50px] mt-16 sm:mt-20 lg:mt-[222px] text-white p-6 sm:p-10 lg:p-16 "
         style={{

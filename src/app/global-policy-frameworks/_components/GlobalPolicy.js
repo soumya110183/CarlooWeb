@@ -6,10 +6,10 @@ import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 
 export default function GlobalPolicy() {
   return (
-    <section className="w-full max-w-[1200px] flex max-lg:flex-col items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
+    <section className="w-full max-w-[1200px] flex max-lg:flex-col items-center max-lg:gap-10 mx-auto justify-between text-foreground lg:pb-32 pb-15">
       <div className="w-full max-w-[570px]">
       <HeadingReuse heading={"Global Policy Frameworks: Navigating International AI Standards"} />
-        <div className="mt-9 h-[600px]">
+        <div className="mt-9 lg:h-[600px] h-full">
           <FeatureAccordions features={featuresInternational} />
         </div>
       </div>
