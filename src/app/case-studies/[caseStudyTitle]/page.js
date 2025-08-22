@@ -1,4 +1,5 @@
 import Underline from "@/app/_subcomponents/UnderLine";
+import BackButton from "@/app/blog/[blogid]/BackButton";
 import BlogContent from "@/app/blog/[blogid]/BlogContent";
 import { connectToDatabase } from "@/lib/mongodb";
 import casestudy from "@/modals/casestudy";
@@ -37,15 +38,7 @@ console.log(serializedBlog)
       </h2>
       <Underline />
       <div className="flex justify-end">
-  <Link
-    href={"/case-studies"}
-    className="text-[#651FFF] text-base font-bold flex gap-1 items-center 
-               transition-all duration-300 hover:text-[#4e12d9] 
-               hover:gap-2 rounded-full px-2 py-3 hover:bg-[#651FFF]/10"
-  >
-    <IoArrowBack size={25} />
-    Back to Casestudy
-  </Link>
+ <BackButton  path={"case-studies"} />
 </div>
     <BlogContent
             mainImage={serializedBlog.image}

@@ -33,7 +33,7 @@ export default async function page({ params }) {
       <h2 className="text-[48px] font-bold text-center">Blogs</h2>
 
       <Underline />
-      <BackButton />
+      <BackButton  path={"blog"} />
 
       <BlogContent
         mainImage={serializedBlog.image}

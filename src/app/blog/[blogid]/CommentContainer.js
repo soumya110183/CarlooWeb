@@ -94,7 +94,7 @@ console.log(blogId)
         {commentList.map((c, idx) => (
           <div key={idx} className="flex items-start gap-3">
             <Image
-              src={"/placeholderperson.png"}
+              src={"/profile-placeholder.svg"}
               alt="profilepic"
               width={50}
               height={50}
