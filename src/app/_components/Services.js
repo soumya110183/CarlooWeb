@@ -35,10 +35,11 @@ export default function Services() {
                 Don&apos;t hesitate to contact us. Contact Us
               </p>
             </div>
-
-            <button className="text-white border-none  m-0  outline-none bg-[#651FFF] max-sm:mt-5   p-2.5 text-[15px] rounded-[36px] font-semibold">
-              <Link href={"/Contact"}> Contact Us</Link>
+              <Link href={"/Contact"}>
+            <button className="text-white border-none  m-0  outline-none bg-[#651FFF] max-sm:mt-5   p-2.5 text-[15px] rounded-[36px] font-semibold hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+              Contact Us
             </button>
+            </Link>
           </div>
         </div>
       </div>

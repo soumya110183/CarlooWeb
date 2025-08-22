@@ -39,7 +39,7 @@ function Navigation() {
     { name: "Solutions", href: "/Solutions" },
     { name: "Resources", href: "/Resources" },
     { name: "Rak Dao", href: "/rak-dao" },
-    { name: "Contact", href: "/Contact" },
+    { name: "Contact Us", href: "/Contact" },
     { name: "About Us", href: "/About-us" },
   ];
 
@@ -206,7 +206,7 @@ function Navigation() {
           )}
         </ul>
 
-        <div className="flex items-center gap-5  justify-between">
+        <div className="flex items-center gap-3  justify-between">
           <button className="sm:block hidden bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold transition-all duration-300 ease-in-out hover:bg-[#311B92] hover:text-[rgb(209,196,233)] hover:shadow-lg hover:scale-105">
             <a href="https://test.policyenforcement.com/login">SIGN IN</a>
           </button>

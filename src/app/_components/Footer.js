@@ -1,16 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import {
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+
 import { useTheme } from "../_subcomponents/ThemeContext";
 import Link from "next/link";
 import SocialMediaIcon from "../_subcomponents/SocialmediaIcon";
 import CompactSubscriptionForm from "../_subcomponents/footerSubScription";
+import CountryFlagSvg from "../_subcomponents/CountryFlag";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -21,23 +17,24 @@ export default function Footer() {
     { href: "/Contact", label: "Contact" },
     { href: "/global-policy-frameworks", label: "Compliance Frameworks" },
     { href: "/blog", label: "Blog" },
-    { href: "/Why-carlo", label: "Research" }, 
+    { href: "/Why-carlo", label: "Research" },
   ];
   const navPolicy = [
     { href: "/privacy-policy", label: "Privacy Policy" },
     { href: "/terms-of-use", label: "Terms of Use" },
     { href: "/cookie-policy", label: "Cookie Policy" },
     { href: "/ethical-ai-policy", label: "Ethical AI Policy" },
-    
   ];
 
   return (
     <footer
-      className={`py-16  px-5 ${
-        theme === "light" ? "text-black bg-[#f0efef]" : "text-white bg-[#1f1063]"
-      } `}
+      className={`py-16 px-5 sm:px-20 ${
+        theme === "light"
+          ? "text-black bg-[#f0efef]"
+          : "text-white bg-[#1f1063]"
+      }`}
     >
-      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row flex-wrap  justify-between gap-12 ">
+      <div className=" mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-5">
         <div className="w-full lg:max-w-[300px] space-y-4 font-medium">
           <div className="flex items-center gap-2">
             <Image
@@ -47,7 +44,7 @@ export default function Footer() {
               width={40}
               height={40}
             />
-            <h2 className="text-xl font-bold">Carlo PEaas</h2>
+            <h2 className="text-xl font-bold">Carlo PEaaS</h2>
           </div>
           <p
             className={`${
@@ -64,17 +61,14 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row flex-wrap gap-12 lg:gap-20">
           <div className="max-w-[185px]">
             <h4 className="font-bold mb-3">Legal</h4>
-              <ul
+            <ul
               className={`space-y-2 ${
                 theme === "light" ? "text-gray-700" : "text-gray-300"
               }`}
             >
               {navPolicy.map((link, idx) => (
                 <li key={idx} className="cursor-pointer">
-                  <Link
-                    href={link.href}
-                    className="hover:underline "
-                  >
+                  <Link href={link.href} className="hover:underline">
                     {link.label}
                   </Link>
                 </li>
@@ -91,10 +85,7 @@ export default function Footer() {
             >
               {navLinks.map((link, idx) => (
                 <li key={idx} className="cursor-pointer">
-                  <Link
-                    href={link.href}
-                    className="hover:underline "
-                  >
+                  <Link href={link.href} className="hover:underline">
                     {link.label}
                   </Link>
                 </li>
@@ -104,12 +95,32 @@ export default function Footer() {
         </div>
 
         <div className="w-full sm:max-w-[300px] space-y-6">
-           <h4 className="font-bold mb-3">News Letter</h4>
-           <p>Subscribe to our newsletter and stay updated with the latest news, insights, 
-  and exclusive offers delivered straight to your inbox.</p>
+          <h4 className="font-bold mb-3">News Letter</h4>
+          <p className={`${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}>
+            Subscribe to our newsletter and stay updated with the latest news,
+            insights, and exclusive offers delivered straight to your inbox.
+          </p>
 
           <CompactSubscriptionForm />
           <SocialMediaIcon />
+        </div>
+
+        <div className="w-full sm:max-w-[300px] space-y-4">
+          <h4 className="font-bold mb-3">Contact Us</h4>
+          <ul
+            className={`space-y-2 ${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}
+          >
+            <li className="flex items-center gap-2"><span><CountryFlagSvg country={"usa"} /></span>Algorethics USA: +1 929-400-3096</li>
+             <li className="flex items-center gap-2"><span><CountryFlagSvg country={"india"} /></span>Algorethics India: +91 91 4897-4612</li>
+             <li className="flex items-center gap-2"><span><CountryFlagSvg country={"uae"} /></span>Algorethics UAE: +971 50 268 2270</li>
+             <li className="flex items-center gap-2"><span><CountryFlagSvg country={"georgia"} /></span>Algorethics Georgia: +995 598 50 25 55</li>
+            <li>📧 steve@algorethics.ai</li>
+            <li>📍 333 Sunset Dr, Apt 204, Fort Lauderdale, FL 33301 USA</li>
+          </ul>
         </div>
       </div>
     </footer>
