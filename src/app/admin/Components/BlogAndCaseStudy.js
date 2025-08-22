@@ -1,14 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogEditorForm from "./BlogEditorForm";
+import { useTheme } from "@/app/_subcomponents/ThemeContext";
 
 export default function BlogsAndCaseStudy({ blogs, caseStudy }) {
   const [switchData, setSwitchData] = useState(false);
+  const {accessGranted}=useTheme()
 
+
+const [adminAccess, setAdminAccess] = useState(false);
+
+  useEffect(() => {
+    const storedValue = sessionStorage.getItem("adminAccess");
+    setAdminAccess(storedValue === "true"); 
+  }, [accessGranted]);
+  
+  
   return (
     <div className="pt-30">
-      <div className="flex justify-center items-center gap-5 mx-auto pb-20">
+      {
+        adminAccess &&  <div className="flex justify-center items-center gap-5 mx-auto pb-20">
         <button
           onClick={() => setSwitchData(false)}
           className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
@@ -23,6 +35,8 @@ export default function BlogsAndCaseStudy({ blogs, caseStudy }) {
           Case Study
         </button>
       </div>
+      }
+     
 
       {switchData ? (
         caseStudy.length < 0 ? (

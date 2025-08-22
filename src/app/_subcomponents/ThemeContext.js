@@ -9,6 +9,7 @@ export function ThemeProvider({ children }) {
   const [price, setPrice] = useState({});
   const [plan, setPlan] = useState({});
   const [loggedIn,setLoggedIn]=useState(false)
+  const [accessGranted, setAccessGranted] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "dark";
@@ -28,7 +29,7 @@ export function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider
-      value={{ theme, setTheme, price, setPrice, plan, setPlan,loggedIn,setLoggedIn }}
+      value={{ theme, setTheme, price, setPrice, plan, setPlan,loggedIn,setLoggedIn,accessGranted,setAccessGranted }}
     >
       {children}
     </ThemeContext.Provider>

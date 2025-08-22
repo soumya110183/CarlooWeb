@@ -6,6 +6,7 @@ import BlogSecondContainer from "@/app/blog/BlogSecondContainer";
 import TextBlock from "../_subComponents/TextBlock";
 import { ImageBlock } from "../_subComponents/ImageBlock";
 import { index } from "d3";
+import { useTheme } from "@/app/_subcomponents/ThemeContext";
 
 
 
@@ -27,7 +28,7 @@ export default function BlogEditorForm({blogs,switchData}) {
   const [isMainImageUploading, setIsMainImageUploading] = useState(false);
   const [isAdminPhotoUploading, setIsAdminPhotoUploading] = useState(false);
   const [password, setPassword] = useState("");
-  const [accessGranted, setAccessGranted] = useState(false);
+const {accessGranted,setAccessGranted}=useTheme()
   const [error, setError] = useState("");
 
   const contentBlogOrCase=switchData ? true : false 

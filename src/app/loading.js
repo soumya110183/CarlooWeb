@@ -1,12 +1,18 @@
+"use client"
+
+
+
 import Spinner from "./_subcomponents/Spinner";
+import { useTheme } from "./_subcomponents/ThemeContext";
 
+function Loading() {
 
-function loading() {
+  const {theme}=useTheme()
   return (
-    <div>
+    <div className={`fixed inset-0 flex items-center justify-center ${theme === "light" ?"bg-white ":"bg-[#0a0a2f] "} z-[9999]`}>
       <Spinner />
     </div>
   );
 }
 
-export default loading;
+export default Loading;
