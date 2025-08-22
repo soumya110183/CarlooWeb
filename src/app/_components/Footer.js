@@ -120,7 +120,7 @@ export default function Footer() {
 
       {/* Divider + Copyright */}
       <div className="mt-10 w-full border-t-[.5px] border-gray-600/40 pt-5 ">
-        <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} text-sm`}>
+        <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} text-sm text-center`}>
           Copyright ©2025 Algorethics.ai
         </p>
       </div>
