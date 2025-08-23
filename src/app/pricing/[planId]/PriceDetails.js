@@ -10,7 +10,7 @@ export default function PriceDetails({ plan }) {
   const { price, setPrice } = useTheme();
   const [formComp,setFormComp]=useState(false)
   return (
-    <div className="w-full flex justify-between gap-10 mt-10">
+    <div className="w-full flex max-lg:flex-col justify-between gap-10 mt-10">
      
       {formComp ? <OrderForm /> :  <PriceCalculate plan={plan} setPrice={setPrice} /> }
       

@@ -17,16 +17,13 @@ export default async function page() {
         <h2 className="text-[48px] font-bold text-center">Case Studies</h2>
 
         <Underline />
-        <p className="text-[22px] text-center w-full max-w-[800px] mx-auto ">
-          Carlo PEaaS: Ethical AI and Data Protection Compliance with Global
-          Standards like GDPR, CCPA, and the EU AI Act
-        </p>
-        <div className="bg-white flex w-full mt-10 gap-6">
+      
+         <div className="bg-white flex max-sm:flex-col w-full mx-auto mt-10 gap-6">
           
           {casestudy.length > 0 && <BlogCard casestudy={casestudy[0]} />}
 
           
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid lg:grid-cols-2   grid-cols-1 gap-2">
             {casestudy.slice(1).map((casestudy) => (
               <BlogSecondContainer key={casestudy._id} casestudy={casestudy} />
             ))}

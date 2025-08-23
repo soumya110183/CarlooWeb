@@ -30,10 +30,10 @@ export default async function page({ params }) {
 
   return (
     <section className="w-full mx-auto mt-35 text-foreground max-w-[1000px] px-4 pb-30">
-      <h2 className="text-[48px] font-bold text-center">Blogs</h2>
+      <h2 className="text-[48px] font-bold text-center">Blog</h2>
 
       <Underline />
-      <BackButton  path={"blog"} />
+      <BackButton  path={"blog"} text={"Back to Blogs"} />
 
       <BlogContent
         mainImage={serializedBlog.image}

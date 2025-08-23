@@ -5,7 +5,7 @@ import { path } from "d3";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 
-export default function BackButton({path}){
+export default function BackButton({path,text}){
 
     const {theme}=useTheme()
     return(
@@ -17,7 +17,7 @@ export default function BackButton({path}){
                        hover:gap-2 rounded-full px-2 py-3 hover:bg-[#00d4fa]/10`}
           >
             <IoArrowBack size={25} />
-            Back to Blogs
+            {text}
           </Link>
         </div>
     )

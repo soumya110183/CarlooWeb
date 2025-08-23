@@ -38,7 +38,7 @@ console.log(serializedBlog)
       </h2>
       <Underline />
       <div className="flex justify-end">
- <BackButton  path={"case-studies"} />
+ <BackButton  path={"case-studies"} text={"Back to Casestudy"} />
 </div>
     <BlogContent
             mainImage={serializedBlog.image}

@@ -41,7 +41,7 @@ export default function BlogCard({ blog, casestudy, deleteButton }) {
         </h2>
 
         <p className="text-sm text-gray-800 mt-2.5">
-          {getPreviewText(contents.blocks)}
+          {getPreviewText(contents.blocks,20)}
         </p>
         <div className="flex items-center gap-2 mb-2 mt-3 w-full justify-between ">
           <div className="flex items-center shrink-0 gap-3">
@@ -92,7 +92,7 @@ export default function BlogCard({ blog, casestudy, deleteButton }) {
   );
 }
 
-function getPreviewText(blocks) {
+export function getPreviewText(blocks,size) {
   if (!blocks || !Array.isArray(blocks)) return "";
 
   // Find the first text block with content
@@ -108,5 +108,5 @@ function getPreviewText(blocks) {
   const text = tempDiv.textContent || tempDiv.innerText || "";
 
   // Limit to 20 words for preview
-  return text.split(" ").slice(0, 20).join(" ") + "...";
+  return text.split(" ").slice(0, size).join(" ") + "...";
 }
