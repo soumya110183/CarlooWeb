@@ -25,7 +25,7 @@ export default async function page() {
     ]);
 
     return (
-      <div className="pb-30">
+      <div className="pb-30 sm:px-10 px-5">
 
         <BlogsAndCaseStudy blogs={blogs} caseStudy={caseStudy} />
       </div>

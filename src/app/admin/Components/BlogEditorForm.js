@@ -520,7 +520,7 @@ const {accessGranted,setAccessGranted}=useTheme()
         </div>
       </div>
 
-      <div className="max-w-[1200px] bg-white grid grid-cols-3 gap-2 mx-auto mt-10">
+      <div className="max-w-[1200px] bg-white grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 mx-auto mt-10">
 
         {
           switchData ? blogs.map((blog,index)=>(

@@ -17,7 +17,7 @@ export default function ContainerProvider2({ title, paragraph, icon }) {
       }  flex rounded-2xl sm:p-10 p-5 min-h-[250px]`}
     >
       <div>
-        {/* Heading */}
+       
         <div className="flex items-center gap-2">
           <div className="bg-[#C3C3C3] rounded-full p-2 w-10 h-10 max-sm:w-8 max-sm:h-8 flex items-center justify-center shrink-0">
             {icon}
@@ -25,10 +25,9 @@ export default function ContainerProvider2({ title, paragraph, icon }) {
           <h3 className="font-bold text-[20px] max-sm:text-base">{title}</h3>
         </div>
 
-        {/* Paragraph / bullet points */}
         <div className="flex flex-col gap-2 mt-2">
           {paragraph.map((para, index) => {
-            // Case 1: para is an object with text + icon
+          
             if (typeof para === "object" && para?.text) {
               return (
                 <div key={index} className="flex items-center gap-2 max-w-[450px]">
@@ -38,7 +37,7 @@ export default function ContainerProvider2({ title, paragraph, icon }) {
               );
             }
 
-            // Case 2: para is just a string
+           
             return (
               <p
                 key={index}

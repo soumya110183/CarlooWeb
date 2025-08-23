@@ -21,15 +21,25 @@ export default async function page({ params, searchParams }) {
   if (!blogDetails) {
     return <div>Content not found!</div>;
   }
+  
+   const serializedBlog = {
+    ...blogDetails,
+    _id: blogDetails._id.toString(),
+    comments: blogDetails.comments?.map((c) => ({
+      ...c,
+      _id: c._id.toString(),
+      createdAt: c.createdAt.toISOString(),
+    })),
+  };
 
   return (
-    <div>
+    <div className="sm:px-10 px-5">
       <EditBlog
-        blogTitle={blogDetails.title}
-        adminNames={blogDetails.adminName}
-        images={blogDetails.image}
-        blogId={blogDetails._id.toString()}
-        blocks={blogDetails.blocks}
+        blogTitle={serializedBlog.title}
+        adminNames={serializedBlog.adminName}
+        images={serializedBlog.image}
+        blogId={serializedBlog._id}
+        blocks={serializedBlog.blocks}
         currently={currently}
       />
     </div>
