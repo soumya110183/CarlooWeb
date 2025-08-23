@@ -32,10 +32,7 @@ export default function RealTimeDashboards() {
           </li>
         </ul>
 
-        <p className="font-normal text-[20px] leading-relaxed text-justify mt-4">
-          All insights are digestible, filterable, and backed by exportable
-          audit trails.
-        </p>
+      <ParagraphReUse paragraph={"All insights are digestible, filterable, and backed by exportable audit trails."} />
       </div>
 
       {/* Image */}

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { BsChevronDown } from "react-icons/bs";
 
 const complianceDropdown = [
   {
@@ -70,6 +71,12 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
     };
   }, [isOpen, setIsOpen]);
 
+  const renderDropdownIcon = (isOpen) => (
+    <BsChevronDown
+      className={`ml-2 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
+    />
+  );
+
   return (
     <div
       ref={menuRef}
@@ -93,14 +100,14 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
               {item.name === "Compliance Frameworks" ? (
                 <>
                   <button
-                    className="text-left w-full"
+                    className="text-left w-full flex items-center justify-between"
                     onClick={() => {
                       setShowComplianceSubmenu((prev) => !prev);
                       setShowResourcesSubmenu(false);
                       setShowSolutionsSubmenu(false);
                     }}
                   >
-                    {item.name}
+                    {item.name} {renderDropdownIcon(showComplianceSubmenu)}
                   </button>
                   {showComplianceSubmenu && (
                     <ul className="mt-2 space-y-3 pl-3 border-l border-white/20">
@@ -128,14 +135,14 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
               ) : item.name === "Resources" ? (
                 <>
                   <button
-                    className="text-left w-full"
+                    className="text-left w-full flex items-center justify-between"
                     onClick={() => {
                       setShowResourcesSubmenu((prev) => !prev);
                       setShowComplianceSubmenu(false);
                       setShowSolutionsSubmenu(false);
                     }}
                   >
-                    {item.name}
+                    {item.name} {renderDropdownIcon(showResourcesSubmenu)}
                   </button>
                   {showResourcesSubmenu && (
                     <ul className="mt-2 space-y-2 pl-3 border-l border-white/20">
@@ -155,14 +162,14 @@ export default function NavigationMenu({ isOpen, setIsOpen, navItems }) {
               ) : item.name === "Solutions" ? (
                 <>
                   <button
-                    className="text-left w-full"
+                    className="text-left w-full flex items-center justify-between"
                     onClick={() => {
                       setShowSolutionsSubmenu((prev) => !prev);
                       setShowComplianceSubmenu(false);
                       setShowResourcesSubmenu(false);
                     }}
                   >
-                    {item.name}
+                    {item.name} {renderDropdownIcon(showSolutionsSubmenu)}
                   </button>
                   {showSolutionsSubmenu && (
                     <ul className="mt-2 space-y-2 pl-3 border-l border-white/20">

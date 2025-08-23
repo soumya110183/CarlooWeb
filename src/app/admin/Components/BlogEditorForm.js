@@ -266,6 +266,7 @@ const {accessGranted,setAccessGranted}=useTheme()
 
       const data = await res.json();
       setMessage("✅ Blog saved successfully!");
+      alert(`Your successfully added the ${switchData ? "casestudy" :"blog"}`)
     } catch (error) {
       setMessage("❌ Failed to save blog.");
     } finally {

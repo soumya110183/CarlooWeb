@@ -59,7 +59,7 @@ export default function BlogSecondContainer({
           {formatDistanceToNow(new Date(contents.createdAt), { addSuffix: true })}
         </p>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           {deleteButton && <button onClick={handleDelete}><MdDelete size={24} color="black"/></button>}
           {editButton && (
             <Link href={{ pathname: `/admin/${contents.slug}`, query: { content: apiPath } }}>

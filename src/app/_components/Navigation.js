@@ -107,7 +107,7 @@ function Navigation() {
       >
         <Link href="/">
           <div className="flex items-center gap-3">
-            <div className={`relative  ${theme === "light" ? "w-45 h-45" : "w-40 h-40"}`}>
+            <div className={`relative  ${theme === "light" ? "sm:w-45 w-30 sm:h-45 h-30" : "sm:w-40 w-30 sm:h-40 h-30"}`}>
              
               <Image
                 src={

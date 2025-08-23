@@ -21,7 +21,7 @@ export default function TrustandTransparency() {
       <div className="w-full lg:max-w-[570px]">
        <HeadingReuse heading={"2. How Carlo Seamlessly Integrates into Your AI Project Effortless Ethical Compliance, Built for Developers"} />
       <ParagraphReUse paragraph={"Carlo integrates seamlessly into your AI workflow, providing real-time monitoring, policy enforcement, feedback, and compliance assurance. With an intuitive UI and developer-ready APIs, its plug-and-play modules adapt to any architecture—LLMs, computer vision, predictive models, or multi-modal systems."} />
-        <div className="mt-4 h-[300px]">
+        <div className="mt-4 lg:h-[300px] h-full">
           <FeatureAccordions features={featuresInterActive} />
         </div>
       </div>
