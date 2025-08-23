@@ -210,11 +210,13 @@ const normalizeUrl = (url) => {
         } else {
           const errorText = await profileResponse.text();
           console.error("Complete Profile Error:", errorText);
+            alert(`❌ Profile completion failed: ${profileResponse.status}`);
           setStatus(`Profile completion failed: ${profileResponse.status}`);
         }
       } else {
         const errorText = await response.text();
         console.error("Register Error:", errorText);
+        alert(`❌ Failed to register: ${response.status}`);
         setStatus(`Failed to register: ${response.status}`);
       }
     } catch (error) {
