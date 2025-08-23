@@ -50,9 +50,17 @@ export default function CompactSubscriptionForm({ maxw }) {
         className="bg-black text-white text-sm px-4 py-3 outline-none w-full placeholder:font-medium placeholder:text-white"
         required
       />
-      <button type="submit" disabled={loading} className="flex-shrink-0">
-        <IoMdSend color={`${loading ? "grey":"#651FFF"}`} size={23} />
-      </button>
+     <button
+  type="submit"
+  disabled={loading}
+  className={`flex-shrink-0 p-2 rounded-full transition-all duration-200 
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+  aria-label="Send message"
+  aria-busy={loading}
+  title={loading ? "Sending..." : "Send message"}
+>
+  <IoMdSend color={loading ? "grey" : "#651FFF"} size={23} />
+</button>
     </form>
   );
 }
