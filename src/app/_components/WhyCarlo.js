@@ -66,7 +66,7 @@ export default function WhyCarlo() {
                 className="absolute top-[-60px] right-[-30px]"
               />
               <div className="pt-14 pl-4">
-                <h4 className="font-bold text-2xl sm:text-3xl">+200</h4>
+                <h4 className="font-bold text-2xl sm:text-3xl">+55</h4>
                 <p className="font-semibold text-[15px]">
                   Compliance Frameworks
                 </p>
@@ -124,7 +124,7 @@ export default function WhyCarlo() {
                 className="absolute top-[-60px] right-[-30px]"
               />
               <div className="pt-14 pl-4">
-                <h4 className="font-bold text-2xl sm:text-3xl">+200</h4>
+                <h4 className="font-bold text-2xl sm:text-3xl">+150</h4>
                 <p className="font-semibold text-[15px]">Enterprise Scale</p>
                 <p className="font-normal text-sm mt-2">
                   Designed for multi-project, high-volume enterprise
@@ -151,7 +151,7 @@ export default function WhyCarlo() {
                 className="absolute top-[-60px] right-[-50px]"
               />
               <div className="pt-14 pl-4">
-                <h4 className="font-bold text-2xl sm:text-3xl">+200</h4>
+                <h4 className="font-bold text-2xl sm:text-3xl">+85</h4>
                 <p className="font-semibold text-[15px]">Virtual Machine</p>
                 <p className="font-normal text-sm mt-2">
                   Isolated, secure sandbox for testing and validating
