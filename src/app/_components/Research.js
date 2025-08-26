@@ -35,7 +35,7 @@ export default function Research() {
           />
         </div>
       </div>
-      <div className="w-full mx-auto">
+      <div className="w-full max-w-[1400px] mx-auto">
         <Card />
       </div>
     </section>

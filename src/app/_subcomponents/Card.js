@@ -32,7 +32,7 @@ export default function Card() {
   return (
     <div
       ref={scrollRef}
-      className="flex items-center gap-8 overflow-x-auto px-4 py-2 lg:pl-70 mt-10 cursor-grab select-none hide-scrollbar scroll-smooth"
+      className="flex items-center gap-6 overflow-x-auto  py-2 lg:px-5  mt-10 cursor-grab select-none hide-scrollbar scroll-smooth"
       onMouseDown={handleMouseDown}
       onMouseLeave={handleMouseUpOrLeave}
       onMouseUp={handleMouseUpOrLeave}

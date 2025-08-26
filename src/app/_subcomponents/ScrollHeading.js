@@ -14,7 +14,7 @@ export default function ScrollHeading({ heading, paragraph }) {
       >
         <h2
           className="
-            text-4xl sm:text-5xl md:text-7xl lg:text-[100px] xl:text-[127px]
+            text-4xl sm:text-5xl md:text-7xl lg:text-[80px] xl:text-[100px]
             font-bold text-center
             bg-clip-text text-transparent
             bg-gradient-to-r from-[#8fa5ff] via-[#38bdf8] to-[#a78bfa]
@@ -26,7 +26,7 @@ export default function ScrollHeading({ heading, paragraph }) {
 
         <p
           className="
-            font-medium 
+            font-normal 
             text-base text-center sm:text-lg md:text-xl lg:text-2xl 
             max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-[1219px]
              mx-auto mt-3 sm:mt-4 md:mt-6
