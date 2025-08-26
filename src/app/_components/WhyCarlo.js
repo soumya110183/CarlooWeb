@@ -190,7 +190,8 @@ export default function WhyCarlo() {
                     {text.heading}
                   </p>
                 </div>
-                <p className="md:text-[20px] text-base sm:text-[18px] font-medium">
+
+                <p className="md:text-[20px] text-base sm:text-[18px] font-medium pl-6 sm:pl-6">
                   {text.details}
                 </p>
               </div>

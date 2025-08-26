@@ -42,21 +42,24 @@ function Hero() {
       </div>
 
       <div className="px-5 flex gap-5 mx-auto justify-center mt-5">
-        {["The Validator", "The Watcher", "The Guardian", "The Messenger"].map(
-          (label, index) => (
-            <button
-              key={label}
-              onClick={() => handleScrollTo(index)}
-              className={`cursor-pointer lg:text-[26px] sm:text-[20px] text-[14px] rounded-full font-bold transition-all duration-400 mt-5 ${
-                activeSlide === index
-                  ? "bg-gradient-to-r from-[#a78bfa] to-[#9333ea] bg-clip-text text-transparent"
-                  : `text-foreground hover:text-purple-300`
-              }`}
-            >
-              {label}
-            </button>
-          )
-        )}
+        {[
+          "The Validator - ",
+          "The Watcher - ",
+          "The Guardian - ",
+          "The Messenger - ",
+        ].map((label, index) => (
+          <button
+            key={label}
+            onClick={() => handleScrollTo(index)}
+            className={`cursor-pointer lg:text-[26px] sm:text-[20px] text-[14px] rounded-full font-bold transition-all duration-400 mt-5 ${
+              activeSlide === index
+                ? "bg-gradient-to-r from-[#a78bfa] to-[#9333ea] bg-clip-text text-transparent"
+                : `text-foreground hover:text-purple-300`
+            }`}
+          >
+            {label}
+          </button>
+        ))}
       </div>
     </div>
   );

@@ -1,6 +1,13 @@
 import Image from "next/image";
 
-function RobootCharacterstics({ img, title, paragraph, imp, flex }) {
+function RobootCharacterstics({
+  img,
+  title,
+  paragraph,
+  imp,
+  flex,
+  imagewidth,
+}) {
   return (
     <div
       className={`w-full max-w-[1000px] mx-auto  flex max-lg:flex-col ${
@@ -11,9 +18,9 @@ function RobootCharacterstics({ img, title, paragraph, imp, flex }) {
         <Image
           src={img}
           alt="robot-validator"
-          width={314}
+          width={imagewidth || 250}
           height={479}
-          className="w-[314px] h-auto"
+          className=""
         />
       </div>
       <div className={`max-w-[601px] text-foreground`}>

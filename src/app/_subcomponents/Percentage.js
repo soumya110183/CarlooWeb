@@ -73,14 +73,12 @@ export default function Percentage() {
           viewport={{ once: true, amount: 0.6 }}
           onViewportEnter={() => handleInView(index, item.value)}
         >
-          {/* Semi-circle Progress */}
           <div className="relative w-[160px] h-[80px]">
             <svg
               className="w-full h-full"
               viewBox="0 0 100 50"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Gradient Definition */}
               <defs>
                 <linearGradient
                   id={`gradient-${index}`}
@@ -95,7 +93,6 @@ export default function Percentage() {
                 </linearGradient>
               </defs>
 
-              {/* Background Arc (Gray) */}
               <path
                 d="M10,50 A40,40 0 0,1 90,50"
                 fill="transparent"
@@ -104,7 +101,6 @@ export default function Percentage() {
                 strokeLinecap="round"
               />
 
-              {/* Animated Progress Arc (Colored) */}
               <motion.path
                 d="M10,50 A40,40 0 0,1 90,50"
                 fill="transparent"

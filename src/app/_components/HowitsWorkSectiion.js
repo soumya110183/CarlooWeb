@@ -8,7 +8,7 @@ export default function HowitsWorkSection() {
         heading="HOW CARLO WORKS"
         paragraph="From data generation to actionable insights, Carlo PEaaS empowers AI developers and enterprises to maintain global compliance effortlessly, ensuring trust and transparency throughout the AI lifecycle"
       />
-      <div className="mt-10 grid md:grid-cols-2 grid-cols-1 max-w-[900px] mx-auto gap-10 text-white">
+      <div className="mt-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 max-w-[1200px] mx-auto gap-10 text-white">
         <HowitsWork
           image="/vecteezy_stunning-artistic-holographic-data-interface-with-complex_59437502.png"
           heading="Data Generated"
@@ -18,17 +18,20 @@ export default function HowitsWorkSection() {
           image="/vecteezy_stylized-encrypted-folder-3d-illustration_14219609.png"
           heading="Privacy"
           paragraph="Carlo enforces compliance , ensuring privacy and security remain intact at every step"
+          mt={"mt-2"}
         />
 
         <HowitsWork
           image="/vecteezy_nostalgic-spectacular-big-data-analytics-graph-no-background_60062308.png"
           heading="Actionable Insights"
           paragraph="Carlo’s feedback loop refines compliance policies and delivers instant recommendations to developers."
+          mt={"mt-7.5"}
         />
         <HowitsWork
           image="/vecteezy_impressive-futuristic-holographic-display-floating_60066530.png"
           heading="Data Processing"
           paragraph="Real-time enforcement of privacy laws, bias audits, and ethical safeguards."
+          mt={"mt-1"}
         />
       </div>
     </section>

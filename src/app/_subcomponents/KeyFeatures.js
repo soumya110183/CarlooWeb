@@ -12,29 +12,27 @@ export default function KeyFeatures({ features }) {
         features.flex ? "flex-row-reverse" : ""
       } items-center mx-auto justify-between md:gap-10 gap-5 text-foreground`}
     >
-      <div className="mt-5">
+      <div className="">
         <motion.div
-          className="mt-5"
+          className=""
           initial={{ opacity: 0, x: value }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <div className="w-full max-w-[400px]">
-            <Image
-              src={features.img}
-              alt={features.heading || "feature image"}
-              width={400}
-              height={300}
-              className="w-full h-auto rounded-2xl mt-5 object-cover"
-            />
-          </div>
+          <Image
+            src={features.img}
+            alt={features.heading || "feature image"}
+            width={300}
+            height={300}
+            className=""
+          />
         </motion.div>
       </div>
       <div>
-        <div className="flex gap-2 items-start max-sm:text-center  max-sm:items-center max-sm:flex-col-reverse">
+        <div className="flex gap-4 items-center max-sm:text-center  max-sm:items-center max-sm:flex-col-reverse">
           <div
-            className="rounded-full mt-4"
+            className="rounded-full "
             style={{
               width: "18px",
               height: "18px",
@@ -54,7 +52,7 @@ export default function KeyFeatures({ features }) {
             {features.heading}
           </h3>
         </div>
-        <p className="md:text-[20px] text-base sm:text-[18px] w-full max-w-[488px] font-medium mt-5">
+        <p className="md:text-[20px] text-base sm:text-[18px] w-full max-w-[488px] font-medium mt-5 pl-6">
           {features.paragraph}
         </p>
       </div>
