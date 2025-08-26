@@ -31,7 +31,7 @@ export default function HowItWorks() {
       {/* Image */}
       <div className="w-full">
         <Image
-          src="/vision.png"
+          src="/howitworks.png"
           alt="how-it-works"
           width={500}
           height={580}

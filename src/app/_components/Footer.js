@@ -1,68 +1,128 @@
-"use client"
+'use client';
 
 import Image from "next/image";
-import {
-  FaTwitter,
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
- 
-} from "react-icons/fa";
 import { useTheme } from "../_subcomponents/ThemeContext";
 import Link from "next/link";
 import SocialMediaIcon from "../_subcomponents/SocialmediaIcon";
+import CompactSubscriptionForm from "../_subcomponents/footerSubScription";
+import CountryFlagSvg from "../_subcomponents/CountryFlag";
 
 export default function Footer() {
   const { theme } = useTheme();
 
+  const navLinks = [
+    { href: "/Why-carlo", label: "Why Carlo" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/Contact", label: "Contact" },
+    { href: "/global-policy-frameworks", label: "Compliance Frameworks" },
+    { href: "/blog", label: "Blog" },
+    { href: "/Why-carlo", label: "Research" },
+  ];
+
+  const navPolicy = [
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms-of-use", label: "Terms of Use" },
+    { href: "/cookie-policy", label: "Cookie Policy" },
+    { href: "/ethical-ai-policy", label: "Ethical AI Policy" },
+  ];
+
   return (
-    <footer className={`py-16 px-5 ${theme === "light" ? "text-black" : "text-white"} `}>
-      <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row flex-wrap justify-between gap-12 ">
+    <footer
+      className={`py-16 px-10 2xl:px-20 ${
+        theme === "light"
+          ? "text-black bg-[#f0efef]"
+          : "text-white bg-[#1f1063]"
+      }`}
+    >
+      <div className="mx-auto max-w-[1400px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         
-  
-        <div className="w-full lg:max-w-[300px] space-y-4 font-medium">
+        <div className="space-y-4 font-medium">
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="Awrora" className="w-[40px]" width={40} height={40} />
-            <h2 className="text-xl font-bold">Carlo PEaas</h2>
+            <Image
+              src={`${
+                theme === "light" ? "/logo black-carlo.png" : "/carlo-logo-.png"
+              }`}
+              alt="Carlo Logo"
+              width={40}
+              height={40}
+            />
+            <h2 className="text-xl font-bold">Carlo PEaaS</h2>
           </div>
           <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
             Carlo PEaaS by Algorethics helps AI developers and enterprises
-            achieve ethical compliance with global standards in real-time. Align
-            your AI projects with trust, transparency, and global regulations.
+            achieve ethical compliance with global standards in real-time.
           </p>
-          <p>Copyright ©2025 Algorethics.ai</p>
-        </div>
-
-
-        <div className="flex flex-col sm:flex-row flex-wrap gap-12 lg:gap-20">
-          <div className="max-w-[185px]">
-            <h4 className="font-bold mb-3">Newsletter</h4>
-            <p className="text-sm">Subscribe our newsletter to get our latest update & news</p>
-          </div>
 
           <div>
-            <h4 className="font-bold mb-3">Quick Links</h4>
-            <ul className={`space-y-2 ${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
-              <li className="cursor-pointer"><Link href={"/Why-carlo"} >Why Carlo</Link></li>
-              <li className="cursor-pointer"><Link href={"/pricing"} >Pricing</Link></li>
-              <li className="cursor-pointer"><Link href={"/Contact"} >Contact</Link></li>
+            <h4 className="font-bold mb-3">Address</h4>
+            <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
+              <li>📍 333 Sunset Dr, Apt 204, Fort Lauderdale, FL 33301 USA</li>
+              <li>📧 steve@algorethics.ai</li>
             </ul>
           </div>
         </div>
 
-       
-        <div className="w-full sm:max-w-[300px] space-y-6">
-          <SocialMediaIcon />
+        
+        <div>
+          <h4 className="font-bold mb-3">Legal</h4>
+          <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2 mb-6`}>
+            {navPolicy.map((link, idx) => (
+              <li key={idx}>
+                <Link href={link.href} className="hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-          <div className="flex items-center bg-black border border-gray-600 rounded-[10px] overflow-hidden max-w-[300px] pr-4">
-            <input
-              type="email"
-              placeholder="Enter Your Email"
-              className="bg-black text-white text-sm px-4 py-3 outline-none w-full placeholder:font-medium placeholder:text-white"
-            />
-            <Image src="/material-symbols_send.svg" alt="send button" width={24} height={24} />
-          </div>
+          <h4 className="font-bold mb-3">Contact Us</h4>
+          <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
+            <li className="flex items-center gap-2">
+              <CountryFlagSvg country={"usa"} /> +1 929-400-3096
+            </li>
+            <li className="flex items-center gap-2">
+              <CountryFlagSvg country={"india"} />+91 91 4897-4612
+            </li>
+            <li className="flex items-center gap-2">
+              <CountryFlagSvg country={"uae"} /> +971 50 268 2270
+            </li>
+            <li className="flex items-center gap-2">
+              <CountryFlagSvg country={"georgia"} />+995 598 50 25 55
+            </li>
+          </ul>
         </div>
+
+     
+        <div>
+          <h4 className="font-bold mb-3">Quick Links</h4>
+          <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
+            {navLinks.map((link, idx) => (
+              <li key={idx}>
+                <Link href={link.href} className="hover:underline">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+       
+        <div className="space-y-6">
+          <h4 className="font-bold mb-3">Newsletter</h4>
+          <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
+            Subscribe to our newsletter and stay updated with the latest news,
+            insights, and exclusive offers delivered straight to your inbox.
+          </p>
+          <CompactSubscriptionForm />
+          <SocialMediaIcon />
+        </div>
+      </div>
+
+      
+      <div className="mt-10 w-full border-t-[.5px] border-gray-600/40 pt-5 ">
+        <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} text-sm text-center`}>
+          Copyright ©2025 Algorethics.ai
+        </p>
       </div>
     </footer>
   );

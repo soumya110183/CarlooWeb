@@ -39,7 +39,7 @@ function Navigation() {
     { name: "Solutions", href: "/Solutions" },
     { name: "Resources", href: "/Resources" },
     { name: "Rak Dao", href: "/rak-dao" },
-    { name: "Contact", href: "/Contact" },
+    { name: "Contact Us", href: "/Contact" },
     { name: "About Us", href: "/About-us" },
   ];
 
@@ -107,7 +107,7 @@ function Navigation() {
       >
         <Link href="/">
           <div className="flex items-center gap-3">
-            <div className={`relative  ${theme === "light" ? "w-45 h-45" : "w-40 h-40"}`}>
+            <div className={`relative  ${theme === "light" ? "sm:w-45 w-30 sm:h-45 h-30" : "sm:w-40 w-30 sm:h-40 h-30"}`}>
              
               <Image
                 src={
@@ -206,13 +206,19 @@ function Navigation() {
           )}
         </ul>
 
-        <div className="flex items-center gap-5  justify-between">
-          <button className="sm:block hidden bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold transition-all duration-300 ease-in-out hover:bg-[#311B92] hover:text-[rgb(209,196,233)] hover:shadow-lg hover:scale-105">
-            <a href="https://app.policyenforcement.com/login">SIGN IN</a>
-          </button>
+        <div className="flex items-center gap-3  justify-between">
+         <a
+  href="https://test.policyenforcement.com/login"
+  className="sm:flex hidden bg-[rgb(209,196,233)] text-[#311B92] w-[115px] h-[40px] text-[14px] rounded-[36px] font-bold  items-center justify-center transition-all duration-300 ease-in-out hover:bg-[#311B92] hover:text-[rgb(209,196,233)] hover:shadow-lg hover:scale-105"
+  aria-label="Sign in to Policy Enforcement Platform"
+>
+  SIGN IN
+</a>
           <button
             onClick={() => setSettingsOpen(!settingsOpen)}
             className={`${theme === "light" ? "text-black" : "text-white"} `}
+             aria-label="Open settings menu"
+  aria-expanded={settingsOpen}
           >
             <IoMdSettings size={29} />
           </button>

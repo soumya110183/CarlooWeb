@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ContactUs(){
     return(
-         <section className="w-full max-w-[1200px] flex items-center mx-auto justify-between text-white pb-32">
+         <section className="w-full max-w-[1200px] flex max-lg:flex-col gap-5 items-center mx-auto justify-between text-white pb-32">
               <div>
                 <Image
                   src="/vision.png"

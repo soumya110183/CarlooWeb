@@ -13,6 +13,7 @@ export default function ButtonPimary({
         width && "max-sm:w-full"
       } items-center justify-center outline-none bg-[#651FFF] flex shrink-0 font-bold px-7 sm:py-5 py-4 text-${size} rounded-[36px] nav-text 
       transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg`}
+      aria-label={buttonText}
     >
       <Link href={href ? href : "#"}>{buttonText}</Link>
     </button>

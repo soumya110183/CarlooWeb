@@ -15,20 +15,20 @@ export async function GET() {
 export async function POST(req) {
   await connectToDatabase();
   const body = await req.json();
-  const { adminName,title, content, image } = body;
- 
+  const { adminName, title, blocks, image,adminPhoto } = body; 
 
-  if (!adminName ||!title || !content || !image) {
-    return NextResponse.json({ error: 'Title, content, and image are required' }, { status: 400 });
+
+  if (!adminName || !title || !image || !blocks || !Array.isArray(blocks)) {
+    return NextResponse.json({ error: 'Title, adminName, image, and blocks are required' }, { status: 400 });
   }
 
-    const slug = title
+  const slug = title
     .toString()
     .toLowerCase()
     .trim()
     .replace(/[\s\W-]+/g, "-");
 
-  const newBlog = await casestudy.create({ title,slug, content, image,adminName });
+  const newBlog = await casestudy.create({ title, slug, blocks, image, adminName,adminPhoto });
   return NextResponse.json(newBlog, { status: 201 });
 }
 
@@ -50,5 +50,52 @@ export async function DELETE(req) {
     return NextResponse.json({ message: 'caseStudy deleted successfully' }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to delete CaseStudy' }, { status: 500 });
+  }
+}
+export async function PUT(req) {
+  await connectToDatabase();
+  const { searchParams } = new URL(req.url);
+  const id = searchParams.get("id");
+  console.log(id)
+
+  if (!id) {
+    return NextResponse.json({ error: 'Blog ID is required' }, { status: 400 });
+  }
+
+  try {
+    const body = await req.json();
+    const { adminName, title, blocks, image, adminPhoto } = body;
+
+   
+    let slug;
+    if (title) {
+      slug = title
+        .toString()
+        .toLowerCase()
+        .trim()
+        .replace(/[\s\W-]+/g, "-");
+    }
+
+    const updatedBlog = await casestudy.findByIdAndUpdate(
+      id,
+      {
+        ...(title && { title }),
+        ...(slug && { slug }),
+        ...(blocks && { blocks }),
+        ...(image && { image }),
+        ...(adminName && { adminName }),
+        ...(adminPhoto && { adminPhoto }),
+      },
+      { new: true } 
+    );
+
+    if (!updatedBlog) {
+      return NextResponse.json({ error: 'Blog not found' }, { status: 404 });
+    }
+
+    return NextResponse.json(updatedBlog, { status: 200 });
+  } catch (error) {
+    console.error("Error updating blog:", error);
+    return NextResponse.json({ error: 'Failed to update blog' }, { status: 500 });
   }
 }

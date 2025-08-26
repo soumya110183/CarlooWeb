@@ -5,13 +5,16 @@ import Image from "next/image";
 import BlogSecondContainer from "@/app/blog/BlogSecondContainer";
 import TextBlock from "../_subComponents/TextBlock";
 import { ImageBlock } from "../_subComponents/ImageBlock";
+import { index } from "d3";
+import { useTheme } from "@/app/_subcomponents/ThemeContext";
 
 
 
 
 
 
-export default function BlogEditorForm({blogs}) {
+
+export default function BlogEditorForm({blogs,switchData}) {
   const [title, setTitle] = useState("");
   const [mainImage, setMainImage] = useState("");
   const [mainImagePublicId, setMainImagePublicId] = useState("");
@@ -25,8 +28,11 @@ export default function BlogEditorForm({blogs}) {
   const [isMainImageUploading, setIsMainImageUploading] = useState(false);
   const [isAdminPhotoUploading, setIsAdminPhotoUploading] = useState(false);
   const [password, setPassword] = useState("");
-  const [accessGranted, setAccessGranted] = useState(false);
+const {accessGranted,setAccessGranted}=useTheme()
   const [error, setError] = useState("");
+
+  const contentBlogOrCase=switchData ? true : false 
+  
 
   const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
@@ -244,7 +250,7 @@ export default function BlogEditorForm({blogs}) {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/blogs", {
+      const res = await fetch(`/api/${switchData ? "casestudy" :"blogs"}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -260,6 +266,7 @@ export default function BlogEditorForm({blogs}) {
 
       const data = await res.json();
       setMessage("✅ Blog saved successfully!");
+      alert(`Your successfully added the ${switchData ? "casestudy" :"blog"}`)
     } catch (error) {
       setMessage("❌ Failed to save blog.");
     } finally {
@@ -294,7 +301,7 @@ export default function BlogEditorForm({blogs}) {
   return (
     <div>
       <div className="max-w-4xl mx-auto p-6 space-y-6 bg-[#0F092A] rounded-xl shadow-2xl text-white">
-        <h1 className="text-2xl font-bold">Blog Editor</h1>
+        <h1 className="text-2xl font-bold">{contentBlogOrCase ? "Case Study" : "Blog"} Editor</h1>
 
         {message && (
           <p className={message.includes('❌') ? 'text-red-500' : 'text-green-500'}>
@@ -305,7 +312,7 @@ export default function BlogEditorForm({blogs}) {
         <form onSubmit={handleSubmit} className="space-y-6">
           <input
             className="w-full p-2 border-b border-gray-600 bg-transparent rounded focus:outline-none focus:border-[#651FFF] placeholder-gray-500"
-            placeholder="Blog Title"
+            placeholder={`${switchData ? "Casestudy Title" : "Blog Title"}`}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -455,7 +462,7 @@ export default function BlogEditorForm({blogs}) {
           )}
 
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold mb-2">{title || "Blog Title"}</h1>
+            <h1 className="text-3xl font-bold mb-2">{title ||"Title"}</h1>
             <div className="flex items-center shrink-0 gap-3">
               <div className="flex items-center justify-center rounded-full bg-gray-300">
                 {adminPhoto ? (
@@ -513,10 +520,18 @@ export default function BlogEditorForm({blogs}) {
         </div>
       </div>
 
-      <div className="max-w-[1200px] bg-white grid grid-cols-3 gap-2 mx-auto mt-10">
-        {blogs.map((blog) => (
-          <BlogSecondContainer key={blog._id} blog={blog} deleteButton={true} editButton={true} />
-        ))}
+      <div className="max-w-[1200px] bg-white grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 mx-auto mt-10">
+
+        {
+          switchData ? blogs.map((blog,index)=>(
+         <BlogSecondContainer key={index} casestudy={blog} deleteButton={true} editButton={true} />
+      )) : blogs.map((blog,index)=>(
+         <BlogSecondContainer key={index} blog={blog} deleteButton={true} editButton={true} />
+      ))
+        }
+      
+
+      
       </div>
     </div>
   );

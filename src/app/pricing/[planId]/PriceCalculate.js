@@ -39,12 +39,12 @@ export default function PriceCalculate({ plan, setPrice }) {
   }, [convertedTotal, convertedMonthly, currency, setPrice]);
 
   return (
-    <div className="bg-white w-full max-w-[577px] rounded-[8px]  shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
+    <div className="bg-white w-full max-w-[577px] rounded-[8px] shadow-[0_0_15px_rgba(0,0,0,0.3)] p-5 text-black">
       <h3 className="font-semibold text-[18px]">{plan.tier} compliance</h3>
       <div className="w-full h-[1px] bg-gray-300 mt-4"></div>
 
-      <div className="flex justify-between mt-5">
-        <div className="relative w-48">
+      <div className="flex flex-col sm:flex-row justify-between mt-5 gap-4 sm:gap-5">
+        <div className="relative flex-1">
           <select
             value={duration}
             onChange={(e) => setDuration(parseInt(e.target.value))}
@@ -61,7 +61,7 @@ export default function PriceCalculate({ plan, setPrice }) {
           </div>
         </div>
 
-        <div className="relative w-28">
+        <div className="relative flex-1">
           <select
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
@@ -76,25 +76,28 @@ export default function PriceCalculate({ plan, setPrice }) {
         </div>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 space-y-4">
         <h4 className="text-[16px] font-medium">
           Monthly Price:{" "}
           <span className="font-semibold">
             {convertedMonthly} {currency}
           </span>
         </h4>
-        <div className="flex w-full max-w-[80%] justify-between items-center mt-5">
-          <h4 className="text-[16px] font-medium ">
-            Total ({duration} Years):{" "}
+
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0">
+          <h4 className="text-[16px] font-medium">
+            Total ({duration} Years):
           </h4>
-          <p className="bg-[#01BD40] px-5 py-2 rounded-full text-white  font-bold">
+
+          <p className="bg-[#01BD40] px-5 py-2 rounded-full text-white font-bold text-center">
             Save ${(priceBeforeDiscount - discountedPrice).toFixed(2)}
           </p>
-          <div>
-            <h4 className="line-through">
+
+          <div className="flex flex-col items-start sm:items-end gap-1">
+            <h4 className="line-through text-sm sm:text-base">
               {(priceBeforeDiscount * conversionRate).toFixed(2)} {currency}
             </h4>
-            <h4 className="font-semibold">
+            <h4 className="font-semibold text-base">
               {convertedTotal} {currency}
             </h4>
           </div>

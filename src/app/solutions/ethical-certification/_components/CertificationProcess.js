@@ -7,6 +7,7 @@ import {
   FaCertificate,
   FaGlobe,
 } from "react-icons/fa";
+import StepsList from "../../ai-compliance/_components/StepsList";
 
 export default function CertificationProcess() {
   const steps = [
@@ -45,31 +46,7 @@ export default function CertificationProcess() {
       </div>
 
       <div className="flex max-lg:flex-col-reverse flex-row-reverse gap-10 lg:gap-16 mt-12 items-center ">
-        {/* Left: Timeline */}
-        <div className="relative flex-1 h-[400px]">
-          {/* Vertical Line */}
-          <div className="absolute left-[14px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#5d3fd3] via-purple-400 to-[#5d3fd3]"></div>
-
-          {/* Steps */}
-          <ul className="space-y-8 relative z-10">
-            {steps.map((step, idx) => (
-              <li key={idx} className="flex items-start gap-4">
-                {/* Icon Circle */}
-                <div className="w-8 h-8 flex items-center justify-center bg-[#5d3fd3] text-white rounded-full flex-shrink-0 shadow-lg">
-                  {step.icon}
-                </div>
-                <div>
-                  <p className="font-semibold text-lg max-sm:text-base">
-                    {step.title}
-                  </p>
-                  <p className="text-foreground/80 max-sm:text-sm">
-                    {step.text}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+   <StepsList steps={steps} />
 
         {/* Right: Image */}
         <div>

@@ -25,7 +25,10 @@ export default async function page() {
     ]);
 
     return (
-    <BlogsAndCaseStudy blogs={blogs} caseStudy={caseStudy} />
+      <div className="pb-30 sm:px-10 px-5">
+
+        <BlogsAndCaseStudy blogs={blogs} caseStudy={caseStudy} />
+      </div>
     );
   } catch (error) {
     console.error("Error fetching data:", error);

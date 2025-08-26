@@ -27,7 +27,11 @@ export default function ScrollHeading({ heading, paragraph }) {
         <p
           className="
             font-normal 
+<<<<<<< HEAD
             text-base text-center sm:text-lg md:text-xl lg:text-2xl 
+=======
+            text-base text-center sm:text-lg md:text-xl lg:text-[22px] 
+>>>>>>> 34815384d2e4f2807d9182521d69714ff0f888f7
             max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-[1219px]
              mx-auto mt-3 sm:mt-4 md:mt-6
           "

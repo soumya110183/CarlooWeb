@@ -12,8 +12,10 @@ import ContactWebMap from "./Contactcomp/ContactWebMap";
 export default function page() {
   return (
     <div>
-      <section className="w-full mx-auto mt-35 text-foreground overflow-y-hidden lg:px-10 px-5 overflow-x-hidden">
-        <h2 className=" lg:text-[48px] text-[28px] sm:text-[32px] font-bold text-center">
+      <section className="w-full mx-auto mt-35 text-foreground overflow-y-hidden  overflow-x-hidden">
+        <div className="lg:px-10 px-5">
+
+        <h2 className=" lg:text-[48px] text-[28px] sm:text-[32px] font-bold text-center ">
           Get in touch with us
         </h2>
         <Underline />
@@ -25,10 +27,11 @@ export default function page() {
        <ParagraphReUse paragraph={"Queries, complaints and feedback. We will be happy to serve you"} center={true} />
         <ContactWebMap />
         <ContactUs />
+        </div>
       
       
         <Experience />
-        <div className="lg:pt-32 pt-15">
+        <div className="lg:pt-32 pt-15 px-5">
           <SubScribe />
         </div>
         

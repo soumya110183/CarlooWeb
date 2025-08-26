@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import RakDaoForm from "./RakDaoForm";
 
 export default function PopUpForm({ theme }) {
   const [showVideo, setShowVideo] = useState(false);
@@ -29,10 +30,10 @@ export default function PopUpForm({ theme }) {
         >
          
           <div
-            className="relative w-[90%] md:w-[70%] bg-[#0F092A] aspect-video  rounded-lg overflow-hidden"
+            className="relative w-[90%] md:w-[70%] bg-[#0F092A] mt-20   rounded-lg "
             onClick={(e) => e.stopPropagation()}
           >
-            hii
+            <RakDaoForm setShowVideo={setShowVideo} />
          
           </div>
         </div>

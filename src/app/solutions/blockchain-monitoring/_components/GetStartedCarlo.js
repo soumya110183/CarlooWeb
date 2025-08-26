@@ -39,7 +39,7 @@ export default function GetStartedCarlo() {
       {/* Image */}
       <div className="w-full ">
         <Image
-          src="/vision.png"
+          src="/getStartedfor.png"
           alt="get-started-carlo"
           width={500}
           height={580}

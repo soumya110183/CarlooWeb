@@ -1,3 +1,4 @@
+import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import Image from "next/image";
@@ -10,27 +11,12 @@ export default function HowToApply() {
         <HeadingReuse heading={"How to Apply for Carlo Certification"} />
 
         <p className="leading-relaxed font-normal text-foreground md:text-[20px] text-base sm:text-[18px]  mt-2">
-          Visit{" "}
-          <a
-            href="https://policyenforcement.com"
-            target="_blank"
-            className="text-[#651FFF] underline"
-          >
-            policyenforcement.com
-          </a>{" "}
-          or{" "}
-          <a
-            href="https://algorethics.info/apply"
-            target="_blank"
-            className="text-[#651FFF] underline"
-          >
-            algorethics.info/apply
-          </a>{" "}
-          and select “Apply for Certification.” You’ll receive:
+          Getting certified with Carlo is simple. You just need to subscribe to any of our Blockchain Plans to begin the certification process.
         </p>
+        <ParagraphReUse paragraph={"By subscribing, you’ll receive:"}/>
 
         <ul className="mt-4 space-y-3 list-disc list-inside text-lg max-sm:text-base leading-relaxed">
-          <li>Submission instructions</li>
+          <li>Step-by-step submission instructions</li>
           <li>NDA & data protection agreement</li>
           <li>Compliance checklist</li>
           <li>Optional pre-assessment consultation</li>
@@ -41,6 +27,10 @@ export default function HowToApply() {
             "This streamlined process ensures that your project is evaluated efficiently while maintaining full compliance and data protection."
           }
         />
+        <div className="mt-5">
+
+        <ButtonPimary buttonText={"View Blockchain Plans"} href={"/pricing"} />
+        </div>
       </div>
 
       {/* Image */}

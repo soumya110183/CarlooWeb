@@ -134,35 +134,35 @@ export const dataProtectionLawsData = [
     title: "🛡️ General Data Protection Regulation (GDPR):",
     steps: [
       "Europe’s comprehensive framework for data protection and privacy.",
-      "How Carlo Helps: Monitors data flows, enforces consent management, and automates compliance actions to prevent violations.",
+      "Carlo Assurance: Monitors data flows, enforces consent management, and automates compliance actions to prevent violations.",
     ],
   },
   {
     title: "🇬🇧 Data Protection Act 2018 (UK):",
     steps: [
       "Governs the processing of personal data in the United Kingdom.",
-      "How Carlo Helps: Ensures lawful data processing and safeguards sensitive personal information.",
+      "Carlo Assurance: Ensures lawful data processing and safeguards sensitive personal information.",
     ],
   },
   {
     title: "🇨🇳 Personal Information Protection Law (PIPL - China):",
     steps: [
       "China’s leading law regulating personal data collection and cross-border data sharing.",
-      "How Carlo Helps: Enforces data localization requirements and monitors adherence to PIPL standards.",
+      "Carlo Assurance: Enforces data localization requirements and monitors adherence to PIPL standards.",
     ],
   },
   {
     title: "🇺🇸 US Algorithmic Accountability Act:",
     steps: [
       "Focuses on transparency, fairness, and accountability in algorithmic systems.",
-      "How Carlo Helps: Detects bias in algorithms, ensures fairness, and provides actionable feedback for retraining.",
+      "Carlo Assurance: Detects bias in algorithms, ensures fairness, and provides actionable feedback for retraining.",
     ],
   },
   {
     title: "🌟 California Consumer Privacy Act (CCPA):",
     steps: [
       "Grants California residents control over their personal data.",
-      "How Carlo Helps: Automates compliance for consumer opt-outs, data access, and deletion requests.",
+      "Carlo Assurance: Automates compliance for consumer opt-outs, data access, and deletion requests.",
     ],
   },
   {
@@ -170,42 +170,42 @@ export const dataProtectionLawsData = [
       "🏥 Health Insurance Portability and Accountability Act (HIPAA - US):",
     steps: [
       "Protects sensitive health information in the U.S.",
-      "How Carlo Helps: Encrypts health data and ensures compliant handling of electronic health records (EHRs).",
+      "Carlo Assurance: Encrypts health data and ensures compliant handling of electronic health records (EHRs).",
     ],
   },
   {
     title: "🇧🇷 Brazil's General Data Protection Law (LGPD):",
     steps: [
       "Regulates personal data processing in Brazil.",
-      "How Carlo Helps: Tracks data usage and ensures informed consent for all data processing activities.",
+      "Carlo Assurance: Tracks data usage and ensures informed consent for all data processing activities.",
     ],
   },
   {
     title: "🇦🇺 Australia Privacy Act 1988:",
     steps: [
       "Governs how personal information is collected, used, and disclosed in Australia.",
-      "How Carlo Helps: Identifies and secures sensitive data, ensuring compliance with national guidelines.",
+      "Carlo Assurance: Identifies and secures sensitive data, ensuring compliance with national guidelines.",
     ],
   },
   {
     title: "🇮🇳 India's Data Protection Bill (Proposed):",
     steps: [
       "Establishes comprehensive data protection rules for Indian citizens.",
-      "How Carlo Helps: Prepares businesses for upcoming regulations by enforcing best practices.",
+      "Carlo Assurance: Prepares businesses for upcoming regulations by enforcing best practices.",
     ],
   },
   {
     title: "🇸🇬 Singapore Personal Data Protection Act (PDPA):",
     steps: [
       "Regulates data collection and management practices in Singapore.",
-      "How Carlo Helps: Ensures transparency and security in data handling processes.",
+      "Carlo Assurance: Ensures transparency and security in data handling processes.",
     ],
   },
   {
     title: "🇿🇦 South Africa's Protection of Personal Information Act (POPIA):",
     steps: [
       "Ensures data privacy and security compliance in South Africa.",
-      "How Carlo Helps: Tracks and secures data in compliance with local regulations.",
+      "Carlo Assurance: Tracks and secures data in compliance with local regulations.",
     ],
   },
 ];
@@ -265,42 +265,42 @@ export const globalPolicyFrameworksData = [
     title: "🌐 G7 International Guiding Principles for Advanced AI:",
     steps: [
       "Establishes international norms for responsible AI development.",
-      "How Carlo Helps: Aligns AI systems with global ethical norms and legal standards.",
+      "Carlo Assurance: Aligns AI systems with global ethical norms and legal standards.",
     ],
   },
   {
     title: "🏛️ UN Algorithmic Impact Assessment Guidelines:",
     steps: [
       "Framework for assessing the societal impact of AI systems.",
-      "How Carlo Helps: Tracks and analyzes AI impacts, ensuring societal benefits.",
+      "Carlo Assurance: Tracks and analyzes AI impacts, ensuring societal benefits.",
     ],
   },
   {
     title: "🌍 World Economic Forum AI Ethics Guidelines:",
     steps: [
       "Promotes ethical AI deployment across industries.",
-      "How Carlo Helps: Provides industry-specific compliance solutions for diverse AI applications.",
+      "Carlo Assurance: Provides industry-specific compliance solutions for diverse AI applications.",
     ],
   },
   {
     title: "🤝 OECD AI Principles:",
     steps: [
       "Encourages international collaboration on ethical AI practices.",
-      "How Carlo Helps: Facilitates cross-border compliance for multinational enterprises.",
+      "Carlo Assurance: Facilitates cross-border compliance for multinational enterprises.",
     ],
   },
   {
     title: "📜 UNESCO Recommendation on the Ethics of Artificial Intelligence:",
     steps: [
       "Sets global standards for the ethical use of AI technologies.",
-      "How Carlo Helps: Integrates UNESCO’s human-centric AI principles into system design and decision-making.",
+      "Carlo Assurance: Integrates UNESCO’s human-centric AI principles into system design and decision-making.",
     ],
   },
   {
     title: "🇪🇺 European Commission's Coordinated Plan on AI:",
     steps: [
       "Boosts innovation and coordination across EU countries.",
-      "How Carlo Helps: Aligns systems with EU guidelines to support harmonized deployment.",
+      "Carlo Assurance: Aligns systems with EU guidelines to support harmonized deployment.",
     ],
   },
   {
@@ -308,7 +308,7 @@ export const globalPolicyFrameworksData = [
       "⚖️ Council of Europe Framework Convention on AI, Human Rights, Democracy, and the Rule of Law:",
     steps: [
       "Provides binding legal standards for AI accountability.",
-      "How Carlo Helps: Enforces governance models aligned with Council of Europe’s human rights values.",
+      "Carlo Assurance: Enforces governance models aligned with Council of Europe’s human rights values.",
     ],
   },
 ];
@@ -417,7 +417,7 @@ export const featuresInternational = [
     featureName: "G7 International Guiding Principles for Advanced AI",
     featureDetails: [
       "Provides a globally recognized framework for responsible AI development, deployment, and governance.",
-      "How Carlo Helps: Ensures AI systems follow G7-aligned ethical standards, enhance transparency, and meet global legal obligations.",
+      "Carlo Assurance: Ensures AI systems follow G7-aligned ethical standards, enhance transparency, and meet global legal obligations.",
     ],
     icon: <FaGlobe color="black" size={22} />,
   },
@@ -425,7 +425,7 @@ export const featuresInternational = [
     featureName: "UN Algorithmic Impact Assessment Guidelines",
     featureDetails: [
       "Outlines a global framework for evaluating the societal, ethical, and human rights impacts of AI systems.",
-      "How Carlo Helps: Monitors and assesses AI performance to maximize public benefit, reduce risks, and maintain alignment with UN principles.",
+      "Carlo Assurance: Monitors and assesses AI performance to maximize public benefit, reduce risks, and maintain alignment with UN principles.",
     ],
     icon: <FaGavel color="black" size={20} />,
   },
@@ -433,7 +433,7 @@ export const featuresInternational = [
     featureName: "World Economic Forum AI Ethics Guidelines",
     featureDetails: [
       "Promotes ethical, transparent, and inclusive AI adoption across industries worldwide.",
-      "How Carlo Helps: Delivers tailored compliance solutions for industry-specific AI applications.",
+      "Carlo Assurance: Delivers tailored compliance solutions for industry-specific AI applications.",
     ],
     icon: <FaUsers color="black" size={21} />,
   },
@@ -441,7 +441,7 @@ export const featuresInternational = [
     featureName: "OECD AI Principles",
     featureDetails: [
       "Encourages cross-border collaboration and adoption of ethical AI practices.",
-      "How Carlo Helps: Supports multinational enterprises in achieving consistent, global AI compliance.",
+      "Carlo Assurance: Supports multinational enterprises in achieving consistent, global AI compliance.",
     ],
     icon: <FaHandshake color="black" size={22} />,
   },
@@ -450,7 +450,7 @@ export const featuresInternational = [
       "UNESCO Recommendation on the Ethics of Artificial Intelligence",
     featureDetails: [
       "Defines human-centered standards for ethical AI use across the globe.",
-      "How Carlo Helps: Embeds UNESCO’s ethical principles into AI system design and governance.",
+      "Carlo Assurance: Embeds UNESCO’s ethical principles into AI system design and governance.",
     ],
     icon: <FaScroll color="black" size={21} />,
   },
@@ -458,7 +458,7 @@ export const featuresInternational = [
     featureName: "European Commission's Coordinated Plan on AI",
     featureDetails: [
       "Drives AI innovation and coordinated policy implementation across EU member states.",
-      "How Carlo Helps: Aligns systems with EU policies to enable harmonized, cross-country AI deployment.",
+      "Carlo Assurance: Aligns systems with EU policies to enable harmonized, cross-country AI deployment.",
     ],
     icon: <FaLandmark color="black" size={21} />,
   },
@@ -467,7 +467,7 @@ export const featuresInternational = [
       "Council of Europe Framework Convention on AI, Human Rights, Democracy, and the Rule of Law",
     featureDetails: [
       "Establishes binding legal standards for AI accountability and human rights protection.",
-      "How Carlo Helps: Implements governance models that fully comply with Council of Europe values.",
+      "Carlo Assurance: Implements governance models that fully comply with Council of Europe values.",
     ],
     icon: <FaBalanceScale color="black" size={21} />,
   },
@@ -478,7 +478,7 @@ export const featuresGlobalAI = [
     featureName: "European Union AI Act",
     featureDetails: [
       "Creates a comprehensive legal framework for building and deploying trustworthy AI.",
-      "How Carlo Helps: Continuously monitors high-risk AI systems to ensure full compliance with EU regulations.",
+      "Carlo Assurance: Continuously monitors high-risk AI systems to ensure full compliance with EU regulations.",
     ],
     icon: <FaBalanceScale color="black" size={21} />,
   },
@@ -486,7 +486,7 @@ export const featuresGlobalAI = [
     featureName: "Ethics Guidelines for Trustworthy AI (EU)",
     featureDetails: [
       "Promotes AI that is transparent, accountable, and fair across all use cases.",
-      "How Carlo Helps: Automates bias detection and improves model explainability for greater trust.",
+      "Carlo Assurance: Automates bias detection and improves model explainability for greater trust.",
     ],
     icon: <FaSearch color="black" size={21} />,
   },
@@ -494,7 +494,7 @@ export const featuresGlobalAI = [
     featureName: "UNESCO Recommendation on AI Ethics",
     featureDetails: [
       "Encourages responsible AI adoption in education, research, and policymaking.",
-      "How Carlo Helps: Delivers actionable insights to maintain ethical integrity throughout AI lifecycles.",
+      "Carlo Assurance: Delivers actionable insights to maintain ethical integrity throughout AI lifecycles.",
     ],
     icon: <FaGlobe color="black" size={21} />,
   },
@@ -502,7 +502,7 @@ export const featuresGlobalAI = [
     featureName: "OECD AI Principles",
     featureDetails: [
       "Ensures AI technologies uphold human rights, fairness, and democratic values.",
-      "How Carlo Helps: Monitors compliance with OECD benchmarks and provides targeted corrective guidance.",
+      "Carlo Assurance: Monitors compliance with OECD benchmarks and provides targeted corrective guidance.",
     ],
     icon: <FaScroll color="black" size={21} />,
   },
@@ -510,7 +510,7 @@ export const featuresGlobalAI = [
     featureName: "IEEE Global Initiative on AI Ethics",
     featureDetails: [
       "Focuses on embedding ethics into the design, development, and deployment of intelligent systems.",
-      "How Carlo Helps: Applies ethical safeguards during every stage of AI system creation and operation.",
+      "Carlo Assurance: Applies ethical safeguards during every stage of AI system creation and operation.",
     ],
     icon: <FaRobot color="black" size={21} />,
   },
@@ -518,7 +518,7 @@ export const featuresGlobalAI = [
     featureName: "Council of Europe's Framework Convention on AI",
     featureDetails: [
       "Defines binding legal standards for AI governance and protection of human rights.",
-      "How Carlo Helps: Aligns AI systems with human-centric governance and accountability principles.",
+      "Carlo Assurance: Aligns AI systems with human-centric governance and accountability principles.",
     ],
     icon: <FaLandmark color="black" size={21} />,
   },
@@ -526,7 +526,7 @@ export const featuresGlobalAI = [
     featureName: "Algorithmic Justice League Guidelines",
     featureDetails: [
       "Advocates for fairness, accountability, and transparency in algorithmic decision-making.",
-      "How Carlo Helps: Identifies and corrects biases in datasets and algorithms to ensure equitable outcomes.",
+      "Carlo Assurance: Identifies and corrects biases in datasets and algorithms to ensure equitable outcomes.",
     ],
     icon: <FaSyncAlt color="black" size={21} />,
   },
@@ -534,7 +534,7 @@ export const featuresGlobalAI = [
     featureName: "Japan's AI Governance Guidelines",
     featureDetails: [
       "Sets forth principles for responsible and transparent AI governance in Japan.",
-      "How Carlo Helps: Delivers customized compliance strategies for Japan-specific AI applications.",
+      "Carlo Assurance: Delivers customized compliance strategies for Japan-specific AI applications.",
     ],
     icon: <FaFlag color="black" size={21} />,
   },
@@ -542,7 +542,7 @@ export const featuresGlobalAI = [
     featureName: "UK National AI Strategy",
     featureDetails: [
       "Promotes AI-driven innovation while safeguarding ethical and regulatory standards.",
-      "How Carlo Helps: Tracks and supports compliance throughout the AI innovation process.",
+      "Carlo Assurance: Tracks and supports compliance throughout the AI innovation process.",
     ],
     icon: <FaLightbulb color="black" size={21} />,
   },
@@ -550,7 +550,7 @@ export const featuresGlobalAI = [
     featureName: "Singapore Model AI Governance Framework",
     featureDetails: [
       "Provides practical guidance for enhancing AI transparency and explainability.",
-      "How Carlo Helps: Improves system clarity with in-depth reporting and documentation.",
+      "Carlo Assurance: Improves system clarity with in-depth reporting and documentation.",
     ],
     icon: <FaBook color="black" size={21} />,
   },

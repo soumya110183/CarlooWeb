@@ -15,9 +15,9 @@ export default function HowitsWorkSection() {
           paragraph="Carlo monitors every data flow, classifying and securing sensitive information."
         />
         <HowitsWork
-          image="/vecteezy_serene-abstract-holographic-data-storage-device-with_60152598.png"
-          heading="Data Stored"
-          paragraph="Automated encryption compliance checks for frameworks like GDPR, HIPAA, and CCPA."
+          image="/vecteezy_stylized-encrypted-folder-3d-illustration_14219609.png"
+          heading="Privacy"
+          paragraph="Carlo enforces compliance , ensuring privacy and security remain intact at every step"
         />
 
         <HowitsWork

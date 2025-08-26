@@ -35,7 +35,7 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        setStatus("Message sent successfully!");
+        setStatus("Thank you for contacting Carlo PEaaS. Your request has been logged, and our compliance experts will be in touch within 24 hours.");
 
         setFormData({
           name: "",
@@ -132,22 +132,64 @@ const ContactForm = () => {
                 Select a Subject
               </option>
               <option
-                value="robotic automation"
+                value="general inquiry"
                 className="bg-[#0F092A] text-white"
               >
-                Robotic Automation
+                General Inquiry
               </option>
               <option
-                value="machine learning"
+                value="partnerships & collaborations"
                 className="bg-[#0F092A] text-white"
               >
-                Machine Learning
+                Partnerships & Collaborations
               </option>
               <option
-                value="virtual learning"
+                value="compliance & certification request"
                 className="bg-[#0F092A] text-white"
               >
-                Virtual Learning
+                Compliance & Certification Request
+              </option>
+              <option
+                value="product demo / sandbox access"
+                className="bg-[#0F092A] text-white"
+              >
+                Product Demo / Sandbox Access
+              </option>
+              <option
+                value="technical support & integration"
+                className="bg-[#0F092A] text-white"
+              >
+                Technical Support & Integration
+              </option>
+              <option
+                value="pricing & subscriptions"
+                className="bg-[#0F092A] text-white"
+              >
+                Pricing & Subscriptions
+              </option>
+              <option
+                value="government & defense programs"
+                className="bg-[#0F092A] text-white"
+              >
+                Government & Defense Programs
+              </option>
+              <option
+                value="enterprise solutions (banking, healthcare, retail, etc.)"
+                className="bg-[#0F092A] text-white"
+              >
+                Enterprise Solutions (Banking, Healthcare, Retail, etc.)
+              </option>
+              <option
+                value="academic / research collaboration"
+                className="bg-[#0F092A] text-white"
+              >
+                Academic / Research Collaboration
+              </option>
+              <option
+                value="media & press inquiry"
+                className="bg-[#0F092A] text-white"
+              >
+                Media & Press Inquiry
               </option>
             </select>
           </div>

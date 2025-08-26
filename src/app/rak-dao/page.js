@@ -18,8 +18,8 @@ export default function page() {
           Build Ethically from Day One - In the UAE&apos;s First Digital Assets
           Free Zone
         </h2>
-        <div className="max-w-[1200px] flex items-center gap-5">
-          <p className="md:text-[22px] text-base sm:text-[18px] text-justify max-w-[70%]  text-foreground lg:mt-10 mt-4">
+        <div className="max-w-[1200px] flex max-lg:flex-col items-center gap-5">
+          <p className="md:text-[22px] text-base sm:text-[18px] text-justify lg:max-w-[70%]  text-foreground lg:mt-10 mt-4">
             Algorethics, in strategic collaboration with RAK Digital Assets
             Oasis (RAK DAO), enables startups and digital ventures to seamlessly
             establish their legal entity in the UAE—while embedding

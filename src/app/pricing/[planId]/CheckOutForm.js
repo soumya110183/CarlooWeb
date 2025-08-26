@@ -6,9 +6,20 @@ const OrderForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [status, setStatus] = useState(true);
   const [showForm, setShowForm] = useState(false);
+  const [accountCreate, setAccountCreate] = useState(false);
   const [loginData, setLoginData] = useState({ username: "", password: "" });
+  const [loginError, setLoginError] = useState("");
+
+  const { loggedIn, setLoggedIn } = useTheme();
+
+  const handleSignOut = () => {
   
-  const {loggedIn,setLoggedIn}=useTheme()
+    sessionStorage.removeItem("loggedIN");
+ 
+   
+    alert("You have signed out!");
+  };
+
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -31,14 +42,19 @@ const OrderForm = () => {
     referralCode: "",
     preferredLanguage: "",
   });
-
-   useEffect(() => {
+const normalizeUrl = (url) => {
+  if (!url) return "";
+  if (!/^https?:\/\//i.test(url)) {
+    return "https://" + url; // add https:// if missing
+  }
+  return url;
+};
+  useEffect(() => {
     const token = sessionStorage.getItem("loggedIN");
     if (token) {
       setLoggedIn(true);
-
     }
-  },);
+  }, []);
 
   const inputClass =
     "mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm " +
@@ -48,10 +64,12 @@ const OrderForm = () => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
+
   const handleChangeLogin = (e) => {
     const { id, value } = e.target;
     setLoginData((prev) => ({ ...prev, [id]: value }));
   };
+
   const validateStep = () => {
     switch (currentStep) {
       case 1:
@@ -86,7 +104,6 @@ const OrderForm = () => {
           formData.subscriptionPlan.trim() &&
           formData.billingFrequency.trim() &&
           formData.preferredLanguage.trim()
-        
         );
       default:
         return true;
@@ -123,35 +140,84 @@ const OrderForm = () => {
     setStatus(false);
 
     try {
-      console.log("Sending data:", JSON.stringify(registerData, null, 2));
-
+      // First API call: register
       const response = await fetch(
         "https://carlo.algorethics.ai/api/auth/register",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-
             Accept: "application/json",
           },
           body: JSON.stringify(registerData),
         }
       );
 
-      console.log("Response status:", response.status);
-      console.log("Response headers:", response.headers);
-
       if (response.ok) {
-        setStatus(true);
         const data = await response.json();
-        sessionStorage.setItem("authToken", data.accessToken);
-        console.log("Success:", data);
+        const token = data.accessToken;
+
+        sessionStorage.setItem("authToken", token);
+        setLoggedIn(true);
+
+        
+        const completeProfileData = {
+          company_info: {
+            company_name: formData.companyName,
+            industry: formData.industry,
+            website: normalizeUrl(formData.website),
+            company_size: formData.companySize,
+            country: formData.country,
+          },
+          project_details: {
+            primary_use_case: formData.primaryUseCase,
+            number_of_projects: Number(formData.numberOfProjects),
+            compliance_frameworks: formData.complianceFrameworks
+              .split(",")
+              .map((c) => c.trim()),
+          },
+          subscription_details: {
+            subscription_plan: formData.subscriptionPlan,
+            billing_frequency: formData.billingFrequency,
+            promo_code: formData.referralCode || "", 
+          },
+          additional_features: {
+            team_members: [],
+            referral_code: formData.referralCode || "",
+            refer: "colleague",
+          },
+          developer_preferences: {
+            preferred_language: formData.preferredLanguage,
+            tools_integrations: [], // optional integrations could be another field
+          },
+        };
+
+        const profileResponse = await fetch(
+          "https://carlo.algorethics.ai/api/auth/complete-profile",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify(completeProfileData),
+          }
+        );
+
+        if (profileResponse.ok) {
+          setAccountCreate(true);
+          setStatus(true);
+        } else {
+          const errorText = await profileResponse.text();
+          console.error("Complete Profile Error:", errorText);
+            alert(`❌ Profile completion failed: ${profileResponse.status}`);
+          setStatus(`Profile completion failed: ${profileResponse.status}`);
+        }
       } else {
         const errorText = await response.text();
-        console.error("Error response:", response.status, errorText);
-        setStatus(
-          `Failed to register: ${response.status} ${response.statusText}`
-        );
+        console.error("Register Error:", errorText);
+        alert(`❌ Failed to register: ${response.status}`);
+        setStatus(`Failed to register: ${response.status}`);
       }
     } catch (error) {
       console.error("Network/Submission error:", error);
@@ -163,45 +229,34 @@ const OrderForm = () => {
     e.preventDefault();
 
     const registerData = {
-     username:loginData.username,
-     password:loginData.password
+      username: loginData.username,
+      password: loginData.password,
     };
-
+    setLoginError("");
     setStatus(false);
 
     try {
-      console.log("Sending data:", JSON.stringify(registerData, null, 2));
-
       const response = await fetch(
         "https://carlo.algorethics.ai/api/auth/login",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-
             Accept: "application/json",
           },
           body: JSON.stringify(registerData),
         }
       );
 
-      console.log("Response status:", response.status);
-      console.log("Response headers:", response.headers);
-
       if (response.ok) {
-        setStatus(true);
         const data = await response.json();
-        setLoggedIn(true)
+        setLoggedIn(true);
         sessionStorage.setItem("authToken", data.accessToken);
-         sessionStorage.setItem("loggedIN", true);
-
-        console.log("Success:", data);
+        sessionStorage.setItem("loggedIN", true);
+        setStatus(true);
       } else {
-        const errorText = await response.text();
-        console.error("Error response:", response.status, errorText);
-        setStatus(
-          `Failed to register: ${response.status} ${response.statusText}`
-        );
+        setLoginError("Invalid username or password");
+        setStatus(true);
       }
     } catch (error) {
       console.error("Network/Submission error:", error);
@@ -260,7 +315,7 @@ const OrderForm = () => {
       {/* Form */}
 
       <form className="space-y-6">
-        <h2 className="text-xl font-semibold text-gray-800">Billing address</h2>
+       
 
         {showForm ? (
           <div>
@@ -478,13 +533,14 @@ const OrderForm = () => {
 
             {currentStep === 6 && (
               <div className="text-center">
-                <button
+                {accountCreate ? <div>Congrats Your Account is Created Sucessfully</div> :  <button
                   type="button"
                   onClick={handleSubmit}
                   className="bg-[#651FFF] text-white px-8 py-4 rounded hover:bg-blue-700"
                 >
                   {status ? "Complete Registration" : "Registering"}
-                </button>
+                </button>}
+               
               </div>
             )}
 
@@ -530,16 +586,32 @@ const OrderForm = () => {
                 placeholder="password"
                 className={inputClass}
               />
+                {loginError && (
+                <p className="text-red-600 text-sm mt-2">{loginError}</p>
+              )}
             </div>
             <button
               onClick={loginFunction}
               type="submit"
               className={`px-4 py-2 w-full rounded mt-5 text-white bg-[#651FFF] hover:bg-blue-700 `}
             >
-              Login
+              {status ? "Login" :"Logging In..."}
             </button>
+           
           </>
-        ) : <div>your logged in successfully</div>}
+        ) : <>
+        
+        <div>your logged in successfully you can now continue your payment</div>
+         <button
+              onClick={handleSignOut}
+              type="submit"
+              className={`px-4 py-2 w-full rounded mt-2 text-white bg-[#651FFF] hover:bg-blue-700 `}
+            >
+              Logout
+            </button>
+        </>
+        
+        }
       </form>
     </div>
   );
