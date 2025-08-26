@@ -8,13 +8,7 @@ import { ImageBlock } from "../_subComponents/ImageBlock";
 import { index } from "d3";
 import { useTheme } from "@/app/_subcomponents/ThemeContext";
 
-
-
-
-
-
-
-export default function BlogEditorForm({blogs,switchData}) {
+export default function BlogEditorForm({ blogs, switchData }) {
   const [title, setTitle] = useState("");
   const [mainImage, setMainImage] = useState("");
   const [mainImagePublicId, setMainImagePublicId] = useState("");
@@ -28,11 +22,10 @@ export default function BlogEditorForm({blogs,switchData}) {
   const [isMainImageUploading, setIsMainImageUploading] = useState(false);
   const [isAdminPhotoUploading, setIsAdminPhotoUploading] = useState(false);
   const [password, setPassword] = useState("");
-const {accessGranted,setAccessGranted}=useTheme()
+  const { accessGranted, setAccessGranted } = useTheme();
   const [error, setError] = useState("");
 
-  const contentBlogOrCase=switchData ? true : false 
-  
+  const contentBlogOrCase = switchData ? true : false;
 
   const correctPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
@@ -58,10 +51,11 @@ const {accessGranted,setAccessGranted}=useTheme()
   };
 
   const addBlock = (type, index) => {
-    const newBlock = type === "text" 
-      ? { type: "text", content: "" }
-      : { type: "image", src: "", publicId: "" };
-    
+    const newBlock =
+      type === "text"
+        ? { type: "text", content: "" }
+        : { type: "image", src: "", publicId: "" };
+
     const updated = [...blocks];
     updated.splice(index + 1, 0, newBlock);
     setBlocks(updated);
@@ -69,31 +63,31 @@ const {accessGranted,setAccessGranted}=useTheme()
 
   const uploadToCloudinary = async (file) => {
     const formData = new FormData();
-    formData.append('image', file);
+    formData.append("image", file);
 
-    const response = await fetch('/api/upload', {
-      method: 'POST',
+    const response = await fetch("/api/upload", {
+      method: "POST",
       body: formData,
     });
 
     if (!response.ok) {
-      throw new Error('Upload failed');
+      throw new Error("Upload failed");
     }
 
     return await response.json();
   };
 
   const deleteFromCloudinary = async (publicId) => {
-    const response = await fetch('/api/delete-image', {
-      method: 'DELETE',
+    const response = await fetch("/api/delete-image", {
+      method: "DELETE",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ public_id: publicId }),
     });
 
     if (!response.ok) {
-      throw new Error('Delete failed');
+      throw new Error("Delete failed");
     }
 
     return await response.json();
@@ -101,7 +95,7 @@ const {accessGranted,setAccessGranted}=useTheme()
 
   const handleImageUpload = async (index, file) => {
     try {
-      setUploadingImages(prev => ({ ...prev, [index]: true }));
+      setUploadingImages((prev) => ({ ...prev, [index]: true }));
       const result = await uploadToCloudinary(file);
 
       const updated = [...blocks];
@@ -111,10 +105,10 @@ const {accessGranted,setAccessGranted}=useTheme()
 
       setMessage("✅ Image uploaded successfully!");
     } catch (error) {
-      console.error('Upload error:', error);
+      console.error("Upload error:", error);
       setMessage("❌ Failed to upload image. Please try again.");
     } finally {
-      setUploadingImages(prev => ({ ...prev, [index]: false }));
+      setUploadingImages((prev) => ({ ...prev, [index]: false }));
     }
   };
 
@@ -131,7 +125,7 @@ const {accessGranted,setAccessGranted}=useTheme()
 
       setMessage("✅ Image deleted successfully!");
     } catch (error) {
-      console.error('Delete error:', error);
+      console.error("Delete error:", error);
       setMessage("❌ Failed to delete image.");
     }
   };
@@ -139,7 +133,7 @@ const {accessGranted,setAccessGranted}=useTheme()
   const handleMainImageUpload = async (file) => {
     try {
       setIsMainImageUploading(true);
-      
+
       if (mainImagePublicId) {
         await deleteFromCloudinary(mainImagePublicId);
       }
@@ -149,7 +143,7 @@ const {accessGranted,setAccessGranted}=useTheme()
       setMainImagePublicId(result.public_id);
       setMessage("✅ Main image uploaded successfully!");
     } catch (error) {
-      console.error('Upload error:', error);
+      console.error("Upload error:", error);
       setMessage("❌ Failed to upload main image. Please try again.");
     } finally {
       setIsMainImageUploading(false);
@@ -165,7 +159,7 @@ const {accessGranted,setAccessGranted}=useTheme()
       setMainImagePublicId("");
       setMessage("✅ Main image deleted successfully!");
     } catch (error) {
-      console.error('Delete error:', error);
+      console.error("Delete error:", error);
       setMessage("❌ Failed to delete main image.");
     }
   };
@@ -173,7 +167,7 @@ const {accessGranted,setAccessGranted}=useTheme()
   const handleAdminPhotoUpload = async (file) => {
     try {
       setIsAdminPhotoUploading(true);
-      
+
       if (adminPhotoPublicId) {
         await deleteFromCloudinary(adminPhotoPublicId);
       }
@@ -183,7 +177,7 @@ const {accessGranted,setAccessGranted}=useTheme()
       setAdminPhotoPublicId(result.public_id);
       setMessage("✅ Admin photo uploaded successfully!");
     } catch (error) {
-      console.error('Upload error:', error);
+      console.error("Upload error:", error);
       setMessage("❌ Failed to upload admin photo. Please try again.");
     } finally {
       setIsAdminPhotoUploading(false);
@@ -199,14 +193,14 @@ const {accessGranted,setAccessGranted}=useTheme()
       setAdminPhotoPublicId("");
       setMessage("✅ Admin photo deleted successfully!");
     } catch (error) {
-      console.error('Delete error:', error);
+      console.error("Delete error:", error);
       setMessage("❌ Failed to delete admin photo.");
     }
   };
 
   const removeBlock = (index) => {
     const blockToRemove = blocks[index];
-    
+
     if (blockToRemove.type === "image" && blockToRemove.publicId) {
       handleImageDelete(index, blockToRemove.publicId);
     }
@@ -250,7 +244,7 @@ const {accessGranted,setAccessGranted}=useTheme()
     setIsSubmitting(true);
 
     try {
-      const res = await fetch(`/api/${switchData ? "casestudy" :"blogs"}`, {
+      const res = await fetch(`/api/${switchData ? "casestudy" : "blogs"}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -266,7 +260,7 @@ const {accessGranted,setAccessGranted}=useTheme()
 
       const data = await res.json();
       setMessage("✅ Blog saved successfully!");
-      alert(`Your successfully added the ${switchData ? "casestudy" :"blog"}`)
+      alert(`Your successfully added the ${switchData ? "casestudy" : "blog"}`);
     } catch (error) {
       setMessage("❌ Failed to save blog.");
     } finally {
@@ -301,10 +295,16 @@ const {accessGranted,setAccessGranted}=useTheme()
   return (
     <div>
       <div className="max-w-4xl mx-auto p-6 space-y-6 bg-[#0F092A] rounded-xl shadow-2xl text-white">
-        <h1 className="text-2xl font-bold">{contentBlogOrCase ? "Case Study" : "Blog"} Editor</h1>
+        <h1 className="text-2xl font-bold">
+          {contentBlogOrCase ? "Case Study" : "Blog"} Editor
+        </h1>
 
         {message && (
-          <p className={message.includes('❌') ? 'text-red-500' : 'text-green-500'}>
+          <p
+            className={
+              message.includes("❌") ? "text-red-500" : "text-green-500"
+            }
+          >
             {message}
           </p>
         )}
@@ -318,7 +318,10 @@ const {accessGranted,setAccessGranted}=useTheme()
           />
 
           <div>
-            <label className="block mb-1 text-gray-300">Main Image</label>
+            <label className="block mb-1 text-gray-300">
+              Main Image(Portrait images may not display well. Landscape is
+              recommended.)
+            </label>
             {mainImage ? (
               <div className="relative inline-block">
                 <Image
@@ -352,7 +355,8 @@ const {accessGranted,setAccessGranted}=useTheme()
                       accept="image/*"
                       className="hidden"
                       onChange={(e) =>
-                        e.target.files && handleMainImageUpload(e.target.files[0])
+                        e.target.files &&
+                        handleMainImageUpload(e.target.files[0])
                       }
                     />
                   </label>
@@ -403,7 +407,8 @@ const {accessGranted,setAccessGranted}=useTheme()
                       accept="image/*"
                       className="hidden"
                       onChange={(e) =>
-                        e.target.files && handleAdminPhotoUpload(e.target.files[0])
+                        e.target.files &&
+                        handleAdminPhotoUpload(e.target.files[0])
                       }
                     />
                   </label>
@@ -462,7 +467,7 @@ const {accessGranted,setAccessGranted}=useTheme()
           )}
 
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold mb-2">{title ||"Title"}</h1>
+            <h1 className="text-3xl font-bold mb-2">{title || "Title"}</h1>
             <div className="flex items-center shrink-0 gap-3">
               <div className="flex items-center justify-center rounded-full bg-gray-300">
                 {adminPhoto ? (
@@ -521,17 +526,23 @@ const {accessGranted,setAccessGranted}=useTheme()
       </div>
 
       <div className="max-w-[1200px] bg-white grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2 mx-auto mt-10">
-
-        {
-          switchData ? blogs.map((blog,index)=>(
-         <BlogSecondContainer key={index} casestudy={blog} deleteButton={true} editButton={true} />
-      )) : blogs.map((blog,index)=>(
-         <BlogSecondContainer key={index} blog={blog} deleteButton={true} editButton={true} />
-      ))
-        }
-      
-
-      
+        {switchData
+          ? blogs.map((blog, index) => (
+              <BlogSecondContainer
+                key={index}
+                casestudy={blog}
+                deleteButton={true}
+                editButton={true}
+              />
+            ))
+          : blogs.map((blog, index) => (
+              <BlogSecondContainer
+                key={index}
+                blog={blog}
+                deleteButton={true}
+                editButton={true}
+              />
+            ))}
       </div>
     </div>
   );
