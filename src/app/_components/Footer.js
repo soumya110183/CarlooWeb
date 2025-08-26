@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { useTheme } from "../_subcomponents/ThemeContext";
@@ -35,7 +35,6 @@ export default function Footer() {
       }`}
     >
       <div className="mx-auto max-w-[1400px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-        
         <div className="space-y-4 font-medium">
           <div className="flex items-center gap-2">
             <Image
@@ -48,24 +47,35 @@ export default function Footer() {
             />
             <h2 className="text-xl font-bold">Carlo PEaaS</h2>
           </div>
-          <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
+          <p
+            className={`${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}
+          >
             Carlo PEaaS by Algorethics helps AI developers and enterprises
             achieve ethical compliance with global standards in real-time.
           </p>
 
           <div>
             <h4 className="font-bold mb-3">Address</h4>
-            <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
+            <ul
+              className={`${
+                theme === "light" ? "text-gray-700" : "text-gray-300"
+              } space-y-2`}
+            >
               <li>📍 333 Sunset Dr, Apt 204, Fort Lauderdale, FL 33301 USA</li>
               <li>📧 steve@algorethics.ai</li>
             </ul>
           </div>
         </div>
 
-        
         <div>
           <h4 className="font-bold mb-3">Legal</h4>
-          <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2 mb-6`}>
+          <ul
+            className={`${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            } space-y-2 mb-6`}
+          >
             {navPolicy.map((link, idx) => (
               <li key={idx}>
                 <Link href={link.href} className="hover:underline">
@@ -76,26 +86,35 @@ export default function Footer() {
           </ul>
 
           <h4 className="font-bold mb-3">Contact Us</h4>
-          <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
+          <ul
+            className={`${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            } space-y-2`}
+          >
             <li className="flex items-center gap-2">
               <CountryFlagSvg country={"usa"} /> +1 929-400-3096
             </li>
             <li className="flex items-center gap-2">
-              <CountryFlagSvg country={"india"} />+91 91 4897-4612
+              <CountryFlagSvg country={"india"} />
+              +91 91 4897-4612
             </li>
             <li className="flex items-center gap-2">
               <CountryFlagSvg country={"uae"} /> +971 50 268 2270
             </li>
             <li className="flex items-center gap-2">
-              <CountryFlagSvg country={"georgia"} />+995 598 50 25 55
+              <CountryFlagSvg country={"georgia"} />
+              +995 598 50 25 55
             </li>
           </ul>
         </div>
 
-     
         <div>
           <h4 className="font-bold mb-3">Quick Links</h4>
-          <ul className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} space-y-2`}>
+          <ul
+            className={`${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            } space-y-2`}
+          >
             {navLinks.map((link, idx) => (
               <li key={idx}>
                 <Link href={link.href} className="hover:underline">
@@ -106,10 +125,13 @@ export default function Footer() {
           </ul>
         </div>
 
-       
         <div className="space-y-6">
           <h4 className="font-bold mb-3">Newsletter</h4>
-          <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"}`}>
+          <p
+            className={`${
+              theme === "light" ? "text-gray-700" : "text-gray-300"
+            }`}
+          >
             Subscribe to our newsletter and stay updated with the latest news,
             insights, and exclusive offers delivered straight to your inbox.
           </p>
@@ -118,9 +140,12 @@ export default function Footer() {
         </div>
       </div>
 
-      
-      <div className="mt-10 w-full border-t-[.5px] border-gray-600/40 pt-5 ">
-        <p className={`${theme === "light" ? "text-gray-700" : "text-gray-300"} text-sm text-center`}>
+      <div className="mt-10 w-full max-w-[1400px] mx-auto border-t-[.5px] border-gray-600/40 pt-5 ">
+        <p
+          className={`${
+            theme === "light" ? "text-gray-700" : "text-gray-300"
+          } text-sm text-center`}
+        >
           Copyright ©2025 Algorethics.ai
         </p>
       </div>

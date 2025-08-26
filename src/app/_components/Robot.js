@@ -8,7 +8,7 @@ function Robot() {
         heading={"ETHICAL GUARDIANS"}
         paragraph={"Carlo Protecting AI Integrity and Compliance in Real Time"}
       />
-      <div className="py-10 flex flex-col md:gap-16 gap-10">
+      <div className="py-10 flex flex-col md:gap-5 gap-5">
         <RobootCharacterstics
           img="/validator-robot.png"
           title={"THE VALIDATOR"}

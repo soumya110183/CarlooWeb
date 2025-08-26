@@ -20,13 +20,15 @@ export default function KeyFeatures({ features }) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <Image
-            src={features.img}
-            alt={features.heading || "feature image"}
-            width={400}
-            height={300}
-            className="w-[400px] rounded-2xl mt-5 object-cover"
-          />
+          <div className="w-full max-w-[400px]">
+            <Image
+              src={features.img}
+              alt={features.heading || "feature image"}
+              width={400}
+              height={300}
+              className="w-full h-auto rounded-2xl mt-5 object-cover"
+            />
+          </div>
         </motion.div>
       </div>
       <div>

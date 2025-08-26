@@ -39,8 +39,10 @@ import {
   FaIndustry,
   FaRocket,
   FaUniversity,
-   FaChartLine, FaBell,
-    FaCertificate, FaStar
+  FaChartLine,
+  FaBell,
+  FaCertificate,
+  FaStar,
 } from "react-icons/fa";
 
 export const providersData = [
@@ -369,7 +371,7 @@ export const KeyfeaturesData = [
     heading: "Feedback Loops",
     paragraph:
       "Continuously improve model performance and compliance with intelligent feedback loops. Carlo PEaaS captures real-world outcomes and user interactions to refine policies, detect drift, and adapt governance in real time.",
-    img: "/feature3_2x_idh2mq.png",
+    img: "/feature 3.png",
     flex: false,
   },
   {
@@ -607,13 +609,12 @@ export const aiEthicsPrinciples = [
   },
 ];
 
-
 export const aiCompliancePrinciples = [
   {
     featureName: "Transparency",
     featureDetails: [
       "AI systems must be understandable to all.",
-      "Carlo logs AI decisions and makes models explainable via dashboards, traceability, and audits."
+      "Carlo logs AI decisions and makes models explainable via dashboards, traceability, and audits.",
     ],
     icon: <FaEye color="black" size={21} />,
   },
@@ -621,7 +622,7 @@ export const aiCompliancePrinciples = [
     featureName: "Inclusion",
     featureDetails: [
       "AI must serve every human being and respect all social groups.",
-      "Carlo detects exclusionary patterns in training data and monitors demographic disparities."
+      "Carlo detects exclusionary patterns in training data and monitors demographic disparities.",
     ],
     icon: <FaUsers color="black" size={21} />,
   },
@@ -629,7 +630,7 @@ export const aiCompliancePrinciples = [
     featureName: "Responsibility",
     featureDetails: [
       "Designers and users of AI must take responsibility.",
-      "Carlo enforces version control, tracks changes, and ensures real-time accountability."
+      "Carlo enforces version control, tracks changes, and ensures real-time accountability.",
     ],
     icon: <FaClipboardCheck color="black" size={21} />,
   },
@@ -637,7 +638,7 @@ export const aiCompliancePrinciples = [
     featureName: "Impartiality",
     featureDetails: [
       "AI must not foster bias or discrimination.",
-      "Carlo uses fairness metrics, demographic parity testing, and bias detection algorithms."
+      "Carlo uses fairness metrics, demographic parity testing, and bias detection algorithms.",
     ],
     icon: <FaBalanceScaleRight color="black" size={21} />,
   },
@@ -645,7 +646,7 @@ export const aiCompliancePrinciples = [
     featureName: "Reliability",
     featureDetails: [
       "AI must operate securely and consistently.",
-      "Carlo monitors uptime, consistency, safety overrides, and anomaly detection."
+      "Carlo monitors uptime, consistency, safety overrides, and anomaly detection.",
     ],
     icon: <FaCogs color="black" size={21} />,
   },
@@ -653,7 +654,7 @@ export const aiCompliancePrinciples = [
     featureName: "Security and Privacy",
     featureDetails: [
       "Personal data must be protected and AI must prevent misuse.",
-      "Carlo integrates encryption, GDPR-aligned privacy controls, and consent-driven workflows."
+      "Carlo integrates encryption, GDPR-aligned privacy controls, and consent-driven workflows.",
     ],
     icon: <FaLock color="black" size={21} />,
   },
@@ -706,37 +707,37 @@ export const cryptoComplianceData = [
     title: "Anomaly Detection Engine",
     paragraph: [
       "Detects flash-loan attacks, reentrancy exploits, and wash trading in real time.",
-      "Monitors gas spikes and mempool manipulation as indicators of suspicious activity."
+      "Monitors gas spikes and mempool manipulation as indicators of suspicious activity.",
     ],
-    icon: <FaShieldAlt color="black" size={22} />
+    icon: <FaShieldAlt color="black" size={22} />,
   },
   {
     title: "DAO Governance Transparency",
     paragraph: [
       "Visualize proposal flows, voting timelines, and quorum patterns.",
       "Identify voter centralization and influence disparities.",
-      "Generate governance fairness scores."
+      "Generate governance fairness scores.",
     ],
-    icon: <FaVoteYea color="black" size={22} />
+    icon: <FaVoteYea color="black" size={22} />,
   },
   {
     title: "Tokenomics Audits",
     paragraph: [
       "Track token release schedules and vesting cliffs.",
       "Flag wallet clusters that may pose centralization risks.",
-      "Monitor liquidity pool stability and slippage."
+      "Monitor liquidity pool stability and slippage.",
     ],
-    icon: <FaCoins color="black" size={22} />
+    icon: <FaCoins color="black" size={22} />,
   },
   {
     title: "Compliance & Risk Dashboards",
     paragraph: [
       "Live scores for operational health, decentralization, and ethical exposure.",
       "Exportable reports for investors, partners, and compliance regulators.",
-      "Weekly snapshots delivered to founders, auditors, and DAO treasurers."
+      "Weekly snapshots delivered to founders, auditors, and DAO treasurers.",
     ],
-    icon: <FaChartLine color="black" size={22} />
-  }
+    icon: <FaChartLine color="black" size={22} />,
+  },
 ];
 
 export const certificationLevelsData = [
@@ -777,39 +778,69 @@ export const targetAudienceData = [
     title: "Web3 Startups & DAOs",
     paragraph: [
       { text: "NFT platforms", icon: <FaCoins size={14} /> },
-      { text: "Decentralized Exchanges (DEXs)", icon: <FaExchangeAlt size={14} /> },
+      {
+        text: "Decentralized Exchanges (DEXs)",
+        icon: <FaExchangeAlt size={14} />,
+      },
       { text: "DAO governance token projects", icon: <FaVoteYea size={14} /> },
-      { text: "Metaverse and GameFi studios", icon: <FaGamepad size={14} /> }
+      { text: "Metaverse and GameFi studios", icon: <FaGamepad size={14} /> },
     ],
-    icon: <FaUsers size={22} />
+    icon: <FaUsers size={22} />,
   },
   {
     title: "AI Startups",
     paragraph: [
       { text: "AI-powered SaaS platforms", icon: <FaRobot size={14} /> },
       { text: "NLP and LLM product companies", icon: <FaBook size={14} /> },
-      { text: "AI in healthcare, finance, and education", icon: <FaHeartbeat size={14} /> },
-      { text: "Algorithm transparency or fairness-focused tools", icon: <FaBalanceScale size={14} /> }
+      {
+        text: "AI in healthcare, finance, and education",
+        icon: <FaHeartbeat size={14} />,
+      },
+      {
+        text: "Algorithm transparency or fairness-focused tools",
+        icon: <FaBalanceScale size={14} />,
+      },
     ],
-    icon: <FaBrain size={22} />
+    icon: <FaBrain size={22} />,
   },
   {
     title: "Regulated or Data-Centric Tech Companies",
     paragraph: [
-      { text: "FinTech or InsurTech platforms", icon: <FaUniversity size={14} /> },
-      { text: "MarTech and AdTech using behavioral data", icon: <FaChartLine size={14} /> },
-      { text: "Identity or authentication platforms", icon: <FaShieldAlt size={14} /> },
-      { text: "EdTech and RegTech scaling to global markets", icon: <FaGraduationCap size={14} /> }
+      {
+        text: "FinTech or InsurTech platforms",
+        icon: <FaUniversity size={14} />,
+      },
+      {
+        text: "MarTech and AdTech using behavioral data",
+        icon: <FaChartLine size={14} />,
+      },
+      {
+        text: "Identity or authentication platforms",
+        icon: <FaShieldAlt size={14} />,
+      },
+      {
+        text: "EdTech and RegTech scaling to global markets",
+        icon: <FaGraduationCap size={14} />,
+      },
     ],
-    icon: <FaUsers size={22} />
+    icon: <FaUsers size={22} />,
   },
   {
     title: "Global Businesses Expanding to MENA",
     paragraph: [
-      { text: "Companies seeking a trusted UAE base", icon: <FaBuilding size={14} /> },
-      { text: "Teams preparing for funding with ESG and compliance requirements", icon: <FaBalanceScale size={14} /> },
-      { text: "Businesses targeting ethical governance as a brand differentiator", icon: <FaGlobe size={14} /> }
+      {
+        text: "Companies seeking a trusted UAE base",
+        icon: <FaBuilding size={14} />,
+      },
+      {
+        text: "Teams preparing for funding with ESG and compliance requirements",
+        icon: <FaBalanceScale size={14} />,
+      },
+      {
+        text: "Businesses targeting ethical governance as a brand differentiator",
+        icon: <FaGlobe size={14} />,
+      },
     ],
-    icon: <FaGlobe size={22} />
-  }
+    icon: <FaGlobe size={22} />,
+  },
 ];

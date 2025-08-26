@@ -5,7 +5,7 @@ function RobootCharacterstics({ img, title, paragraph, imp, flex }) {
     <div
       className={`w-full max-w-[1000px] mx-auto  flex max-lg:flex-col ${
         flex ? "flex-row-reverse" : "flex"
-      } justify-between text-white items-center my-12`}
+      } justify-between text-white items-center `}
     >
       <div>
         <Image
