@@ -46,7 +46,7 @@ function Hero() {
           "The Validator - ",
           "The Watcher - ",
           "The Guardian - ",
-          "The Messenger - ",
+          "The Messenger ",
         ].map((label, index) => (
           <button
             key={label}

@@ -10,7 +10,7 @@ export default function Research() {
         height={500}
         src="/card.png"
         alt="card"
-        className=" absolute top-0 left-[-100] z-[-1] md:block hidden "
+        className=" absolute top-[60] left-[-100] z-[-1] md:block hidden "
       />
       <div
         className={`mt-[124px] w-full max-w-[1200px] mx-auto flex max-lg:flex-col max-lg:gap-5 lg:items-center justify-between text-foreground max-lg:px-10 max-sm:px-5`}
