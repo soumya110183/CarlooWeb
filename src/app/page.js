@@ -12,12 +12,14 @@ import Research from "./_components/Research";
 import Experience from "./_components/Experience";
 import Robot from "./_components/Robot";
 import HowitsWorkSection from "./_components/HowitsWorkSectiion";
+import LogoSlider from "./_subcomponents/LogoSlider";
 
 export default function Home() {
   return (
     <div>
       <main className=" overflow-hidden ">
         <Hero />
+        <LogoSlider />
         <WhyCarlo />
         <KeyFeaturesSection />
         <Robot />

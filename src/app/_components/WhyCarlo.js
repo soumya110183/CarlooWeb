@@ -37,7 +37,6 @@ export default function WhyCarlo() {
 
   return (
     <section className="relative sm:px-10 px-5">
-      {/* Background Image - hidden on mobile for clarity */}
       <Image
         width={1500}
         height={700}
@@ -47,9 +46,7 @@ export default function WhyCarlo() {
       />
 
       <div className="flex max-w-[1200px] max-lg:flex-col justify-between items-center gap-20 mt-20 lg:mt-35 mx-auto text-foreground">
-        {/* Left Section with Cards */}
         <div className="relative w-full min-h-[616px] px-5 sm:px-10 max-lg:order-2 max-lg:grid max-lg:grid-cols-2 max-sm:grid-cols-1 max-lg:gap-6 max-lg:h-auto">
-          {/* Card 1 */}
           <div
             style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)" }}
             className={`w-[220px] h-[220px] sm:w-[220px] sm:h-[220px] ${
@@ -78,7 +75,6 @@ export default function WhyCarlo() {
             </div>
           </div>
 
-          {/* Card 2 */}
           <div
             style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)" }}
             className={`w-[220px] h-[220px] sm:w-[220px] sm:h-[220px] px-2 ${
@@ -107,7 +103,6 @@ export default function WhyCarlo() {
             </div>
           </div>
 
-          {/* Card 3 */}
           <div
             style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)" }}
             className={`w-[220px] h-[220px] sm:w-[220px] sm:h-[220px] px-2 ${
@@ -134,7 +129,6 @@ export default function WhyCarlo() {
             </div>
           </div>
 
-          {/* Card 4 */}
           <div
             style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.15)" }}
             className={`w-[220px] h-[220px] sm:w-[220px] sm:h-[220px] px-2 ${
@@ -162,7 +156,6 @@ export default function WhyCarlo() {
           </div>
         </div>
 
-        {/* Right Section */}
         <div className="w-full relative max-lg:order-1">
           <div className="absolute top-[-40px] right-0 z-0 max-lg:hidden">
             <LottieShield animationData={animationBot} />
