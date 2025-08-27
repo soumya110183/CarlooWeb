@@ -15,17 +15,20 @@ export default function page() {
               "Data Protection Laws: Ensuring Data Privacy Across Borders"
             }
           />
-          <ParagraphReUse paragraph={" Carlo PEaaS ensures compliance with the most stringent global data protection regulations. Each compliance is represented with a Unicode icon for better visualization and organization."} />
+          <ParagraphReUse
+            paragraph={
+              " Carlo PEaaS ensures compliance with the most stringent global data protection regulations. Each compliance is represented with a Unicode icon for better visualization and organization."
+            }
+          />
           <div className="mt-7">
             <FeatureAccordions features={aiEthicsPrinciples} />
           </div>
         </div>
         <div>
           <Image
-            src="/machine-ai 1.png"
+            src="/data-protection.png"
             alt="robot-validator"
-            className="w-[500px]"
-            width={500}
+            width={700}
             height={500}
           />
         </div>

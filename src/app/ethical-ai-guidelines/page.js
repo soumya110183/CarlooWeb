@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import TrustSteps from "../Why-carlo/_subcomp/TrustSteps";
+import { motion } from "framer-motion";
 import HeadingReuse from "../_subcomponents/HeadingReuse";
 import { featuresGlobalAI } from "../_data/data";
 import FeatureAccordions from "../_subcomponents/Accordion";
@@ -16,15 +17,22 @@ export default function page() {
             <FeatureAccordions features={featuresGlobalAI} />
           </div>
         </div>
-        <div>
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            repeat: Infinity,
+            duration: 20, // 20s per rotation
+            ease: "linear",
+          }}
+          className="w-[700px] h-[500px]"
+        >
           <Image
-            src="/machine-ai 1.png"
+            src="/ethical-aiguiles.png"
             alt="robot-validator"
-            className="w-[500px]"
-            width={500}
+            width={700}
             height={500}
           />
-        </div>
+        </motion.div>
       </section>
     </div>
   );

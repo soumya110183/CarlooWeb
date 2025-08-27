@@ -23,7 +23,7 @@ export default function KeyFeatures({ features }) {
           <Image
             src={features.img}
             alt={features.heading || "feature image"}
-            width={300}
+            width={500}
             height={300}
             className=""
           />

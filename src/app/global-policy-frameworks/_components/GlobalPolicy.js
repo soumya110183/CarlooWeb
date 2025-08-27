@@ -8,18 +8,21 @@ export default function GlobalPolicy() {
   return (
     <section className="w-full max-w-[1200px] flex max-lg:flex-col items-center max-lg:gap-10 mx-auto justify-between text-foreground lg:pb-32 pb-15">
       <div className="w-full max-w-[570px]">
-      <HeadingReuse heading={"Global Policy Frameworks: Navigating International AI Standards"} />
+        <HeadingReuse
+          heading={
+            "Global Policy Frameworks: Navigating International AI Standards"
+          }
+        />
         <div className="mt-9 lg:h-[600px] h-full">
           <FeatureAccordions features={featuresInternational} />
         </div>
       </div>
       <div>
         <Image
-          src="/feature3_2x_idh2mq.png"
+          src="/global-policy.png"
           alt="robot-validator"
-          className="w-[500px]"
-          width={500}
-          height={500}
+          width={700}
+          height={700}
         />
       </div>
     </section>

@@ -357,28 +357,28 @@ export const KeyfeaturesData = [
     heading: "Policy Monitoring & Enforcement",
     paragraph:
       "Ensure consistent compliance across your AI systems with automated policy checks and real-time enforcement. Stay ahead of regulatory requirements and maintain governance at scale.",
-    img: "/feature1_2x_tjihji.png",
+    img: "/policy-monitoring.png",
     flex: false,
   },
   {
     heading: "Cross-Platform Integration",
     paragraph:
       "Seamlessly integrate with a wide range of platforms, tools, and environments. Carlo PEaaS ensures compatibility across cloud providers, development stacks, and deployment pipelines—enabling a unified compliance workflow wherever your AI runs.",
-    img: "/feature2_2x_ztsr7p.png",
+    img: "/crossplatform (1).png",
     flex: true,
   },
   {
     heading: "Feedback Loops",
     paragraph:
       "Continuously improve model performance and compliance with intelligent feedback loops. Carlo PEaaS captures real-world outcomes and user interactions to refine policies, detect drift, and adapt governance in real time.",
-    img: "/feature 3.png",
+    img: "/feedback.png",
     flex: false,
   },
   {
     heading: "Multi-Project Scalability",
     paragraph:
       "Effortlessly manage compliance across multiple AI projects and teams. Carlo PEaaS is built to scale with your organization, offering centralized policy control, role-based access, and streamlined governance for enterprise-wide deployment.",
-    img: "/feature2_2x_ztsr7p.png",
+    img: "/multi-projects.png",
     flex: true,
   },
 ];
