@@ -107,7 +107,7 @@ const ComplianceFeatureTable = () => {
     <div className=" font-sans text-gray-200 mt-10 lg:pb-32 pb-15">
       <HeadingReuse heading={"Compliance Features by Tier"} />
 
-      {/* Desktop Table */}
+     
       <div className="hidden md:block w-full max-w-7xl rounded-xl overflow-hidden shadow-xl bg-gray-800 mt-10">
         <table className="w-full border-collapse">
           <thead>
@@ -155,7 +155,7 @@ const ComplianceFeatureTable = () => {
         </table>
       </div>
 
-      {/* Mobile Cards */}
+   
       <div className="md:hidden mt-8 space-y-6">
         {featuresData.map((row, idx) => (
           <div

@@ -1,13 +1,16 @@
+import { connectToDatabase } from "@/lib/mongodb";
 import Underline from "../_subcomponents/UnderLine";
 import BlogCard from "../case-studies/_Components/BlogContainer";
 import BlogSecondContainer from "./BlogSecondContainer";
+import blog from "@/modals/blog";
+
+
 
 export default async function Page() {
-  const res = await fetch("https://carlo-peass-71nb.vercel.app/api/blogs", {
-    cache: "no-store",
-  });
+  await connectToDatabase();
 
-  const blogs = await res.json();
+  
+  const blogs = await blog.find().sort({ createdAt: -1 }).lean();
   console.log(blogs)
 
   return (
@@ -16,10 +19,10 @@ export default async function Page() {
       <Underline />
 
       <div className="bg-white flex max-sm:flex-col w-full mx-auto mt-10 gap-6">
-        {/* First blog (big card) */}
+    
         {blogs.length > 0 && <BlogCard blog={blogs[0]}/>}
 
-        {/* Remaining blogs (small stacked cards) */}
+     
         <div className="grid lg:grid-cols-2   grid-cols-1 gap-2">
           {blogs.slice(1).map((blog) => (
             <BlogSecondContainer key={blog._id} blog={blog} />

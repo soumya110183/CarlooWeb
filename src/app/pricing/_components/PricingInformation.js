@@ -4,9 +4,7 @@ import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import PricingButtonAndCards from "./PricingButtonAndCArds";
 
 export default async function PricingInformation() {
-  const res = await fetch("https://carlo.algorethics.ai/api/pricing", {
-    cache: "no-store", // always fetch fresh
-  });
+  const res = await fetch("https://carlo.algorethics.ai/api/pricing");
 
   if (!res.ok) {
     throw new Error("Failed to fetch pricing");

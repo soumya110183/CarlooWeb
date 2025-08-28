@@ -20,7 +20,7 @@ export default function OrderSummary({ setFormComp, formComp }) {
     const registerData = {
       pricing_tier: "seed",
       billing_cycle: "monthly",
-      success_url: "https://example.com/success",
+      success_url: "/pricing/successful",
       cancel_url: "https://example.com/cancel",
       discount_code: "WELCOME10",
     };
