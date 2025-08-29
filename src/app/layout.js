@@ -13,10 +13,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Carlo peass | Ethical and Data Science",
+  title: "Carlo PEaaS | Ethical and Data Science",
   description: "Ethical and Data Science",
   icons: {
-    icon: "/logo-carlo.png",
+    icon: "/logo black-carlo.png",
   },
 };
 

@@ -3,7 +3,8 @@ import BlogsAndCaseStudy from "./Components/BlogAndCaseStudy";
 import blog from "@/modals/blog";
 import casestudy from "@/modals/casestudy";
 
-export const revalidate=0;
+
+
 
 
 export default async function Page() {
