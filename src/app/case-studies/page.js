@@ -4,7 +4,7 @@ import BlogSecondContainer from "../blog/BlogSecondContainer";
 import BlogCard from "./_Components/BlogContainer";
 import { connectToDatabase } from "@/lib/mongodb";
 
-
+export const revalidate=0;
 
 export default async function page() {
  await connectToDatabase();

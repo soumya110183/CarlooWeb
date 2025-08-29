@@ -4,7 +4,7 @@ import BlogCard from "../case-studies/_Components/BlogContainer";
 import BlogSecondContainer from "./BlogSecondContainer";
 import blog from "@/modals/blog";
 
-
+export const revalidate=0;
 
 export default async function Page() {
   await connectToDatabase();
