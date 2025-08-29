@@ -15,7 +15,7 @@ export async function POST(req) {
 
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-     to: "anandhup059@gmail.com",
+     to: "info@algorethics.ai",
       subject: `New Contact Form Submission: ${subject}`,
       text: `
         Name: ${name}
