@@ -55,14 +55,7 @@ export default function MeetTeam() {
             "Ketevan Kimbarishvili is a qualified lawyer with a Master's degree in Law and a strong track record in data protection, compliance, and legal advisory across public and private sectors. As the Data Protection & Compliance Officer at Algorethics, she leads our efforts in legal updates, government and industry engagement, and compliance training initiatives.\n\nKetevan previously served as the Data Protection Officer at the LEPL State Care Agency, where she implemented regulatory standards and privacy frameworks. She is also a certified trainer, currently teaching the “Personal Data Protection” course at BMCC Center, empowering professionals with knowledge on privacy laws and digital rights. Her legal acumen and hands-on experience in data governance strengthen Algorethics’ mission to align AI development with international data protection standards, ethical compliance, and regulatory readiness."
           }
         />
-        {/* <TeamContainer
-          img={"ullas.jpg"}
-          name={"Ullas Krishnan MPhil, LLB"}
-          role={"Ethical AI Developer Advocate"}
-          details={
-            "Ullas Krishnan is a seasoned technology leader with more than 20 years of experience in the IT and software industry, combining advanced technical expertise with strong legal and regulatory knowledge. Holding an MPhil and a Bachelor’s degree in Law, he specializes not only in the Indian IT Act, IP Act, and Trademark regulations but also in global Data Protection and AI governance frameworks, including the EU General Data Protection Regulation (GDPR), the European AI Act 2025, the U.S. AI Bill of Rights, OECD AI Principles, and India’s Digital Personal Data Protection Act (DPDPA).\n\nHe played a key role as the Legal Policy Architect for the Carlo Compliance Sandbox, a framework designed to evaluate and validate third-party LLM models against diverse international regulatory standards. His work ensured that the sandbox not only addressed technical compliance but also embedded strong legal and ethical safeguards in line with emerging global AI regulations.\n\nOver the course of his career, Ullas has led enterprise IT and cloud solution design, pioneered IoT and AI implementations, and contributed to the development of AI policy frameworks that balance innovation with accountability. His rare combination of technology leadership, legal acumen, and ethics advocacy positions him as a trusted guide for enterprises seeking to modernize securely, ethically, and in compliance with global standards."
-          }
-        /> */}
+       
       </div>
     </section>
   );
