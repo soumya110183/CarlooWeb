@@ -12,6 +12,9 @@ export async function POST(req) {
   const data = await req.formData();
   const file = data.get('image');
 
+  console.log("API Key length:", process.env.CLOUDINARY_API_KEY);
+
+
   if (!file) {
     return NextResponse.json({ error: 'No image uploaded' }, { status: 400 });
   }
