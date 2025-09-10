@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TrustSteps from "../Why-carlo/_subcomp/TrustSteps";
+import TrustSteps from "../why-carlo/_subcomp/TrustSteps";
 import HeadingReuse from "../_subcomponents/HeadingReuse";
 import { aiEthicsPrinciples } from "../_data/data";
 import FeatureAccordions from "../_subcomponents/Accordion";
