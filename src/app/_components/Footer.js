@@ -13,7 +13,7 @@ export default function Footer() {
   const navLinks = [
     { href: "/why-carlo", label: "Why Carlo" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/contact", label: "Contact" },
+    { href: "/Contact", label: "Contact" },
     { href: "/global-policy-frameworks", label: "Compliance Frameworks" },
     { href: "/blog", label: "Blog" },
     { href: "/why-carlo", label: "Research" },
