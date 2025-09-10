@@ -8,6 +8,13 @@ import ContactForm from "./Contactcomp/ContactForm";
 import ContactUs from "./Contactcomp/ContactUs";
 import ContactWebMap from "./Contactcomp/ContactWebMap";
 
+export const metadata = {
+  title: "Contact Carlo for AI Compliance",
+  description: "Get in touch with Carlo PEaaS for demos, support, and partnerships. Offices in USA, India, UAE, Georgia.",
+  keywords: "contact Carlo, AI compliance demo, support, partnership",
+};
+
+
 
 export default function page() {
   return (
