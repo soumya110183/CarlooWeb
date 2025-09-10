@@ -39,7 +39,7 @@ function Navigation() {
     { name: "Solutions", href: "/Solutions" },
     { name: "Resources", href: "/Resources" },
     { name: "Rak Dao", href: "/rak-dao" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Contact Us", href: "/Contact" },
     { name: "About Us", href: "/about" },
   ];
 
