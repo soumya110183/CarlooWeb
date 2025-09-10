@@ -34,7 +34,7 @@ export default function Introduction() {
         <HeadingReuse heading={"Why Carlo"} />
         <ParagraphReUse
           paragraph={
-            " Carlo PEaaS is more than a compliance platform—it&apos;s your partner in building trust, mitigating risks, and ensuring that every algorithm aligns with global ethical and legal standards. Whether you&apos;re developing AI for healthcare, finance, retail, or IoT, Carlo adapts to your needs and ensures your projects are always compliant and transparent."
+            " Carlo PEaaS is more than a compliance platform—it's your partner in building trust, mitigating risks, and ensuring that every algorithm aligns with global ethical and legal standards. Whether you&apos;re developing AI for healthcare, finance, retail, or IoT, Carlo adapts to your needs and ensures your projects are always compliant and transparent."
           }
         />
         <div className="lg:mt-10 mt-5 grid sm:grid-cols-2 gap-6">
