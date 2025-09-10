@@ -1,4 +1,4 @@
-"use client"
+
 
 import ButtonPimary from "../_subcomponents/ButtonPrimary";
 import ContactSetupTeam from "./_components/ContactSetupTeam";
