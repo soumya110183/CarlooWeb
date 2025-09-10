@@ -1,5 +1,5 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
-import PointsContainer from "@/app/About-us/_components/PointsContainer";
+import PointsContainer from "@/app/about/_components/PointsContainer";
 import Image from "next/image";
 import {
   FaHeartbeat,

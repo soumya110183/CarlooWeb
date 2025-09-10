@@ -1,9 +1,17 @@
-"use client";
-import Image from "next/image";
-import { motion } from "framer-motion";
+
+
+
 import HeadingReuse from "../_subcomponents/HeadingReuse";
 import { featuresGlobalAI } from "../_data/data";
 import FeatureAccordions from "../_subcomponents/Accordion";
+import MotionImage from "./Motionimage";
+
+export const metadata = {
+  title: "Ethical Guardians: Validator, Watcher, Guardian, Messenger",
+  description: "Meet Carlo’s Ethical Guardians—real-time modules that validate, monitor, enforce, and deliver feedback for AI compliance.",
+  keywords: "ethical guardians, validator, watcher, guardian, messenger, AI modules",
+};
+
 
 export default function page() {
   return (
@@ -17,22 +25,7 @@ export default function page() {
             <FeatureAccordions features={featuresGlobalAI} />
           </div>
         </div>
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{
-            repeat: Infinity,
-            duration: 20, // 20s per rotation
-            ease: "linear",
-          }}
-          className="w-[700px] h-[500px]"
-        >
-          <Image
-            src="/ethical-aiguiles.png"
-            alt="robot-validator"
-            width={700}
-            height={500}
-          />
-        </motion.div>
+       <MotionImage />
       </section>
     </div>
   );

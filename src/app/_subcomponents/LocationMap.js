@@ -203,7 +203,7 @@ export default function OfficeMap({ locations, reach, setCurrentLoc }) {
                     <Link href="/global-policy-frameworks">
                       View Compliance Details →
                     </Link>
-                    <Link href="/Contact">Request a Demo →</Link>
+                    <Link href="/contact">Request a Demo →</Link>
                   </div>
                 </div>
               </Popup>

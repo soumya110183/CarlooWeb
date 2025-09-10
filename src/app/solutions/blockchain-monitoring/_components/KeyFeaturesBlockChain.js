@@ -2,7 +2,7 @@ import { cryptoComplianceData, featuresCompliance } from "@/app/_data/data";
 
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
-import ContainerProvier from "@/app/About-us/_components/ContainerProvider";
+import ContainerProvier from "@/app/about/_components/ContainerProvider";
 
 export default function KeyFeaturesBlockChain() {
   return (

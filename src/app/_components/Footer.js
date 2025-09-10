@@ -11,12 +11,12 @@ export default function Footer() {
   const { theme } = useTheme();
 
   const navLinks = [
-    { href: "/Why-carlo", label: "Why Carlo" },
+    { href: "/why-carlo", label: "Why Carlo" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/Contact", label: "Contact" },
+    { href: "/contact", label: "Contact" },
     { href: "/global-policy-frameworks", label: "Compliance Frameworks" },
     { href: "/blog", label: "Blog" },
-    { href: "/Why-carlo", label: "Research" },
+    { href: "/why-carlo", label: "Research" },
   ];
 
   const navPolicy = [

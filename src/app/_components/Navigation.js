@@ -35,12 +35,12 @@ function Navigation() {
   const navItems = [
     { name: "Why Carlo", href: "/why-carlo" },
     { name: "Compliance Frameworks", href: "/Compliance-Frameworks" },
-    { name: "Key Features", href: "/Key-Features" },
+    { name: "Key Features", href: "/features" },
     { name: "Solutions", href: "/Solutions" },
     { name: "Resources", href: "/Resources" },
     { name: "Rak Dao", href: "/rak-dao" },
-    { name: "Contact Us", href: "/Contact" },
-    { name: "About Us", href: "/About-us" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "About Us", href: "/about" },
   ];
 
   useEffect(() => {

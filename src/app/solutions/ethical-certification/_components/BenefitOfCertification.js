@@ -2,7 +2,7 @@ import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import Image from "next/image";
 
 import ButtonPimary from "@/app/_subcomponents/ButtonPrimary";
-import PointsContainer from "@/app/About-us/_components/PointsContainer";
+import PointsContainer from "@/app/about/_components/PointsContainer";
 
 export default function BenefitsOfCertification() {
   const benefits = [
@@ -30,7 +30,6 @@ export default function BenefitsOfCertification() {
 
   return (
     <section className="w-full max-w-[1200px] max-lg:flex-col max-lg:gap-20 flex flex-row-reverse items-center mx-auto justify-between text-foreground lg:pb-32 pb-15">
-      
       {/* Left Image */}
       <div>
         <Image
@@ -46,15 +45,11 @@ export default function BenefitsOfCertification() {
       <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"Benefits of Carlo Certification"} />
 
-      
-
         <div className="flex flex-col gap-3.5 mt-5 text-foreground">
           {benefits.map((item, index) => (
             <PointsContainer key={index} title={item.title} para={item.para} />
           ))}
         </div>
-
-        
       </div>
     </section>
   );

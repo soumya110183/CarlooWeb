@@ -51,7 +51,7 @@ export default function Introduction() {
           ))}
         </div>
         <div className="lg:mt-10 mt-6">
-          <ButtonPimary buttonText={"Read More"} href={"/About-us"} />
+          <ButtonPimary buttonText={"Read More"} href={"/about"} />
         </div>
       </div>
     </div>
