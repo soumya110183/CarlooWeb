@@ -33,7 +33,7 @@ function Navigation() {
   const solutionsMenuRef = useRef(null);
 
   const navItems = [
-    { name: "Why Carlo", href: "/Why-carlo" },
+    { name: "Why Carlo", href: "/why-carlo" },
     { name: "Compliance Frameworks", href: "/Compliance-Frameworks" },
     { name: "Key Features", href: "/Key-Features" },
     { name: "Solutions", href: "/Solutions" },
