@@ -38,7 +38,7 @@ export default function Experience() {
 
             {/* Button 2 */}
             <Link
-              href="/contact"
+              href="/Contact"
               className="w-full sm:w-auto px-6 py-3 border-2 border-black text-black rounded-[37px] text-sm sm:text-base font-semibold text-center"
             >
               TALK TO A COMPLIANCE SUPPORT
