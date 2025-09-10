@@ -1,4 +1,4 @@
-import TrustSteps from "@/app/Why-carlo/_subcomp/TrustSteps";
+import TrustSteps from "@/app/why-carlo/_subcomp/TrustSteps";
 import Image from "next/image";
 import { featuresInternational } from "@/app/_data/data";
 import FeatureAccordions from "@/app/_subcomponents/Accordion";
