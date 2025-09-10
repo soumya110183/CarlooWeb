@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TrustSteps from "../Why-carlo/_subcomp/TrustSteps";
+import TrustSteps from "../why-carlo/_subcomp/TrustSteps";
 import HeadingReuse from "../_subcomponents/HeadingReuse";
 import {containerData } from "../_data/data";
 import ContainerProvier from "../About-us/_components/ContainerProvider";
