@@ -9,6 +9,13 @@ import RAKDAOBenefits from "./_components/RakDaoBenefits";
 import WhoisThis from "./_components/WhoisThis";
 import WhyLaunchWithUs from "./_components/WhyLaunchWithUS";
 
+
+export const metadata = {
+  title: "Rak DAO & Carlo Partnership",
+  description: "Discover how Carlo collaborates with Rak DAO to drive ethical AI, compliance, and innovation across global ecosystems.",
+  keywords: "Rak DAO, AI compliance partnership, Algorethics collaboration",
+};
+
 export default function page() {
   
   return (
