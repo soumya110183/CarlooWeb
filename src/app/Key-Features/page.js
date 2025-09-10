@@ -4,6 +4,12 @@ import { featuresData } from "../_data/data";
 import ProjectCount from "./_Components-keyFeature/ProjectCount";
 import SubScribeSection from "./_Components-keyFeature/SubsScribeSection";
 
+export const metadata = {
+  title: "Features: Monitor, Enforce, Audit",
+  description: "Explore Carlo’s powerful features: policy monitoring, cross-platform integration, feedback loops, and enterprise scalability.",
+  keywords: "AI compliance features, monitoring, policy enforcement, scalability, audit logs",
+};
+
 export default function page() {
   return (
     <div className="mt-40 overflow-hidden lg:px-10 px-5">
