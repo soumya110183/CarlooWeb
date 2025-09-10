@@ -1,6 +1,6 @@
 "use client";
 
-import ContactMap from "@/app/Contact/Contactcomp/MapContainer";
+import ContactMap from "@/app/contact/Contactcomp/MapContainer";
 
 import SubHeading from "../_subcomp/Subheading";
 import LawList from "../_subcomp/LawList";

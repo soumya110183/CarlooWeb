@@ -34,7 +34,7 @@ export default function ProjectCount() {
             <ParagraphReUse paragraph={"Carlo is an AI compliance platform designed to monitor, detect, and enforce ethical standards across projects. It validates outputs against global regulations, flags risks, and provides real-time feedback for safer AI adoption. Carlo helps organizations integrate transparency, accountability, and trust directly into their workflows without disrupting productivity."} />
           </div>
           <div className="lg:mt-8 mt-4">
-            <ButtonPimary buttonText={"About us"} href={"/About-us"} />
+            <ButtonPimary buttonText={"About us"} href={"/about"} />
           </div>
         </div>
       </section>

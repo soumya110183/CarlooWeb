@@ -1,5 +1,5 @@
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
-import MissionFeatures from "@/app/About-us/_components/MissionFeatures";
+import MissionFeatures from "@/app/about/_components/MissionFeatures";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { FaShieldAlt } from "react-icons/fa";
 import { FaHandshake } from "react-icons/fa";
@@ -13,8 +13,11 @@ export default function MissionStatement() {
       <div className="w-full lg:max-w-[570px]">
         <HeadingReuse heading={"Mission Statement"} />
         <div className="flex gap-2 items-start">
-         <ParagraphReUse paragraph={"Our mission is to enable developers, companies, and enterprises to innovate fearlessly while adhering to global data protection laws and ethical AI guidelines. We believe that responsible AI development is not just a regulatory requirement—it is a moral imperative."} />
-          
+          <ParagraphReUse
+            paragraph={
+              "Our mission is to enable developers, companies, and enterprises to innovate fearlessly while adhering to global data protection laws and ethical AI guidelines. We believe that responsible AI development is not just a regulatory requirement—it is a moral imperative."
+            }
+          />
         </div>
         <div className="grid grid-cols-2 w-full gap-5 mt-6">
           <MissionFeatures

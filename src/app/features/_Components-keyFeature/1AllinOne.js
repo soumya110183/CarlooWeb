@@ -12,7 +12,7 @@ export default function AllInOne() {
           <ParagraphReUse paragraph={" Carlo PEaaS is not just a compliance tool—it's your automated compliance engineer. From real-time monitoring to intelligent policy enforcement, Carlo ensures every AI model in your stack meets global regulatory and ethical standards, without slowing down your development workflow."} />
         </div>
         <div className="lg:mt-12 mt-4">
-          <ButtonPimary buttonText={"Read More"} href={"/About-us"} />
+          <ButtonPimary buttonText={"Read More"} href={"/about"} />
         </div>
       </div>
       <div>
