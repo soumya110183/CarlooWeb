@@ -6,6 +6,13 @@ import { connectToDatabase } from "@/lib/mongodb";
 
 export const revalidate=0;
 
+export const metadata = {
+  title: "Case Studies: Real-World AI Compliance and Ethical Successes",
+  description: "Explore Carlo PEaaS Case Studies to see how organizations implement AI compliance, ethical governance, and responsible innovation across industries. Learn from real-world examples in healthcare, finance, blockchain, and Web3 projects.",
+  keywords: "Carlo PEaaS case studies, AI compliance, ethical AI, real-world AI examples, responsible innovation, healthcare AI, finance AI, blockchain, Web3 projects, AI governance success stories",
+};
+
+
 export default async function page() {
  await connectToDatabase();
  
