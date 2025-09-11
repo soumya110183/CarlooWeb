@@ -6,6 +6,13 @@ import ComplianceFeatureTable from "./_components/FeatureTable";
 import PricingInformation from "./_components/PricingInformation";
 import ComplianceTable from "./_components/TierTable";
 
+export const metadata = {
+  title: "Pricing: Carlo PEaaS Plans for Every Business Need",
+  description: "Discover Carlo PEaaS pricing plans designed for startups, growing businesses, and enterprises. Choose scalable, cost-effective options to access AI compliance, ethical governance, and real-time monitoring features tailored to your needs.",
+  keywords: "Carlo PEaaS, pricing plans, AI compliance, ethical AI, scalable pricing, enterprise compliance, startup AI solutions, real-time monitoring, tiered pricing, cost-effective AI governance",
+};
+
+
 export default function page() {
   return (
     <div>
