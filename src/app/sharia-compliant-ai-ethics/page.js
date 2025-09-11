@@ -7,6 +7,13 @@ import Underline from "../_subcomponents/UnderLine";
 import ShariaContent from "./ShariaContent";
 import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 
+export const metadata = {
+  title: "Sharia-Compliant AI Ethics: Carlo PEaaS for the Modern World",
+  description: "Carlo PEaaS provides AI governance solutions tailored for Islamic ethical and legal principles, ensuring fairness, transparency, and compliance with Sharia across sectors like finance, healthcare, and education.",
+  keywords: "Sharia-compliant AI, Carlo PEaaS, Islamic ethics, AI governance, data protection, fairness, transparency, AI compliance, finance AI, healthcare AI, education AI",
+};
+
+
 export default function page() {
   return (
     <div className="mt-50 text-foreground max-w-[1200px] mx-auto max-lg:flex-col sm:px-10 px-5">
