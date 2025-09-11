@@ -5,6 +5,12 @@ import { aiEthicsPrinciples } from "../_data/data";
 import FeatureAccordions from "../_subcomponents/Accordion";
 import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 
+export const metadata = {
+  title: "Data Protection Laws: Ensuring Data Privacy Across Borders",
+  description: "Carlo PEaaS ensures compliance with global data protection laws, using intuitive visual tools and real-time monitoring to safeguard information across borders.",
+  keywords: "data protection, data privacy, GDPR compliance, cross-border security, Carlo PEaaS, information privacy, data regulations, AI compliance",
+};
+
 export default function page() {
   return (
     <div className="mt-50">
