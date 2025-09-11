@@ -8,6 +8,13 @@ import VerificationAndMeta from "./_components/VerficationAndMeta";
 import HowToApply from "./_components/HowtoAplly";
 import ReadyToLead from "./_components/ReadyToLead";
 
+export const metadata = {
+  title: "Carlo Ethical Certification: Build Trust and Lead with Integrity",
+  description: "The Carlo Ethical Certification Badge provides AI and Web3 projects a verifiable way to demonstrate ethical practices, responsible innovation, and compliance, helping organizations build trust with regulators, investors, and users.",
+  keywords: "Carlo Ethical Certification, AI ethics, Web3 ethics, ethical badge, responsible innovation, compliance, trust, digital ethics credential, DeFi certification, NFT ethics, machine learning compliance",
+};
+
+
 export default function Page() {
   return (
     <div className="mt-50 text-foreground overflow-hidden lg:px-10 px-5 mx-auto  ">
