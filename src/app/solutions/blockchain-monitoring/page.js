@@ -7,6 +7,12 @@ import BlockchainDeFiUseCases from "./_components/BlockchainDeFiUseCases";
 import HowItWorks from "./_components/HowitWorks";
 import GetStartedCarlo from "./_components/GetStartedCarlo";
 
+export const metadata = {
+  title: "Web3 Risk Intelligence: Real-Time Blockchain & DeFi Monitoring with Carlo",
+  description: "Carlo provides real-time blockchain and DeFi monitoring, helping developers, investors, and compliance teams ensure transparency, security, and ethical on-chain operations across decentralized ecosystems.",
+  keywords: "Carlo, blockchain monitoring, DeFi monitoring, Web3 risk intelligence, on-chain compliance, decentralized finance, NFT monitoring, DAO oversight, blockchain transparency, crypto security, ethical blockchain",
+};
+
 export default function page() {
   return (
     <div className="mt-50 w-full max-w-[1200px] text-foreground overflow-hidden lg:px-10 px-5 mx-auto">
