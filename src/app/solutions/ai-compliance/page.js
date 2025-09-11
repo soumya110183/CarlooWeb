@@ -11,6 +11,12 @@ import StartForFree from "./_components/StartForFree";
 import JoinEthicalAIMovement from "./_components/JoinAiEthicalMovement";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 
+export const metadata = {
+  title: "Building Responsible AI: Carlo’s Comprehensive AI Compliance Platform",
+  description: "Carlo by Algorethics delivers real-time AI compliance solutions, helping organizations ensure ethical, transparent, and trustworthy AI across industries—from healthcare to retail—while mitigating risks like bias, data misuse, and regulatory violations.",
+  keywords: "Carlo, AI compliance, responsible AI, ethical AI, AI governance, real-time monitoring, algorithmic transparency, data privacy, AI risk management, LLM compliance, healthcare AI, e-commerce AI",
+};
+
 export default function Page() {
   return (
     <div className="mt-50 max-w-[1200px] text-foreground overflow-hidden lg:px-10 px-5 mx-auto ">
