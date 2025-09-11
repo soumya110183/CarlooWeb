@@ -9,6 +9,13 @@ import PricingPackages from "./_componets/PricingPackages";
 import WhyCarloAudits from "./_componets/WhyCarloAudits";
 import BookCarloAudit from "./_componets/BookCarloAudit";
 
+export const metadata = {
+  title: "Ethical Smart Contract Audits: Carlo Ensuring Security & Compliance",
+  description: "Carlo by Algorethics delivers ethical and comprehensive smart contract audits, combining technical analysis, governance fairness, and regulatory readiness to protect DeFi, NFT, and Web3 projects from risks and vulnerabilities.",
+  keywords: "Carlo, smart contract audit, ethical audits, DeFi security, NFT audit, Web3 compliance, blockchain audit, governance fairness, regulatory readiness, crypto security, vulnerability assessment",
+};
+
+
 export default function page() {
   return (
     <div className="mt-50 w-full max-w-[1200px] text-foreground overflow-hidden lg:px-10 px-5 mx-auto">
