@@ -4,6 +4,12 @@ import BlogCard from "../case-studies/_Components/BlogContainer";
 import BlogSecondContainer from "./BlogSecondContainer";
 import blog from "@/modals/blog";
 
+export const metadata = {
+  title: "Blog: Insights on AI Compliance, Ethics, and Emerging Technologies",
+  description: "Explore the Carlo PEaaS Blog for the latest insights on AI ethics, compliance best practices, blockchain, DeFi, and responsible innovation across industries. Stay informed about trends, guides, and thought leadership in ethical AI.",
+  keywords: "Carlo PEaaS blog, AI ethics, AI compliance, blockchain, DeFi, responsible AI, ethical innovation, AI trends, thought leadership, machine learning insights, Web3",
+};
+
 export const revalidate=0;
 
 export default async function Page() {
