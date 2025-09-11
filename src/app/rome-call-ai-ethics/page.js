@@ -7,6 +7,12 @@ import Underline from "../_subcomponents/UnderLine";
 import RomeCallContent from "./RomeCallContent";
 import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 
+export const metadata = {
+  title: "Carlo PEaaS: Enforcing Rome Call for AI Ethics in Every Project",
+  description: "Carlo PEaaS ensures AI compliance with global ethical standards like GDPR, CCPA, and the Rome Call for AI Ethics by providing real-time monitoring, bias detection, and audit trails across industries.",
+  keywords: "Carlo PEaaS, AI ethics, Rome Call, GDPR, CCPA, data protection, fairness, bias detection, privacy, compliance, healthcare AI, finance AI, education AI",
+};
+
 export default function page() {
   return (
     <div className="mt-50 text-foreground overflow-y-hidden px-10 max-sm:px-5 ">
