@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import CardComp from "./CardComp";
 
-export default function Card() {
+export default function Card({ blogs = [] }) {
   const scrollRef = useRef(null);
 
   const handleMouseDown = (e) => {
@@ -29,44 +29,45 @@ export default function Card() {
     el.scrollLeft = el.scrollLeftStart - walk;
   };
 
+  // Helper function to truncate text
+  const truncateText = (text, maxLength = 100) => {
+    if (!text) return "";
+    if (text.length <= maxLength) return text;
+    return text.slice(0, maxLength).trim() + "...";
+  };
+
   return (
     <div
       ref={scrollRef}
-      className="flex items-center gap-6 overflow-x-auto  py-2 lg:px-5  mt-10 cursor-grab select-none hide-scrollbar scroll-smooth"
+      className="flex items-center gap-6 overflow-x-auto py-2 lg:px-5 mt-10 cursor-grab select-none hide-scrollbar scroll-smooth"
       onMouseDown={handleMouseDown}
       onMouseLeave={handleMouseUpOrLeave}
       onMouseUp={handleMouseUpOrLeave}
       onMouseMove={handleMouseMove}
     >
-      <div className="flex-shrink-0">
-        <CardComp
-          heading="How Bias Creeps into AI Models - And How Carlo Stops It"
-          paragraph="  Artificial intelligence has the power to transform decision-making
-      across industries, from loan approvals to job candidate screening,"
-          img="/unsplash_FYOwBvRb2Mk.png"
-        />
-      </div>
-      <div className="flex-shrink-0">
-        <CardComp
-          heading="Top 7 Misconceptions About Ethical AI and Compliance"
-          paragraph="  As artificial intelligence (AI) becomes an integral part of industries from healthcare to finance, conversations around,"
-          img="/unsplash_bV_P23FXxhI.png"
-        />
-      </div>
-      <div className="flex-shrink-0">
-        <CardComp
-          heading="How Bias Creeps into AI Models - And How Carlo Stops It"
-          paragraph="Artificial intelligence has the power to transform decision-making across industries. From loan approvals to job candidate screening,"
-          img="/unsplash_agUC-v_D1iI.png"
-        />
-      </div>
-      <div className="flex-shrink-0">
-        <CardComp
-          heading="Why Every AI System Needs a Human-in-the-Loop for Ethical Safety "
-          paragraph="As artificial intelligence becomes increasingly integrated into business operations,"
-          img="/unsplash_FHgWFzDDAOs.png"
-        />
-      </div>
+      {blogs.length === 0 ? (
+        <div className="w-full text-center py-10 text-gray-500">
+          No blogs found
+        </div>
+      ) : (
+        blogs.map((blog) => {
+          const firstLine =
+            blog.blocks?.[0]?.content
+              ?.replace(/<[^>]+>/g, "") // remove HTML tags
+              .split("\n")[0] || "";
+
+          return (
+            <div className="flex-shrink-0" key={blog._id}>
+              <CardComp
+                heading={blog.title}
+                paragraph={truncateText(firstLine, 100)}
+                img={blog.image}
+                slug={blog.slug}
+              />
+            </div>
+          );
+        })
+      )}
     </div>
   );
 }

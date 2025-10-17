@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Hero from "./_components/Hero";
 
@@ -13,6 +11,8 @@ import Experience from "./_components/Experience";
 import Robot from "./_components/Robot";
 import HowitsWorkSection from "./_components/HowitsWorkSectiion";
 import LogoSlider from "./_subcomponents/LogoSlider";
+import { Suspense } from "react";
+import Spinner from "./_subcomponents/Spinner";
 
 export default function Home() {
   return (
@@ -25,7 +25,15 @@ export default function Home() {
         <Robot />
         <HowitsWorkSection />
         <Services />
-        <Research />
+        <Suspense
+          fallback={
+            <div>
+              <Spinner />
+            </div>
+          }
+        >
+          <Research />
+        </Suspense>
         <Experience />
       </main>
     </div>

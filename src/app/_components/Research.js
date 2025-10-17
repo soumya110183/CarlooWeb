@@ -1,8 +1,37 @@
 import Image from "next/image";
 import Card from "../_subcomponents/Card";
 import ParagraphReUse from "../_subcomponents/ParagraphReUse";
+import blog from "@/modals/blog";
+import { connectToDatabase } from "@/lib/mongodb";
 
-export default function Research() {
+export default async function Research() {
+  // Fetch blogs directly on the server
+  await connectToDatabase();
+  
+  const blogs = await blog.find({})
+    .sort({ createdAt: -1 }) // latest first
+    .lean(); // convert to plain JS object
+  
+  // Deep serialize for client component - convert ALL ObjectIds to strings
+  const serializedBlogs = blogs.map(blog => {
+    const serialized = {
+      ...blog,
+      _id: blog._id.toString(),
+      createdAt: blog.createdAt?.toISOString(),
+      updatedAt: blog.updatedAt?.toISOString(),
+    };
+
+    // Serialize nested blocks array if it exists
+    if (blog.blocks && Array.isArray(blog.blocks)) {
+      serialized.blocks = blog.blocks.map(block => ({
+        ...block,
+        _id: block._id?.toString(), // convert block _id to string
+      }));
+    }
+
+    return serialized;
+  });
+
   return (
     <section className="relative w-full">
       <Image
@@ -36,7 +65,7 @@ export default function Research() {
         </div>
       </div>
       <div className="w-full max-lg:pl-5 max-w-[1400px] mx-auto">
-        <Card />
+        <Card blogs={serializedBlogs} />
       </div>
     </section>
   );

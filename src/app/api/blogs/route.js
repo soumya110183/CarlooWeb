@@ -11,6 +11,25 @@ export async function GET() {
   return NextResponse.json(blogs);
 }
 
+export async function GET_BY_ID(req) {
+  await connectToDatabase();
+  const { searchParams } = new URL(req.url);
+  const id = searchParams.get("id");
+
+  if (!id) {
+    return NextResponse.json({ error: 'Blog ID is required' }, { status: 400 });
+  }
+
+  try {
+    const blog = await Blog.findById(id);
+    if (!blog) {
+      return NextResponse.json({ error: 'Blog not found' }, { status: 404 });
+    }
+    return NextResponse.json(blog, { status: 200 });
+  } catch (err) {
+    return NextResponse.json({ error: 'Failed to fetch blog' }, { status: 500 });
+  }
+}
 
 export async function POST(req) {
   await connectToDatabase();
