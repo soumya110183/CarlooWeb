@@ -4,6 +4,9 @@ import ParagraphReUse from "../_subcomponents/ParagraphReUse";
 import blog from "@/modals/blog";
 import { connectToDatabase } from "@/lib/mongodb";
 
+export const dynamic = "force-dynamic";
+
+
 export default async function Research() {
   // Fetch blogs directly on the server
   await connectToDatabase();
