@@ -5,6 +5,7 @@ import blog from "@/modals/blog";
 import { connectToDatabase } from "@/lib/mongodb";
 
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 
 export default async function Research() {
