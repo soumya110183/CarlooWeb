@@ -1,16 +1,23 @@
+export const dynamic = "force-dynamic";
+
+
 import HeadingReuse from "@/app/_subcomponents/HeadingReuse";
 import ComplianceCard from "./ComplianceCard";
 import ParagraphReUse from "@/app/_subcomponents/ParagraphReUse";
 import PricingButtonAndCards from "./PricingButtonAndCArds";
 
 export default async function PricingInformation() {
-  const res = await fetch("https://carlo.algorethics.ai/api/pricing");
+ let apiData;
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch pricing");
-  }
+try {
+  const res = await fetch("https://carlo.algorethics.ai/api/pricing", {
+    cache: "no-store",
+  });
+  apiData = await res.json();
+} catch (e) {
+  apiData = { data: [] };
+}
 
-  const apiData = await res.json();
 
   const descriptions = {
     seed: "Perfect for small teams starting their compliance journey.",
