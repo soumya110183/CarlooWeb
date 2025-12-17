@@ -1,4 +1,5 @@
 
+import { revalidatePath } from "next/cache";
 
 import { connectToDatabase } from '@/lib/mongodb';
 import Blog from '@/modals/blog';
@@ -48,6 +49,7 @@ export async function POST(req) {
     .replace(/[\s\W-]+/g, "-");
 
   const newBlog = await Blog.create({ title, slug, blocks, image, adminName,adminPhoto });
+    revalidatePath("/");
   return NextResponse.json(newBlog, { status: 201 });
 }
 
@@ -93,7 +95,7 @@ export async function PUT(req) {
     if (!updatedBlog) {
       return NextResponse.json({ error: 'Blog not found' }, { status: 404 });
     }
-
+  revalidatePath("/");
     return NextResponse.json(updatedBlog, { status: 200 });
   } catch (error) {
     console.error("Error updating blog:", error);
@@ -114,8 +116,11 @@ export async function DELETE(req) {
     return NextResponse.json({ error: 'Blog ID is required' }, { status: 400 });
   }
 
+
+
   try {
     await Blog.findByIdAndDelete(id);
+    revalidatePath("/");
     return NextResponse.json({ message: 'Blog deleted successfully' }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to delete blog' }, { status: 500 });
