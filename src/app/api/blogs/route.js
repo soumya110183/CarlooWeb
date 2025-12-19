@@ -6,10 +6,35 @@ import Blog from '@/modals/blog';
 import { NextResponse } from 'next/server';
 
 
-export async function GET() {
+export async function GET(req) {
   await connectToDatabase();
-  const blogs = await Blog.find().sort({ createdAt: -1 });
-  return NextResponse.json(blogs);
+
+  const { searchParams } = new URL(req.url);
+
+  const page = parseInt(searchParams.get("page")) || 1;
+  const limit = parseInt(searchParams.get("limit")) || 6;
+
+  const skip = (page - 1) * limit;
+
+  const [blogs, total] = await Promise.all([
+    Blog.find()
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit)
+      .lean(),
+
+    Blog.countDocuments(),
+  ]);
+
+  return NextResponse.json({
+    blogs,
+    pagination: {
+      page,
+      limit,
+      total,
+      totalPages: Math.ceil(total / limit),
+    },
+  });
 }
 
 export async function GET_BY_ID(req) {

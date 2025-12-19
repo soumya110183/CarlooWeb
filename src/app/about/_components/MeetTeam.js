@@ -23,14 +23,14 @@ export default function MeetTeam() {
             "Robert McNamara is a forward-thinking technologist and ethical innovator, perfectly suited to lead the charge at Algorethics as its Co-Founder and Chief Ethical Innovation Officer. With a deep-rooted commitment to human-first technological solutions, Robert’s pioneering work includes the invention of Triggersmart, a globally recognized childproof smart gun that uses RFID technology to ensure that only authorized users can fire the weapon. This innovation addresses a critical global issue—preventing thousands of accidental firearm injuries and deaths each year, particularly among children.\n\nRobert's drive to create technology that serves humanity responsibly aligns seamlessly with the core mission of Algorethics. His passion for ethical AI development, combined with his track record of creating life-saving, socially impactful technologies, makes him the ideal advocate for promoting fairness, transparency, and ethical accountability in AI.\n\nHis vision for Algorethics is to ensure that AI not only advances society but does so in a way that safeguards human values and ethical integrity."
           }
         />
-        <TeamContainer
+        {/* <TeamContainer
           img={"drlevan.jpg"}
           name={"Dr. Levan Bodzashvili"}
           role={"Co-founder, Chief Legal & Compliance Lead"}
           details={
             "Dr. Levan Bodzashvili is a leading expert in cyberlaw, AI governance, and public policy, with over 20 years of experience in government positions, advisory roles, and academia. His extensive background in AI regulation and compliance makes him an indispensable part of Algorethics' leadership team.\n\nDr. Bodzashvili serves as the Chair of Neiron Academy, an institution committed to advancing artificial intelligence for the benefit of humanity. He firmly believes that AI governance frameworks must promote fairness, transparency, and accountability, ensuring that technology serves the common good. In his role as Governmental Relations and AI Compliance Officer at Algorethics, Dr. Bodzashvili bridges the gap between AI ethics and public policy, advising governments and enterprises on compliant AI deployment. He is passionate about ensuring that AI governance strategies align with regional laws, cultural norms, and global standards. His expertise in regulatory frameworks allows Algorethics to adapt its AI solutions to meet local and regional compliance requirements, promoting ethical AI deployment globally."
           }
-        />
+        /> */}
         <TeamContainer
           img={"tasleel-r5p2is03p7nlxekboqslnlvoyd3ckj39gctlgiqi2o.jpg"}
           name={"Tasleel"}
@@ -47,14 +47,14 @@ export default function MeetTeam() {
             "Prof. Dr. Jose Berengueres is an esteemed academic and thought leader in AI and human-computer interaction, with a PhD in bio-inspired robotics from the Tokyo Institute of Technology. As a professor at the Computer Science Department at UAE University, he teaches cutting-edge topics like Visualization, Leadership in IT, and Design Thinking, while also conducting research in applied data science and AI. His extensive experience includes consulting for top-tier organizations like Apple, Etihad Airways, and Porsche Middle East, making him a go-to expert on the intersection of technology, creativity, and analytics.\n\nAs the Chief Mentor & Principal Ethical AI Advisor at Algorethics, Dr. Jose’s expertise in developing AI algorithms and his passion for ethical technology development are invaluable. He understands the critical importance of identifying and mitigating biases in AI systems, which, if unchecked, can lead to unfair outcomes in areas such as race, gender, and socioeconomic status. With his deep knowledge of AI and human-centered design, Dr. Jose ensures that Algorethics fosters fairness, transparency, and ethical integrity in all its AI applications."
           }
         />
-        <TeamContainer
+        {/* <TeamContainer
           img={"kimbarshili.jpg"}
           name={"Ketevan Kimbarishvili"}
           role={"Data Protection & Compliance Officer"}
           details={
             "Ketevan Kimbarishvili is a qualified lawyer with a Master's degree in Law and a strong track record in data protection, compliance, and legal advisory across public and private sectors. As the Data Protection & Compliance Officer at Algorethics, she leads our efforts in legal updates, government and industry engagement, and compliance training initiatives.\n\nKetevan previously served as the Data Protection Officer at the LEPL State Care Agency, where she implemented regulatory standards and privacy frameworks. She is also a certified trainer, currently teaching the “Personal Data Protection” course at BMCC Center, empowering professionals with knowledge on privacy laws and digital rights. Her legal acumen and hands-on experience in data governance strengthen Algorethics’ mission to align AI development with international data protection standards, ethical compliance, and regulatory readiness."
           }
-        />
+        /> */}
             <TeamContainer
           img={"ullas.jpg"}
           name={"Ullas Krishnan MPhil, LLB"}
