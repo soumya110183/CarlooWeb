@@ -29,37 +29,56 @@ try {
       "Enterprise-level compliance with dedicated consultants and on-premise deployment.",
   };
 
-  const globalCompliancePlan = apiData.data.map((plan) => {
-    return {
-      tier: plan.tier,
+ const globalCompliancePlan = (apiData?.data || [])
+  .filter((plan) => plan?.tier) // ⬅️ important
+  .map((plan) => {
+    const tier = plan.tier.toLowerCase();
 
-      priceInteger: plan.price,
-      price: `$${plan.price}/mo`,
-      title: `${
-        plan.tier.charAt(0).toUpperCase() + plan.tier.slice(1)
-      } Compliance`,
-      description: descriptions[plan.tier] || "Compliance plan for AI ethics.",
+    return {
+      tier,
+
+      priceInteger: plan.price ?? 0,
+      price: plan.price ? `$${plan.price}/mo` : "Custom",
+      title: `${tier.charAt(0).toUpperCase() + tier.slice(1)} Compliance`,
+      description:
+        descriptions[tier] || "Compliance plan for AI ethics.",
+
       features: [
-        ...plan.features.map((f) => ({ name: f, available: true })),
+        ...(plan.features || []).map((f) => ({
+          name: f,
+          available: true,
+        })),
+
         plan.real_time_monitoring && {
           name: "Real-time monitoring",
           available: true,
         },
+
         plan.projects_supported && {
           name: `Projects supported: ${plan.projects_supported}`,
           available: true,
         },
-        plan.feedback_loops && { name: "Feedback loops", available: true },
+
+        plan.feedback_loops && {
+          name: "Feedback loops",
+          available: true,
+        },
+
         plan.compliance_dashboard && {
           name: "Compliance dashboard",
           available: true,
         },
 
-        plan.custom_features && { name: "Custom features", available: true },
+        plan.custom_features && {
+          name: "Custom features",
+          available: true,
+        },
+
         plan.on_premises_deployment && {
           name: "On-premises deployment",
           available: true,
         },
+
         plan.dedicated_support && {
           name: `Support: ${plan.dedicated_support.replace(/_/g, " ")}`,
           available: true,
@@ -67,6 +86,7 @@ try {
       ].filter(Boolean),
     };
   });
+
 
 
   return (

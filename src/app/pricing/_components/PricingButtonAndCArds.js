@@ -5,7 +5,8 @@ import ComplianceCard from "./ComplianceCard";
 
 export default function PricingButtonAndCards({plan}){
 
-    const [plans,setPlans]=useState(false)
+const [plans, setPlans] = useState(true)
+
 
      const premiumPlansData = [
   {
